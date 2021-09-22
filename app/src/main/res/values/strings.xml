@@ -2,10 +2,16 @@
     <string name="app_name">TuneCare</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="welcome_message">Selamat Datang di Aplikasi Kesehatan Harian Tunanetra</string>
-    <string name="litkes_menu">
+    <string name="welcome_message">
+        Selamat Datang di Aplikasi Kesehatan Harian Tunanetra, Katakan Literasi Kesehatan untuk melanjutkan.
+    </string>
+    <string name="menu_litkes">
         Katakan 1 untuk Gizi Seimbang, Katakan 2 untuk informasi Covid-19,
         Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat, Katakan 4 untuk Kontak Person Sahabat Netra,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_giziSeimbang">
+        Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang.
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 </resources>
