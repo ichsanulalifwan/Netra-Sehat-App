@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var textToSpeechEngine: TextToSpeech? = null
 
-    private val textToSpeechEngine2: TextToSpeech by lazy {
+    /*private val textToSpeechEngine2: TextToSpeech by lazy {
         // Pass in context and the listener.
         TextToSpeech(
             this
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 textToSpeechEngine2.language = Locale("id", "ID")
             }
         }
-    }
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -135,6 +135,54 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    /*private fun welcomeTTS2() {
+        // Get the text from local string resource
+        val text = getString(R.string.welcome_message)
+
+        // Lollipop and above requires an additional ID to be passed.
+        // Call Lollipop+ function
+        textToSpeechEngine2.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+
+        textToSpeechEngine2.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
+            override fun onStart(utteranceId: String?) {
+                Log.i("TextToSpeech", "On Start")
+            }
+
+            // Get Input speech after TTS Done
+            override fun onDone(utteranceId: String?) {
+                Log.i("TextToSpeech", "On Done")
+
+                // Get the Intent action
+                val sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+                // Language model defines the purpose, there are special models for other use cases, like search.
+                sttIntent.putExtra(
+                    RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+                )
+                // Adding an extra language, you can use any language from the Locale class.
+                sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+                // Text that shows up on the Speech input prompt.
+                sttIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Bicara Sekarang!")
+                try {
+                    // Start the intent for a result, and pass in our request code.
+                    startActivityForResult(sttIntent, REQUEST_CODE_STT1)
+                } catch (e: ActivityNotFoundException) {
+                    // Handling error when the service is not available.
+                    e.printStackTrace()
+                    Toast.makeText(
+                        applicationContext,
+                        "Your device does not support SpeechRecognizer.",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
+
+            override fun onError(utteranceId: String?) {
+                Log.i("TextToSpeech", "On Error")
+            }
+        })
+    }*/
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
@@ -155,6 +203,7 @@ class MainActivity : AppCompatActivity() {
                         if (recognizedText.equals(getTesxt, true)) {
                             val nextIntent = Intent(this, LitkesActivity::class.java)
                             startActivity(nextIntent)
+
                         } else {
                             Toast.makeText(this, "Gagal", Toast.LENGTH_SHORT).show()
                         }
@@ -165,16 +214,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkPermission() {
-        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(Manifest.permission.RECORD_AUDIO),
                 RecordAudioRequestCode
             )
-        }*/
+        }
     }
 
-    /*override fun onRequestPermissionsResult(
+    override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
         grantResults: IntArray
@@ -184,17 +233,17 @@ class MainActivity : AppCompatActivity() {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
         }
-    }*/
+    }
 
     override fun onPause() {
         textToSpeechEngine?.stop()
-        textToSpeechEngine2.stop()
+        //textToSpeechEngine2.stop()
         super.onPause()
     }
 
     override fun onDestroy() {
         textToSpeechEngine?.shutdown()
-        textToSpeechEngine2.shutdown()
+        //textToSpeechEngine2.shutdown()
         super.onDestroy()
     }
 

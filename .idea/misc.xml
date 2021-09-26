@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_gizi_seimbang.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_litkes.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_gizi_seimbang.xml" value="0.23645833333333333" />
       </map>
     </option>

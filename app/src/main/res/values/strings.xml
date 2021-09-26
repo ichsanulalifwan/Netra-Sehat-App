@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TuneCare</string>
+    <string name="app_name">Tunanetra Daily</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_message">
@@ -9,6 +9,27 @@
         Katakan 1 untuk Gizi Seimbang, Katakan 2 untuk informasi Covid-19,
         Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat, Katakan 4 untuk Kontak Person Sahabat Netra,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_litkes1">
+        Katakan 1 untuk Gizi Seimbang.
+    </string>
+    <string name="menu_litkes2">
+        Katakan 2 untuk informasi Covid-19.
+    </string>
+    <string name="menu_litkes3">
+        Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat.
+    </string>
+    <string name="menu_litkes4">
+        Katakan 4 untuk Kontak Person Sahabat Netra.
+    </string>
+    <string name="menu7">
+        Katakan 7 untuk kembali.
+    </string>
+    <string name="menu_litkes9">
+        Katakan 9 untuk ke menu utama.
+    </string>
+    <string name="menu_litkes0">
+        Katakan 0 untuk Keluar.
     </string>
     <string name="menu_giziSeimbang">
         Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang.

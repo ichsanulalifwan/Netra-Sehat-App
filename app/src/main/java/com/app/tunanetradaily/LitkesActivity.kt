@@ -16,7 +16,7 @@ import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
-class LitkesActivity : AppCompatActivity(), CoroutineScope {
+class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener {
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -26,6 +26,7 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
     private var textToSpeechEngine: TextToSpeech? = null
+    private var loop: Int = 0
 
     /*private val textToSpeechEngine2: TextToSpeech by lazy {
         // Pass in context and the listener.
@@ -67,21 +68,40 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
         // Get the text from local string resource
         val textLitkes = getString(R.string.menu_litkes)
 
+        val textLitkes1 = getString(R.string.menu_litkes1)
+
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(textLitkes, TextToSpeech.QUEUE_FLUSH, null, "tts")
+        textToSpeechEngine?.speak(textLitkes, TextToSpeech.QUEUE_FLUSH, null, "tts1")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
                 Log.i("TextToSpeech", "On Start")
+                startListening()
             }
 
             // Get Input speech after TTS Done
             override fun onDone(utteranceId: String?) {
                 Log.i("TextToSpeech", "On Done")
-                launch(Dispatchers.Main.immediate) {
-                    speechRecognizer.startListening(sttIntent)
-                }
+
+                // sementara aman
+                /*if (utteranceId == "tts1") {
+                    loop = +1
+                    launch(Dispatchers.Main.immediate) {
+                        speechRecognizer.startListening(sttIntent)
+                    }
+                } else if (utteranceId == "tts2") {
+                    loop = +2
+                    launch(Dispatchers.Main.immediate) {
+                        speechRecognizer.startListening(sttIntent)
+                    }
+                } else if (utteranceId == "tts0") {
+                    loop = +11
+                    launch(Dispatchers.Main.immediate) {
+                        speechRecognizer.startListening(sttIntent)
+                    }
+                }*/
+
 
                 /*// Get the Intent action
                 val sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
@@ -129,6 +149,8 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
 
     private fun setSpeech() {
 
+        speechRecognizer.setRecognitionListener(this)
+
         // Language model defines the purpose, there are special models for other use cases, like search.
         sttIntent.putExtra(
             RecognizerIntent.EXTRA_LANGUAGE_MODEL,
@@ -136,17 +158,27 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+
+        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
+        sttIntent.putExtra(
+            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
+            1000
+        )
+        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
+
         // Text that shows up on the Speech input prompt.
         /*sttIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Bicara Sekarang!")*/
 
-        speechRecognizer.setRecognitionListener(object : RecognitionListener {
+
+        // keep
+        /*speechRecognizer.setRecognitionListener(object : RecognitionListener {
             override fun onReadyForSpeech(p0: Bundle?) {
                 Log.i(TAG, "onReadyForSpeech")
             }
 
             override fun onBeginningOfSpeech() {
                 Log.i(TAG, "onBeginningOfSpeech")
-                val text = "Listening"
+                val text = "Mendengarkan . . ."
                 binding.tvResult.text = text
             }
 
@@ -165,9 +197,24 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
             override fun onError(errorCode: Int) {
                 val errorMessage: String = getErrorText(errorCode)
                 Log.d(TAG, "FAILED $errorMessage")
+                binding.tvResult.text = errorMessage
 
-                val message = "Silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(message, TextToSpeech.QUEUE_FLUSH, null, "tts2")
+                // sementara lumayan aman
+                *//*if (loop == 0 || loop == 1) {
+                    val textLitkes2 = getString(R.string.menu_litkes2)
+                    textToSpeechEngine?.speak(textLitkes2, TextToSpeech.QUEUE_FLUSH, null, "tts2")
+                    //val message = "Silahkan katakan sekali lagi"
+                    //textToSpeechEngine?.speak(message, TextToSpeech.QUEUE_FLUSH, null, "tts2")
+                } else if (loop == 2) {
+                    val textLitkes0 = getString(R.string.menu_litkes0)
+                    textToSpeechEngine?.speak(textLitkes0, TextToSpeech.QUEUE_FLUSH, null, "tts0")
+                } else {
+                    val message = "Silahkan katakan sekali lagi"
+                    textToSpeechEngine?.speak(message, TextToSpeech.QUEUE_FLUSH, null, "tts0")
+                }*//*
+
+                //val message = "Silahkan katakan sekali lagi"
+                //textToSpeechEngine?.speak(message, TextToSpeech.QUEUE_FLUSH, null, "tts2")
             }
 
             override fun onResults(results: Bundle?) {
@@ -181,11 +228,17 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
 
                 speechRecognizer.stopListening()
 
-                if (recognizedText.equals("tujuh", true) || recognizedText == "7") {
-                    val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                    startActivity(backPreviousMenu)
+                if (recognizedText.equals("satu", true) || recognizedText == "1") {
+                    textToSpeechEngine?.stop()
+                    val giziSeimbangMenu =
+                        Intent(this@LitkesActivity, GiziSeimbangActivity::class.java)
+                    startActivity(giziSeimbangMenu)
+                    //finish()
+                } else if (recognizedText.equals("tujuh", true) || recognizedText == "7"
+                ) {
+                    *//*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                    startActivity(backPreviousMenu)*//*
                     finish()
-                    speechRecognizer.stopListening()
                 } else if (recognizedText.equals(
                         "sembilan",
                         true
@@ -193,15 +246,19 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
                 ) {
                     val backMainMenu = Intent(this@LitkesActivity, MainActivity::class.java)
                     startActivity(backMainMenu)
-                    finish()
-                    speechRecognizer.stopListening()
+                    finishAffinity()
                 } else if (recognizedText.equals("nol", true) || recognizedText == "0") {
                     finishAffinity()
-                    speechRecognizer.stopListening()
                     exitProcess(0)
                 } else {
-                    val messageNoMatch = "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                    textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts2")
+                    val messageNoMatch =
+                        "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+                    textToSpeechEngine?.speak(
+                        messageNoMatch,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "tts0"
+                    )
                     Toast.makeText(applicationContext, "Pilihan Salah", Toast.LENGTH_SHORT)
                         .show()
                 }
@@ -214,7 +271,38 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
             override fun onEvent(p0: Int, p1: Bundle?) {
                 Log.i(TAG, "onEvent")
             }
-        })
+        })*/
+    }
+
+    private fun startOver() {
+        speechRecognizer.destroy()
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
+        speechRecognizer.setRecognitionListener(this)
+
+        sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        sttIntent.putExtra(
+            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+        )
+        sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+
+        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
+        sttIntent.putExtra(
+            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
+            1000
+        )
+        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
+        startListening()
+    }
+
+    private fun startListening() {
+        launch(Dispatchers.Main.immediate) {
+            speechRecognizer.startListening(sttIntent)
+        }
+    }
+
+    private fun stopListening() {
+        speechRecognizer.stopListening()
     }
 
     /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -252,6 +340,128 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
         }
     }*/
 
+    override fun onReadyForSpeech(p0: Bundle?) {
+        Log.i(TAG, "onReadyForSpeech")
+    }
+
+    override fun onBeginningOfSpeech() {
+        Log.i(TAG, "onBeginningOfSpeech")
+        val text = "Mendengarkan . . ."
+        binding.tvResult.text = text
+    }
+
+    override fun onRmsChanged(rmsdB: Float) {
+        Log.i(TAG, "onRmsChanged: $rmsdB")
+    }
+
+    override fun onBufferReceived(buffer: ByteArray?) {
+        Log.i(TAG, "onBufferReceived: $buffer")
+    }
+
+    override fun onEndOfSpeech() {
+        Log.i(TAG, "onEndOfSpeech")
+    }
+
+    override fun onError(errorCode: Int) {
+        val errorMessage: String = getErrorText(errorCode)
+        Log.d(TAG, "FAILED $errorMessage")
+        binding.tvResult.text = errorMessage
+        startOver()
+    }
+
+    override fun onResults(results: Bundle?) {
+        Log.i(TAG, "onResults")
+
+        val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
+        val recognizedText = matches?.get(0)
+        binding.tvResult.text = recognizedText
+        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
+        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
+        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
+        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
+
+        when {
+            check1 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                val giziSeimbangMenu = Intent(this@LitkesActivity, GiziSeimbangActivity::class.java)
+                startActivity(giziSeimbangMenu)
+                //finish()
+            }
+            check7 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                startActivity(backPreviousMenu)*/
+                finish()
+            }
+            check9 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                val backMainMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                startActivity(backMainMenu)
+                finishAffinity()
+            }
+            check0 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                finishAffinity()
+                exitProcess(0)
+            }
+            else -> {
+                val messageNoMatch =
+                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts0")
+                Toast.makeText(applicationContext, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    override fun onPartialResults(parsialResult: Bundle?) {
+        Log.i(TAG, "onPartialResults")
+
+        val matches = parsialResult?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
+        val recognizedText = matches?.get(0)
+        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
+        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
+        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
+        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
+
+        when {
+            check1 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                val giziSeimbangMenu = Intent(this@LitkesActivity, GiziSeimbangActivity::class.java)
+                startActivity(giziSeimbangMenu)
+                //finish()
+            }
+            check7 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                startActivity(backPreviousMenu)*/
+                finish()
+            }
+            check9 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                val backMainMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                startActivity(backMainMenu)
+                finishAffinity()
+            }
+            check0 -> {
+                textToSpeechEngine?.stop()
+                stopListening()
+                finishAffinity()
+                exitProcess(0)
+            }
+        }
+    }
+
+    override fun onEvent(p0: Int, p1: Bundle?) {
+        Log.i(TAG, "onEvent")
+    }
+
     fun getErrorText(errorCode: Int): String {
         val message: String = when (errorCode) {
             SpeechRecognizer.ERROR_AUDIO -> "Audio recording error"
@@ -271,6 +481,7 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
     override fun onPause() {
         textToSpeechEngine?.stop()
         //textToSpeechEngine2.stop()
+        stopListening()
         super.onPause()
     }
 
@@ -282,7 +493,6 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope {
     }
 
     companion object {
-        private const val REQUEST_CODE_STT2 = 2
         private const val TAG = "LitkesActivity"
     }
 }
