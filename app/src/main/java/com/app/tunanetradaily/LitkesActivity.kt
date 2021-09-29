@@ -26,7 +26,6 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
     private var textToSpeechEngine: TextToSpeech? = null
-    private var loop: Int = 0
 
     /*private val textToSpeechEngine2: TextToSpeech by lazy {
         // Pass in context and the listener.
@@ -462,7 +461,7 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
         Log.i(TAG, "onEvent")
     }
 
-    fun getErrorText(errorCode: Int): String {
+    private fun getErrorText(errorCode: Int): String {
         val message: String = when (errorCode) {
             SpeechRecognizer.ERROR_AUDIO -> "Audio recording error"
             SpeechRecognizer.ERROR_CLIENT -> "Client side error"

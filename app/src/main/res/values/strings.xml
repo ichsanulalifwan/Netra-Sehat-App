@@ -31,8 +31,944 @@
     <string name="menu_litkes0">
         Katakan 0 untuk Keluar.
     </string>
+
+    <!-- Menu res-->
     <string name="menu_giziSeimbang">
-        Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang.
+        Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_pilarGiziSeimbang">
+        Katakan 1 untuk Mengonsumsi Aneka Ragam Makanan, Katakan 2 untuk Perilaku Hidup Bersih dan Sehat,
+        Katakan 3 untuk Aktivitas Fisik, Katakan 4 untuk Memantau Berat Badan,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_anekaRagamMakanan">
+        Katakan 1 untuk Makanan Pokok, Katakan 2 untuk Lauk Pauk,
+        Katakan 3 untuk Sayuran, Katakan 4 untuk Buah-buahan, Katakan 5 untuk Air Putih,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_makananPokok">
+        Katakan 1 untuk Penjelasan Makanan Pokok, Katakan 2 untuk Jenis-Jenis Makanan Pokok,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_laukPauk">
+        Katakan 1 untuk Penjelasan Lauk Pauk, Katakan 2 untuk Jenis-Jenis Lauk Pauk,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_sayuran">
+        Katakan 1 untuk Penjelasan Sayuran, Katakan 2 untuk Jenis-Jenis Sayuran,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_buah">
+        Katakan 1 untuk Penjelasan Buah-buahan, Katakan 2 untuk Jenis-Jenis Buah-buahan,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_PHBS">
+        Katakan 1 untuk Perawatan diri pada kulit, Katakan 2 untuk Perawatan diri pada kaki dan tangan,
+        Katakan 3 untuk Perawatan diri pada kuku, Katakan 4 untuk Perawatan diri pada kulit kepala dan rambut,
+        Katakan 5 untuk Perawatan diri pada kebersihan gigi dan mulut, Katakan 6 untuk Perawatan diri pada kebersihan mata,
+        Katakan 7 untuk PPerawatan diri pada kebersihan telinga dan hidung, Katakan 8 untuk Perawatan diri pada kebersihan genetalia,
+        Katakan 77 untuk kembali, Katakan 88 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_aktivitasFisik">
+        Katakan 1 untuk Aktivitas Fisik Ringan, Katakan 2 untuk Aktivitas Fisik Sedang,
+        Katakan 3 untuk Aktivitas Fisik Berat,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_memantauBeratBadan">
+        Katakan 1 untuk Penjelasan memantau berat badan, Katakan 2 untuk menghitung Indeks massa tubuh,
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_pesanGiziSeimbang">
+        Katakan 1 untuk Bersyukur dan Nikmati Semua Jenis Makanan, Katakan 2 untuk Banyak Makan Sayur dan Cukup Buah,
+        Katakan 3 untuk Biaskan Mengonsumsi Lauk Pauk Yang Mengandung Protein Tinggi, Katakan 4 untuk Biasakan Mengonsumsi Aneka Ragam Makanan Pokok,
+        Katakan 5 untuk Batasi Konsumsi Pangan Manis, Asin Dan Berlemak, Katakan 6 untuk Biasakan Sarapan yang Bergizi,
+        Katakan 7 untuk Biasakan Minum Air Putih yang Cukup dan Aman, Katakan 8 untuk Biasakan Membaca Label Pada Kemasan Pangan,
+        Katakan 9 untuk Cuci tangan pakai sabun dengan air bersih mengalir, Katakan 10 untuk Lakukan Aktivitas Fisik Yang Cukup dan Pertahankan Berat Badan Normal.
+        Katakan 77 untuk kembali, Katakan 88 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
+    <!-- Pengantar res-->
+    <string name="pengantar_makananPokok">
+        1 Pengertian
+        Makanan pokok adalah makanan paling utama yang harus dimakan oleh manusia setiap hari.
+        2 Manfaat Makanan Pokok
+        Manfaat makanan pokok adalah sebagai sumber energi, dan merupakan penghasil karbohidrat yang dibutuhkan oleh tubuh. Selain itu, karbohidrat dapat bermanfaat untuk meningkatkan metabolisme tubuh, menyeimbangkan asam basa dalam tubuh, pembentuk sel, jaringan serta organ, memperlancar pencernaan dan penyerapan kalsium serta membantu membentuk protein dan lemak.
+        3 Jenis Makanan Pokok
+        Jenis makanan pokok misalnya beras, jagung, sagu, ubi jalar, singkong, mie, roti dan sebagainya.
+        4 Porsi Makanan Pokok
+        Kebutuhan energi orang dewasa di Indonesia, yakni 2.000 kalori untuk wanita dan 2.300 kalori untuk pria.
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="pengantar_laukPauk">
+        1 Pengertian Lauk Pauk
+        Lauk pauk adalah makanan pendamping makanan pokok umumnya banyak mengandung protein.
+        2 Manfaat
+        Manfaat lauk-pauk yaitu mengandung zat protein yang berguna sebagai zat pembangun pada tubuh. Protein dapat mengganti sel-sel tubuh yang rusak dengan sel-sel baru (memperbaharui sel). Protein yang kita konsumsi dapat menetralkan racun yang ada pada tubuh, membantu pelaksanaan metabolisme tubuh serta ia dapat memelihara cairan dalam rongga tubuh.
+        3 Jenis
+        Lauk-pauk terdiri dari ayam, daging, ikan, telur, tahu, tempe, dan lauk-pauk lainnya.
+        4 Porsi
+        Lauk pauk yang berasal dari hewan seperti daging dan telur dapat dikonsumsi maksimal 160 gram saja perharinya. Hal ini setara dengan 2 atau 3 potong daging, untuk protein nabati bisa memakannya hingga 400 gram setiap harinya.
+        5 Kandungan
+        Kandungan zat gizi satu porsi Tempe sebanyak 2 potong sedang atau 50 gram adalah 80 Kalori, 6 gram Protein, 3 gram lemak dan 8 gram karbohidrat.
+        6 Masalah jika konsumsi tidak sesuai
+        Kelebihan asupan protein akan disimpan sebagai lemak di dalam tubuh. Konsumsi protein yang kurang pada balita dapat menyebabkan kondisi Kurang Energi Protein.
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="pengantar_sayuran">
+        1 Pengertian
+        Sayuran merupakan bahan pangan asal tumbuhan yang mengandung serat tinggi yang dikonsumsi dalam keadaan segar dan diolah jadi makanan.
+        2 Manfaat
+        Manfaat sayur secara garis besar yaitu berkhasiat untuk meningkatkan kesehatan dan metabolisme tubuh yaitu melancarkan buang air besar, mencegah kanker, meningkatkan sistem imun, meningkatkan kesehatan syaraf dan mata.
+        3 Jenis
+        Jenis sayur yang sering dikonsumsi masyarakat yaitu sayur asam, sayur sop, sayur bayam bening, sayur lodeh, tumis sawi, tumis kacang panjang, gulai daun singkong, tumis kangkong, tumis tauge, balado terong, urap, wortel rebus, buncis rebus, nangka, labu siam, dan terong.
+        4 Porsi
+        Konsumsi sayuran yang dianjurkan oleh WHO perhari, yaitu 250 gram sayur (setara dengan 2 ½ porsi atau 2 ½ gelas sayur setelah dimasak dan ditiriskan).
+        5 Kandungan
+        Pada umumnya sayur-sayuran lebih banyak mengandung zat tepung, karbohidrat, terutama sayuran yang berasal dari akar. Sayuran yang berwarna hijau kandungan gulanya lebih sedikit daripada sayuran yang berbentuk buah, dan sayuran yang berupa daun lebih banyak mengandung vitamin dan mineral.
+        6 Masalah yang timbul jika tidak sesuai
+        Tidak makan sayur dapat mengakibatkan sulit buang air besar, kegemukan, tekanan darah tidak terkontrol, kadar glukosa darah tidak terkontrol, pembuluh darah menyempit, dan mudah terkena penyakit menular. Konsumsi sayur yang kurang dapat menyebabkan kanker gastrointestinal, penyakit jantung iskemik, stroke, dan sebagai faktor risiko kematian.
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="pengantar_buah">
+        1 Pengertian
+        Secara umum pengertian buah-buahan adalah salah satu bagian dari tanaman atau pohon yang berdaging dan dapat dimakan sebagai makanan yang bisa memberikan efek mengenyangkan, menyehatkan dan menyenangkan (sebagai camilan). Sebagai makanan alami, buah-buahan memiliki kandungan vitamin, gizi, dan mineral.
+        2 Manfaat
+        Manfaat buah untuk kesehatan tubuh yaitu mengoptimalkan kesehatan dalam jangka panjang, menjaga dan meningkatkan energi, kesehatan organ, melindungi tubuh dari penyakit dan membantu proses penyembuhan penyakit.
+        3 Jenis
+        Adapun jenis buah-buahan yang sering kita temui sehari-hari diantaranya alpukat, anggur, apel, belimbing, bengkuang, blueberry, cempedak, cermai, delima, duku, durian, jambu biji, jeruk, kedondong, kelapa, kiwi, kurma, langsat, lemon, leci, mangga, manggis, markisa, nanas, Nangka, naga, papaya, pir, pisang, rambutan, salak, sawo, semangka, sirsak, stroberi, dan sebagainya.
+        4 Porsi
+        Dianjurkan untuk mengkonsumsi buah-buahan 300-400 gram per orang per hari dan bagi remaja dan orang dewasa sebanyak 400-600 gram per orang per hari.
+        5 Kandungan
+        Berikut ini adalah beberapa kandungan nutrisi yang umum terdapat dalam buah-buahan:
+        • Serat, yang beperan penting dalam menjaga fungsi saluran pencernaan
+        • Vitamin C, yang penting untuk menjaga jaringan tubuh dari kerusakan akibat radikal bebas
+        • Vitamin A, yang penting untuk kesehatan mata, kulit dan sistem kekebalan tubuh
+        • Folat, yang berperan penting dalam pembentukan darah dan materi genetik
+        • Kalium, yang dapat membantu menjaga tekanan darah dan fungsi sistem saraf
+        6 Masalah atau penyakit yang timbul jika tidak sesuai mengkosumsi buah
+        1 Gangguan pencernaan
+        Makan buah secara berlebihan justru bisa menyebabkan gangguan pencernaan. Anda bisa saja mengalami kembung, begah, kram perut, hingga diare.
+        2 Peningkatan gula darah pada penderita diabetes
+        Terlalu banyak mengonsumsi gula dapat meningkatnya kadar gula darah. Hal ini ternyata juga dapat terjadi bila Anda kebanyakan makan buah.
+        3 Kekurangan zat gizi
+        Kebanyakan makan buah memang tidak secara langsung membuat kekurangan zat gizi. Namun, jika menganggap buah sebagai superfood dan mengonsumsinya tanpa dibarengi makanan yang beragam, justru berisiko kekurangan zat gizi lain.
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="pengantar_airPutih">
+        1 Pengertian
+        Air putih adalah air yang melalui proses pengolahan, filtrasi sehingga tampak jernih. Tanpa proses pengolahan yang melalu syarat dan air tidak dapat langsung diminum.
+        2 Manfaat
+        Manfaat air putih untuk kesehatan sangat banyak, air putih dapat digunakan untuk mengobati berbagai penyakit berbahaya atau mencegah terjadinya penyakit yang tidak diinginkan. Air putih merupakan minuman yang paling sehat dan tidak berbahaya karena dibutuhkan setiap hari oleh tubuh kita untuk menjaga kesehatan.
+        3 Jenis
+        Jenis air putih yaitu air mineral, air demineral, air beroksigen, dan air dengan pH tinggi.
+        4 Porsi
+        Minum minimal 2 liter atau kurang lebih 8 gelas air per hari jika tidak minum 50 persen dari kebutuhan air.
+        5 Kandungan
+        Kandungan dalam air minum adalah Kalsium, Natrium, Selenium, Kalium, Silika dan Zink.
+        6 Masalah atau penyakit yang timbul
+        jika kurang minum air putih Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat.
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
+    <!-- Jenis res-->
+    <string name="jenis_makananPokok">
+        Jenis-jenis makanan pokok
+
+        a Nasi
+        1 Pengertian
+        Nasi adalah salah satu bahan pangan utama masyarakat Indonesia. Nasi berwarna putih, bentuk panjang dan kecil, dan berstektur sangat lembut.
+        Nasi merupakan hasil olahan dari beras. Beras yang dimasak menjadi nasi yang siap dimakan.
+        2 Manfaat
+        Manfaat nasi adalah sebagai sumber energi.
+        3 Jenis
+        Ada dua jenis nasi yang paling sering ditemui yaitu nasi putih dan nasi merah.
+        Jika memiliki riwayat penyakit gula darah maka, disarankan memilih nasi merah. Nasi merah mengandung lebih banyak serat serta lebih rendah gula dibanding nasi putih.
+        4 Porsi
+        Porsi satu kepal nasi setara dengan 100 gram. Porsi wanita dewasa maksimal 400 gram nasi per hari. Sedangkan porsi pria dewasa maksimal 500 gram nasi per hari. Dengan kata lain, baik wanita maupun pria butuh sekitar 4- 5 kepal nasi dalam sehari.
+        Cara konsumsi sebanyak 3 kali sehari. Dapat dibagi 1,5 kepal nasi di pagi hari, 2 kepal nasi di siang hari, dan 1,5 kepal nasi di malam hari.
+        5 Kandungan
+        Nasi mengandung karbohidrat yang tinggi dan banyak nutrisi lainnya mulai dari protein, mineral, dan vitamin.
+        6 Masalah Jika konsumsi tidak sesuai
+        Masalah yang timbul jika terlalu banyak mengonsumsi nasi bisa mengakibatkan kegemukan dan diabetes. Nasi memiliki kadar gula yang tinggi sehingga kita harus makan sesuai dengan kebutuhan tubuh.
+
+        b Jagung
+        1 Pengertian
+        Jagung merupakan buah yang memiliki tongkol. Setiap tongkol memiliki 10-16 baris biji yang jumlahnya selalu genap. Jagung ada yang berwarna kuning dan putih.
+        2 Manfaat
+        Manfaat dari jagung adalah bermanfaat sebagai sumber kalori yang tinggi yang diperlukan untuk metabolisme tubuh.
+        3 Jenis
+        Beberapa jenis jagung diantaranya adalah jagung manis, jagung popcorn, jagung gigi kuda, jagung mutiara, jagung tepung, jagung ketan, jagung pod.
+        4 Porsi
+        Satu porsi jagung untuk sekali makan sebanyak 200 gram atau setara dengan 3 centong nasi jagung. Jagung memiliki kandungan serat yang tinggi sehingga menimbulkan efek kenyang lebih lama.
+        5 Kandungan
+        Karbohidrat jagung terdiri atas pati, gula, serat kasar dan pentosan. Satu biji jagung, kandungan patinya berkisar 54,1-71,7 persen, kandungan gulanya sebesar 2,6-12 persen. Kandungan kalori dalam 100 gram jagung kira-kira 342 kalori.
+        6 Masalah jika konsumsi tidak sesuai
+        Masalah yang ditimbulkan akibat terlalu banyak mengonsumsi jagung yaitu dapat menimbulkan risiko diabetes dan gangguan pencernaan.
+
+        c Sagu
+        1 Pengertian
+        Sagu adalah salah satu jenis tepung yang berasal dari tanaman sagu. Tepung sagu hanya bisa didapatkan di Indonesia di bagian timur saja. Sagu biasanya diolah menjadi papeda atau kapurung sebagai kuliner khas Indonesia.
+        2 Manfaat
+        Manfaat sagu adalah dapat mengikat gula darah dalam tubuh dan menghambat pertumbuhan kanker pada organ dalam seperti paru – paru ataupun usus karena zat prebiotik yang dikandungnya.
+        3 Jenis
+        Jenis sagu diantaranya sagu molat (Metroxylon sagus), adapula Metroxylon rumphii dengan batang dapat mencapai tinggi 10 – 12 meter dengan diameter 70 - 100 cm, dan Sagu Inur (Metroxylon Sylvester) batangnya mencapai 10 - 20 meter dengan diameter relatif lebih besar dari yang lain.
+        4 Porsi
+        Satu porsi sagu untuk sekali makan sebanyak 250 gram atau setara dengan 12 sendok makan (setiap sendok makan mengandung 20 gram sagu).
+        5 Kandungan
+        Makanan ini mengandung antioksidan dan bisa memberikan ekstra energi, 100 gram sagu bisa mendapatkan 332 kalori dan karbohidrat sebanyak 83 gram.
+        6 Masalah
+        jika konsumsi tidak sesuai Jika diproses tidak benar atau mentah maka akan menimbulkan mual dan muntah, bahkan kerusakan hati.
+
+        d Ubi Jalar
+        1 Pengertian
+        Ubi jalar adalah tanaman yang termasuk jenis umbi batang. Ubi jalar sering juga disebut ketela rambat.
+        2 Manfaat
+        Manfaat ubi jalar adalah mampu mengontrol kadar gula dalam tubuh, dan mampu menjaga kesehatan jantung.
+        3 Jenis
+        Terdapat 3 jenis ubi jalar yang popular di Indonesia yaitu ubi ungu, ubi kuning/orange dan ubi putih.
+        4 Porsi
+        Satu porsi ubi jalar untuk sekali makan sebanyak 200 gram atau setara dengan satu buah ubi jalar ukuran besar. Ubi jalar ukuran sedang yang sudah dipanggang hanya memiliki 105 kalori, sehingga cocok untuk program penurunan berat badan.
+        5 Kandungan
+        Kandungan dalam ubi jalar adalah karbohidrat dan kalori. Ubi jalar mengandung serat dan hampir tidak mengandung lemak. Kandungan nutrisi pada ubi jalar yaitu 37 persen kebutuhan tubuh akan Vitamin C, 25 persen mangan, 14 persen vitamin B6, dan 9 persen kalium. Serta mengandung vitamin A.
+        6 Masalah jika konsumsi tidak sesuai
+        Mengkonsumsi ubi jalar secara berlebihan dapat menyebabkan gangguan pencernaan dan peningkatan kadar kalium dalam darah.
+
+        e Singkong
+        1 Pengertian
+        Singkong adalah jenis umbi-umbian yang berasal dari umbi akar. Singkong dikenal dengan Ketela Pohon atau Ubi Kayu.
+        2 Manfaat
+        Manfaat singkong ialah melancarkan pencernaan, menurunkan berat badan, serta meningkatkan energi, fungsi otak dan saraf.
+        3 Jenis
+        Jenis singkong diantaranya Manggu/Cimanggu, Singkong Putih, Singkong Emas, Singkong Mentega, Singkong Darul Hidayah, Singkong Gajah, Singkong Manggu, dan Singkong Mukibat.
+        4 Porsi
+        Satu porsi singkong rebus untuk sekali makan sebanyak 100 gram atau setara dengan dua potong singkong rebus.
+        5 Kandungan
+        Sebanyak 98% kandungan singkong adalah karbohidrat, sisanya baru protein dan lemak, 100 gram singkong terkandung 110-150 kalori. Singkong yang telah direbus juga mengandung zat besi, vitamin C, dan niacin. Singkong menyediakan Energi sebesar 160 Kilokalori, jumlah Karbohidrat 38.06 g, Protein 1,36 g 2,5, Total Lemak 0.28 g, Kolesterol 0 mg, dan Serat 1,8 g.
+        6 Masalah jika konsumsi tidak sesuai
+        Hal yang terpenting adalah jangan pernah mengonsumsi singkong mentah karena masih mengandung racun. Umbi Singkong tertentu mengandung senyawa beracun alami yang bernama glikosida sianogen linamarin dan metil-linamarin. Namun mengupas singkong akan mengurangi kandungan sianida, pengeringan matahari dan perendaman, perebusan akan menguapkan senyawa ini, yang membuatnya aman untuk dikonsumsi manusia.
+
+        f Mie
+        1 Pengertian
+        Mie merupakan makanan yang diolah dengan bentuk menyerupai tali-tali dengan bahan dasar tepung, garam, dan minyak sawit. Terdapat kontroversi terkait dengan terganggunya kesehatan akibat mengkonsumsi mie instan karena mengandung sodium dan MSG dalam jumlah tinggi.
+        2 Manfaat
+        Manfaat mie yaitu sebagai sumber energi, membantu memenuhi asupan nutrisi bagi tubuh, dan dapat membuat perut kenyang.
+        3 Jenis
+        Adapun jenis mie yakni ada mie kuning basah, mie kwiteau, mie bihun, mie telur, mie sohun, dan mie kering.
+        4 Porsi
+        Satu porsi mie untuk sekali makan sebanyak 100 gram atau setara dengan 10 sendok makan (setiap sendok makan mengandung 10 gram mie).
+        5 Kandungan
+        Kandungan mie instan adalah terdapat 219 kalori yang mengandung 14% lemak, 73% karbohidrat, 3.3 gram lemak, 40.02 karbohidrat, 7,22 gram protein, 46 mg kolestrol, 378 mg sodium, vitamn A 1%, dan kalsium 2%.
+        6 Masalah jika konsumsi tidak sesuai
+        Konsumsi mie bisa menimbulkan beberapa dampak negatif bagi kesehatan. Beberapa efek samping tersebut diantaranya adalah kanker, gangguan pencernaan, maupun berbagai jenis gangguan kesehatan lainnya.
+
+        g Roti
+        1 Pengertian
+        Roti merupakan salah satu produk pangan berbahan dasar tepung terigu yang di fermentasi dengan ragi roti atau bahan pengembang lainnya yang diolah dengan cara dipanggang.
+        2 Manfaat
+        Manfaat dari 100 gram roti bisa memberikan lebih banyak energi, karbohidrat, protein, kalsium, fosfor, dan besi dibandingkan 100 gram nasi putih.
+        Tingginya kandungan serat dalam roti gandum juga sangat baik untuk sistem pencernaan. Selain itu, roti gandum juga mengandung antioksidan dan fitoestrogen yang baik untuk mencegah penyakit jantung dan kanker.
+        3 Jenis
+        Begitu banyak jenis- jenis roti yang ada. Namun, roti yang paling sering di konsumsi di Indonesia sendiri yakni roti tawar dan roti manis. Padahal, roti gandum yang berwarna kecokelatan mengandung serat lebih banyak dan dinilai juga lebih sehat.
+        4 Porsi
+        Satu porsi roti untuk sekali makan sebanyak 75 gram.
+        5 Kandungan
+        Roti mengandung zat bermanfaat, seperti vitamin B1, vitamin B2, dan niasin serta sejumlah mineral berupa zat besi, yodium, kalsium, dan kandungan mineral lainnya.
+        6 Masalah jika konsumsi tidak sesuai
+        Masalah yang ditimbulkan roti yakni bisa berisiko penyakit diabetes, membuat perut kembung, dan bisa menaikkan berat badan pula apabila dikonsumsi secara berlebihan.
+
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="jenis_laukPauk">
+        Jenis-jenis lauk pauk
+
+        a Ayam
+        1 Pengertian
+        Ayam termasuk kedalam kelompok unggas, Ayam merupakan hewan omnivore yang berkembang biak dengan cara bertelur (Ovipar). Ayam memiliki sepasang kaki bercakar, memiliki bentuk paruh yang kecil sedikit runcing, dengan jengger di kepalanya. Ayam memiliki bulu sebagai penutup tubuh, biasanya ayam jantan yang berkokok.
+        Ayam merupakan jenis pangan hewani yang memiliki tekstur daging yang kenyal. Warna daging ayam yang
+        segar biasanya berwarna merah muda atau agak kemerahan.
+        Dada ayam merupakan bagian yang paling sehat. Bagian ini mengandung lebih banyak protein dibanding paha dan sayap. Pada jumlah yang sama, jumlah kalori dada ayam juga lebih rendah dibandingkan bagian lain, yakni 170.
+        2 Manfaat
+        Manfaat daging ayam adalah mengontrol tekanan darah dan kolestrol, meningkatkan sistem kekebalan tubuh, dan meningkatkan kekuatan tulang.
+        3 Jenis
+        Beberapa jenis daging ayam diantaranya daging ayam ras, daging ayam kampung, ayam organik, dan ayam broiler.
+        4 Kandungan
+        Kandungan daging ayam terdiri atas protein, karbohidrat, lemak, kolestrol, berbagai vitamin seperti vitamin A, B1, B3, B5, B6, B12, D, dan E.
+        5 Porsi
+        Satu porsi ayam untuk sekali makan sebanyak 75 gram atau setara dengan satu potong paha atas. Setiap hari tubuh membutuhkan sekitar 0,8 hingga 1 gram protein per kilogram dari berat badan.
+        6 Masalah jika tidak sesuai
+        Masalah yang ditimbulkan akibat terlalu banyak mengonsumsi ayam yaitu dapat mengakibatkan kolestrol, sakit kepala dan gangguan neurologis.
+
+        b Daging
+        1 Pengertian
+        Daging adalah salah satu bahan pangan yang berasal dari hewan seperti sapi, domba, kambing dan hewan lainnya. Daging yang sehat adalah daging yang apabila ditekan terasa kenyal, terlihat merah segar, kelembapannya relative kering, dan aroma khas dagingnya relatif gurih.
+        2 Manfaat
+        Manfaat daging adalah mampu memelihara kesehatan sel saraf, membatu pembentukan sel darah merah, sebagai sumber zat besi, kaya akan vitamin serta sebagai sumber protein yang tinggi.
+        3 Jenis
+        Jenis daging diantaranya, daging sapi, kerbau, kambing, domba, dan jenis daging lainnya.
+        4 Porsi
+        Satu porsi daging untuk sekali makan sebanyak 60 gram atau setara dengan 1 potong daging.
+        5 Kandungan
+        Kandungan nutrisi dalam daging antara lain kalori, protein, lemak, zat besi, selenium, vitamin B6, dan B12.
+        6 Masalah jika tidak sesuai
+        Masalah yang timbul jika berlebihan dalam mengkonsumsi daging bisa mengakibatkan serangan jantung, kanker usus dan gangguan pencernaan lainnya.
+
+        c Ikan
+        1 Pengertian
+        Ikan merupakan hewan bertulang belakang (vertebrata) yang hidup dalam air. Ikan terdiri dari ikan air tawar dan ikan laut. Memiliki insang untuk mengambil oksigen dari air dan sirip untuk berenang. Tubuh ditutupi oleh sisik dan berlendir, serta mempunyai bagian tubuh yang jelas antara kepala, badan dan ekor. Ukuran ikan bervariasi mulai dari yang kecil sampai yang besar. Kebanyakan ikan berbentuk pipih.
+        Ikan adalah salah satu sumbar protein hewani. Daging ikan secara umum sangat empuk mudah dicerna oleh tubuh. Ikan dapat dikonsumsi dengan cara dimasak, dibakar ataupun digoreng.
+        2 Manfaat
+        Manfaat ikan adalah membantu pertumbuhan otak dan pembentukukan tulang, dapat mencegah penyakit jantung dan risiko diabetes, dapat menjaga kesehatan mata, dapat menjaga daya tahan tubuh dan kesehatan kulit, serta sebagai antioksidan bagi tubuh. Omega - 3 pada ikan dapat meningkatkan kognisi, serta menurunkan risiko Alzheimer.
+        3 Jenis
+        Adapun jenis ikan adalah ikan salmon, ikan trout, ikan sarden, ikan herring, makaler dan tuna. Ikan dapat diolah menjadi ikan goreng, bakso ikan, nugget, pepes ikan, ikan bakar, otak-otak, gulai ikan dan olahan lainnya.
+        4 Porsi
+        Satu porsi ikan untuk sekali makan sebanyak 120 gram setara dengan satu ekor ikan ukuran sedang.
+        5 Kandungan
+        Ikan mengandung asam lemak tak jenuh seperti omega, yodium, selenium, fluorida, zat besi, magnesium, zink, taurine, serta coenzyme. Kandungan omega 3 pada ikan jauh lebih tinggi dibanding sumber protein hewani.
+        6 Masalah jika tidak sesuai
+        Pada dasarnya, tidak ada dampak negatif jika tidak suka makan ikan. Hanya saja banyak kandungan ikan yang sangat baik bagi tubuh, sehingga sangat rugi jika tidak dikonsumsi.
+
+        d Telur
+        1 Pengertian
+        Telur berasal dari hewan yang ternak seperti ayam, dan bebek. Bentuk telur bulat oval.
+        2 Manfaat
+        Manfaat telur yaitu menjaga kesehatan tulang dan gigi, membentuk jaringan tubuh dan membantu fungsinya, menjaga sistem imun tubuh, serta mencegah munculnya kadar kolestrol jahat dalam tubuh.
+        3 Jenis
+        Jenis telur yakni telur bebek, dan telur ayam. Telur dapat dibuat dengan beragam varian olahan seperti telur ceplok balado, telur dadar, telur rebus balado, dan telur puyuh rebus.
+        4 Porsi
+        Batas aman konsumsi telur utuh yang dianjurkan dokter gizi adalah satu sampai dua butir perhari. Setiap butir telur yang dikonsumsi tiap harinya berkisar 60-120 gram.
+        5 Kandungan
+        Telur memiliki banyak kandungan seperti protein, karbohidrat, kalori, lemak, serta vitamin A, D, B1, B2, B6 dan asam folat yang berguna untuk tubuh.
+        6 Masalah jika tidak sesuai
+        Konsumsi telur jika berlebihan akan berdampak pada tubuh seperti meningkatkan kadar kolestrol dalam tubuh
+
+        e Kepiting
+        1 Pengertian
+        Kepiting merupakan jenis seafood yang berasal dari laut ataupun tambak yang dibudidayakan manusia. Tubuh kepiting umumnya ditutupi dengan cangkang, dan memiliki sepasang capit.
+        Pada bagian kaki juga dilengkapi dengan kuku dan sepasang penjepit. Cara pengolahan kepiting biasanya dimasak hidup-hidup dan akan berubah menjadi warna kemerahan saat dimasak.
+        2 Manfaat
+        Manfaat kepiting diantarannya membantu memelihara kesehatan jantung, kesehatan otak, membantu memperbaiki jaringan sel otak, dan sebagai antioksidan.
+        3 Jenis
+        Adapun jenis kepiting yakni Kepiting Raja, Kepiting Bakau, Kepiting Rajungan, Kepiting Kenari, dan Kepiting Yuyu. Adapun jenis olahan kepiting yakni kepiting saus, kepiting rebus, kepiting lada hitam, kepiting kecap saus tiram, kepiting asap, sop kepiting, dan kepiting cabai hijau.
+        4 Porsi
+        Satu porsi kepiting untuk sekali makan sebanyak 80-100 gram atau setara dengan satu ekor kepiting ukuran sedang.
+        5 Kandungan
+        Kepiting memiliki kandungan protein dan nutrisi penting lainnya seperti asam folat, vitamin B kompleks, serta berbagai mineral (kalium, magnesium, zat besi, yodium, selenium, zinc, dan mangan). Kepiting kaya omega-3.
+        6 Masalah jika tidak sesuai
+        Masalah yang ditimbulkan akibat terlalu banyak mengkomsumsi kepiting ialah mengakibatkan kenaikan kolestrol yang berlebihan dan bisa juga mengganggu sistem pencernaan serta bisa pula merusak sistem kekebalan tubuh bagi kita.
+
+        f Udang
+        1 Pengertian
+        Udang merupakan salah satu jenis seafood. Udang dapat ditemukan di hampir semua "genangan" air yang berukuran besar baik air tawar, air payau, maupun air asin. Udang berbentuk melengkung dan memiliki cangkang yang transparan. Seperti kepiting saat dimasak udang akan berubah warna menjadi kemerahan.
+        2 Manfaat
+        Manfaat udang bagi kesehatan adalah membantu pembentukan sel-sel baru dalam tubuh, menjaga kesehatan tulang dan gigi, serta menyehatkan jantung.
+        3 Jenis
+        Adapun jenis yang bisa Dikonsumsi Yaitu Udang Rebon, Udang Jerbung, Udang Dogol, Udang Peci, Udang Flower, dan Udang Karang atau Lobster. Adapun jenis olahan udang berupa udang saus, bumbu rendang, bakso goreng udang, udang goreng tepung dan jenis olahan lainnya.
+        4 Porsi
+        Satu porsi udang untuk sekali makan sebanyak 50 gram setara dengan 5 ekor udang ukuran sedang.
+        5 Kandungan
+        Kandungan udang yaitu 20 gram protein, kalsium, magnesium, fosfor kalium, zat besi, beta karoten, serat lemak dan zinc. Udang juga mengandung omega 3, omega 6, Vitamin B1, B2 dan B3.
+        6 Masalah jika tidak sesuai
+        Mengonsumsi udang secara berlebihan akan mengakibatkan alergi, kolestrol tinggi dan keracunan makanan.
+
+        g Cumi-Cumi
+        1 Pengertian
+        Cumi-cumi merupakan salah satu seafood. Cumi-cumi mentah memiliki ciri tubuh yang berlendir, agak keras dagingnya bila dipegang dan mempunyai tentakel atau kaki yang banyak. Cumi-cumi memiliki bentuk cenderung runcing dan panjang. Cumi-cumi memiliki tinta hitam dalam tubuhnya.
+        2 Manfaat
+        Manfaat cumi-cumi bagi tubuh yaitu mengatur pembentukan sel darah merah, menjaga keseimbangan tekanan darah, serta membantu menurunkan kolestrol pada tubuh. Tinta cumi juga sangat bermanfaat sebagai antioksidan.
+        3 Jenis
+        Adapun jenis cumi yakni cumi sotong, cumi karang, cumi banga, cumi sero dan cumi telur. Adapun jenis olahan cumi-cumi yaitu cumi yakni asin pedas, sambal cumi, cumi hitam bumbu kunyit dan jenis olahan lainnya.
+        4 Porsi
+        Satu porsi cumi untuk sekali makan sebanyak 40 gram setara dengan 1 ekor cumi ukuran sedang.
+        5 Kandungan
+        Cumi-cumi memiliki kandungan lemak dan kalori yang sangat rendah. Cumi-cumi mengandung omega-3.
+        6 Masalah yang timbul jika tidak sesuai
+        Jika mengonsumsi cumi-cumi secara berlebihan akan beresiko menimbulkan penyakit stroke, jantung, kanker, hingga tekanan darah tinggi.
+
+        h Tempe
+        1 Pengertian
+        Tempe merupakan makanan yang terbuat dari kacang kedelai atau beberapa bahan lain yang diproses melalui fermentasi menggunakan mikroorganisme Rhizopus sp. atau yang biasa dikenal sebagai starter/ragi tempe.
+        2 Manfaat
+        Manfaat mengonsumsi tempe yaitu sebagai antioksidan, membangun dan memperbaiki sel tubuh yang rusak, menurunkan resiko osteoporosis, dan menangkal reaksi radikal bebas.
+        3 Jenis
+        Jenis olahan tempe terdiri dari tempe goreng tepung, tempe goreng mendoan, tempe penyet, tempe orek dan tempe kering.
+        4 Porsi
+        Satu porsi tempe untuk sekali makan sebanyak 60 gram setara dengan 2 potong segitiga.
+        5 Kandungan
+        Kandungan gizi tempe terdiri dari protein 20,7 gram, lemak 8,8 gram, karbohidrat 13,5 gram, dan vitamin B12 1,7 gram.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang ditimbulkan jika mengkomsumsi tempe secara berlebih yaitu mengakibatkan diabetes, penyakit jantung, dan obesitas.
+
+        i Tahu
+        1 Pengertian
+        Tahu merupakan bahan makanan yang terbuat dari kacang kedelai yang dipadatkan, berbentuk kotak dengan warna putih dan bertekstur sangat lembut.
+        2 Manfaat
+        Tahu bermanfaat sebagai zat besi, menurunkan kadar kolesterol jahat (LDL) di dalam tubuh, tekanan darah tinggi, dan risiko aterosklerosis, dan meningkatkan kadar kolesterol baik (HDL) sehingga dapat mencegah penyakit jantung.
+        3 Jenis
+        Jenis olahan tahu sangat beragam, seperti tahu isi, tahu balado, tahu kecap, tahu gejrot, tahu tek, tahu crispy ataupun sebagai bahan tambahan pada makanan tertentu seperti gado-gado.
+        4 Porsi
+        Satu porsi tahu untuk sekali makan sebanyak 70 gram setara dengan 1 potong tahu.
+        5 Kandungan
+        Tahu mengandung 10% kebutuhan tubuh akan zat tembaga. Selain itu, tahu juga mengandung zat besi dan protein nabati.
+        6 Masalah yang timbul jika tidak sesuai
+        Pada umumnya, banyak yang mengkonsumsi tahu dengan cara digoreng daripada direbus atau dikukus. Beberapa risiko akibat makan tahu goreng secara berlebihan yaitu kelebihan berat badan, meningkatkan risiko penyakit kardiovaskuler, meningkatkan risiko diabetes, dan meningkatkan risiko munculnya kanker.
+
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="jenis_sayuran">
+        Jenis-jenis Sayuran
+
+        a Sayur Asem
+        1Pengertian
+        Sayur asem merupakan sayur khas Indonesia yang melambangkan keragaman karena isi sayurannya yang beraneka ragam seperti kacang panjang, jagung manis, labu, kacang tanah, melinjo, terung, nangka, jagung manis, daun melinjo. Ciri khas sayur kuah ini seperti namanya adalah rasa asem.
+        2 Manfaat
+        Manfaat mengosumsi sayur asem adalah melindungi tubuh dari penyakit kronis, mengontrol kadar gula darah dan menurunkan berat badan, meningkatkan metabolisme tubuh, menguatkan tulang, meningkatkan daya tahan tubuh, mengurangi gejala alergi, dan mencegah penyakit kulit.
+        3 Jenis
+        Jenis olahan sayur asam yaitu sayur asam Jakarta (asam kangkung dan sayur asam ikan asin). Sayur asam dari Sumatra memiliki kuah yang lebih keruh, merah, dan berminyak dibandingkan dengan sayur asam Betawi yang berkuah bening. Sayur asam dari Aceh dikenal dengan nama sayur asam sunti. Sayur asem Kalimantan, memakai terung dan asam rimbang, kunyit, dan kepala ikan patin.
+        4 Porsi
+        Satu porsi sayur asam untuk sekali makan sebanyak 250 gram atau setara dengan 8 sendok sayur (setiap sendok sayur mengandung 30 gram sayur asem).
+        5 Kandungan
+        Kandungan sayur asem yaitu, energi sebesar 29 kilokalori, protein 0,7 gram, karbohidrat 5 gram, lemak 0,6 gram, kalsium 40 miligram, fosfor 61 miligram, dan zat besi 3,1 miligram. Selain itu di dalam Sayur Asem juga terkandung vitamin A sebanyak 47 IU, vitamin B1 0,1 miligram dan vitamin C 0,3 miligram.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang timbul jika mengonsumsi sayur asem secara berlebihan yaitu membuat tubuh sulit mencerna makanan karena kandungan karbohidrat yang tinggi menyebabkan gula darah meningkat. Selain itu mengonsumsi kentang tidak dianjurkan setiap hari dikarenakan banyaknya kadungan residu peptisida yang bisa meracuni tubuh kita.
+
+        b Sayur Sop
+        1 Pengertian
+        Sayur sop merupakan salah satu sayuran yang enak dan menyegarkan. Sayur sop terdiri dari kembang kol, brokoli, wortel, kentang, tomat, daun seledri dan rempah-rempah serta kuah kaldu.
+        2 Manfaat
+        Manfaat mengonsumsi sayur sup yaitu dapat mengembalikan cairan tubuh yang hilang, memperlancar sistem pencernaan, mampu memulihkan dan meringankan kondisi tubuh ketika sakit.
+        3 Jenis
+        Olahan sayur sop khas Indonesia yang sering di konsumsi adalah Sup Tunjang, Sup Kaki Kambing, Sup Kimlo, Sup Bunga Matahari, Sup Buntut, Sup Iga, Sup Konro, Sup Ikan Batam, Sup Gangan Lempah Kuning, Sup Medan, dan Sup Saudara.
+        4 Porsi
+        Satu porsi sayur sop untuk sekali makan sebanyak 250 gram atau setara dengan 8 sendok sayur (setiap sendok sayur mengandung 30 gram sayur sop).
+        5 Kandungan
+        Sayur Sup mengandung energi sebesar 27 kilokalori, protein 1,3 gram, karbohidrat 1 gram, lemak 2 gram, kalsium 168 miligram, fosfor 57 miligram, dan zat besi 1,8 miligram. Selain itu di dalam Sayur Sop juga terkandung vitamin A sebanyak 67 IU, vitamin B1 0,1 miligram dan vitamin C 0,2 miligram.
+        6 Masalah yag timbul jika tidak sesuai
+        Masalah yang timbul apabila mengonsumsi terlalu banyak sayur sup secara berlebihan apalagi kandungan serat di dalamnya dalam jumlah besar menyebabkan ketidaknyamanan pada pencernaan seperti gas, kembung dan kram.
+
+        c. Sayur Bayam Bening
+        1 Pengertian
+        Sayur bayam merupakan jenis sayuran yang pada umumnya terdiri atas daun bayam, jagung, bumbu penyedap dan tambahan bahan lainnya sesuai selera seperti cabai.
+        2 Manfaat
+        Sayur bayam bermanfaat sebagai antioksidan (asam alfa-lipoat) yang dapat menurunkan kadar glukosa, meningkatkan sensitivitas insulin, dan mencegah oksidatif, dan mencegah stres pada pasien dengan penyakit diabetes.
+        3 Jenis
+        Jenis olahan sayur bayam yakni sayur bayam sederhana tanpa tambahan bahan lainnya dan sayur bayam dengan tambahan jagung, wortel dan kacang panjang.
+        4 Porsi
+        Satu porsi sayur bayam untuk sekali makan sebanyak 250 gram atau setara dengan 8 satu sendok sayur (setiap sendok sayur mengandung 30 gram sayur bayam).
+        5 Kandungan
+        Kandungan dalam 100 gram sayur bayam mengandung gizi dengan perincian yaitu, energi 240 kilokalori, protein 9,08 gram, karbohidrat: 30,65 gram, lemak 12,45 gram, kalsium 135 miligram, fosfor 184 miligram, zat besi 4,26 miligram . Selain itu, dalam satu porsi per takaran 100 gram sayur bayam terdapat, Vitamin A 1465 IU, Vitamin B1 0,14 miligram, Vitamin C 29 miligram.
+        6 Masalah yang timbul jika tidak sesuai
+        Bayam memiliki dampak buruk bagi kesehatan seperti hanya boleh dikonsumsi untuk satu kali makan dan tidak boleh memanaskan kembali sayur yang sudah masak. Bayam mengandung beberapa senyawa alergenik salah satunya yaitu oksalat (oxalate) yang dapat mengganggu fungsi ginjal.
+
+        d Sayur Lodeh
+        1 Pengertian
+        Sayur Lodeh merupakan jenis sayur sederhana yang terdiri atas labu, jagung, kentang dan bahan lainnya lalu diberi kuah santan dan bumbu sederhana hingga rasanya gurih dan sedap.
+        2 Manfaat
+        Manfaat mengonsumsi sayur lodeh adalah meningkatkan nafsu makan, menambah stamina, meningkatkan kecerdasan, melancarkan buang air kecil, mengatasi sembelit, mencegah kolesterol tinggi, menyehatkan jantung, makanan diet ketat, meningkatkan fungsi hati, dan mencegah kanker.
+        3 Jenis
+        Jenis olahan sayur lodeh yaitu Sayur Lodeh Jawa Timur), Sayur Lodeh Tewel Komplet, Sayur Lodeh Manisah dan Ceker, Sayur Lodeh Rebung Pedas, Sayur Lodeh Rebung, Ceker, dan Petai, Sayur Lodeh Pepaya Muda dan Tahu, Sayur Lodeh Jantung Pisan dan masih banyak lagi.
+        4 Porsi
+        Satu porsi sayur lodeh untuk sekali makan sebanyak 250 gram atau setara dengan 8 satu sendok sayur (setiap sendok sayur mengandung 30 gram sayur lodeh).
+        5 Kandungan
+        Kandungan pada sayur lodeh adalah energi 240 kilokalori, protein 9,08 gram, karbohidrat 30,65 gram, lemak 12,45 gram, kalsium 135 miligram, fosfor 184 miligram, zat besi 4,26 miligram. Selain itu di dalam sayur lodeh juga terkandung vitamin A sebanyak 1465 IU, vitamin B1 0,14 miligram dan vitamin C 29 miligram.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang timbul jika terlalu banyak mengonsumsi sayur lodeh dengan kadar santan yang berlebihan akan menaikkan kadar kolestrol karena lemak jenuh yang terandung pada santan yang menimbulkan penyakit kardiovakular misalnya penyakit jantung.
+
+        e Tumis Sawi
+        1 Pengertian
+        Tumisan sawi merupakan sayur yang diolah dengan cara ditumis terlebih dahulu secara terpisah bersama bumbu dasar lalu setelah sayur layu maka ditambahkan pelengkap seperti wortel, cabai, dan lainnya
+        2 Manfaat
+        Manfaat tumisan sawi adalah sawi sebagai antioksidan, detoksifikasi, mencegah kolesterol, kaya akan serat, sumber fitokimia, glukosinolat, dan fenol, menjaga kondisi tubuh tetap fit, mengobati psoriasis, mencegah menopause, mengatasi beberapa gangguan pernafasan, sumber nutrisi, dan baik untuk kesehatan tulang
+        3 Jenis
+        Olahan tumisan sawi hijau diantaranya oseng sawi telur, sawi keriting tumis bawang, sawi tumis sosis, tumis sawi cah jamur siram, caisim cah kacang mede, tumis sawi dan tauge, egg tufu tumis sawi hijau, sawi tahu saus tiram, dan tumis sawi bakso.
+        4 Porsi
+        Satu porsi tumis sawi untuk sekali makan sebanyak 100 gram atau setara dengan 9 satu sendok makan (setiap sendok makan mengandung 15 gram tumis sawi).
+        5 Kandungan
+        Kandungan gizi sawi per 70 gram dengan perincian kalori: 9 Kkal, protein: 1,05 gr, karbohidrat: 1,53 gr, serat: 0,7 gr, kalsium: 74 mg, lemak tak jenuh tunggal: 0,067 gr, zat besi: 0,56 mg, fosfor: 26 mg.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang timbul apabila mengonsumsi sawi secara berlebihan yaitu senyawa goitrogen dalam tubuh akan meningkat dan dapat menghambat kelenjar tiroid menghasilkan hormon tiroid. Akbatnya tubuh mudah lelah dan pusing, berat badan naik tanpa sebab yang jelas, sulit berkonsentrasi, sulit buang air besar dan otot-otot menjadi lemah. Selain itu sawi mengandung senyawa oksalat yang apabila dikonsumsi secara berlebihan dapat menyebabkan terjadinya gangguan pada ginjal.
+
+        f Tumis Kacang Panjang
+        1 Pengertian
+        Tumis kacang panjang adalah sayur olahan dengan cara ditumis. Sayur ini biasanya diolah dimana kacang panjang yang telah dipotong kecil ditumis bersama cabai, bawang putih terlebih dahulu baru setelah layu masukkan bahan lainnya yang menjadi pelengkap masakan seperti telur tahu dan lainnya.
+        2 Manfaat
+        Manfaat tumis kacang panjang yaitu dapat meningkatkan kesehatan kulit, menjaga kesehatan jantung, menurunkan risiko kanker usus, mencegah cacat tabung saraf pada janin, dan menangkal radikal bebas.
+        3 Jenis
+        Jenis tumisan kacang panjang yaitu tumis kacang panjang dengan tambahan tempe, rebon, telur, toge, bakso, sosis, petai, terasi, kol, kecap, dan tahu pedas.
+        4 Porsi
+        Satu porsi tumis kacang panjang untuk sekali makan sebanyak 100 gram atau setara dengan 9 satu sendok makan (setiap sendok makan mengandung 15 gram tumis kacang panjang).
+        5 Kandungan
+        Nilai gizi yang terkandung di dalam kacang panjang mentah per 100 gram adalah, 47 kalori, 50 gram lemak total, 0 gram kolesterol, 8 gram karbohidrat total atau 2% dari nilai harian yang dibutuhkan, 3 gram protein atau 5% dari nilai harian yang dibutuhkan, serta 4mg natrium atau 0% dari nilai harian yang dibutuhkan.
+        6 Masalah yang timbul jika tidak sesuai
+        Meskipun memiliki manfaat untuk tubuh, ternyata mengonsumsi kacang panjang juga memiliki efek samping jika terlalu berlebihan mengkonsumsinya. Efek samping yang dapat timbul di antaranya seperti reaksi alergi, gangguan pencernaan, hingga memicu gangguan hati dan ginjal.
+
+        g Tumis Kangkung
+        1 Pengertian
+        Tumis kangkung pada umumnya adalah masakan olahan dari bahan dasar kangkung yang ditumis bersama bawang putih, bawang merah cabe rawit yang diiris tipis dan ditambahkan saus tiram dan penyedap rasa lainnya seperti kecap.
+        2 Manfaat
+        Manfaat mengonsumsi tumis kangkung adalah menjaga kesehatan mata, meningkatkan imunitas tubuh karena sumber Vitamin A dan C dalam kangkung mampu meningkatkan imunitas tubuh, melawan radikal bebas, mengatur keseimbangan cairan, dan menurunkan tekanan darah.
+        3 Jenis
+        Jenis olahan tumisan kangkung pada umumnya sederhana hanya kangkung, dan bumbu dasar. Namun ada juga yang menambahkan penyedap rasa seperti terasi, dan tauco. Ada juga yang sengaja membuat sayur kangkung rasa manis dengan tambahan kecap asin dan pedas dengan tambahan cabai.
+        4 Porsi
+        Satu porsi tumis kangkung untuk sekali makan sebanyak 100 gram atau setara dengan 10 sendok makan (setiap sendok makan mengandung 10 gram tumis kangkung).
+        5 Kandungan
+        Kandungan kangkung yaitu Vitamin A 6,300 IU, Energi sebesar 29 kalori, Protein 9 gram, Lemak 0,3 gram, Karbohidrat 5,49 gram, Serat 1,0 gram, Kalsium 79 mg, Fosor 50 mg, Zat besi 2,5 mg, Vitamin A 6.300 IU, Vitamin B1 0,07 mg, Vitamin C 32 mg, Air 89,7 gram.
+        6 Masalah yang timbul jika tidak sesuai
+        Bahaya kangkung bukan datang dari zat yang dikandungnya, melainkan cara pengolahan yang dilakukan sebelum dihidangkan. Kangkung harus bersih dan harus dimasak dengan betul-betul matang. Jika tidak, bisa terjadi kasus Fasciolopsiasis yaitu kondisi yang disebabkan oleh kuman Fasciolopsis buski, yang bisa masuk ke dalam tubuh menempel pada dinding usus dan menyebabkan gangguan pencernaan, reaksi alergi, dan sakit perut hebat.
+
+        h Tumis Tauge
+        1 Pengertian
+        Tumis tauge adalah sayuran sederhana dengan bahan dasar tauge, bawang putih, bawang merah, garam dan tambahan penyedap rasa lainnya.
+        2 Manfaat
+        Manfaat tumis tauge yaitu dapat melancarkan pencernaan, meningkatkan metabolism, meningkatkan sirkulasi darah dan memulihkan anemia, menurunkan berat badan, menjaga kesehatan jantung dan mencegah stroke, meningkatkan sistem imun, menyehatkan dan menumbuhkan rambut, dan mencegah kanker.
+        3 Jenis
+        Jenis olahan tumis tauge adalah oseng touge, tumis touge oncom, tumis touge renyah, tumis tauge sederhana, dan berbagai masakan olahan tumis tauge yang dicampur dengan bahan lain seperti tahu, pete, kerang, bakso, jagung dan lainnya.
+        4 Porsi
+        Satu porsi tumis tauge untuk sekali makan sebanyak 70 gram atau setara dengan 7 sendok makan (setiap sendok makan mengandung 10 gram tumis tauge).
+        5 Kandungan
+        Kandungan tauge dalam 100 gram tauge segar yaitu 34 kalori, 3 gram protein, dan 1 gram lemak. Selain itu, kandungan betakaroten sebesar 41 mg, vitamin C 5 mg, vitamin E 0.5 mg, kalsium 133 mg dan kalium 100 gram. Berbagai vitamin dan mineral.
+        6 Masalah yang timbul jika tidak sesuai
+        Konsumsi tauge secara berlebihan dapat menimbulkan masalah kesehatan seperti penyerapan nutrisi yang buruk dan penumpukan gas pada perut yang mengakibatkan perut kembung. Bagi pengidap tekanan darah tinggi dan orang yang sudah mengonsumsi obat dan mengonsumsi taoge dalam jumlah berlebih justru memperburuk kondisinya.
+
+        i Wortel Rebus
+        1 Pengertian
+        Wortel rebus adalah makanan sederhana yang kaya kandungan gizi yang sangat sederhana karena dibuat tidak membutuhkan campuran apapun hanya garam daur saja. Hasil wortel rebus ini menambah kandungan gizi pada wortel.
+        2 Manfaat
+        Manfaat mengonsumsi wortel rebus yaitu sebagai antioksidan lebih banyak tiga kali lipat lebih tinggi dibandingkan dengan wortel mentah sehingga memudahkan perlindungan ekstra terhadap tubuh dari racun maupun sumber penyakit yang berasal dari dalam dan luar. Wortel rebusan meningatkan falcarinol yang merupakan senyawa antikanker yang berfungsi untuk mencegah pertumbuhan sel-sel abnormal yang menggerogoti tubuh dan senyawa beta karoten yang tinggi yang dapat menjaga kesehatan mata.
+        3 Jenis
+        Jenis olahan wortel rebus hanya sederhana dengan tambahan aram dan merica. Wortel rebus baik juga diolah bersama makanan yang lain seperti pastel isi wortel rebus, sup ayam wortel rebus dan olahan masakan lainnya.
+        4 Porsi
+        Satu porsi wortel rebus untuk sekali makan sebanyak 15 gram atau setara dengan satu potong besar mengandung 15 gram.
+        5 Kandungan
+        Kandungan gizi wortel yaitu energi 28 kkal, protein 0,70 gram, lemak 0,50 gram, karbohidrat 6,30 gram. Wortel kaya beta-karoten yang bertanggung jawab atas kandungan vitamin A. Selain itu, wortel mengandung banyak serat, vitamin C, vitamin K, kalium dan mangan.
+        6 Masalah yang timbul jika tidak sesuai
+        Wortel adalah sayuran yang kaya kandungan vitamin A, tetapi bila mengonsumsinya terlalu banyak dapat menyebabkan keracunan hypervitaminosis A atau keracunan vitamin A dapat meliputi kehilangan nafsu makan, mual, muntah, rambut rontok, kelelahan, dan perdarahan pada hidung. Selain itu bahaya wortel lainnya jika dimakan terlalu banyak bisa menyebabkan karotenemia yaitu, suatu kondisi tidak berbahaya namun membuat kulit berwarna jingga karena terlalu banyak beta-karoten dalam aliran darah.
+
+        j Buncis Rebus
+        1 Pengertian
+        Buncis rebus adalah sayur rebusan yang bahan dasarnya buncis dan diberikan tambahan enyedap rasa seerti garam dan merica serta tambahan bumbu dasar seperti bawag merah dan bawang putih.
+        2 Manfaat
+        Manfaat mengonsumsi bunci rebus adalah membantu menurunkan berat badan, baik untuk kesehatan jantung, mencegah kanker, meningkatkan kesuburan, mencegah depresi, mengandung protein, sumber vitamin, mengandung mineral, meningkatkan energy, dan baik untuk kesehatan tulang, baik untuk kesehatan mata.
+        3 Jenis
+        Jenis olahan buncis rebus hanya olahan sangat sederhana dengan tambahan garam dan merica.
+        4 Porsi
+        Satu porsi buncis rebus untuk sekali makan sebanyak 25 gram atau setara dengan 5 buah buncis
+        5 Kandungan
+        Kandungan dalam 100 gram buncis terdiri dari 35 kalori, 3 gram serat, 2 gram protein, 5 mg karbohidrat, 12 mg vitamin C, 43 mikrogram vitamin K, 33 mikrogram folat, 690 IU vitamin A. Buncis juga kaya akan mineral, kalsium, zat besi, magnesium, fosfor, kalium, dan zinc.
+        6 Masalah yang timbul jika tidak sesuai
+        Mengonsumsi buncis secara berlebihan dapat menimbulkan reaksi alergi dalam tubuh. Pada penelitian klinis ini, pasien mengonsumsi air rebusan buncis dalam jumlah yang banyak, yaitu sebanyak 32 gram , setelah itu pasien tersebut menunjukkan gejala berupa sesak nafas dan gatal-gatal pada kerongkongan.
+
+        k Labu Siam
+        1 Pengertian
+        Labu siam adalah buah berwarna hijau muda dengan bentuk mirip buah pir dengan satu lubang besar dan daging serta kulit yang dapat dimakan. Daging labu siam memiliki rasa yang ringan, teksturnya berada di antara kentang dan mentimun.
+        2 Manfaat
+        Manfaat labu siam yaitu membantu memenuhi kebutuhan nutrisi ibu selama kehamilan, menjaga agar kadar kolesterol, mengontrol tekanan darah tinggi, membantu mengatasi anemia, , menangkal radikal bebas, sebagai antioksidan, mengandung antikanker yang bisa menghambat pertumbuhan dan perkembangan sel kanker.
+        3 Jenis
+        Hanya ada dua jenis masakan olahan dari labu siam yaitu labu siam santan dan labu siam rebus.
+        4 Porsi
+        Satu porsi labu siam untuk sekali makan sebanyak 50 gram atau setara dengan 1 buah labu siam kecil.
+        5 Kandungan
+        Kandungan nutrisi yang terdapat pada satu buah labu siam yang berukuran 203 gram terdiri atas kalori 39, karbohidrat 9 gram, protein 2 gram.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang timbul ketika dikonsumsi secara berlebihan yaitu menimbulkan penyakit diabetes karena buah ini mengandung glukosa.
+
+        l Balado Terong
+        1 Pengertian
+        Terong Balado adalah masakan terung ungu degan rasa pedas karena dimasak dengan bumbu rempah dengan banyak menggunakan cabai.
+        2 Manfaat
+        Manfaat terong balado yaitu membantu mengurangi risiko munculnya penyakit jantung, mampu mengontrol kadar gula darah, menurunkan berat badan, dipercaya dapat membantu mencegah kanker, baik untuk menjaga kadar kolesterol, kesehatan hati, dan kesehatan otak.
+        3 Jenis
+        Olahan terong balado pada umumnya sederhana, namun ada yang memasak dengan menambahkan bumbu agar terasa pedas manis dan ada juga yang menambahkan bawang, kacang dan lainnya.
+        4 Porsi
+        Satu porsi terong balado untuk sekali makan sebanyak 90 gram atau sama dengan 3-4 potong terong balado.
+        5 Kandungan
+        Kandungan pada 80 gram dalam terong ungu mengandung 20 kalori, 3 gram serat, 1 gram protein, 5 gram karbohidrat, 5 persen folat, 5 persen kalium, 10 persen mangan, 4 persen vitamin K, dan 3 persen vitamin C.
+        6 Masalah yang timbul jika tidak sesuai
+        Terong adalah bagian dari keluarga nightshade yang mengandung alkaloid, termasuk solanin. Kandungan itu bisa menjadi racun jika mengonsumsi terung ungu secara berlebihan. Kandungan tersebut dapat menyebabkan gejala seperti terbakar di tenggorokan, mual dan muntah, dan aritmia jantung.
+
+        m Terong Bulat Hijau
+        1 Pengertian
+        Terong hijau merupakan jenis terung dengan tekstur daging yang agak keras dibanding jenis terung lainnya. Bentuk terung hijau bulat dan ukurannya kecil dan biasanya dimasak dengan memotongnya menjadi bagian yang kecil karena proses masaknya yang lama.
+        2 Manfaat
+        Manfaat mengonsumsi terong hijau yaitu dapat mengendalikan kadar gula darah dan kolesterol, mampu mencegah kanker, dan bermanfaat untuk kesehatan jantung.
+        3 Jenis
+        Jenis olahan terong bulat hijau yaitu, tumis terong hijau, sambal terong hijau, terong hijau sambal santan dan masakan olahan lainnya. Selain ditumis terong hijau juga biasanya menjadi tambahan bahan pada sayur bening.
+        4 Porsi
+        Satu porsi terong bulat hijau untuk sekali makan sebanyak 50 gram atau setara dengan 1 buah terong bulat hijau.
+        5 Kandungan
+        Kandungan terong hijau yaitu vitamin, mineral, vitamin A, vitamin E, vitamin B1, vitamin B3, vitamin B2, vitamin B6, vitamin B9, vitamin B12, vitamin K, kalsium, zat besi, kalium, sodium, fosfor, mangan, dan zinc.
+        6 Masalah yang timbul jika tidak sesuai
+        Beberapa efek samping yang dapat ditimbulkan oleh terong hijau diantaranya menyebabkan mual karena memiliki kandungan yang bernama solanine. Senyawa solanine ini akan hilang apabila sudah dimasak senyawa solanine apabila di konsumsi secara terus menerus akan mengakibatkan mual dan muntah-muntah. Selain itu terong hijau juga dapat menyebabkan batu ginjal karena kandungan asam oksalat di dalam terong dapat menyebabkan terbentuknya senyawa tak larut dan tak dapat dicerna oleh tubuh. Senyawa tersebut berasal dari penumpukan asam oksalat yang berlebih yang berupa kristal-kristal padat. Kristal-kristal ini akan mengendap di dalam ginjal dan dapat menyebabkan rasa nyeri. Pada akhirnya, kristal-kristal ini lah yang menyebabkan terjadinya penyakit batu ginjal yang membuat fungsi ginjal tidak berjalan semestinya.
+
+        n Terong Bulat Ungu
+        1 Pengertian
+        Terong ungu adalah jenis sayuran yang memiliki bentuk bulat. Tekstur dagingnya terung ungu bulat lebih lembek dibanding jenis terong bulat lainnya.
+        2 Manfaat
+        Manfaat terong ungu adalah membantu menurunkan berat badan, mencegah penyakit diabetes, melawan radikal bebas, mengurangi risiko penyakit jantung, menurunkan kolesterol, baik untuk kesehatan kulit, meningkatkan fungsi otak, mencegah penyakit kanker, dan menjaga kesehatan mata.
+        3 Jenis
+        Jenis olahan untuk terong ungu yaitu, pecak terong ungu, terong ungu balado, terong ungu masak kemangi, satan terong ungu, mangut terong ungu, terong ungu sambal ebi dan masih banyak lagi masakan lainnya.
+        4 Porsi
+        Satu porsi terong bulat ungu untuk sekali makan sebanyak 40 gram atau setara dengan 1 buah terong bulat ungu diameter 5 cm.
+        5 Kandungan
+        Kandungan pada terong bulat ungu yaitu serat, kalium, vitamin C, vitamin B6, fitonutrien untuk kesehatan jantung, dan asam klorogenat yang berfungsi sebagai antivirus, antimikroba, dan antikarsinogen.
+        6 Masalah yang timbul jika tidak sesuai
+        Konsumsi terong ungu secara berlebihan akan berdampak buruk bagi kesehatan tubuh diantaranya menganggu kesehatan reproduksi pria karena dapat mengurangi jumlah produksi dan motilitas sel sperma pria, serta dapat menimbulkan anemia pada ibu hamil.
+
+        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="jenis_buah">
+         Jenis-jenis Buah-buahan
+
+        a Alpukat
+        1 Pengertian
+        Alpukat (Persea Americana) adalah
+        buah tropis atau subtropis yang berasal
+        dari Amerika Selatan. Alpukat memiliki
+        tekstur daging buah yang agak lembut
+        mudah di serut dari kulitnya apabila mau
+        dibuat jadi jus.
+        2 Manfaat
+        Alpukat memiliki manfaat yakni
+        menjaga kesehatan jantung,
+        menurunkan risiko gangguan metabolik,
+        mencegah cacat lahir pada janin,
+        melancarkan sistem pencernaan,
+        menjaga kesehatan kulit, mencegah
+        kanker dan membantu pengobatan pada mata.
+        3 Jenis
+        Ada 10 jenis alpukat yang dikembangbiakkan di Indonesia yaitu alpukat mentega, alpukat wina, alpukat miki, alpukat hass, alpukat jambon, alpukat pluwang , alpukat meg murapi, alpukat kendil, alpukat aligator, dan alpukat tanpa biji.
+        4 Porsi
+        Satu porsi alpukat untuk sekali makan sebanyak 130 gram atau setara dengan 1 buah alpukat ukuran sedang.
+        5 Kandungan
+        Alpukat mengandung vitamin C, vitamin K, kalium, magnesium, mangan, zat besi, folat, vitamin E, dan vitamin B6. Kandungan alpukat terdiri sekitar 73 % air, 15 % lemak, 8.5 % karbohidrat yang sebagian besarnya serat dan 2 % protein.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang muncul ketika banyak mengonsumsi buah alpukat yaitu, meningkatkan berat badan, defisiensi nutrisi, alergi, menurunkan produksi asi pada ibu hamil dan menyusui, merusak hati, menurunkan kerja obat, dan iritasi pada saluran pencernaan.
+
+        b Anggur
+        1 Pengertian
+        Buah anggur adalah buah yang rasanya sedikit asam tetapi masih ada rasa manisnya. Bantuknya bulat dan
+        daging buahnya agak lembek dan jika disentuh dengan jari.
+        2 Manfaat
+        Manfaat buah anggur yaitu sebagai sistem kekebalan tubuh, perkembangan jaringan ikat, serta penyembuhan luka, menncegah kanker, melawan penuaan dini, menjaga kesehatan otak, meredakan alergi dan peradangan, menurunkan kadar kolestrol, menjaga kesehatan mata, mengendalikan gula darah, dan membantu menurunkan berat badan.
+        3 Jenis
+        Jenis buah anggur yaitu buah anggur dengan kulit yang merah keunguan, hijau, dan hitam.
+        4 Porsi
+        Satu porsi anggur untuk sekali makan sebanyak 120 gram atau setara dengan 10 buah anggur.
+        5 Kandungan
+        Kandungan dalam buah anggur dalam 150 gram yaitu 122 gram air, 104 kalori, 1,09 gram protein, 7,3 gram karbohidrat, 1,36 gram serat, 23,4 gram gula total, 15,1 miligram milligram kalsium, 10,6 milligram magnesium, 30,2 milligram fosfor, 288 milligram kalium, 4,83 milligram vitamin C, 3.02 mikrogram folat atau vitamin B9, 58,9 mikrogram beta karoten.
+        6 Masalah yang timbul jika tidak sesuai
+        Mengonsumsi buah anggur secara berlebihan dapat membahayakan dapat menimbulkan alergi, dapat menimbulkan gangguan pencernaan seperti maag, diare, atau konstipasi.
+
+        c Apel
+        1 Pengertian
+        Apel adalah jenis buah yang biasanya berwarna merah kulitnya jika sudah matang, namun ada juga berwarna hijau dan kuning. Kulit buahnya agak lembek dan daging buahnya keras.
+        2 Manfaat
+        Manfaat dari buah apel yaitu, dapat menurunkan berat badan, dapat menguatkan tulang, mencegah dan mengobati asma, mencegah penyakit kanker, mengobati reumatik, sebagai
+        sumber energi, bagus untuk kecerdasan otak, dan membuat payudara menjadi lebih sehat.
+        3 Jenis
+        Jenis apel yang sering dikonsumsi masyarakat Indonesia adalah Apel Manalagi, Apel Jonathan, Apel Rome Beauty, Apel Granny Smith, Apel Fuji, Apel Red Delicious, Apel Golden Delicious, Apel Mcintosh, Apel Gala, dan Apel Black Diamond.
+        4 Porsi
+        Satu porsi apel untuk sekali makan sebanyak 150 gram atau setara dengan 1 b uah apel.
+        5 Kandungan
+        Apel mempunyai kandungan nutrisi antioksidan, flavonoid, serat, air, vitamin C, Vitamin K, folat, kalium, pektin, dan asam ursolat.
+        6 Masalah yang timbul jika tidak sesuai
+        Konsumsi apel secara berlebihan dapat menimbulkan masalah pencernaan, berpotensi mengalami fluktuasi gula darah, merusak gigi, dan dapat membuat lambung bekerja kerja ekstra.
+
+        d Belimbing
+        1 Pengertian
+        Belimbing (star fruit) merupakan buah yang kulitnya berwarna kuning dan hijau memiliki daging putih manis serta asam. Terkadang dapat langsung
+        dimakan setelah dikupas, tapi juga bisa dijadikan jus dan rujak.
+        2 Manfaat
+        Manfaat belimbing yaitu dapat menyehatkan tubuh, dapat meningkatkan kesehatan mata, membantu menurunkan berat badan, meningkatkan fungsi sistem kekebalan tubuh, menyeimbangkan tekanan darah, menyehatkan tulang dan menurunkan kolesterol serta meningkatkan kesehatan rambut.
+        3 Jenis
+        Jenis belimbing yaitu Belimbing Demak, Belimbing Wulan, Belimbing Dewi, Belimbing Paris dan Belimbing Sembiring.
+        4 Porsi
+        Satu porsi belimbing untuk sekali makan sebanyak 150 gram atau setara dengan 1 buah belimbing.
+        5 Kandungan Kandangan buah belimbing yaitu vitamin C, protein, vitamin A, vitamin B5, folat, tembaga, kalium, magnesium, dan mineral.
+        6 Masalah yang timbul jika tidak sesuai
+        Belimbing mengandung oksalat dan karamboksin yang tinggi sehingga dapat mengeluarkan toksis atau racun. Seseorang yang menderita gagal ginjal tidak diperbolehkan mengonsumsi belimbing berlebihan karena toksis tidak dapat dikeluarkan secara efisien. Gejala yang muncul akibat toksis ini adalah cegukan, gangguan kesadaran, muntah, dan pada level yang paling parah dapat menyebabkan kematian.
+
+        e Durian
+        1 Pengertian
+        Durian adalah buah yang kulit keras dan berlekuk-lekuk tajam sehingga menyerupai duri. Rasanya manis dan tekstur dagingnya ada yang lembek dan ada yang keras.
+        2 Manfaat Manfaat buah durian adalah dapat memperbaiki suasana hati, mengatasi susah tidur, mengontrol tekanan darah, memasok energi, meningkatkan kesehatan tulang, menjaga kesehatan
+        kulit, mendukung kesehatan jantung dan menunjang kehamilan yang sehat
+        3 Jenis
+        Jenis durian yaitu Durian Monthong, Durian Musang King, Durian D24, Durian Petruk, Durian Bawor, Durian Merah Banyuwangi, dan Durian Pelangi
+        4 Porsi
+        Satu porsi durian untuk sekali makan sebanyak 100 gram atau setara dengan 1 juring durian.
+        5 Kandungan Kandungan durian dalam 100 gram durian yaitu 27 gram karbohidrat, 4 gram serat, 1,5 gram protein, 5 gram lemak, vitamin A sebanyak 44 IU, vitamin C sekitar 20 mg, magnesium 30 mg, fosfor 39 mg, dan mineral lainnya.
+        6 Masalah yang timbul jika tidak sesuai
+        Mengonsumsi durian secara berlebihan untuk orang yang mengidap
+        obesitas, hipertensi, penyakit jantung dan diabetes akan menyebabkan kondisi buruk karena kandungan gula dan lemak dalam durian bisa memperburuk kondisi yang sudah ada. Selain itu masalah lain yang timbul adalah masalah pencernaan, peningkatan gula darah, dan peningkatan berat badan.
+
+        f Jambu air
+        1 Pengertian
+        Jambu air merupakan buah yang rasa manis dan sedikit asam. Buah jambu air mengandung banyak air
+        sangat segar dimakan langsung dan dibuat rujak.
+        2 Manfaat
+        Manfaat buah jambu air yaitu dapat memelihara sistem pencernaan. Buah jambu air merah kaya akan serat yang baik untuk sistem pencernaan tubuh, mencegah kanker, memelihara kesehatan jantung, dan meningkatkan daya tahan tubuh.
+        3 Jenis
+        Jenis buah jambu air terdiri dari jambu Cincalo, Citra Green Rose Apple, Bell Apple, Black Kingkong, Inrung Petruk, King Rose Apple, Si Loreng, Pink Rose Apple, dan Madu Deli Green.
+        4 Porsi
+        Satu porsi jambu air untuk sekali makan sebanyak 140 gram atau setara dengan 5 buah jambu air ukuran sedang.
+        5 Kandungan Kandungan jambu air adalah sebagai sumber vitamin C dan A, serat, kalsium, tiamin, niasin, potasium, myricetin, hexahydroxyflavone, fenolik, flavonoid dan zat besi.
+        6 Masalah yang timbul jika tidak sesuai
+        Jambu air mengandung senyawa asam hidrosianat yang sifatnya toksik bagi tubuh, sehingga konsumsi buah ini harus diperhatikan dan tidak berlebih. Jambu air juga mengandung komponen metalik mineral. Walaupun jumlahnya sedikit, konsumsi buah ini tetap harus dalam batas normal.
+
+        g Jambu biji
+        1 Pengertian
+        Jambu biji adalah buah yang berbentuk lonjong dengan kulit hijau muda atau kuning mengandung biji yang bisa dimakan. Terlebih lagi, daun jambu biji digunakan sebagai racikan herbal dan ekstrak daunnya banyak dijadikan suplemen.
+        2 Manfaat
+        Manfaat buah jambu biji yaitu dapat membantu menurunkan kadar darah, meningkatkan jantung, dapat membantu meringankan nyeri, menyehatkan sistem pencernaan, dapat membantu menurunkan berat badan,
+        memiliki efek antikanker, dapat meningkatkan sistem kekebalan tubuh dan baik untuk kesehatan kulit.
+        3 Jenis
+        Jenis jambu biji yang banyak dikonsumsi masyarakat Indonesia adalah jambu Kristal, Jambu Sukun, Jambu Tanjung Barat Atau Pasar Minggu, Jambu Bangkok, Jambu Getas Merah, Jambu Astralia dan Jambu Tukan
+        4 Porsi
+        Satu porsi jambu biji untuk sekali makan sebanyak 250 gram atau setara dengan 1 buah jambu biji ukuran sedang.
+        5 Kandungan Satu buah jambu biji terkandung berbagai nutrisi berikut. Kalori: 112 Lemak: 1,6g Sodium: 3,3mg Karbohidrat: 23,6g Serat: 8,9g Gula: 14,7g Protein: 4,2g.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang terjadi ketika memakan jambu biji secara berlebihan yaitu akan menyebabkan diare bagi ibu hamil yang sebaiknya mengkonsumsi jambu tidak melebihi 300 gram sehari, menyebabkan gangguan lambung, merusak gigi, dan dapat meningkatkan kadar gula dalam tubuh tinggi.
+
+        h Jeruk Bali
+        1 Pengertian
+        Jeruk bali (Citrus grandis/ Citrus Maxima) merupakan sejenis buah sitrus yang beratnya bisa mencapai 1-2 kg. Daging buahnya berbulir dengan warna merah-oranye dan rasa yang cenderung terasa manis bercampur asam dan sedikit getir.
+        2 Manfaat
+        Manfaat jeruk bali meningkatkan sistem kekebalan tubuh, menyehatkan pencernaan, mengurangi risiko batu ginjal, mengurangi resiko kanker, menjaga kesehatan jantung dan menjaga kesehatan otak.
+        3 Jenis
+        Jenis jeruk mempunyai adalah Jeruk Bali Honey Pomelo, Jeruk Bali Banpieyu, Shantian Pamelo, Dan Jeruk Bali Madu.
+        4 Porsi
+        Satu porsi jeruk bali untuk sekali makan sebanyak 60 gram atau setara dengan 1 juring jeruk bali.
+        5 Kandungan
+        Kandunagn jeruk bali yaitu vitamin C. Dalam sepiring jeruk bali (sekitar 100 gram), mengandung 60 mg vitamin C dan 40 kalori.
+        6 Masalah yang timbul jika tidak sesuai
+        Bahaya apabila mengonsumsi jeruk bali bersamaan dengan obat-obatan akan menyebabkan penyakit yang serius dapat memicu sakit ginjal batu ginjal disebabkan oleh kalsium orang yang tinggi jeruk bali terbukti meningkatkan kadar kalsium oksida yang dapat menyebabkan pembentukan batu.
+
+        i Jeruk Mandarin
+        1 Pengertian
+        Jeruk mandarin adalah buah yang masuk dalam genus citrus. Kulit jeruk mandarin berwarna oranye tua, kasar dan melindungi bagian yang manis dan berair di dalamnya. Buah ini tumbuh di pohon jeruk berbunga kecil sampai sedang. Ketika matang buahnya berubah dari hijau tua ke warna oranye tua.
+        2 Manfaat
+        Manfaat dari jeruk mandarin yaitu menurunkan panas mencegah
+        kolesterol, mencegah penyakit TBC, mengatasi penyakit hipertensi, memperlancar pencernaan, meningkatkan stamina tubuh, mengasah motoric dan mengurangi resiko kanker hati.
+        3 Jenis
+        Jenis Jeruk Mandarin adalah Ponkan, Lukan, Swatow, Kinno, Mikan, Clementine, Mandelo, Dekopon, Honey Murcott, Tangerine dan Sour Orange
+        4 Porsi
+        Satu porsi jeruk mandarin untuk sekali makan sebanyak 100 gram atau setara dengan 1 buah jeruk mandarin ukuran sedang.
+        5 Kandungan
+        Satu buah jeruk mandarin berukuran sedang (88 gram) mengandung 47 kalori, 12 gram karbohidrat, 0,7 gram protein, 0,3 gram lemak, dan 2 gram serat.Buah oranye terang ini pun mengandung
+        berbagai vitamin dan mineral yang penting untuk tubuh. Contohnya, vitamin C, vitamin A, vitamin B, kalium, kalsium, mangan, serta magnesium.
+        6 Masalah yang timbul jika tidak sesuai
+        Jeruk mandarin kaya akan vitamin, terutama vitamin C. Namun, konsumsi jeruk mandarin berlebihan akan membuat tubuh kelebihan vitamin C yang akan berdampak pada memberatkan kerja ginjal sehingga meningkatkan risiko penyakit ginjal seperti batu ginjal dan gagal ginjal.
+
+        j Kedondong
+        1 Pengertian
+        Kedondong (ambarella) adalah buah yang memiliki bentuk oval dengan diameter kurang lebih 5 cm. Buah kedondong memiliki daging berserat yang renyah dan terdapat biji tunggal yang berserabut. Buah ini memiliki rasa manis asam, seperti perpaduan nanas dan mangga. Saat matang, warna buah akan berubah menjadi kuning keemasan. K
+        2 Manfaat
+        Manfaat buah kedongdong yaitu menjaga kesehatan kulit, membantu mengobati batuk, meningkatkan sistem kekebalan tubuh, membantu mengatasi masalah pencernaan, meningkatkan kemampuan penglihatan, membantu menurunkan berat badan, memberi energi, mengurangi risiko penyakit kardiovaskular mengurangi risiko diabetes, dan mengurangi risiko hipertensi.
+        3 Jenis
+        Jenis kedodong adalah Kedondong Karimun Jawa, Kedondong Bangkok, dan Kedondong Kendeng.
+        4 Porsi
+        Satu porsi kedondong untuk sekali makan sebanyak 50 gram atau setara dengan 1 buah kedondong ukuran sedang.
+        5 Kandungan
+        Kandungan dalam satu buah kedongdong yang rata beratnya 100 g terkandung sekitar 40 kalori dan beragam nutrisi yaitu 1 g protein dan serat, 12 g karbohidrat, 0,1 g lemak, 230 IU vitamin A, 30 mg vitamin C, 2,8 mg zat besi, 15 mg kalsium, 65 mg fosfor.
+        6 Masalah yang timbul jika tidak sesuai
+        Mengkonsumsi kedondong dalam jumlah yang banyak memiliki dampak seperti menyebabkan rasa mual dan
+        muntah karena kedondong memiliki rasa asam yang tinggi. Apabila asam lambung naik hingga ke kerongkongan, maka dapat menyebabkan rasa perih dan panas di dada. Ketika kadar vitamin c pada buah ini maka berbentuk oksalat yang dapat mengikat mineral dapat menyebabkan timbulnya batu ginjal.
+
+        k Mangga
+        1 Pengertian
+        Mangga adalah buah yang rasanya manis dan kecut sehingga kita seyogyanya pandai memilih atau memetik manga yang masak. Manga
+        juga bisa dibuat rujak ketika masih mengkal dan menjadi penambah rasa asam pada ikan bakar.
+        2 Manfaat
+        Manfaat mangga yaitu dapat membantu dalam penambahan berat badan, pergerakan usus yang sehat dan teratur dan membantu menjaga kesehatan usus besar.
+        3 Jenis
+        Jenis manga yaitu Mangga gedong gincu, Mangga arumanis, Mangga manalagi, Mangga apel, Mangga alpukat, Mangga golek, Mangga Malibu, Mangga madu, Mangga nam dok mai, Mangga kweni/ pakel, dan Mangga Indramayu / cengkir.
+        4 Porsi
+        Satu porsi mangga untuk sekali makan sebanyak 60 gram atau setara dengan 1 iris buah manga.
+        5 Kandungan
+        Kandungan nutrisi mangga yaitu mengandung sekitar 20 vitamin dan mineral yang berbeda, mengandung mineral seperti, besi, tembaga, kalium dan beberapa mineral, seperti selenium, mangan, fosfor, seng dan kalsium. Buah ini juga mengandung karbohidrat tinggi. Kaya akan vitamin A, vitamin C dan vitamin B. Walaupun tidak banyak mangga juga mengandung vitamin E dan vitamin K. Memiliki beberapa senyawa lain seperti, lutein, asam galat, asam anakardat dan kriptozantin.
+        6 Masalah yang timbul jika tidak sesuai
+        Banyak mengonsumsi mangga bisa menimbulkan efek samping bagi kesehatan. seperti, iritasi, kenaikan berat badan, meningkatkan gula darah, berpotensi karsinogenik, menyebabkan masalah gastrointestinal, terjadi infeksi salmonella, tidak baik bagi orang
+        dengan Arthritis, dan menimbulkan reaksi alergi.
+
+        l Buah Naga
+        1 Pengertian
+        Buah naga atau pitaya adalah buah yang hanya tumbuh di daerah tropis dan subtropis, seperti Amerika Selatan dan Asia. Bentuk tanamannya pun unik karena memiliki batang yang menyerupai kaktus besar.
+        2 Manfaat Manfaat buah naga untuk kesehatan, mulai dari melawan penyakit kronis hingga, kaya akan serat,
+        meningkatkan kesehatan usus, memperkuat sistem kekebalan tubuh, dan meningkatkan kadar zat besi.
+        3 Jenis
+        Jenis buah naga adalah Buah Naga Merah, Buah Naga Varintorn, Buah Naga Putih, Buah Naga Helgaka, Buah Naga Hitam., Buah Naga, dan Buah Naga Kuning.
+        4 Porsi
+        Satu porsi naga untuk sekali makan sebanyak 80 gram atau setara dengan 1 potong sedang buah naga.
+        5 Kandungan
+        Buah naga termasuk jenis buah yang rendah kalori. Dalam seporsi buah naga (sekitar 100 gram) hanya terdapat sekitar 60 kalori. Buah ini juga sama sekali tidak mengandung lemak.
+        6 Masalah yang timbul jika tidak sesuai
+        Bahaya buah naga apabila dikonsumsi secara berlebihan yaitu tidak bisa terserap dengan baik saat melewati usus sehingga terjadi gangguan pencernaan dengan gejala sakit perut, hingga penyumbatan usus
+
+        m Nanas
+        1 Pengertian
+        Buah nanas merupakan buah yang rasanya manis dengan daging buah yang lunak. Memiliki banyak bulu halus disekitar kulitnya. Buah ini bisa
+        dikonsumsi secara langsung dengan tambahan garam agar tidak gatal maupun dijadikan rujak bersama dengan buah lainnya.
+        2 Manfaat
+        Manfaat buah nanas yaitu mencegah penyakit, sebagai antioksidan, melancarkan pencernaan, mengurangi risiko kanker, meningkatkan sistem imun, dan mempercepat pemulihan setelah operasi.
+        3 Jenis
+        Terdapat 4 jenis golongan nanas, yaitu, Cayene (daun halus, tidak berduri, buah besar), Queen (daun pendek berduri tajam, buah lonjong mirip kerucut), Spanyol/Spanish (daun panjang kecil, berduri halus sampai kasar, buah bulat dengan mata datar) dan Abacaxi (daun panjang berduri kasar, buah silindris atau seperti piramida).
+        4 Porsi
+        Satu porsi nanas untuk sekali makan sebanyak 100 gram atau setara dengan 1 potong sedang buah nanas.
+        5 Kandungan
+        Buah nanas mengandung vitamin C tinggi dan mineral mangan. Nanas juga diperkaya oleh vitamin B1. Satu cup potongan nanas (atau sekitar 165 gram) hanya memiliki 50 kalori, nanas termasuk buah yang rendah lemak (0,12 gram), bebas kolesterol, serta kandungan natrium-nya pun kecil (sekitar 1 miligram). Meski begitu, dalam jumlah yang sama, nanas mengandung gula sebanyak 9,85 gram.
+        6 Masalah yang timbul jika tidak sesuai
+        Nanas mengandung enzim bernama bromelain. Enzim ini diketahui dapat menyebabkan mual, diare, dan gangguan pencernaan, khususnya jika dikonsumsi secara berlebihan.
+
+        n Nangka
+        1 Pengertian
+        Buah nangka (Artocarpus heterophyllus) merupakan salah satu jenis buah yang mudah ditemukan di Indonesia. Tekstur kulit buah nangka sedikit berduri dan warnanya hijau kekuningan, sedangkan dagingnya berwarna kuning dan memiliki aroma yang khas.
+        2 Manfaat
+        Manfaat buah nangka adaah melawan kanker, mengurangi risiko penyakit kardiovaskular, memperbaiki sistem pencernaan, mempercepat
+        proses pemulihan luka, menjaga fungsi penglihatan tetap baik, dan mengontrol diabetes
+        3 Jenis
+        Jenis buah nangka adalah nangka Madu, Nangka Mini, Nangka Cempedak, Nangka Nangkadak, Nangka Sri Bajong, Nangka Merah, Nangka Celeng Atau Nangka Bilulang, dan Nangka Dulang.
+        4 Porsi
+        Dalam seporsi buah nangka (sekitar 100 – 150 gram), terdapat sekitar 100 – 160 kalor. Satu porsi nangka untuk sekali makan sebanyak 30 gram atau setara dengan 1 buah namgka ukuran sedang.
+        5 Kandungan
+        Kandungan buah nangka adalah vitamin A, C, tiamin, kalium, kalsium, riboflavin, zat besi, niasin, dan seng. Kandungan nutrisi buah nangka dalam satu cup (165 gram) diketahui memiliki
+        155 kalori, 39,6 gram karbohidrat, 2,4 gram protein, 0,5 gram lemak, 2,6 gram serat.
+        6 Masalah yang timbul jika tidak sesuai
+        Bagi orang yang alergi lateks atau serbuk sari, sebaiknya hindari mengonsumsi nangka. Nangka juga mengandung potasium tinggi, yang bisa berbahaya bagi penderita penyakit ginjal kronis (PGK) atau gagal ginjal akut. Orang dengan kondisi ini dapat mengalami hiperkalemia jika mengonsumsi banyak kalium.
+
+        o Pear
+        1 Pengertian
+        Pir adalah buah berbentuk bel dengan perpaduan rasa manis dan masam. Buah ini sejak dulu dianggap sebagai salah satu asupan makanan dengan gizi yang seimbang, sebab kandungan gizinya sangat melimpah dan beragam.
+        2 Manfaat
+        Manfaat buah pir adalah mencegah sembelit, berpotensi menurunkan risiko diabetes, membantu menjaga kesehatan tulang, berpotensi melawan kanker, dan membantu menjaga kesehatan jantung.
+        3 Jenis
+        Jenis buah pir yaitu pir red blush, Pir Packham, Pir Forelle, Pir Williams, Pir Seckel, Pir Bosc, dan Pir Anjou.
+        4 Porsi
+        Satu porsi pear untuk sekali makan sebanyak 120 gram atau setara dengan 1 buah pear ukuran sedang.
+        5 Kandungan Buah pir mempunyai kandungan nutrisi yang meliputi protein, karbohidrat, serat, vitamin A, vitamin C, vitamin E dan vitamin K. Semua kandungan dalam buah pir tentu memberikan manfaat bagi kesehatan tubuh.
+        6 Masalah yang timbul jika tidak sesuai
+        Bahaya makan buah pir terlalu banyak dikonsumsi antaranya kelebihan vitamin C, kelebihan vitamin A, kelebihan zat besi, kelebihan kalium, hingga kegemukan karena penumpukan kalori. Kelebihan zat-zat ini tentunya dapat mengganggu kesehatan.
+
+        p Pepaya
+        1 Pengertian
+        Pepaya adalah buah yang lembut dengan warna oranye kekuningan dengan berbagai macam ukuran tergantung jenisnya. Saat matang, pepaya rasanya manis. Pepaya mentah, di sisi lain, mungkin memiliki sedikit atau bahkan tanpa rasa.
+        2 Manfaat
+        Manfaat pepaya yaitu untuk sisitem penernaan, untuk anti inflamasi, mencegah penyakit jantung dan kanket, mencegah diabetes,
+        menghilanglan jerawat, dan membuat kulit tanpak lebih cerah.
+        3 Jenis
+        Jenis pepaya yang biasanya dikonsumsi Pepaya Bangkok, Pepaya Red Lady, Pepaya Hawai dan Pepaya California.
+        4 Porsi
+        Satu porsi pepaya untuk sekali makan sebanyak 100 gram atau setara dengan sepotong papaya.
+        5 Kandungan Kandungan buah pepaya disebut memiliki kandungan vitamin C yang tinggi, banyak mengandung vitamin A, vitamin B1, B3, B5, vitamin E, vitamin K, serat, kalsium, folat, potasium, dan magnesium. Seluruh nutrisi ini sangat baik untuk tubuh dan bisa memberi manfaat yang menyehatkan.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang terjadi Papain, enzim yang ada dalam pepaya bisa menjadi alergen yang kuat. Mengonsumsi pepaya berlebihan dapat memicu berbagai gangguan pernapasan seperti sesak napas, bersin, asma, dan hidung tersumbat.
+
+        q Pisang
+        1 Pengertian
+        Pisang adalah buah yagn tersusun dalam tandan dengan kelompok-kelompok tersusun menjari yang disebut sisir. Pisang adalah buah yang dikenal luas di Indonesia. Buah pisang
+        bisa dinikmati dengan berbagai cara seperti dimakan langsung, digoreng, dikukus, atau diolah bersama bahan lain.
+        2 Manfaat Manfaat pisang untuk membantu atasi hipertensi, meningkatkan kekebalan tubuh, melancarkan aliran oksigen ke otak, mengatasi anemia, menurunkan berat badan, menyehatkan tulang, dan merawat kulit. Selain itu pisang juga sebagai sumber energi yang baik saat beraktivitas fisik seperti membantu otot-otot bergerak dengan baik, membantu mengatur denyut jantung, tekanan darah, dan menjaga kesehatan jantung. Pisang juga dapat membantu mencegah penyakit jantung, tekanan darah tinggi, dan stroke.
+        3 Jenis
+        Jenis Pisang adalah Pisang Raja, Pisang Cavendish, Pisang Susu, Pisang Ambon dan Pisang Kepok.
+        4 Porsi
+        Satu porsi pisang untuk sekali makan sebanyak 100 gram atau setara dengan satu buah pisang.
+        5 Kandungan
+        Pisang merupakan salah satu buah yang kaya akan mineral kalium dan serat pektin. 1 buah pisang berukuran sedang dengan panjang 18 – 20 cm (± 118 gram) mengandung 88,4 gram (g) air, 105 kalori, 1,29 g protein, 27 g karbohidrat, 3,07 g serat, 14,4 g gula total, 6,35 g pati, 5,9 miligram (mg) kalsium, 31,9 mg magnesium, 26 mg fosfor, 422 mg kalium, 1,18 mikrogram (mcg) selenium, 10,3 mg vitamin C, 23,6 mcg folat atau vitamin B9, 30,7 mcg beta karoten. Termasuk buah yang rendah lemak (0,389 g) dan memiliki indeks glikemik rendah, pisang juga diperkaya oleh zat besi, zinc, tembaga, mangan, vitamin A, B1, B2, B3, B5, B6, Kolin, omega 3 dan 6.
+        6 Masalah yang timbul jika tidak sesuai
+        Pisang mengandung sumber kalium yang baik, tetapi nutrisi yang baik ini malah bisa menyebabkan kerusakan pada tubuh jika dikonsumsi secara berlebihan. Makan kebanyakan pisang bisa membuat tubuh mengembangkan hiperkalemia, suatu kondisi yang mengganggu fungsi sel saraf dan otot.
+
+        r Rambutan
+        1 Pengertian
+        Rambutan adalah buah yang mempunyai ciri khas rambut pada
+        kulitnya dengan rasa segar dan nikmat ketika dimakan. Isi buahnya berbetuk bulat kenyal dan berair.
+        2 Manfaat
+        Kandungan nutrisi pada buah rambutan memberikan manfaat seperti melancarkan pencernaan, membantu menurunkan berat badan, meningkatkan daya tahan tubuh, menurunkan risiko diabetes dan membantu mengontrol tekanan darah.
+        3 Jenis
+        Jenis-jenis rambutan adalah Rambutan Rapiah, Rambutan Binjai, Rambutan Aceh, Rambutan Lebak Bulus, dan Rambutan Sibongkok.
+        4 Porsi
+        Satu porsi rambutan untuk sekali makan sebanyak 50 gram atau setara dengan lima buah rambutan.
+        5 Kandungan Dalam setiap 100 gr buah rambutan terdapat sekitar 69 kalori, 58 mg
+        vitamin C dan 18,1 gr karbohidrat. Buah rambutan termasuk salah satu jenis buah yang tinggi akan kandungan serat yaitu 2 gr dalam setiap 100 gr buahnya sehingga buah ini mudah untuk dicerna dan cocok untuk membantu program diet.
+        6 Masalah yang timbul jika tidak sesuai
+        Masalah yang timbul akibat terlalu sering mengonsumsi rambuan adalah kulit rambutan mungkin memiliki sifat beracun, terutama ketika dimakan secara teratur dan dalam jumlah besar. Biji pada buah rambutan ternyata memiliki efek narkotik dan analgesik, sehingga bisa menimbulkan gejala berupa mengantuk, koma, hingga kematian. Gejala tersebut memang baru dijumpai pada hewan. Namun, tidak ada salahnya menghindari konsumsi biji dan kulit rambutan guna menghindari risiko tersebut.
+
+        s Salak
+        1 Pengertian
+        Salak adalah buah yang memiliki kulit berwarna coklat dan bersisik kasar, sehingga dikenal juga dengan nama snake fruit.
+        2 Manfaat
+        Manfaat salak menunjang kesehatan mata menjaga daya tahan tubuh tetap baik menambah stamina menjaga kesehatan jantung menghindari tubuh dari penyakit kronis menjaga kesehatan mengontrol gula darah
+        pankreas meningkatkan memori membantu menurunkan berat badan dan menyehatkan pencernaan.
+        3 Jenis
+        Jenis buah salak adalah Salak madu Salak Gading, Salak Pondoh dan Salak gula Pasir.
+        4 Porsi
+        Satu porsi salak untuk sekali makan sebanyak 40 gram atau setara satu buah salak ukuran sedang.
+        5 Kandungan Salak mengandung kalsium, fosfor, kalium, vitamin A, vitamin B, vitamin C, karbohidrat, protein, zat besi, dan juga serat. Kandungan tersebut tentu saja sangat dibutuhkan bagi tubuh.
+        6 Masalah yang timbul jika tidak sesuai
+        Kandugan buah salak ternyata bisa membuat perut luka saat terlalu banyak mengonsumsinya. Seseorang yang menderita penyakit maag pun
+        tidak baik atau tidak dianjurkan untuk mengkonsumsi buah ini.
+
+        t Sawo
+        1 Pengertian
+        Sawo adalah buah hidangan pencuci mulut karena teksturnya yang lembut serta rasa dan aromanya yang manis. Dalam mengonsumsi sawo bisa dengan cara dimakan langsung atau dengan menjadikannya jus maupun selai.
+        2 Manfaat
+        Manfaat buah sawo yaitu melancarkan pencernaan, membantu menurunkan berat badan, menangkal radikal bebas, redakan demam dan radang, meningkatkan sistem kekebalan tubuh.
+        3 Jenis
+        Jenis buah sawo yang biasanya dimakan masayarakat Indonesia adalah Sawo Mentega, Sawo Kecik, Sawo Duren, Sawo Mentimun, Sawo Putih, Sawo Manila, Sawo Hitam, Sawo Hijau dan Sawo Mamey Sapote.
+        4 Porsi
+        Satu porsi sawo untuk sekali makan sebanyak 70 gram atau setara satu buah sawo ukuran sedang.
+        5 Kandungan
+        Dalam 1 buah sawo terkandung kurang lebih 140 kalori. Selain itu, ada berbagai nutrisi lainnya yang juga bermanfaat bagi tubuh, yaitu
+        mengandung karbohidrat, serat, lemak, Mineral, seperti kalsium, potasium, magnesium, dan zat besi, Vitamin, termasuk vitamin C, vitamin A, dan vitamin B6. Buah sawo juga mengandung antioksidan, di antaranya adalah polifenol dan karotenoid.
+        6 Masalah yang timbul jika tidak sesuai
+        Mengonsumsi terlalu banyak sawo dapat menyebabkan peningkatan berat badan, gangguan pencernaan dan sakit perut, konsumsi sawo mentah bahkan dapat menyebabkan tukak lambung, masalah pernapasan, dan iritasi tenggorokan.
+
+        u Semangka
+        1 Pengertian
+        Semangka (Citrullus Lanatus) adalah buah yang berasal dari Afrika Selatan dan kini sudah bisa dijumpai di seluruh dunia. Buah dengan kulit berwarna hijau ini memiliki bagian dalam yang berwarna merah atau merah jambu dengan biji yang banyak.
+        2 Manfaat
+        Manfaat dari buah semangka yaitu menjaga kesehatan jantung, memenuhi kebutuhan cairan tubuh, meningkatkan
+        kesehatan rambut dan kulit, mencegah pembentukan batu ginjal, membantu mengendalikan gula darah, dan mengatasi nyeri otot. Buah semangka kuning dapat digunakan untuk menurunkan tekanan darah pada penderita hipertensi.
+        3 Jenis
+        Jenis semangka yang populer yaitu Semangka tanpa biji, Semangka hibrida, Semangka piknik, Semangka kulkas atau ice box dan Semangka daging kuning.
+        4 Porsi
+        Satu porsi semangka untuk sekali makan sebanyak 100 gram atau setara sepotong buah semangka.
+        5 Kandungan
+        Kandungan semangka yaitu Vitamin C sebanyak 21% dari kebutuhan tubuh, Vitamin A sebanyak 18% dari kebutuhan tubuh, Kalium sebanyak 5% dari kebutuhan tubuh, Magnesium
+        sebanyak 4% dari kebutuhan tubuh, Vitamin B1, B5 dan B6 sebanyak 3% dari kebutuhan tubuh. Selain itu, buah semangka juga tinggi antioksidan penting seperti beta-karoten dan likopen.
+        6 Masalah yang timbul jika tidak sesuai
+        Konsumsi semangka terlalu banyak tentu dapat berdampak buruk terhadap kesehatan akibat asupan likopen dan kalium yang berlebihan, seperti mual, diare, perut kembung, masalah pencernaan, dan hiperkalemia.
+
+        v Sirsak
+        1 Pengertian
+        Sirsak merupakan buah yang lembek kulitnya jika dipegang pada saat matang. Rasanya sangat manis dan lembut ketika masuk di mulut.
+        2 Manfaat
+        Manfaat sirsak adalah membantu mencegah kerusakan sel dan dapat menurunkan risiko penyakit kronis, membantu membunuh sel kanker, mengatur tekanan darah tinggi, mengobati maag, mengontrol diabetes,
+        mencegah kerusakan hati, membantu meredakan nyeri, dan bantu memperlancar pencernaan.
+        3 Jenis
+        Jenis sirsak adalah Sirsak Lokal, Annona reticulate, Annona crassiflora, Sirsak Ratu, Sirsak Merah, dan Sirsak Mandalika.
+        4 Porsi
+        Satu porsi sirsak untuk sekali makan sebanyak 100 gram atau setara sepotong buah sirsak.
+        5 Kandungan
+        Dalam 100 gram sirsak, terkandung beberapa zat gizi sebagai berikut: 66 kalori 1 gram protein 16,8 gram karbohidrat 3,3 gram serat 34% dari rekomendasi takaran harian vitamin C 8% dari rekomendasi takaran harian kalium 5% dari rekomendasi takaran harian magnesium 5% dari rekomendasi takaran harian tiamin. Selain zat gizi di atas, sirsak juga mengandung sedikit
+        niasin, folat, zat besi, dan riboflavin (vitamin B2). .
+        6 Masalah yang timbul jika tidak sesuai
+        Mengonsumsi sirsak secara berlebihan dapat bersiko menimbulkan beberapa efek samping seperti gangguan saraf dengan gejala yang mirip penyakit Parkinson, gangguan gerakan tubuh, hingga kerusakan organ hati dan ginjal. Makan sirsak juga tidak disarankan untuk dikonsumsi jika memiliki beberapa kondisi seperti, memiliki tekanan darah rendah, sedang dalam pengobatan hipertensi atau diabetes, sedang menjalani perawatan dan mengonsumsi antdepresan, sedang hamil atau menyusui, memiliki kelainan hati atau ginjal, peradangan mata, dan neurotoksitas.
+
+        w Stroberi
+        1 Pengertian
+        Strawberry adalah buah yang sangat kaya akan antioksidan dan senyawa tumbuhan, yang diketahui memiliki manfaat untuk kesehatan jantung dan pengendalian gula darah. Buah ini juga dapat membantu meningkatkan fungsi otak dan meningkatkan kesehatan mata dan kulit, radang sendi, dan asam urat.
+        2 Manfaat
+        Strawberry memiliki manfaat untuk kesehatan jantung dan pengendalian gula darah. Buah ini juga dapat membantu meningkatkan fungsi otak dan meningkatkan kesehatan mata dan kulit, mencegah radang sendi, asam urat, dan mencegah kanker
+        3 Jenis
+        Berdasarkan varietasnya, maka strawberry dapat dibedakan menjadi beberapa jenis yaitu Jewel Strawberries, White Jewel, Sweet Charlie, Nyoho, Chandler, Ozark Beauty, Oso Grande, Dan Sparkle.
+        4 Porsi
+        Satu porsi stroberi untuk sekali makan sebanyak 100 gram atau setara 6 buah stroberi
+        5 Kandungan
+        Buah strowberi memiliki banyak kandungan gizi yaitu, vitamin C, karbohidrat, protein, polifenol, folat,
+        mangan, air, serat, dan kalium. Buah stroberi juga hanya sedikit mengandung kalori dan lemak, serta memiliki indeks glikemik yang rendah.
+        6 Masalah yang timbul jika tidak sesuai
+        Bila makan stroberi setengah matang atau masih mentah, maka bisa mengalami masalah sensasi terbakar di mulut, membahayakan tubuh, karena menghambat penyerapan nutrisi, membahayakan kesehatan pencernaan. Memakan straoberi dalam jumlah banyak juga dapat menyebabkan alergi karena stroberi mengandung histamin dalam jumlah banyak. Selain itu juga ada unsur-unsur yang dapat menyebabkan pusing, mual dan gatal.
+
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 </resources>
