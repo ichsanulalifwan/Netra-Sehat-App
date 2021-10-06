@@ -13,6 +13,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TunanetraDaily">
         <activity
+            android:name=".giziseimbang.pilar.anekaragammakanan.makananpokok.JenisMakananPokokActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.anekaragammakanan.AirPutihActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.anekaragammakanan.BuahActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.anekaragammakanan.SayuranActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.anekaragammakanan.LaukPaukActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.anekaragammakanan.MakananPokokActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.BeratBadanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.AktivitasFisikActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.PhbsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.pilar.AnekaRagamMakananActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.PesanGiziSeimbangActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giziseimbang.PilarGiziSeimbangActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ContactSahabatNetraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PelayananKesehatanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Covid19Activity"
+            android:exported="true" />
+        <activity
             android:name=".GiziSeimbangActivity"
             android:exported="true" />
         <activity

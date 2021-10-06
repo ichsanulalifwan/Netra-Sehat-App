@@ -3,37 +3,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_message">
-        Selamat Datang di Aplikasi Kesehatan Harian Tunanetra, Katakan Literasi Kesehatan untuk melanjutkan.
+        Selamat Datang di Aplikasi Kesehatan Harian Tunanetra.
     </string>
     <string name="menu_litkes">
         Katakan 1 untuk Gizi Seimbang, Katakan 2 untuk informasi Covid-19,
         Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat, Katakan 4 untuk Kontak Person Sahabat Netra,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
-    <string name="menu_litkes1">
-        Katakan 1 untuk Gizi Seimbang.
-    </string>
-    <string name="menu_litkes2">
-        Katakan 2 untuk informasi Covid-19.
-    </string>
-    <string name="menu_litkes3">
-        Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat.
-    </string>
-    <string name="menu_litkes4">
-        Katakan 4 untuk Kontak Person Sahabat Netra.
-    </string>
-    <string name="menu7">
-        Katakan 7 untuk kembali.
-    </string>
-    <string name="menu_litkes9">
-        Katakan 9 untuk ke menu utama.
-    </string>
-    <string name="menu_litkes0">
-        Katakan 0 untuk Keluar.
-    </string>
 
     <!-- Menu res-->
     <string name="menu_giziSeimbang">
+        Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang.
         Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
@@ -47,22 +27,49 @@
         Katakan 3 untuk Sayuran, Katakan 4 untuk Buah-buahan, Katakan 5 untuk Air Putih,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+
     <string name="menu_makananPokok">
         Katakan 1 untuk Penjelasan Makanan Pokok, Katakan 2 untuk Jenis-Jenis Makanan Pokok,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+    <string name="menu_jenisMakananPokok">
+        Katakan 1 untuk Nasi, Katakan 2 untuk Jagung, Katakan 3 untuk Sagu, Katakan 4 untuk Ubi Jalar, Katakan 5 untuk Singkong,
+        Katakan 6 untuk Mie, Katakan 7 untuk Roti.
+        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
     <string name="menu_laukPauk">
         Katakan 1 untuk Penjelasan Lauk Pauk, Katakan 2 untuk Jenis-Jenis Lauk Pauk,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+    <string name="menu_jenisLaukPauk">
+        Katakan 1 untuk Ayam, Katakan 2 untuk Daging, Katakan 3 untuk Ikan, Katakan 4 untuk Telur, Katakan 5 untuk Kepiting,
+        Katakan 6 untuk Udang, Katakan 7 untuk Cumi-Cumi, Katakan 8 untuk Tempe, Katakan 9 untuk Tahu.
+        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
     <string name="menu_sayuran">
         Katakan 1 untuk Penjelasan Sayuran, Katakan 2 untuk Jenis-Jenis Sayuran,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+    <string name="menu_jenisSayuran">
+        Katakan 1 untuk Sayur Asem, Katakan 2 untuk Sayur Sop, Katakan 3 untuk Sayur Bayam Bening, Katakan 4 untuk Sayur Lodeh, Katakan 5 untuk Tumis Sawi,
+        Katakan 6 untuk Tumis Kacang Panjang, Katakan 7 untuk Tumis Kangkung, Katakan 8 untuk Tumis Tauge, Katakan 9 untuk Wortel Rebus,
+        Katakan 10 untuk Buncis Rebus, Katakan 11 untuk Labu Siam, Katakan 12 untuk Balado Terong, Katakan 13 untuk Terong Bulat Hijau, Katakan 14 untuk Terong Bulat Ungu.
+        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
     <string name="menu_buah">
         Katakan 1 untuk Penjelasan Buah-buahan, Katakan 2 untuk Jenis-Jenis Buah-buahan,
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+    <string name="menu_jenisBuah">
+        Katakan 1 untuk Sayur Asem, Katakan 2 untuk Sayur Sop, Katakan 3 untuk Sayur Bayam Bening, Katakan 4 untuk Sayur Lodeh, Katakan 5 untuk Tumis Sawi,
+        Katakan 6 untuk Tumis Kacang Panjang, Katakan 7 untuk Tumis Kangkung, Katakan 8 untuk Tumis Tauge, Katakan 9 untuk Wortel Rebus,
+        Katakan 10 untuk Buncis Rebus, Katakan 11 untuk Labu Siam, Katakan 12 untuk Balado Terong, Katakan 13 untuk Terong Bulat Hijau, Katakan 14 untuk Terong Bulat Ungu.
+        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
     <string name="menu_PHBS">
         Katakan 1 untuk Perawatan diri pada kulit, Katakan 2 untuk Perawatan diri pada kaki dan tangan,
         Katakan 3 untuk Perawatan diri pada kuku, Katakan 4 untuk Perawatan diri pada kulit kepala dan rambut,
@@ -85,7 +92,7 @@
         Katakan 5 untuk Batasi Konsumsi Pangan Manis, Asin Dan Berlemak, Katakan 6 untuk Biasakan Sarapan yang Bergizi,
         Katakan 7 untuk Biasakan Minum Air Putih yang Cukup dan Aman, Katakan 8 untuk Biasakan Membaca Label Pada Kemasan Pangan,
         Katakan 9 untuk Cuci tangan pakai sabun dengan air bersih mengalir, Katakan 10 untuk Lakukan Aktivitas Fisik Yang Cukup dan Pertahankan Berat Badan Normal.
-        Katakan 77 untuk kembali, Katakan 88 untuk ke menu utama, Katakan 0 untuk Keluar.
+        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
     <!-- Pengantar res-->

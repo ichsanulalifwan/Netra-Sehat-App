@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GiziSeimbangActivity">
+    tools:context=".giziseimbang.pilar.anekaragammakanan.MakananPokokActivity">
 
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24sp"
-        android:text="Gizi Seimbang"
+        android:text="Makanan Pokok"
         android:textColor="@color/purple_700"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/tv_speak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text=". . . . ."
         android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,27 +30,26 @@
         app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
 
     <Button
-        android:id="@+id/btn_pilarGiziSeimbang"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="4 Pilar Gizi Seimbang"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/btn_pesanGiziSeimbang"
-        app:layout_constraintStart_toStartOf="@id/btn_pesanGiziSeimbang"
-        app:layout_constraintTop_toBottomOf="@id/tv_speak" />
-
-    <Button
-        android:id="@+id/btn_pesanGiziSeimbang"
+        android:id="@+id/btn_jenisMakananPokok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="10 Pesan Gizi Seimbang"
-        android:textAllCaps="false"
-        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:text="Jenis Makanan Pokok"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_pilarGiziSeimbang" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Pengantar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengantar"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_jenisMakananPokok" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

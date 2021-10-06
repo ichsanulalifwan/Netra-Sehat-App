@@ -8,7 +8,7 @@ import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
-import android.widget.Toast
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.app.tunanetradaily.databinding.ActivityLitkesBinding
 import kotlinx.coroutines.*
@@ -44,6 +44,9 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
 
         binding = ActivityLitkesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+        //AudioManager.getSystemService(Context.AUDIO_SERVICE).setParameters("noise_suppression=on");
 
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
 
@@ -157,8 +160,9 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        //sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 100)
 
-        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
+        /*
         sttIntent.putExtra(
             RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
             1000
@@ -284,6 +288,7 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
             RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
         )
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 100)
 
         /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
         sttIntent.putExtra(
@@ -370,7 +375,6 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
 
     override fun onResults(results: Bundle?) {
         Log.i(TAG, "onResults")
-
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
         binding.tvResult.text = recognizedText
@@ -390,8 +394,8 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
             check7 -> {
                 textToSpeechEngine?.stop()
                 stopListening()
-                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                startActivity(backPreviousMenu)*/
+                val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                startActivity(backPreviousMenu)
                 finish()
             }
             check9 -> {
@@ -408,18 +412,18 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
                 exitProcess(0)
             }
             else -> {
-                val messageNoMatch =
+               startOver()
+                /*val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
                 textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts0")
-                Toast.makeText(applicationContext, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Pilihan Salah", Toast.LENGTH_SHORT).show()*/
             }
         }
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {
         Log.i(TAG, "onPartialResults")
-
-        val matches = parsialResult?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
+/*        val matches = parsialResult?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
@@ -437,8 +441,8 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
             check7 -> {
                 textToSpeechEngine?.stop()
                 stopListening()
-                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                startActivity(backPreviousMenu)*/
+                val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                startActivity(backPreviousMenu)
                 finish()
             }
             check9 -> {
@@ -454,7 +458,7 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
                 finishAffinity()
                 exitProcess(0)
             }
-        }
+        }*/
     }
 
     override fun onEvent(p0: Int, p1: Bundle?) {
@@ -480,7 +484,6 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
     override fun onPause() {
         textToSpeechEngine?.stop()
         //textToSpeechEngine2.stop()
-        stopListening()
         super.onPause()
     }
 

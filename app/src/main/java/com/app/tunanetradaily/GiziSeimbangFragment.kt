@@ -74,23 +74,23 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             //litkesTTS()
 
-            binding.btnSpeak.setOnClickListener {
-                Toast.makeText(context, "btnSpeak Clicked", Toast.LENGTH_LONG).show()
-            }
-
-            binding.btnListen.setOnClickListener {
-                //litkesTTS()
-                /*// Get the text to be converted to speech from our EditText.
-                val text = binding.tvSpeak.text.toString()
-                // Check if user hasn't input any text.
-                if (text.isNotEmpty()) {
-                    // Lollipop and above requires an additional ID to be passed.
-                    // Call Lollipop+ function
-                    textToSpeechEngine.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts")
-                } else {
-                    Toast.makeText(this, "Text cannot be empty", Toast.LENGTH_LONG).show()
-                }*/
-            }
+//            binding.btnSpeak.setOnClickListener {
+//                Toast.makeText(context, "btnSpeak Clicked", Toast.LENGTH_LONG).show()
+//            }
+//
+//            binding.btnListen.setOnClickListener {
+//                //litkesTTS()
+//                /*// Get the text to be converted to speech from our EditText.
+//                val text = binding.tvSpeak.text.toString()
+//                // Check if user hasn't input any text.
+//                if (text.isNotEmpty()) {
+//                    // Lollipop and above requires an additional ID to be passed.
+//                    // Call Lollipop+ function
+//                    textToSpeechEngine.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts")
+//                } else {
+//                    Toast.makeText(this, "Text cannot be empty", Toast.LENGTH_LONG).show()
+//                }*/
+//            }
         }
     }
 
@@ -155,7 +155,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
         val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
+        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -173,7 +173,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
+       // binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -182,7 +182,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
+        //binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
@@ -192,7 +192,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             check1 -> {
                 textToSpeechEngine?.stop()
                 stopListening()
-                val giziSeimbangMenu = Intent(this@LitkesActivity, GiziSeimbangActivity::class.java)
+                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
                 startActivity(giziSeimbangMenu)
                 //finish()
             }
@@ -207,7 +207,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             check9 -> {
                 textToSpeechEngine?.stop()
                 stopListening()
-                val backMainMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
                 activity?.let { finishAffinity(it) }
             }
@@ -240,7 +240,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             check1 -> {
                 textToSpeechEngine?.stop()
                 stopListening()
-                val giziSeimbangMenu = Intent(this@LitkesActivity, GiziSeimbangActivity::class.java)
+                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
                 startActivity(giziSeimbangMenu)
                 //finish()
             }
@@ -255,7 +255,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             check9 -> {
                 textToSpeechEngine?.stop()
                 stopListening()
-                val backMainMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
                 activity?.let { finishAffinity(it) }
             }

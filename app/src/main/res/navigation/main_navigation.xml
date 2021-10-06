@@ -3,16 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/navigation_giziSeimbang">
+
+    <fragment
+        android:id="@+id/navigation_giziSeimbang"
+        android:name="com.app.tunanetradaily.GiziSeimbangFragment"
+        android:label="fragment_gizi_seimbang"
+        tools:layout="@layout/fragment_gizi_seimbang" />
 
     <activity
         android:id="@+id/mainActivity"
         android:name="com.app.tunanetradaily.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
-    <fragment
-        android:id="@+id/giziSeimbangFragment"
-        android:name="com.app.tunanetradaily.GiziSeimbangFragment"
-        android:label="fragment_gizi_seimbang"
-        tools:layout="@layout/fragment_gizi_seimbang" />
+
 </navigation>
