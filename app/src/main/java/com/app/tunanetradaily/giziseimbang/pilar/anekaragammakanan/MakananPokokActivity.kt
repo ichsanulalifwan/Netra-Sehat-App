@@ -44,21 +44,21 @@ class MakananPokokActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
         // Init speechRecognizer
         setSpeech()
 
-        binding.btnPengantar.setOnClickListener {
-            val makananPengantar = getString(R.string.pengantar_makananPokok)
-            textToSpeechEngine?.speak(
-                makananPengantar,
-                TextToSpeech.QUEUE_FLUSH,
-                null,
-                "pengantarMakanan"
-            )
-        }
-        binding.btnJenisMakananPokok.setOnClickListener {
-            textToSpeechEngine?.stop()
-            stopListening()
-            val covidMenu = Intent(this, JenisMakananPokokActivity::class.java)
-            startActivity(covidMenu)
-        }
+//        binding.btnPengantar.setOnClickListener {
+//            val makananPengantar = getString(R.string.pengantar_makananPokok)
+//            textToSpeechEngine?.speak(
+//                makananPengantar,
+//                TextToSpeech.QUEUE_FLUSH,
+//                null,
+//                "pengantarMakanan"
+//            )
+//        }
+//        binding.btnJenisMakananPokok.setOnClickListener {
+//            textToSpeechEngine?.stop()
+//            stopListening()
+//            val covidMenu = Intent(this, JenisMakananPokokActivity::class.java)
+//            startActivity(covidMenu)
+//        }
     }
 
     override fun onStart() {

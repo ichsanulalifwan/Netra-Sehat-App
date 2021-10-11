@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_abu_gradient"
-    tools:context=".MainActivity">
+    tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="56dp">
+        android:paddingBottom="56dp"
+        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_welcome"
@@ -40,8 +40,8 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_giziSeimbang"
-            android:layout_width="120dp"
-            android:layout_height="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:clickable="true"
             android:focusable="true"
@@ -73,18 +73,15 @@
 
                 <TextView
                     android:id="@+id/tv_giziSeimbang"
-                    android:layout_width="104dp"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
                     android:text="Gizi Seimbang"
-                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/img_giziSeimbang"
+                    app:layout_constraintStart_toStartOf="@id/img_giziSeimbang"
                     app:layout_constraintTop_toBottomOf="@id/img_giziSeimbang" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -123,18 +120,15 @@
 
                 <TextView
                     android:id="@+id/tv_covid19"
-                    android:layout_width="104dp"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
                     android:text="Covid-19"
-                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/img_covid19"
+                    app:layout_constraintStart_toStartOf="@id/img_covid19"
                     app:layout_constraintTop_toBottomOf="@id/img_covid19" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -175,18 +169,16 @@
 
                 <TextView
                     android:id="@+id/tv_pelayananKesehatan"
-                    android:layout_width="104dp"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
                     android:text="Pelayanan\nKesehatan"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/img_pelayananKesehatan"
+                    app:layout_constraintStart_toStartOf="@id/img_pelayananKesehatan"
                     app:layout_constraintTop_toBottomOf="@id/img_pelayananKesehatan" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -226,31 +218,20 @@
 
                 <TextView
                     android:id="@+id/tv_contactPerson"
-                    android:layout_width="104dp"
-                    android:layout_height="34dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Contact Person\nSahabat Netra"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/img_contactPerson"
+                    app:layout_constraintStart_toStartOf="@id/img_contactPerson"
                     app:layout_constraintTop_toBottomOf="@id/img_contactPerson" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <TextView
-            android:id="@+id/tv_speak"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text=". . . . ."
-            android:textSize="14sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cv_contactPerson" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -9,7 +9,6 @@ import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.app.tunanetradaily.GiziSeimbangActivity
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
 import com.app.tunanetradaily.databinding.ActivityPilarGiziSeimbangBinding
@@ -43,25 +42,25 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
         // Init speechRecognizer
         setSpeech()
 
-        binding.btnGiziSeimbang.setOnClickListener {
+        binding.cvAnekaRagam.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val giziSeimbangMenu = Intent(this, AnekaRagamMakananActivity::class.java)
             startActivity(giziSeimbangMenu)
         }
-        binding.btnCovid19.setOnClickListener {
+        binding.cvPhbs.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, PhbsActivity::class.java)
             startActivity(covidMenu)
         }
-        binding.btnPelayananKesehatan.setOnClickListener {
+        binding.cvAktivitasFisik.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, AktivitasFisikActivity::class.java)
             startActivity(covidMenu)
         }
-        binding.btnContactPerson.setOnClickListener {
+        binding.cvPantauBb.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, BeratBadanActivity::class.java)

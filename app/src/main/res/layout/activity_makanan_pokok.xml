@@ -1,55 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".giziseimbang.pilar.anekaragammakanan.MakananPokokActivity">
 
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24sp"
-        android:text="Makanan Pokok"
-        android:textColor="@color/purple_700"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingBottom="16dp">
 
-    <TextView
-        android:id="@+id/tv_speak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text=". . . . ."
-        android:textSize="14sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_header"
+            android:layout_width="match_parent"
+            android:layout_height="327dp"
+            android:translationY="-40dp"
+            app:cardBackgroundColor="@color/gray1"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_jenisMakananPokok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Jenis Makanan Pokok"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/ic_arrow_back_white_24dp"
+                android:backgroundTint="@color/dark_blue"
+                android:contentDescription="Back" />
 
-    <Button
-        android:id="@+id/btn_Pengantar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pengantar"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_jenisMakananPokok" />
+        </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Makanan Pokok"
+            android:textColor="@color/purple_1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_header" />
+
+        <TextView
+            android:id="@+id/tv_pengertian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1) Pengertian"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/detail_pengertian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/pengertian_makananPokok"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_pengertian"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pengertian" />
+
+        <TextView
+            android:id="@+id/tv_manfaat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2) Manfaat"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_pengertian" />
+
+        <TextView
+            android:id="@+id/detail_manfaat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Manfaat makanan pokok adalah sebagai sumber energi, dan merupakan penghasil karbohidrat yang dibutuhkan oleh tubuh. Selain itu, karbohidrat dapat bermanfaat untuk meningkatkan metabolisme tubuh, menyeimbangkan asam basa dalam tubuh, pembentuk sel, jaringan serta organ, memperlancar pencernaan dan penyerapan kalsium serta membantu membentuk protein dan lemak."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_manfaat"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_manfaat" />
+
+        <TextView
+            android:id="@+id/tv_jenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3) Jenis Makanan Pokok"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_manfaat" />
+
+        <TextView
+            android:id="@+id/detail_jenis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Jenis makanan pokok misalnya  beras, jagung, sagu, ubi jalar, singkong, mie, roti dan sebagainya."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_jenis"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_jenis" />
+
+        <TextView
+            android:id="@+id/tv_porsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="4) Porsi Makanan Pokok"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_jenis" />
+
+        <TextView
+            android:id="@+id/detail_porsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Kebutuhan energi orang dewasa di Indonesia, yakni 2.000 kalori untuk wanita dan 2.300 kalori untuk pria"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_porsi"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_porsi" />
+
+        <TextView
+            android:id="@+id/tv_speak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text=". . . . ."
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

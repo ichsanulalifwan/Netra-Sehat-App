@@ -11,5 +11,9 @@
     <color name="red_app">#D54C4C</color>
     <color name="red_700">#8D2828</color>
     <color name="purple_0">#7001F7</color>
+    <color name="purple_1">#58419C</color>
+    <color name="gray_purple1">#E9E8FD</color>
+    <color name="gray1">#EEF2F8</color>
+    <color name="dark_blue">#232E3E</color>
     <color name="purple_gradient1">#7001F7</color>
 </resources>

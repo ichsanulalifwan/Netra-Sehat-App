@@ -58,25 +58,25 @@ class MainActivity : AppCompatActivity(), CoroutineScope, RecognitionListener {
         // Init speechRecognizer
         setSpeech()
 
-        binding.btnGiziSeimbang.setOnClickListener {
+        binding.cvGiziSeimbang.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val giziSeimbangMenu = Intent(this, GiziSeimbangActivity::class.java)
             startActivity(giziSeimbangMenu)
         }
-        binding.btnCovid19.setOnClickListener {
+        binding.cvCovid19.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, Covid19Activity::class.java)
             startActivity(covidMenu)
         }
-        binding.btnPelayananKesehatan.setOnClickListener {
+        binding.cvPelayananKesehatan.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val pelayananKesehatanMenu = Intent(this, PelayananKesehatanActivity::class.java)
             startActivity(pelayananKesehatanMenu)
         }
-        binding.btnContactPerson.setOnClickListener {
+        binding.cvContactPerson.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val cpSahabatNetraMenu = Intent(this, ContactSahabatNetraActivity::class.java)

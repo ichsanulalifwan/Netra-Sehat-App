@@ -3,26 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_air_putih.xml" value="0.22239583333333332" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_aktivitas_fisik.xml" value="0.23645833333333333" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_aneka_ragam_makanan.xml" value="0.4" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_berat_badan.xml" value="0.23645833333333333" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_buah.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_air_putih.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_aktivitas_fisik.xml" value="0.4" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_aneka_ragam_makanan.xml" value="0.2" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_berat_badan.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_buah.xml" value="0.2" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_contact_sahabat_netra.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_covid19.xml" value="0.22239583333333332" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_gizi_seimbang.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_gizi_seimbang.xml" value="0.2" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_jenis_makanan_pokok.xml" value="0.23645833333333333" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_lauk_pauk.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_lauk_pauk.xml" value="0.2" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_litkes.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_makanan_pokok.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_makanan_pokok.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_pelayanan_kesehatan.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_pesan_gizi_seimbang.xml" value="0.23645833333333333" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_phbs.xml" value="0.23645833333333333" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_pilar_gizi_seimbang.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_sayuran.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_phbs.xml" value="0.152" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_pilar_gizi_seimbang.xml" value="0.2" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_sayuran.xml" value="0.176" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_gizi_seimbang.xml" value="0.2" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_literasi_kesehatan.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_pilar_gizi_seimbang.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pilargizi.xml" value="0.264" />
       </map>
     </option>
   </component>

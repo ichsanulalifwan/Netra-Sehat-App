@@ -70,8 +70,6 @@ class LitkesActivity : AppCompatActivity(), CoroutineScope, RecognitionListener 
         // Get the text from local string resource
         val textLitkes = getString(R.string.menu_litkes)
 
-        val textLitkes1 = getString(R.string.menu_litkes1)
-
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
         textToSpeechEngine?.speak(textLitkes, TextToSpeech.QUEUE_FLUSH, null, "tts1")

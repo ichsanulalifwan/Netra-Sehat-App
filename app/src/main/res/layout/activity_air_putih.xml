@@ -1,22 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".giziseimbang.pilar.anekaragammakanan.AirPutihActivity">
 
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Air Putih"
-        android:textAlignment="center"
-        android:textColor="@color/purple_700"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingBottom="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_header"
+            android:layout_width="match_parent"
+            android:layout_height="327dp"
+            android:translationY="-40dp"
+            app:cardBackgroundColor="@color/gray1"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/ic_arrow_back_white_24dp"
+                android:backgroundTint="@color/dark_blue"
+                android:contentDescription="Back" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Air Putih"
+            android:textColor="@color/purple_1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_header" />
+
+        <TextView
+            android:id="@+id/tv_pengertian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1) Pengertian"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/detail_pengertian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Air putih adalah air yang melalui proses pengolaha, filtrasi sehingga tampak jernih. Tanpa proses pengolahan yang melalu syarat dan air tidak dapat langsung diminum."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_pengertian"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pengertian" />
+
+        <TextView
+            android:id="@+id/tv_manfaat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2) Manfaat"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_pengertian" />
+
+        <TextView
+            android:id="@+id/detail_manfaat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Manfaat air putih untuk kesehatan sangat banyak, air putih dapat digunakan untuk mengobati berbagai penyakit berbahaya atau mencegah terjadinya penyakit yang tidak diinginkan. Air putih merupakan minuman yang paling sehat dan tidak berbahaya karena dibutuhkan setiap hari oleh tubuh kita untuk menjaga kesehatan."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_manfaat"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_manfaat" />
+
+        <TextView
+            android:id="@+id/tv_jenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3) Jenis"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_manfaat" />
+
+        <TextView
+            android:id="@+id/detail_jenis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Jenis air putih yaitu air mineral, air demineral, air beroksigen, dan air dengan pH tinggi."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_jenis"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_jenis" />
+
+        <TextView
+            android:id="@+id/tv_porsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="4) Porsi"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_jenis" />
+
+        <TextView
+            android:id="@+id/detail_porsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Minum minimal 2 liter atau kurang lebih 8 gelas air per hari jika tidak minum 50 persen dari kebutuhan air."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_porsi"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_porsi" />
+
+        <TextView
+            android:id="@+id/tv_kandungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="5) Kandungan"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_porsi" />
+
+        <TextView
+            android:id="@+id/detail_kandungan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Kandungan dalam air minum adalah Kalsium, Natrium, Selenium, Kalium, Silika dan Zink."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_kandungan"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_kandungan" />
+
+        <TextView
+            android:id="@+id/tv_masalah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="6) Masalah atau penyakit yang timbul jika kurang minum air putih"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_kandungan" />
+
+        <TextView
+            android:id="@+id/detail_masalah"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_masalah"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_masalah" />
+
+        <TextView
+            android:id="@+id/tv_speak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text=". . . . ."
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

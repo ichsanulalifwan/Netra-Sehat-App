@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
 import com.app.tunanetradaily.databinding.ActivityAnekaRagamMakananBinding
-import com.app.tunanetradaily.giziseimbang.PilarGiziSeimbangActivity
 import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -40,31 +39,31 @@ class AnekaRagamMakananActivity : AppCompatActivity(), CoroutineScope, Recogniti
         // Init speechRecognizer
         setSpeech()
 
-        binding.btnGiziSeimbang.setOnClickListener {
+        binding.cvMakanan.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val giziSeimbangMenu = Intent(this, MakananPokokActivity::class.java)
             startActivity(giziSeimbangMenu)
         }
-        binding.btnCovid19.setOnClickListener {
+        binding.cvLauk.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, LaukPaukActivity::class.java)
             startActivity(covidMenu)
         }
-        binding.btnPelayananKesehatan.setOnClickListener {
+        binding.cvSayuran.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, SayuranActivity::class.java)
             startActivity(covidMenu)
         }
-        binding.btnContactPerson.setOnClickListener {
+        binding.cvBuah.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, BuahActivity::class.java)
             startActivity(covidMenu)
         }
-        binding.btnAirputih.setOnClickListener {
+        binding.cvAirPutih.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, AirPutihActivity::class.java)
