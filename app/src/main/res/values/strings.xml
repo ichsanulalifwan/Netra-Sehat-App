@@ -11,6 +11,10 @@
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
+    <string name="opsi7">
+        katakan 7 untuk opsi selanjutnya
+    </string>
+
     <!-- Menu res-->
     <string name="menu_giziSeimbang">
         Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang.
@@ -28,9 +32,22 @@
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
-    <string name="menu_makananPokok">
-        Katakan 1 untuk Penjelasan Makanan Pokok, Katakan 2 untuk Jenis-Jenis Makanan Pokok,
-        Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    <string name="menu_detail_anekaRagamMakanan">
+        Katakan 1 untuk Pengertian, Katakan 2 untuk Manfaat, Katakan 3 untuk Jenis, Katakan 4 untuk Porsi,
+        Katakan 5 untuk Kandungan, Katakan 6 untuk Masalah jika konsumsi tidak sesuai,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
+    <string name="menu_detail_airputih">
+        Katakan 1 untuk Pengertian, Katakan 2 untuk Manfaat,Katakan 3 untuk Jenis, Katakan 4 untuk Porsi,
+        Katakan 5 untuk Kandungan, Katakan 6 untuk Masalah yang timbul jika kurang minum air putih,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
+    <string name="menu_detail_makananPokok">
+        Katakan 1 untuk Pengertian, Katakan 2 untuk Manfaat,Katakan 3 untuk Jenis, Katakan 4 untuk Porsi,
+        Katakan 5 untuk Kandungan, Katakan 6 untuk Masalah jika konsumsi tidak sesuai,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
     <string name="menu_jenisMakananPokok">
         Katakan 1 untuk Nasi, Katakan 2 untuk Jagung, Katakan 3 untuk Sagu, Katakan 4 untuk Ubi Jalar, Katakan 5 untuk Singkong,
@@ -47,6 +64,8 @@
         Katakan 6 untuk Udang, Katakan 7 untuk Cumi-Cumi, Katakan 8 untuk Tempe, Katakan 9 untuk Tahu.
         Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+
+
 
     <string name="menu_sayuran">
         Katakan 1 untuk Penjelasan Sayuran, Katakan 2 untuk Jenis-Jenis Sayuran,
@@ -1100,6 +1119,161 @@
 
         Katakan 7 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+
     <string name="detail_imt"><![CDATA[Cara orang dewasa menentuka ukuran indeks massa tubuh (IMT) yaitu dengan mengukur ukuran yang berkaitan dengan kekurangan atau 4. Pemantauan Berat Badan kelebihan berat badan. Mempertahankan berat badan normal memungkinkan seseorang dapat mencegah berbagai penyakit tidak menular. Berikut cara menghitungnya menggunakan rumus IMT.\nBatas ambang IMT ditentukan dengan merujuk ketentuan WHO yang membedakan batas ambang normal untuk laki-laki dan perempuan. Di Indonesia, berdasarkan hasil penelitian dan pengalaman klinis tidak dibedakan menurut jenis kelamin, dan batas ambang normal yang digunakan adalah 18.5 - < 25.0. Seseorang dikategorikan menderita obesitas jika IMTnya ≥ 27.0. Cara mempertahankan berat badan normal adalah dengan mempertahankan pola konsumsi BB (kg) IMT = TB2 (m) Ket : BB = Berat Badan (kg) TB = Tinggi Badan makanan dengan susunan gizi seimbang dan beraneka ragam serta mempertahankan kebiasaan latihan fisik/olah raga teratur.]]></string>
+    <string name="pengertian_gizi_seimbang">Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang.</string>
+    <string name="pengertian_berat_badan">Berat Badan yang normal, yaitu berat badan yang ideal atau sesuai dengan tinggi badannya. Indikator tersebut dikenal dengan Indeks Masa Tubuh (IMT). Pentingnya pemantauan Berat Badan Normal karena berkaitan dengan penilaian bagaimana Pola Hidup dengan‘Gizi Seimbang terhadap individu sehingga dapat mencegah penyimpangan BB dari BB normal, dan apabila terjadi penyimpangan maka dapat segera dilakukan langkah-langkah pencegahan dan penanganannya.</string>
+    <string name="pengertian_aktivitas_fisik">Aktivitas fisik merupakan setiap gerakan tubuh yang diakibatkan kerja otot rangka dan meningkatkan pengeluaran tenaga serta energi. Aktivitas fisik adalah setiap gerakan tubuh yang jika dilakukan dapat mengeluarkan energi. Aktivitas fisik ini biasanya seperti olahraga fisik, hobi, maupun aktivitas sehari-hari.</string>
+
+    <!-- Makanan Pokok res-->
     <string name="pengertian_makananPokok">Makanan pokok adalah makanan paling utama yang harus dimakan oleh manusia setiap hari.</string>
+    <string name="manfaat_makanan_pokok">Manfaat makanan pokok adalah sebagai sumber energi, dan merupakan penghasil karbohidrat yang dibutuhkan oleh tubuh. Selain itu, karbohidrat dapat bermanfaat untuk meningkatkan metabolisme tubuh, menyeimbangkan asam basa dalam tubuh, pembentuk sel, jaringan serta organ, memperlancar pencernaan dan penyerapan kalsium serta membantu membentuk protein dan lemak.</string>
+    <string name="detail_jenis_makanan_pokok">Jenis makanan pokok misalnya beras, jagung, sagu, ubi jalar, singkong, mie, roti dan sebagainya.</string>
+    <string name="porsi_makanan_pokok">Kebutuhan energi orang dewasa di Indonesia, yakni 2.000 kalori untuk wanita dan 2.300 kalori untuk pria</string>
+    <!-- Nasi res-->
+    <string name="pengertian_nasi">Nasi adalah salah satu bahan pangan utama masyarakat Indonesia. Nasi berwarna putih, bentuk panjang dan kecil, dan berstektur sangat lembut. \n Nasi merupakan hasil olahan dari beras. Beras yang dimasak menjadi nasi yang siap dimakan.</string>
+    <string name="manfaat_nasi">Manfaat nasi adalah sebagai sumber energi.</string>
+    <string name="jenis_nasi">Ada dua jenis nasi yang paling sering ditemui yaitu nasi putih dan nasi merah. \n Jika memiliki riwayat penyakit gula darah maka, disarankan memilih nasi merah. Nasi merah mengandung lebih banyak serat serta lebih rendah gula dibanding nasi putih.</string>
+    <string name="porsi_nasi">Porsi satu kepal nasi setara dengan 100 gram. Porsi wanita dewasa maksimal 400 gram nasi per hari. Sedangkan porsi pria dewasa maksimal 500 gram nasi per hari. Dengan kata lain, baik wanita maupun pria butuh sekitar 4–5 kepal nasi dalam sehari.\n Cara konsumsi sebanyak 3 kali sehari. Dapat dibagi 1,5 kepal nasi di pagi hari, 2 kepal nasi di siang hari, dan 1,5 kepal nasi di malam hari.</string>
+    <string name="kandungan_nasi">Nasi mengandung karbohidrat yang tinggi dan banyak nutrisi lainnya mulai dari protein, mineral, dan vitamin.</string>
+    <string name="masalah_nasi">Masalah yang timbul jika terlalu banyak mengonsumsi nasi bisa mengakibatkan kegemukan dan diabetes. Nasi memiliki kadar gula yang tinggi sehingga kita harus makan sesuai dengan kebutuhan tubuh.</string>
+    <!-- Jagung res-->
+    <string name="pengertian_jagung">Jagung merupakan buah yang memiliki tongkol. Setiap tongkol memiliki 10–16 baris biji yang jumlahnya selalu genap. Jagung ada yang berwarna kuning dan putih.</string>
+    <string name="manfaat_jagung">Manfaat dari jagung adalah bermanfaat sebagai sumber kalori yang tinggi yang diperlukan untuk metabolisme tubuh.</string>
+    <string name="jenis_jagung">Beberapa jenis jagung diantaranya adalah jagung manis, jagung popcorn, jagung gigi kuda, jagung mutiara, jagung tepung, jagung ketan, jagung pod.</string>
+    <string name="porsi_jagung">Satu porsi jagung untuk sekali makan sebanyak 200 gram atau setara dengan 3 centong nasi jagung. Jagung memiliki kandungan serat yang tinggi sehingga menimbulkan efek kenyang lebih lama.</string>
+    <string name="kandungan_jagung">Kandungan Karbohidrat jagung terdiri atas pati, gula, serat kasar dan pentosan. Satu biji jagung, kandungan patinya berkisar 54,1–71,7 persen, kandungan gulanya sebesar 2,6–12 persen. Kandungan kalori dalam 100 gram jagung kira-kira 342 kalori.</string>
+    <string name="masalah_jagung">Masalah yang ditimbulkan akibat terlalu banyak mengonsumsi jagung yaitu dapat menimbulkan risiko diabetes dan gangguan pencernaan.</string>
+    <!-- sagu res-->
+    <string name="pengertian_sagu">Sagu adalah salah satu jenis tepung yang berasal dari tanaman sagu. Tepung sagu hanya bisa didapatkan di Indonesia di bagian timur saja. Sagu biasanya diolah menjadi papeda atau kapurung sebagai kuliner khas Indonesia.</string>
+    <string name="manfaat_sagu">Manfaat sagu adalah dapat mengikat gula darah dalam tubuh dan menghambat pertumbuhan kanker pada organ dalam seperti paru – paru ataupun usus karena zat prebiotik yang dikandungnya.</string>
+    <string name="jenis_sagu">Jenis sagu diantaranya sagu molat (Metroxylon sagus), adapula Metroxylon rumphii dengan batang dapat mencapai tinggi 10 – 12 meter dengan diameter 70 – 100 cm, dan Sagu Inur (Metroxylon Sylvester) batangnya mencapai 10 – 20 meter dengan diameter relatif lebih besar dari yang lain.</string>
+    <string name="porsi_sagu">Satu porsi sagu untuk sekali makan sebanyak 250 gram atau setara dengan 12 sendok makan (setiap sendok makan mengandung 20 gram sagu).</string>
+    <string name="kandungan_sagu">Makanan ini mengandung antioksidan dan bisa memberikan ekstra energi, 100 gram sagu bisa mendapatkan 332 kalori dan karbohidrat sebanyak 83 gram.</string>
+    <string name="masalah_sagu">Jika diproses tidak benar atau mentah maka akan menimbulkan mual dan muntah, bahkan kerusakan hati.</string>
+    <!-- ubijalar res-->
+    <string name="pengertian_ubijalar">Ubi jalar adalah tanaman yang termasuk jenis umbi batang. Ubi jalar sering juga disebut ketela rambat.</string>
+    <string name="manfaat_ubijalar">Manfaat ubi jalar adalah mampu mengontrol kadar gula dalam tubuh, dan mampu menjaga kesehatan jantung.</string>
+    <string name="jenis_ubijalar">Terdapat 3 jenis ubi jalar yang popular di Indonesia yaitu ubi ungu, ubi kuning/orange dan ubi putih.</string>
+    <string name="porsi_ubijalar">Satu porsi ubi jalar untuk sekali makan sebanyak 200 gram atau setara dengan satu buah ubi jalar ukuran besar. Ubi jalar ukuran sedang yang sudah dipanggang hanya memiliki 105 kalori, sehingga cocok untuk program penurunan berat badan.</string>
+    <string name="kandungan_ubijalar">Kandungan dalam ubi jalar adalah karbohidrat dan kalori. Ubi jalar mengandung serat dan hampir tidak mengandung lemak. Kandungan nutrisi pada ubi jalar yaitu 37 persen kebutuhan tubuh akan Vitamin C, 25 persen mangan, 14 persen vitamin B6, dan 9 persen kalium. Serta mengandung vitamin A.</string>
+    <string name="masalah_ubijalar">Mengkonsumsi ubi jalar secara berlebihan dapat menyebabkan gangguan pencernaan dan peningkatan kadar kalium dalam darah.</string>
+    <!-- singkong res-->
+    <string name="pengertian_singkong">Singkong adalah jenis umbi-umbian yang berasal dari umbi akar. Singkong dikenal dengan Ketela Pohon atau Ubi Kayu.</string>
+    <string name="manfaat_singkong">Manfaat singkong ialah melancarkan pencernaan, menurunkan berat badan, serta meningkatkan energi, fungsi otak dan saraf.</string>
+    <string name="jenis_singkong">Jenis singkong diantaranya Manggu/Cimanggu, Singkong Putih, Singkong Emas, Singkong Mentega, Singkong Darul Hidayah, Singkong Gajah, Singkong Manggu, dan Singkong Mukibat.</string>
+    <string name="porsi_singkong">Satu porsi singkong rebus untuk sekali makan sebanyak 100 gram atau setara dengan dua potong singkong rebus.</string>
+    <string name="kandungan_singkong">Sebanyak 98% kandungan singkong adalah karbohidrat, sisanya baru protein dan lemak, 100 gram singkong terkandung 110–150 kalori. Singkong yang telah direbus juga mengandung zat besi, vitamin C, dan niacin. Singkong menyediakan Energi sebesar 160 Kilokalori, jumlah Karbohidrat 38.06 g, Protein 1,36 g 2,5, Total Lemak 0.28 g, Kolesterol 0 mg, dan Serat 1,8 g.</string>
+    <string name="masalah_singkong">Hal yang terpenting adalah jangan pernah mengonsumsi singkong mentah karena masih mengandung racun. Umbi Singkong tertentu mengandung senyawa beracun alami yang bernama glikosida sianogen linamarin dan metil-linamarin. Namun mengupas singkong akan mengurangi kandungan sianida, pengeringan matahari dan perendaman, perebusan akan menguapkan senyawa ini, yang membuatnya aman untuk dikonsumsi manusia.</string>
+    <!-- mie res-->
+    <string name="pengertian_mie">Mie merupakan makanan yang diolah dengan bentuk menyerupai tali-tali dengan bahan dasar tepung, garam, dan minyak sawit.\n Terdapat kontroversi terkait dengan terganggunya kesehatan akibat mengkonsumsi mie instan karena mengandung sodium dan MSG dalam jumlah tinggi.</string>
+    <string name="manfaat_mie">Manfaat mie yaitu sebagai sumber energi, membantu memenuhi asupan nutrisi bagi tubuh, dan dapat membuat perut kenyang.</string>
+    <string name="jenis_mie">Adapun jenis mie yakni ada mie kuning basah, mie kwiteau, mie bihun, mie telur, mie sohun, dan mie kering.</string>
+    <string name="porsi_mie">Satu porsi mie untuk sekali makan sebanyak 100 gram atau setara dengan 10 sendok makan (setiap sendok makan mengandung 10 gram mie).</string>
+    <string name="kandungan_mie">Kandungan mie instan adalah terdapat 219 kalori yang mengandung 14 % lemak, 73 % karbohidrat, 3.3 gram lemak, 40.02 karbohidrat, 7,22 gram protein, 46 mg kolestrol, 378 mg sodium, vitamn A 1 %, dan kalsium 2 %.</string>
+    <string name="masalah_mie">Konsumsi mie bisa menimbulkan beberapa dampak negatif bagi kesehatan. Beberapa efek samping tersebut diantaranya adalah kanker, gangguan pencernaan, maupun berbagai jenis gangguan kesehatan lainnya.</string>
+    <!-- roti res-->
+    <string name="pengertian_roti">Roti merupakan salah satu produk pangan berbahan dasar tepung terigu yang di fermentasi dengan ragi roti atau bahan pengembang lainnya yang diolah dengan cara dipanggang.</string>
+    <string name="manfaat_roti">Manfaat dari 100 gram roti bisa memberikan lebih banyak energi, karbohidrat, protein, kalsium, fosfor, dan besi dibandingkan 100 gram nasi putih. \n Tingginya kandungan serat dalam roti gandum juga sangat baik untuk sistem pencernaan. Selain itu, roti gandum juga mengandung antioksidan dan fitoestrogen yang baik untuk mencegah penyakit jantung dan kanker.</string>
+    <string name="jenis_roti">Begitu banyak jenis- jenis roti yang ada. Namun, roti yang paling sering di konsumsi di Indonesia sendiri yakni roti tawar dan roti manis. Padahal, roti gandum yang berwarna kecokelatan mengandung serat lebih banyak dan dinilai juga lebih sehat.</string>
+    <string name="porsi_roti">Satu porsi roti untuk sekali makan sebanyak 75 gram.</string>
+    <string name="kandungan_roti">Roti mengandung zat bermanfaat, seperti vitamin B1, vitamin B2, dan niasin serta sejumlah mineral berupa zat besi, yodium, kalsium, dan kandungan mineral lainnya.</string>
+    <string name="masalah_roti">Masalah yang ditimbulkan roti yakni bisa berisiko penyakit diabetes, membuat perut kembung, dan bisa menaikkan berat badan pula apabila dikonsumsi secara berlebihan.</string>
+
+    <!-- Lauk Pauk res-->
+    <string name="pengertian_lauk_pauk">Lauk pauk adalah makanan pendamping makanan pokok umumnya banyak mengandung protein.</string>
+    <string name="manfaat_laukpauk">Manfaat lauk-pauk yaitu mengandung zat protein yang berguna sebagai zat pembangun pada tubuh. Protein dapat mengganti sel-sel tubuh yang rusak dengan sel-sel baru (memperbaharui sel). Protein yang kita konsumsi dapat menetralkan racun yang ada pada tubuh, membantu pelaksanaan metabolisme tubuh serta ia dapat memelihara cairan dalam rongga tubuh.</string>
+    <string name="detail_jenis__laukpauk">Lauk-pauk terdiri dari ayam, daging, ikan, telur, tahu, tempe, dan lauk-pauk lainnya.</string>
+    <string name="porsi_laukpauk">Lauk pauk yang berasal dari hewan seperti daging dan telur dapat dikonsumsi maksimal 160 gram saja perharinya. Hal ini setara dengan 2 atau 3 potong daging, untuk protein nabati bisa memakannya hingga 400 gram setiap harinya.</string>
+    <string name="kandungan_laukpauk">Kandungan zat gizi satu (1) porsi Tempe sebanyak 2 potong sedang atau 50 gram adalah 80 Kalori, 6 gram Protein, 3 gram lemak dan 8 gram karbohidrat.</string>
+    <string name="masalah_laukpauk">Kelebihan asupan protein akan disimpan sebagai lemak di dalam tubuh. Konsumsi protein yang kurang pada balita dapat menyebabkan kondisi Kurang Energi Protein.</string>
+    <!-- Ayam res-->
+    <string name="pengertian_ayam">Ayam termasuk kedalam kelompok unggas, Ayam merupakan hewan omnivore yang berkembang biak dengan cara bertelur (Ovipar). Ayam memiliki sepasang kaki bercakar, memiliki bentuk paruh yang kecil sedikit runcing, dengan jengger di kepalanya. Ayam memiliki bulu sebagai penutup tubuh, biasanya ayam jantan yang berkokok.\n Ayam merupakan jenis pangan hewani yang memiliki tekstur daging yang kenyal. Warna daging ayam yang segar biasanya berwarna merah muda atau agak kemerahan.\n Dada ayam merupakan bagian yang paling sehat. Bagian ini mengandung lebih banyak protein dibanding paha dan sayap. Pada jumlah yang sama, jumlah kalori dada ayam juga lebih rendah dibandingkan bagian lain, yakni 170.</string>
+    <string name="manfaat_ayam">Manfaat daging ayam adalah mengontrol tekanan darah dan kolestrol, meningkatkan sistem kekebalan tubuh, dan meningkatkan kekuatan tulang.</string>
+    <string name="jenis_ayam">Beberapa jenis daging ayam diantaranya daging ayam ras, daging ayam kampung, ayam organik, dan ayam broiler.</string>
+    <string name="kandungan_ayam">Kandungan daging ayam terdiri atas protein, karbohidrat, lemak, kolestrol, berbagai vitamin seperti vitamin A, B1, B3, B5, B6, B12, D, dan E.</string>
+    <string name="porsi_ayam">Satu porsi ayam untuk sekali makan sebanyak 75 gram atau setara dengan satu potong paha atas. Setiap hari tubuh membutuhkan sekitar 0,8 hingga 1 gram protein per kilogram dari berat badan.</string>
+    <string name="masalah_ayam">Masalah yang ditimbulkan akibat terlalu banyak mengonsumsi ayam yaitu dapat mengakibatkan kolestrol, sakit kepala dan gangguan neurologis.</string>
+    <!-- Daging res-->
+    <string name="pengertian_daging">Daging adalah salah satu bahan pangan yang berasal dari hewan seperti sapi, domba, kambing dan hewan lainnya. Daging yang sehat adalah daging yang apabila ditekan terasa kenyal, terlihat merah segar, kelembapannya relative kering, dan aroma khas dagingnya relatif gurih.</string>
+    <string name="manfaat_daging">Manfaat daging adalah mampu memelihara kesehatan sel saraf, membatu pembentukan sel darah merah, sebagai sumber zat besi, kaya akan vitamin serta sebagai sumber protein yang tinggi.</string>
+    <string name="jenis_daging">Jenis daging diantaranya, daging sapi, kerbau, kambing, domba, dan jenis daging lainnya.</string>
+    <string name="porsi_daging">Satu porsi daging untuk sekali makan sebanyak 60 gram atau setara dengan 1 potong daging.</string>
+    <string name="kandungan_daging">Kandungan nutrisi dalam daging antara lain kalori, protein, lemak, zat besi, selenium, vitamin B6, dan B12.</string>
+    <string name="masalah_daging">Masalah yang timbul jika berlebihan dalam mengkonsumsi daging bisa mengakibatkan serangan jantung, kanker usus dan gangguan pencernaan lainnya.</string>
+    <!-- Ikan res-->
+    <string name="pengertian_ikan">Ikan merupakan hewan bertulang belakang (vertebrata) yang hidup dalam air. Ikan terdiri dari ikan air tawar dan ikan laut. Memiliki insang untuk mengambil oksigen dari air dan sirip untuk berenang. Tubuh ditutupi oleh sisik dan berlendir, serta mempunyai bagian tubuh yang jelas antara kepala, badan dan ekor. Ukuran ikan bervariasi mulai dari yang kecil sampai yang besar. Kebanyakan ikan berbentuk pipih.\n Ikan adalah salah satu sumbar protein hewani. Daging ikan secara umum sangat empuk mudah dicerna oleh tubuh. Ikan dapat dikonsumsi dengan cara dimasak, dibakar ataupun digoreng.</string>
+    <string name="manfaat_ikan">Manfaat ikan adalah membantu pertumbuhan otak dan pembentukukan tulang, dapat mencegah penyakit jantung dan risiko diabetes, dapat menjaga kesehatan mata, dapat menjaga daya tahan tubuh dan kesehatan kulit, serta sebagai antioksidan bagi tubuh. Omega - 3 pada ikan dapat meningkatkan kognisi, serta menurunkan risiko Alzheimer.</string>
+    <string name="jenis_ikan">Adapun jenis ikan adalah ikan salmon, ikan trout, ikan sarden, ikan herring, makaler dan tuna. Ikan dapat diolah menjadi ikan goreng, bakso ikan, nugget, pepes ikan, ikan bakar, otak-otak, gulai ikan dan olahan lainnya.</string>
+    <string name="porsi_ikan">Satu porsi ikan untuk sekali makan sebanyak 120 gram setara dengan satu ekor ikan ukuran sedang.</string>
+    <string name="kandungan_ikan">Ikan mengandung asam lemak tak jenuh seperti omega, yodium, selenium, fluorida, zat besi, magnesium, zink, taurine, serta coenzyme. Kandungan omega 3 pada ikan jauh lebih tinggi dibanding sumber protein hewani.</string>
+    <string name="masalah_ikan">Pada dasarnya, tidak ada dampak negatif jika tidak suka makan ikan. Hanya saja banyak kandungan ikan yang sangat baik bagi tubuh, sehingga sangat rugi jika tidak dikonsumsi.</string>
+    <!-- Telur res-->
+    <string name="pengertian_telur">Telur berasal dari hewan yang ternak seperti ayam, dan bebek. Bentuk telur bulat oval.</string>
+    <string name="manfaat_telur">Manfaat telur yaitu menjaga kesehatan tulang dan gigi, membentuk jaringan tubuh dan membantu fungsinya, menjaga sistem imun tubuh, serta mencegah munculnya kadar kolestrol jahat dalam tubuh.</string>
+    <string name="jenis_telur">Jenis telur yakni telur bebek, dan telur ayam. Telur dapat dibuat dengan beragam varian olahan seperti telur ceplok balado, telur dadar, telur rebus balado, dan telur puyuh rebus.</string>
+    <string name="porsi_telur">Batas aman konsumsi telur utuh yang dianjurkan dokter gizi adalah satu sampai dua butir perhari. Setiap butir telur yang dikonsumsi tiap harinya berkisar 60–120 gram.</string>
+    <string name="kandungan_telur">Telur memiliki banyak kandungan seperti protein, karbohidrat, kalori, lemak, serta vitamin A, D, B1, B2, B6 dan asam folat yang berguna untuk tubuh.</string>
+    <string name="masalah_telur">Konsumsi telur jika berlebihan akan berdampak pada tubuh seperti meningkatkan kadar kolestrol dalam tubuh</string>
+    <!-- Kepiting res-->
+    <string name="pengertian_kepiting">Kepiting merupakan jenis seafood yang berasal dari laut ataupun tambak yang dibudidayakan manusia. Tubuh kepiting umumnya ditutupi dengan cangkang, dan memiliki sepasang capit. Pada bagian kaki juga dilengkapi dengan kuku dan sepasang penjepit. Cara pengolahan kepiting biasanya dimasak hidup-hidup dan akan berubah menjadi warna kemerahan saat dimasak.</string>
+    <string name="manfaat_kepiting">Manfaat kepiting diantarannya membantu memelihara kesehatan jantung, kesehatan otak, membantu memperbaiki jaringan sel otak, dan sebagai antioksidan.</string>
+    <string name="jenis_kepiting">Adapun jenis kepiting yakni Kepiting Raja, Kepiting Bakau, Kepiting Rajungan, Kepiting Kenari, dan Kepiting Yuyu. Adapun jenis olahan kepiting yakni kepiting saus, kepiting rebus, kepiting lada hitam, kepiting kecap saus tiram, kepiting asap, sop kepiting, dan kepiting cabai hijau.</string>
+    <string name="porsi_kepiting">Satu porsi kepiting untuk sekali makan sebanyak 80–100 gram atau setara dengan satu ekor kepiting ukuran sedang.</string>
+    <string name="kandungan_kepiting">Kepiting memiliki kandungan protein dan nutrisi penting lainnya seperti asam folat, vitamin B kompleks, serta berbagai mineral (kalium, magnesium, zat besi, yodium, selenium, zinc, dan mangan). Kepiting kaya omega-3.</string>
+    <string name="masalah_kepiting">Masalah yang ditimbulkan akibat terlalu banyak mengkomsumsi kepiting ialah mengakibatkan kenaikan kolestrol yang berlebihan dan bisa juga mengganggu sistem pencernaan serta bisa pula merusak sistem kekebalan tubuh bagi kita.</string>
+    <!-- Udang res-->
+    <string name="pengertian_udang">Udang merupakan salah satu jenis seafood. Udang dapat ditemukan di hampir semua "genangan" air yang berukuran besar baik air tawar, air payau, maupun air asin. Udang berbentuk melengkung dan memiliki cangkang yang transparan. Seperti kepiting saat dimasak udang akan berubah warna menjadi kemerahan.</string>
+    <string name="manfaat_udang">Manfaat udang bagi kesehatan adalah membantu pembentukan sel-sel baru dalam tubuh, menjaga kesehatan tulang dan gigi, serta menyehatkan jantung.</string>
+    <string name="jenis_udang">Adapun jenis yang bisa Dikonsumsi Yaitu Udang Rebon, Udang Jerbung, Udang Dogol, Udang Peci, Udang Flower, dan Udang Karang atau Lobster. Adapun jenis olahan udang berupa udang saus, bumbu rendang, bakso goreng udang, udang goreng tepung dan jenis olahan lainnya.</string>
+    <string name="porsi_udang">Satu porsi udang untuk sekali makan sebanyak 50 gram setara dengan 5 ekor udang ukuran sedang.</string>
+    <string name="kandungan_udang">Kandungan udang yaitu 20 gram protein, kalsium, magnesium, fosfor kalium, zat besi, beta karoten, serat lemak dan zinc. Udang juga mengandung omega 3, omega 6, Vitamin B1, B2 dan B3.</string>
+    <string name="masalah_udang">Mengonsumsi udang secara berlebihan akan mengakibatkan alergi, kolestrol tinggi dan keracunan makanan.</string>
+    <!-- Cumi-Cumi res-->
+    <string name="pengertian_cumi">Cumi-cumi merupakan salah satu seafood. Cumi-cumi mentah memiliki ciri tubuh yang berlendir, agak keras dagingnya bila dipegang dan mempunyai tentakel atau kaki yang banyak. Cumi-cumi memiliki bentuk cenderung runcing dan panjang. Cumi-cumi memiliki tinta hitam dalam tubuhnya.</string>
+    <string name="manfaat_cumi">Manfaat cumi-cumi bagi tubuh yaitu mengatur pembentukan sel darah merah, menjaga keseimbangan tekanan darah, serta membantu menurunkan kolestrol pada tubuh. Tinta cumi juga sangat bermanfaat sebagai antioksidan.</string>
+    <string name="jenis_cumi">Adapun jenis cumi yakni cumi sotong, cumi karang, cumi banga, cumi sero dan cumi telur. Adapun jenis olahan cumi-cumi yaitu cumi yakni asin pedas, sambal cumi, cumi hitam bumbu kunyit dan jenis olahan lainnya.</string>
+    <string name="porsi_cumi">Satu porsi cumi untuk sekali makan sebanyak 40 gram setara dengan 1 ekor cumi ukuran sedang.</string>
+    <string name="kandungan_cumi">Cumi-cumi memiliki kandungan lemak dan kalori yang sangat rendah. Cumi-cumi mengandung omega-3.</string>
+    <string name="masalah_cumi">Jika mengonsumsi cumi-cumi secara berlebihan akan beresiko menimbulkan penyakit stroke, jantung, kanker, hingga tekanan darah tinggi.</string>
+    <!-- Tempe res-->
+    <string name="pengertian_tempe">Tempe merupakan makanan yang terbuat dari kacang kedelai atau beberapa bahan lain yang diproses melalui fermentasi menggunakan mikroorganisme Rhizopus sp. atau yang biasa dikenal sebagai starter/ragi tempe.</string>
+    <string name="manfaat_tempe">Manfaat mengonsumsi tempe yaitu sebagai antioksidan, membangun dan memperbaiki sel tubuh yang rusak, menurunkan resiko osteoporosis, dan menangkal reaksi radikal bebas.</string>
+    <string name="jenis_tempe">Jenis olahan tempe terdiri dari tempe goreng tepung, tempe goreng mendoan, tempe penyet, tempe orek dan tempe kering.</string>
+    <string name="porsi_tempe">Satu porsi tempe untuk sekali makan sebanyak 60 gram setara dengan 2 potong segitiga.</string>
+    <string name="kandungan_tempe">Kandungan gizi tempe terdiri dari protein 20,7 gram, lemak 8,8 gram, karbohidrat 13,5 gram, dan vitamin B12 1,7 gram.</string>
+    <string name="masalah_tempe">Masalah yang ditimbulkan jika mengkomsumsi tempe secara berlebih yaitu mengakibatkan diabetes, penyakit jantung, dan obesitas.</string>
+
+    <!-- Ikan res-->
+    <string name="pengertian_"></string>
+    <string name="manfaat_"></string>
+    <string name="jenis_"></string>
+    <string name="porsi_"></string>
+    <string name="kandungan_"></string>
+    <string name="masalah_"></string>
+
+    <!-- Sayuran res-->
+    <string name="pengertian_sayuran">Sayuran merupakan bahan pangan asal tumbuhan yang mengandung serat tinggi yang dikonsumsi dalam keadaan segar dan diolah jadi makanan.</string>
+    <string name="manfaat_sayuran">Manfaat sayur secara garis besar yaitu berkhasiat untuk meningkatkan kesehatan dan metabolisme tubuh yaitu melancarkan buang air besar, mencegah kanker, meningkatkan sistem imun, meningkatkan kesehatan syaraf dan mata.</string>
+    <string name="detail_jenis_sayuran">Jenis sayur yang sering dikonsumsi masyarakat yaitu sayur asam, sayur sop, sayur bayam bening, sayur lodeh, tumis sawi, tumis kacang panjang, gulai daun singkong, tumis kangkong, tumis tauge, balado terong, urap, wortel rebus, buncis rebus, nangka, labu siam, dan terong.</string>
+    <string name="porsi_sayuran">Konsumsi sayuran yang dianjurkan oleh WHO perhari, yaitu 250 gram sayur (setara dengan 2 ½ porsi atau 2 ½ gelas sayur setelah dimasak dan ditiriskan).</string>
+    <string name="kandungan_sayuran">Pada umumnya sayur-sayuran lebih banyak mengandung zat tepung, karbohidrat, terutama sayuran yang berasal dari akar. Sayuran yang berwarna hijau kandungan gulanya lebih sedikit daripada sayuran yang berbentuk buah, dan sayuran yang berupa daun lebih banyak mengandung vitamin dan mineral.</string>
+    <string name="masalah_sayuran">Tidak makan sayur dapat mengakibatkan sulit buang air besar, kegemukan, tekanan darah tidak terkontrol, kadar glukosa darah tidak terkontrol, pembuluh darah menyempit, dan mudah terkena penyakit menular. Konsumsi sayur yang kurang dapat menyebabkan kanker gastrointestinal, penyakit jantung iskemik, stroke, dan sebagai faktor risiko kematian.</string>
+
+    <!-- Buah res-->
+    <string name="pengertian_buah">Secara umum pengertian buah-buahan adalah salah satu bagian dari tanaman atau pohon yang berdaging dan dapat dimakan sebagai makanan yang bisa memberikan efek mengenyangkan, menyehatkan dan menyenangkan (sebagai camilan). Sebagai makanan alami, buah-buahan memiliki kandungan vitamin, gizi, dan mineral.</string>
+    <string name="manfaat_buah">Manfaat buah untuk kesehatan tubuh yaitu mengoptimalkan kesehatan dalam jangka panjang, menjaga dan meningkatkan energi, kesehatan organ, melindungi tubuh dari penyakit dan membantu proses penyembuhan penyakit.</string>
+    <string name="detail_jenis_buah">Adapun jenis buah-buahan yang sering kita temui sehari-hari diantaranya alpukat, anggur, apel, belimbing, bengkuang, blueberry, cempedak, cermai, delima, duku, durian, jambu biji, jeruk, kedondong, kelapa, kiwi, kurma, langsat, lemon, leci, mangga, manggis, markisa, nanas, Nangka, naga, papaya, pir, pisang, rambutan, salak, sawo, semangka, sirsak, stroberi, dan sebagainya.</string>
+    <string name="porsi_buah">Dianjurkan untuk mengkonsumsi buah–buahan 300 – 400 gram per orang per hari dan bagi remaja dan orang dewasa sebanyak 400 -600 gram per orang per hari.</string>
+    <string name="kandungan_buah">Berikut ini adalah beberapa kandungan nutrisi yang umum terdapat dalam buah-buahan: • Serat, yang beperan penting dalam menjaga fungsi saluran pencernaan • Vitamin C, yang penting untuk menjaga jaringan tubuh dari kerusakan akibat radikal bebas • Vitamin A, yang penting untuk kesehatan mata, kulit dan sistem kekebalan tubuh • Folat, yang berperan penting dalam pembentukan darah dan materi genetik • Kalium, yang dapat membantu menjaga tekanan darah dan fungsi sistem saraf</string>
+    <string name="masalah_buah">1. Gangguan pencernaan Makan buah secara berlebihan justru bisa menyebabkan gangguan pencernaan. Anda bisa saja mengalami kembung, begah, kram perut, hingga diare. 2. Peningkatan gula darah pada penderita diabetes Terlalu banyak mengonsumsi gula dapat meningkatnya kadar gula darah. Hal ini ternyata juga dapat terjadi bila Anda kebanyakan makan buah. 3. Kekurangan zat gizi Kebanyakan makan buah memang tidak secara langsung membuat kekurangan zat gizi. Namun, jika menganggap buah sebagai superfood dan mengonsumsinya tanpa dibarengi makanan yang beragam, justru berisiko kekurangan zat gizi lain.</string>
+
+    <!-- Air Putih res-->
+    <string name="pengertian_airputih">Air putih adalah air yang melalui proses pengolaha, filtrasi sehingga tampak jernih. Tanpa proses pengolahan yang melalu syarat dan air tidak dapat langsung diminum.</string>
+    <string name="manfaat_airputih">Manfaat air putih untuk kesehatan sangat banyak, air putih dapat digunakan untuk mengobati berbagai penyakit berbahaya atau mencegah terjadinya penyakit yang tidak diinginkan. Air putih merupakan minuman yang paling sehat dan tidak berbahaya karena dibutuhkan setiap hari oleh tubuh kita untuk menjaga kesehatan.</string>
+    <string name="jenis_airputih">Jenis air putih yaitu air mineral, air demineral, air beroksigen, dan air dengan pH tinggi.</string>
+    <string name="porsi_airputih">Minum minimal 2 liter atau kurang lebih 8 gelas air per hari jika tidak minum 50 persen dari kebutuhan air.</string>
+    <string name="kandungan_airputih">Kandungan dalam air minum adalah Kalsium, Natrium, Selenium, Kalium, Silika dan Zink.</string>
+    <string name="masalah_airputih">Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat.</string>
+
 </resources>

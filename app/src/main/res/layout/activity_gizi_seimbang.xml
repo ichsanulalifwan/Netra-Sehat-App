@@ -38,7 +38,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="16dp"
-            android:text="Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang."
+            android:text="@string/pengertian_gizi_seimbang"
             android:textColor="@color/white"
             android:textSize="16sp" />
     </com.google.android.material.card.MaterialCardView>

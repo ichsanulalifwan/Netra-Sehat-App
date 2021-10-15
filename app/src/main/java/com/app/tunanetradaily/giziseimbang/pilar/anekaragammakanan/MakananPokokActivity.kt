@@ -77,7 +77,7 @@ class MakananPokokActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val makananPokok = getString(R.string.menu_makananPokok)
+        val makananPokok = getString(R.string.menu_detail_makananPokok)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function

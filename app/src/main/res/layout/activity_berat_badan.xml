@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Berat Badan yang normal, yaitu berat badan yang ideal atau sesuai dengan tinggi badannya. Indikator tersebut dikenal dengan Indeks Masa Tubuh (IMT). Pentingnya pemantauan Berat Badan Normal karena berkaitan dengan penilaian bagaimana Pola Hidup dengan‘Gizi Seimbang terhadap individu sehingga dapat mencegah penyimpangan BB dari BB normal, dan apabila terjadi penyimpangan maka dapat segera dilakukan langkah-langkah pencegahan dan penanganannya."
+            android:text="@string/pengertian_berat_badan"
             android:textColor="@color/black"
             android:textSize="11sp"
             app:layout_constraintLeft_toLeftOf="@id/tv_pengertian"

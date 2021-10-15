@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Secara umum pengertian buah-buahan adalah salah satu bagian dari tanaman atau pohon yang berdaging dan dapat dimakan sebagai makanan yang bisa memberikan efek mengenyangkan, menyehatkan dan menyenangkan (sebagai camilan). Sebagai makanan alami, buah-buahan memiliki kandungan vitamin, gizi, dan mineral."
+            android:text="@string/pengertian_buah"
             android:textColor="@color/black"
             android:textSize="11sp"
             app:layout_constraintLeft_toLeftOf="@id/tv_pengertian"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Manfaat buah untuk kesehatan tubuh yaitu mengoptimalkan kesehatan dalam jangka panjang, menjaga dan meningkatkan energi, kesehatan organ, melindungi tubuh dari penyakit dan membantu proses penyembuhan penyakit."
+            android:text="@string/manfaat_buah"
             android:textColor="@color/black"
             android:textSize="11sp"
             app:layout_constraintLeft_toLeftOf="@id/tv_manfaat"
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Adapun jenis buah-buahan yang sering kita temui sehari-hari diantaranya alpukat, anggur, apel, belimbing, bengkuang, blueberry, cempedak, cermai, delima, duku, durian, jambu biji, jeruk, kedondong, kelapa, kiwi, kurma, langsat, lemon, leci, mangga, manggis, markisa, nanas, Nangka, naga, papaya, pir, pisang, rambutan, salak, sawo, semangka, sirsak, stroberi, dan sebagainya."
+            android:text="@string/detail_jenis_buah"
             android:textColor="@color/black"
             android:textSize="11sp"
             app:layout_constraintLeft_toLeftOf="@id/tv_jenis"
@@ -138,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Dianjurkan untuk mengkonsumsi buah-buahan 300-400 gram per orang per hari dan bagi remaja dan orang dewasa sebanyak 400-600 gram per orang per hari."
+            android:text="@string/porsi_buah"
             android:textColor="@color/black"
             android:textSize="11sp"
             app:layout_constraintLeft_toLeftOf="@id/tv_porsi"
@@ -163,12 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Berikut ini adalah beberapa kandungan nutrisi yang umum terdapat dalam buah-buahan:
-            • Serat, yang beperan penting dalam menjaga fungsi saluran pencernaan
-            • Vitamin C, yang penting untuk menjaga jaringan tubuh dari kerusakan akibat radikal bebas
-            • Vitamin A, yang penting untuk kesehatan mata, kulit dan sistem kekebalan tubuh
-            • Folat, yang berperan penting dalam pembentukan darah dan materi genetik
-            • Kalium, yang dapat membantu menjaga tekanan darah dan fungsi sistem saraf"
+            android:text="@string/kandungan_buah"
             android:textColor="@color/black"
             android:textSize="11sp"
             app:layout_constraintLeft_toLeftOf="@id/tv_kandungan"
@@ -193,9 +188,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="1. Gangguan pencernaan Makan buah secara berlebihan justru bisa menyebabkan gangguan pencernaan. Anda bisa saja mengalami kembung, begah, kram perut, hingga diare.
-            2. Peningkatan gula darah pada penderita diabetes Terlalu banyak mengonsumsi gula dapat meningkatnya kadar gula darah. Hal ini ternyata juga dapat terjadi bila Anda kebanyakan makan buah.
-            3. Kekurangan zat gizi Kebanyakan makan buah memang tidak secara langsung membuat kekurangan zat gizi. Namun, jika menganggap buah sebagai superfood dan mengonsumsinya tanpa dibarengi makanan yang beragam, justru berisiko kekurangan zat gizi lain."
+            android:text="@string/masalah_buah"
             android:textColor="@color/black"
             android:textSize="11sp"
             app:layout_constraintLeft_toLeftOf="@id/tv_masalah"
