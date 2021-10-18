@@ -15,7 +15,12 @@
         katakan 7 untuk opsi selanjutnya
     </string>
 
-    <!-- Menu res-->
+    <!-- Title Menu -->
+    <string name="title_gizi_seimbang">Gizi Seimbang</string>
+    <string name="title_pilar_gizi_seimbang">4 Pilar Gizi Seimbang</string>
+    <string name="title_pesan_gizi_seimbang">10 Pesan Gizi Seimbang</string>
+
+    <!-- Menu res -->
     <string name="menu_giziSeimbang">
         Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang.
         Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang,
@@ -1415,5 +1420,14 @@
     <string name="porsi_airputih">Minum minimal 2 liter atau kurang lebih 8 gelas air per hari jika tidak minum 50 persen dari kebutuhan air.</string>
     <string name="kandungan_airputih">Kandungan dalam air minum adalah Kalsium, Natrium, Selenium, Kalium, Silika dan Zink.</string>
     <string name="masalah_airputih">Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat.</string>
+
+    <!--Image Content Description_-->
+    <string name="contentDescription_pesanGizi">Gambar Pesan Gizi Seimbang</string>
+    <string name="contentDescription_pilarGizi">Gambar Pilar Gizi Seimbang</string>
+
+
+    <!--Others String-->
+    <string name="speech_belum_mulai">. . . . .</string>
+    <string name="text_read_more">Baca selengkapnya</string>
 
 </resources>

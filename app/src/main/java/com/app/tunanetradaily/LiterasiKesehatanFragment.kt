@@ -102,6 +102,50 @@ class LiterasiKesehatanFragment : Fragment(), CoroutineScope, RecognitionListene
         })
     }
 
+    /*private fun litkesTTS() {
+       // val textLitkes = getString(R.string.litkes_menu)
+       // textToSpeechEngine2.speak(textLitkes, TextToSpeech.QUEUE_FLUSH, null, "tts")
+
+        textToSpeechEngine2.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
+            override fun onStart(utteranceId: String?) {
+                Log.i("TextToSpeech", "On Start")
+            }
+
+            // Get Input speech after TTS Done
+            override fun onDone(utteranceId: String?) {
+                Log.i("TextToSpeech", "On Done")
+
+                // Get the Intent action
+                val sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+                // Language model defines the purpose, there are special models for other use cases, like search.
+                sttIntent.putExtra(
+                    RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+                )
+                // Adding an extra language, you can use any language from the Locale class.
+                sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+                // Text that shows up on the Speech input prompt.
+                sttIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Bicara Sekarang!")
+                try {
+                    // Start the intent for a result, and pass in our request code.
+                    startActivityForResult(sttIntent, MainActivity.REQUEST_CODE_STT2)
+                } catch (e: ActivityNotFoundException) {
+                    // Handling error when the service is not available.
+                    e.printStackTrace()
+                    Toast.makeText(
+                        context,
+                        "Your device does not support SpeechRecognizer.",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
+
+            override fun onError(utteranceId: String?) {
+                Log.i("TextToSpeech", "On Error")
+            }
+        })
+    }*/
+
     /*private fun setSpeech() {
 
         //speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)

@@ -12,9 +12,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.app.tunanetradaily.databinding.FragmentGiziSeimbangBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -37,18 +41,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Default
 
-//    private val textToSpeechEngine2: TextToSpeech by lazy {
-//        // Pass in context and the listener.
-//        TextToSpeech(
-//            context
-//        ) { status ->
-//            // set our locale only if init was success.
-//            if (status == TextToSpeech.SUCCESS) {
-//                textToSpeechEngine2.language = Locale("id", "ID")
-//            }
-//        }
-//    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -66,23 +58,18 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             // Init speechRecognizer
             setSpeech()
 
-//            binding.btnSpeak.setOnClickListener {
-//                Toast.makeText(context, "btnSpeak Clicked", Toast.LENGTH_LONG).show()
-//            }
-//
-//            binding.btnListen.setOnClickListener {
-//                //litkesTTS()
-//                /*// Get the text to be converted to speech from our EditText.
-//                val text = binding.tvSpeak.text.toString()
-//                // Check if user hasn't input any text.
-//                if (text.isNotEmpty()) {
-//                    // Lollipop and above requires an additional ID to be passed.
-//                    // Call Lollipop+ function
-//                    textToSpeechEngine.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts")
-//                } else {
-//                    Toast.makeText(this, "Text cannot be empty", Toast.LENGTH_LONG).show()
-//                }*/
-//            }
+            // Init Toolbar
+            val toolbar = binding.toolbar
+            val navHostFragment = NavHostFragment.findNavController(this)
+            NavigationUI.setupWithNavController(toolbar, navHostFragment)
+
+            setHasOptionsMenu(true)
+
+            (activity as AppCompatActivity).setSupportActionBar(toolbar)
+
+            toolbar.setNavigationOnClickListener {
+                it.findNavController().navigateUp()
+            }
         }
     }
 
@@ -142,50 +129,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
     }
-
-    /*private fun litkesTTS() {
-       // val textLitkes = getString(R.string.litkes_menu)
-       // textToSpeechEngine2.speak(textLitkes, TextToSpeech.QUEUE_FLUSH, null, "tts")
-
-        textToSpeechEngine2.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-            override fun onStart(utteranceId: String?) {
-                Log.i("TextToSpeech", "On Start")
-            }
-
-            // Get Input speech after TTS Done
-            override fun onDone(utteranceId: String?) {
-                Log.i("TextToSpeech", "On Done")
-
-                // Get the Intent action
-                val sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-                // Language model defines the purpose, there are special models for other use cases, like search.
-                sttIntent.putExtra(
-                    RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
-                )
-                // Adding an extra language, you can use any language from the Locale class.
-                sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-                // Text that shows up on the Speech input prompt.
-                sttIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Bicara Sekarang!")
-                try {
-                    // Start the intent for a result, and pass in our request code.
-                    startActivityForResult(sttIntent, MainActivity.REQUEST_CODE_STT2)
-                } catch (e: ActivityNotFoundException) {
-                    // Handling error when the service is not available.
-                    e.printStackTrace()
-                    Toast.makeText(
-                        context,
-                        "Your device does not support SpeechRecognizer.",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            }
-
-            override fun onError(utteranceId: String?) {
-                Log.i("TextToSpeech", "On Error")
-            }
-        })
-    }*/
 
     private fun startListening() {
         launch(Dispatchers.Main.immediate) {

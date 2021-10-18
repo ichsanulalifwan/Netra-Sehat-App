@@ -13,7 +13,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
 import androidx.navigation.fragment.findNavController
 import com.app.tunanetradaily.databinding.FragmentHomeBinding
 import kotlinx.coroutines.CoroutineScope
