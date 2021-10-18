@@ -8,11 +8,11 @@ import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.app.tunanetradaily.databinding.FragmentHomeBinding
 import kotlinx.coroutines.CoroutineScope
@@ -35,6 +35,12 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Default
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+//        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+//        requireActivity().window.statusBarColor = Color.parseColor("#7001F7")
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,22 +58,25 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             // Init speechRecognizer
             setSpeech()
 
-            binding.cvGiziSeimbang.setOnClickListener {
-                val actionToGiziSeumbang =
-                    HomeFragmentDirections.actionHomeFragmentToNavigationGiziSeimbang()
-                findNavController().navigate(actionToGiziSeumbang)
-            }
+            with(binding) {
+                cvGiziSeimbang.setOnClickListener {
+                    val actionToGiziSeumbang =
+                        HomeFragmentDirections.actionHomeFragmentToNavigationGiziSeimbang()
+                    findNavController().navigate(actionToGiziSeumbang)
+                }
 
-            binding.cvCovid19.setOnClickListener {
-                Toast.makeText(context, "cvCovid19 Clicked", Toast.LENGTH_LONG).show()
-            }
+                cvCovid19.setOnClickListener {
+                    Toast.makeText(context, "cvCovid19 Clicked", Toast.LENGTH_LONG).show()
+                }
 
-            binding.cvPelayananKesehatan.setOnClickListener {
-                Toast.makeText(context, "cvPelayananKesehatan Clicked", Toast.LENGTH_LONG).show()
-            }
+                cvPelayananKesehatan.setOnClickListener {
+                    Toast.makeText(context, "cvPelayananKesehatan Clicked", Toast.LENGTH_LONG)
+                        .show()
+                }
 
-            binding.cvContactPerson.setOnClickListener {
-                Toast.makeText(context, "cvContactPerson Clicked", Toast.LENGTH_LONG).show()
+                cvContactPerson.setOnClickListener {
+                    Toast.makeText(context, "cvContactPerson Clicked", Toast.LENGTH_LONG).show()
+                }
             }
         }
     }
@@ -105,8 +114,12 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
                 val ttsLoop = utteranceId.equals("tts0") ||
-                            utteranceId.equals("tts1") ||
-                            utteranceId.equals("litkesText")
+                        utteranceId.equals("tts1") ||
+                        utteranceId.equals("welcomeText")
+//                if (ttsLoop) {
+//                    startListening()
+//                }
+
                 if (ttsLoop) {
                     startListening()
                 }
@@ -132,53 +145,10 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-        //sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
+        sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
+        sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
         //sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1)
     }
-
-    /*private fun litkesTTS() {
-       // val textLitkes = getString(R.string.litkes_menu)
-       // textToSpeechEngine2.speak(textLitkes, TextToSpeech.QUEUE_FLUSH, null, "tts")
-
-        textToSpeechEngine2.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-            override fun onStart(utteranceId: String?) {
-                Log.i("TextToSpeech", "On Start")
-            }
-
-            // Get Input speech after TTS Done
-            override fun onDone(utteranceId: String?) {
-                Log.i("TextToSpeech", "On Done")
-
-                // Get the Intent action
-                val sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-                // Language model defines the purpose, there are special models for other use cases, like search.
-                sttIntent.putExtra(
-                    RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
-                )
-                // Adding an extra language, you can use any language from the Locale class.
-                sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-                // Text that shows up on the Speech input prompt.
-                sttIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Bicara Sekarang!")
-                try {
-                    // Start the intent for a result, and pass in our request code.
-                    startActivityForResult(sttIntent, MainActivity.REQUEST_CODE_STT2)
-                } catch (e: ActivityNotFoundException) {
-                    // Handling error when the service is not available.
-                    e.printStackTrace()
-                    Toast.makeText(
-                        context,
-                        "Your device does not support SpeechRecognizer.",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            }
-
-            override fun onError(utteranceId: String?) {
-                Log.i("TextToSpeech", "On Error")
-            }
-        })
-    }*/
 
     private fun startListening() {
         launch(Dispatchers.Main.immediate) {
@@ -219,8 +189,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         //textToSpeechEngine?.stop()
         //stopListening()
         // val messageNoMatch = "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-        textToSpeechEngine?.speak(errorMessage, TextToSpeech.QUEUE_FLUSH, null, "tts0")
-        // startOver()
+//        textToSpeechEngine?.speak(errorMessage, TextToSpeech.QUEUE_FLUSH, null, "tts0")
+        startOver()
     }
 
     override fun onResults(results: Bundle?) {
@@ -274,10 +244,11 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 exitProcess(0)
             }
             else -> {
-                val messageNoMatch =
+                startOver()
+                /*val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
                 textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts1")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()*/
             }
         }
     }
@@ -291,7 +262,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     }
 
     private fun startOver() {
-        // stopListening()
+        // Destroy and rebuild again
+        stopListening()
         speechRecognizer.destroy()
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)
         speechRecognizer.setRecognitionListener(this)
@@ -302,13 +274,9 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
         )
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
+        sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
 
-        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
-        sttIntent.putExtra(
-            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
-            1000
-        )
-        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
         // start again
         startListening()
     }

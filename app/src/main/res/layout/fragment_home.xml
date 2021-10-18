@@ -15,8 +15,8 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_welcome"
             android:layout_width="match_parent"
-            android:layout_height="327dp"
-            android:translationY="-40dp"
+            android:layout_height="288dp"
+            android:translationY="-48dp"
             app:cardCornerRadius="48dp"
             app:cardElevation="6dp"
             app:layout_constraintTop_toTopOf="parent">
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="56dp"
+                android:layout_marginTop="64dp"
                 android:text="@string/title_selamat_datang"
                 android:textColor="@color/white"
                 android:textSize="32sp"
@@ -53,7 +53,7 @@
             android:id="@+id/cv_giziSeimbang"
             android:layout_width="120dp"
             android:layout_height="130dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:clickable="true"
             android:focusable="true"
             app:cardBackgroundColor="@color/white"

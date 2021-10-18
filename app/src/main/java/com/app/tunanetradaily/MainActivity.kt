@@ -3,6 +3,7 @@ package com.app.tunanetradaily
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.speech.RecognitionListener
@@ -11,6 +12,7 @@ import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
+import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -88,6 +90,12 @@ class MainActivity : AppCompatActivity()/*, CoroutineScope, RecognitionListener*
 //            val cpSahabatNetraMenu = Intent(this, ContactSahabatNetraActivity::class.java)
 //            startActivity(cpSahabatNetraMenu)
 //        }
+    }
+
+    fun updateStatusBarColor(color: String?) { // Color must be in hexadecimal fromat
+        val window: Window = window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = Color.parseColor(color)
     }
 
     //
