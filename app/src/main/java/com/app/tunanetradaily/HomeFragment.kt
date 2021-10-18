@@ -41,7 +41,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        binding.cvWelcome.setBackgroundResource(R.drawable.bg_welcome)
         return binding.root
     }
 
