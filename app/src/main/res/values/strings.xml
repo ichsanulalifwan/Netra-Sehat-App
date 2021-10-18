@@ -23,6 +23,10 @@
     <string name="title_cp_sahabat_netra">Contact Person\nSahabat Netra</string>
     <string name="title_pilar_gizi_seimbang">4 Pilar Gizi Seimbang</string>
     <string name="title_pesan_gizi_seimbang">10 Pesan Gizi Seimbang</string>
+    <string name="title_mengonsumsi_aneka">Mengonsumsi Aneka Ragam Makanan</string>
+    <string name="title_phbs">Perilaku Hidup Bersih dan Sehat</string>
+    <string name="title_aktivitas_fisik">Aktivitas Fisik</string>
+    <string name="title_memantau_berat_badan">Memantau Berat Badan</string>
 
     <!-- Menu res -->
     <string name="menu_giziSeimbang">
