@@ -72,15 +72,17 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
                 it.findNavController().navigateUp()
             }
 
-            binding.cvPilarGizi.setOnClickListener {
-                val actionToPilarGizi =
-                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-                findNavController().navigate(actionToPilarGizi)
-            }
-            binding.cvPesanGizi.setOnClickListener {
-                val actionToPesanGizi =
-                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-                findNavController().navigate(actionToPesanGizi)
+            with(binding) {
+                cvPilarGizi.setOnClickListener {
+                    val actionToPilarGizi =
+                        GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
+                    findNavController().navigate(actionToPilarGizi)
+                }
+                cvPesanGizi.setOnClickListener {
+                    val actionToPesanGizi =
+                        GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
+                    findNavController().navigate(actionToPesanGizi)
+                }
             }
         }
     }
@@ -94,7 +96,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
                 // Set language
                 textToSpeechEngine?.language = Locale("id", "ID")
 
-                // start speech welcome message
+                // start speech
                 textToSpeech()
             }
         }
@@ -125,9 +127,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         })
     }
 
-
     private fun setSpeech() {
-
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)
         speechRecognizer.setRecognitionListener(this)
 
@@ -140,6 +140,8 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+
+        sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
     private fun startListening() {
@@ -150,6 +152,31 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     private fun stopListening() {
         speechRecognizer.stopListening()
+    }
+
+    private fun startOver() {
+        // Destroy and rebuild again
+        stopListening()
+        speechRecognizer.destroy()
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)
+        speechRecognizer.setRecognitionListener(this)
+
+        sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        sttIntent.putExtra(
+            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+        )
+        sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
+
+        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
+        sttIntent.putExtra(
+            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
+            1000
+        )
+        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
+        // start again
+        startListening()
     }
 
     override fun onReadyForSpeech(p0: Bundle?) {
@@ -235,28 +262,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onEvent(p0: Int, p1: Bundle?) {
         Log.i(TAG, "onEvent")
-    }
-
-    private fun startOver() {
-        stopListening()
-//        speechRecognizer.destroy()
-//        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)
-//        speechRecognizer.setRecognitionListener(this)
-//
-//        sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-//        sttIntent.putExtra(
-//            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-//            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
-//        )
-//        sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
-        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
-        sttIntent.putExtra(
-            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
-            1000
-        )
-        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
-        startListening()
     }
 
     private fun getErrorText(errorCode: Int): String {
