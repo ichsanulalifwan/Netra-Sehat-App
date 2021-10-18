@@ -6,6 +6,7 @@ import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
+import android.speech.tts.UtteranceProgressListener
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import com.app.tunanetradaily.databinding.FragmentGiziSeimbangBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,21 +31,23 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentGiziSeimbangBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
+    private lateinit var navController: NavController
+
     private val job = Job()
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Default
 
-    private val textToSpeechEngine2: TextToSpeech by lazy {
-        // Pass in context and the listener.
-        TextToSpeech(
-            context
-        ) { status ->
-            // set our locale only if init was success.
-            if (status == TextToSpeech.SUCCESS) {
-                textToSpeechEngine2.language = Locale("id", "ID")
-            }
-        }
-    }
+//    private val textToSpeechEngine2: TextToSpeech by lazy {
+//        // Pass in context and the listener.
+//        TextToSpeech(
+//            context
+//        ) { status ->
+//            // set our locale only if init was success.
+//            if (status == TextToSpeech.SUCCESS) {
+//                textToSpeechEngine2.language = Locale("id", "ID")
+//            }
+//        }
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,20 +63,8 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         if (activity != null)  {
 
-            // Init Text to Speech
-            /*tts = TextToSpeech(this, this)*/
-
-            textToSpeechEngine = TextToSpeech(context) { arg0 ->
-                if (arg0 == TextToSpeech.SUCCESS) {
-                    // Set language
-                    textToSpeechEngine?.language = Locale("id", "ID")
-
-                    // start speech welcome message
-                    //welcomeTTS()
-                }
-            }
-
-            //litkesTTS()
+            // Init speechRecognizer
+            setSpeech()
 
 //            binding.btnSpeak.setOnClickListener {
 //                Toast.makeText(context, "btnSpeak Clicked", Toast.LENGTH_LONG).show()
@@ -92,6 +84,63 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 //                }*/
 //            }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        // Init TTS
+        textToSpeechEngine = TextToSpeech(context) { arg0 ->
+            if (arg0 == TextToSpeech.SUCCESS) {
+                // Set language
+                textToSpeechEngine?.language = Locale("id", "ID")
+
+                // start speech welcome message
+                textToSpeech()
+            }
+        }
+    }
+
+    private fun textToSpeech() {
+        // Get the text from local string resource
+        val giziSeimbang = getString(R.string.menu_giziSeimbang)
+
+        // Lollipop and above requires an additional ID to be passed.
+        // Call Lollipop+ function
+        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts")
+
+        textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
+            override fun onStart(utteranceId: String?) {
+                Log.i(TAG, "TTS On Start")
+
+            }
+
+            override fun onDone(utteranceId: String?) {
+                Log.i(TAG, "TTS On Done")
+                startListening()
+            }
+
+            override fun onError(utteranceId: String?) {
+                Log.i(TAG, "TTS On Error")
+            }
+        })
+    }
+
+
+    private fun setSpeech() {
+
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)
+        speechRecognizer.setRecognitionListener(this)
+
+        // Get the Intent action
+        sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        // Language model defines the purpose, there are special models for other use cases, like search.
+        sttIntent.putExtra(
+            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+        )
+        // Adding an extra language, you can use any language from the Locale class.
+        sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
     }
 
     /*private fun litkesTTS() {
@@ -155,7 +204,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
         val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
+        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -173,7 +222,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-       // binding.tvSpeak.text = errorMessage
+        binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -182,7 +231,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
+        binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
@@ -190,30 +239,31 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         when {
             check1 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
+                //textToSpeechEngine?.stop()
+                //stopListening()
                 val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
                 startActivity(giziSeimbangMenu)
                 //finish()
             }
             check7 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
+                //textToSpeechEngine?.stop()
+                //stopListening()
                 /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
                 startActivity(backPreviousMenu)*/
-                parentFragmentManager.popBackStack()
+                //fragmentManager?.popBackStack()
+                navController.popBackStack()
                 //finish()
             }
             check9 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
+                //textToSpeechEngine?.stop()
+                //stopListening()
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
                 activity?.let { finishAffinity(it) }
             }
             check0 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
+                //textToSpeechEngine?.stop()
+                //stopListening()
                 activity?.finishAffinity()
                 exitProcess(0)
             }
@@ -228,44 +278,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onPartialResults(parsialResult: Bundle?) {
         Log.i(TAG, "onPartialResults")
-
-        val matches = parsialResult?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
-        val recognizedText = matches?.get(0)
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
-        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
-        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
-
-        when {
-            check1 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
-                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
-                startActivity(giziSeimbangMenu)
-                //finish()
-            }
-            check7 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
-                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                startActivity(backPreviousMenu)*/
-                parentFragmentManager.popBackStack()
-                //finish()
-            }
-            check9 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { finishAffinity(it) }
-            }
-            check0 -> {
-                textToSpeechEngine?.stop()
-                stopListening()
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-        }
     }
 
     override fun onEvent(p0: Int, p1: Bundle?) {
@@ -273,16 +285,17 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     }
 
     private fun startOver() {
-        speechRecognizer.destroy()
-        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)
-        speechRecognizer.setRecognitionListener(this)
-
-        sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-        sttIntent.putExtra(
-            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
-        )
-        sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        stopListening()
+//        speechRecognizer.destroy()
+//        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(context)
+//        speechRecognizer.setRecognitionListener(this)
+//
+//        sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+//        sttIntent.putExtra(
+//            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+//            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+//        )
+//        sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
 
         /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
         sttIntent.putExtra(
@@ -312,13 +325,13 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onPause() {
         super.onPause()
         textToSpeechEngine?.stop()
-        textToSpeechEngine2.stop()
+        stopListening()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         textToSpeechEngine?.shutdown()
-        textToSpeechEngine2.shutdown()
+        speechRecognizer.destroy()
         _binding = null
     }
 
