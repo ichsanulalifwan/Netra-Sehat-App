@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.tunanetradaily.databinding.FragmentGiziSeimbangBinding
 import kotlinx.coroutines.CoroutineScope
@@ -53,7 +54,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (activity != null)  {
+        if (activity != null) {
 
             // Init speechRecognizer
             setSpeech()
@@ -69,6 +70,17 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
+            }
+
+            binding.cvPilarGizi.setOnClickListener {
+                val actionToPilarGizi =
+                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
+                findNavController().navigate(actionToPilarGizi)
+            }
+            binding.cvPesanGizi.setOnClickListener {
+                val actionToPesanGizi =
+                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
+                findNavController().navigate(actionToPesanGizi)
             }
         }
     }
@@ -94,7 +106,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts")
+        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -176,21 +188,23 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         val recognizedText = matches?.get(0)
         binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
+        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
             check1 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
-                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
-                startActivity(giziSeimbangMenu)
-                //finish()
+                val actionToPilarGizi =
+                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
+                findNavController().navigate(actionToPilarGizi)
             }
-            check7 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
+            check2 -> {
+                val actionToPesanGizi =
+                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
+                findNavController().navigate(actionToPesanGizi)
+            }
+            check8 -> {
                 /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
                 startActivity(backPreviousMenu)*/
                 //fragmentManager?.popBackStack()
@@ -198,22 +212,18 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
                 //finish()
             }
             check9 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
                 activity?.let { finishAffinity(it) }
             }
             check0 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
                 activity?.finishAffinity()
                 exitProcess(0)
             }
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts0")
+                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
                 Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
             }
         }

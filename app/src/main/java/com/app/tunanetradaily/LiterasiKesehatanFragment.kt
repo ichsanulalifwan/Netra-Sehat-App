@@ -265,6 +265,44 @@ class LiterasiKesehatanFragment : Fragment(), CoroutineScope, RecognitionListene
                // startOver()
             }
         }
+
+        //        val matches = parsialResult?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
+//        val recognizedText = matches?.get(0)
+//        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
+//        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
+//        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
+//        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
+//
+//        when {
+//            check1 -> {
+//                textToSpeechEngine?.stop()
+//                stopListening()
+//                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
+//                startActivity(giziSeimbangMenu)
+//                //finish()
+//            }
+//            check7 -> {
+//                textToSpeechEngine?.stop()
+//                stopListening()
+//                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+//                startActivity(backPreviousMenu)*/
+//                parentFragmentManager.popBackStack()
+//                //finish()
+//            }
+//            check9 -> {
+//                textToSpeechEngine?.stop()
+//                stopListening()
+//                val backMainMenu = Intent(context, MainActivity::class.java)
+//                startActivity(backMainMenu)
+//                activity?.let { ActivityCompat.finishAffinity(it) }
+//            }
+//            check0 -> {
+//                textToSpeechEngine?.stop()
+//                stopListening()
+//                activity?.finishAffinity()
+//                exitProcess(0)
+//            }
+//        }
     }
 
     override fun onResults(results: Bundle?) {

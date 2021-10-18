@@ -5,6 +5,12 @@
     android:id="@+id/navigation"
     app:startDestination="@id/navigation_home">
 
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.app.tunanetradaily.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.app.tunanetradaily.HomeFragment"
@@ -19,12 +25,24 @@
         android:id="@+id/navigation_giziSeimbang"
         android:name="com.app.tunanetradaily.GiziSeimbangFragment"
         android:label="fragment_gizi_seimbang"
-        tools:layout="@layout/fragment_gizi_seimbang" />
+        tools:layout="@layout/fragment_gizi_seimbang" >
+        <action
+            android:id="@+id/action_navigation_giziSeimbang_to_pilarGiziSeimbangFragment"
+            app:destination="@id/pilarGiziSeimbangFragment" />
+        <action
+            android:id="@+id/action_navigation_giziSeimbang_to_pesanGiziSeimbangFragment"
+            app:destination="@id/pesanGiziSeimbangFragment" />
+    </fragment>
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.app.tunanetradaily.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/pilarGiziSeimbangFragment"
+        android:name="com.app.tunanetradaily.giziseimbang.PilarGiziSeimbangFragment"
+        android:label="fragment_pilar_gizi_seimbang"
+        tools:layout="@layout/fragment_pilar_gizi_seimbang" />
+    <fragment
+        android:id="@+id/pesanGiziSeimbangFragment"
+        android:name="com.app.tunanetradaily.giziseimbang.PesanGiziSeimbangFragment"
+        android:label="fragment_pesan_gizi_seimbang"
+        tools:layout="@layout/fragment_pesan_gizi_seimbang" />
 
 </navigation>

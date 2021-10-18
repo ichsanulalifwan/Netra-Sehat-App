@@ -53,7 +53,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             setSpeech()
 
             binding.cvGiziSeimbang.setOnClickListener {
-                Toast.makeText(context, "cvGiziSeimbang Clicked", Toast.LENGTH_LONG).show()
                 val actionToGiziSeumbang =
                     HomeFragmentDirections.actionHomeFragmentToNavigationGiziSeimbang()
                 findNavController().navigate(actionToGiziSeumbang)
@@ -285,44 +284,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onPartialResults(parsialResult: Bundle?) {
         Log.i(TAG, "onPartialResults")
-
-//        val matches = parsialResult?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
-//        val recognizedText = matches?.get(0)
-//        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-//        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
-//        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
-//        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
-//
-//        when {
-//            check1 -> {
-//                textToSpeechEngine?.stop()
-//                stopListening()
-//                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
-//                startActivity(giziSeimbangMenu)
-//                //finish()
-//            }
-//            check7 -> {
-//                textToSpeechEngine?.stop()
-//                stopListening()
-//                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-//                startActivity(backPreviousMenu)*/
-//                parentFragmentManager.popBackStack()
-//                //finish()
-//            }
-//            check9 -> {
-//                textToSpeechEngine?.stop()
-//                stopListening()
-//                val backMainMenu = Intent(context, MainActivity::class.java)
-//                startActivity(backMainMenu)
-//                activity?.let { ActivityCompat.finishAffinity(it) }
-//            }
-//            check0 -> {
-//                textToSpeechEngine?.stop()
-//                stopListening()
-//                activity?.finishAffinity()
-//                exitProcess(0)
-//            }
-//        }
     }
 
     override fun onEvent(p0: Int, p1: Bundle?) {
@@ -359,7 +320,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "izin tidak mencukupi, silakan coba lagi."
             SpeechRecognizer.ERROR_NETWORK -> "Kesalahan jaringan, silakan coba lagi."
             SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "batas waktu jaringan, silakan coba lagi."
-            SpeechRecognizer.ERROR_NO_MATCH -> "Tidak ada kecocokanh, silakan coba lagi."
+            SpeechRecognizer.ERROR_NO_MATCH -> "Tidak ada kecocokan, silakan coba lagi."
             SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "Servis Pengenalan suara sibuk, silakan coba lagi."
             SpeechRecognizer.ERROR_SERVER -> "kesalahan dari server, silakan coba lagi."
             SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "Tidak ada masukan ucapan, silakan coba lagi."
