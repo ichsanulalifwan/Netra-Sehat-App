@@ -1,12 +1,12 @@
-package com.app.tunanetradaily.giziseimbang.pilar.phbs
+package com.app.tunanetradaily.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.app.tunanetradaily.R
 
-class PhbsActivity : AppCompatActivity() {
+class AktivitasFisikActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_phbs)
+        setContentView(R.layout.activity_aktivitas_fisik)
     }
 }

@@ -1,4 +1,4 @@
-package com.app.tunanetradaily.giziseimbang
+package com.app.tunanetradaily.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,11 +11,10 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
-import com.app.tunanetradaily.databinding.ActivityPilarGiziSeimbangBinding
-import com.app.tunanetradaily.giziseimbang.pilar.AktivitasFisikActivity
-import com.app.tunanetradaily.giziseimbang.pilar.AnekaRagamMakananActivity
-import com.app.tunanetradaily.giziseimbang.pilar.BeratBadanActivity
-import com.app.tunanetradaily.giziseimbang.pilar.phbs.PhbsActivity
+import com.app.tunanetradaily.databinding.ActivityAnekaRagamMakananBinding
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -24,9 +23,9 @@ import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
-class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, RecognitionListener {
+class AnekaRagamMakananActivity : AppCompatActivity(), CoroutineScope, RecognitionListener {
 
-    private lateinit var binding: ActivityPilarGiziSeimbangBinding
+    private lateinit var binding: ActivityAnekaRagamMakananBinding
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
     private var textToSpeechEngine: TextToSpeech? = null
@@ -36,34 +35,40 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPilarGiziSeimbangBinding.inflate(layoutInflater)
+        binding = ActivityAnekaRagamMakananBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Init speechRecognizer
         setSpeech()
 
-        binding.cvAnekaRagam.setOnClickListener {
+        binding.cvMakanan.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
-            val giziSeimbangMenu = Intent(this, AnekaRagamMakananActivity::class.java)
+            val giziSeimbangMenu = Intent(this, MakananPokokActivity::class.java)
             startActivity(giziSeimbangMenu)
         }
-        binding.cvPhbs.setOnClickListener {
+        binding.cvLauk.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
-            val covidMenu = Intent(this, PhbsActivity::class.java)
+            val covidMenu = Intent(this, LaukPaukActivity::class.java)
             startActivity(covidMenu)
         }
-        binding.cvAktivitasFisik.setOnClickListener {
+        binding.cvSayuran.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
-            val covidMenu = Intent(this, AktivitasFisikActivity::class.java)
+            val covidMenu = Intent(this, SayuranActivity::class.java)
             startActivity(covidMenu)
         }
-        binding.cvPantauBb.setOnClickListener {
+        binding.cvBuah.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
-            val covidMenu = Intent(this, BeratBadanActivity::class.java)
+            val covidMenu = Intent(this, BuahActivity::class.java)
+            startActivity(covidMenu)
+        }
+        binding.cvAirPutih.setOnClickListener {
+            textToSpeechEngine?.stop()
+            stopListening()
+            val covidMenu = Intent(this, AirPutihActivity::class.java)
             startActivity(covidMenu)
         }
     }
@@ -84,11 +89,11 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val pilarGizi = getString(R.string.menu_pilarGiziSeimbang)
+        val anekaMakanan = getString(R.string.menu_anekaRagamMakanan)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(pilarGizi, TextToSpeech.QUEUE_FLUSH, null, "tts")
+        textToSpeechEngine?.speak(anekaMakanan, TextToSpeech.QUEUE_FLUSH, null, "tts")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -182,26 +187,31 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
         val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
+        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
         val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
             check1 -> {
-                val anekaMenu = Intent(this, AnekaRagamMakananActivity::class.java)
-                startActivity(anekaMenu)
+                val makananPokokMenu = Intent(this, MakananPokokActivity::class.java)
+                startActivity(makananPokokMenu)
             }
             check2 -> {
-                val phbsMenu = Intent(this, PhbsActivity::class.java)
-                startActivity(phbsMenu)
+                val laukMenu = Intent(this, LaukPaukActivity::class.java)
+                startActivity(laukMenu)
             }
             check3 -> {
-                val aktivitasMenu = Intent(this, AktivitasFisikActivity::class.java)
-                startActivity(aktivitasMenu)
+                val sayurMenu = Intent(this, SayuranActivity::class.java)
+                startActivity(sayurMenu)
             }
             check4 -> {
-                val beratMenu = Intent(this, BeratBadanActivity::class.java)
-                startActivity(beratMenu)
+                val buahMenu = Intent(this, BuahActivity::class.java)
+                startActivity(buahMenu)
+            }
+            check5 -> {
+                val airMenu = Intent(this, AirPutihActivity::class.java)
+                startActivity(airMenu)
             }
             check7 -> {
                 finish()
@@ -254,6 +264,6 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
     }
 
     companion object {
-        private const val TAG = "PilarGiziActivity"
+        private const val TAG = "AnekaRagamActivity"
     }
 }

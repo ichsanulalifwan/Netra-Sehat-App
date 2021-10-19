@@ -25,22 +25,22 @@
             android:name=".giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.BeratBadanActivity"
+            android:name=".activity.BeratBadanActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.AktivitasFisikActivity"
+            android:name=".activity.AktivitasFisikActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.phbs.PhbsActivity"
+            android:name=".activity.PhbsActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.AnekaRagamMakananActivity"
+            android:name=".activity.AnekaRagamMakananActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.PesanGiziSeimbangActivity"
+            android:name=".activity.PesanGiziSeimbangActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.PilarGiziSeimbangActivity"
+            android:name=".activity.PilarGiziSeimbangActivity"
             android:exported="true" />
         <activity
             android:name=".ContactSahabatNetraActivity"

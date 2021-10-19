@@ -1,12 +1,12 @@
-package com.app.tunanetradaily.giziseimbang.pilar
+package com.app.tunanetradaily.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.app.tunanetradaily.R
 
-class AktivitasFisikActivity : AppCompatActivity() {
+class BeratBadanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_aktivitas_fisik)
+        setContentView(R.layout.activity_berat_badan)
     }
 }
