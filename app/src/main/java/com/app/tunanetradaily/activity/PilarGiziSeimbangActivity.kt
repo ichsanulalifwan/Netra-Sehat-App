@@ -41,8 +41,8 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
         binding.cvAnekaRagam.setOnClickListener {
             textToSpeechEngine?.stop()
             stopListening()
-            val giziSeimbangMenu = Intent(this, AnekaRagamMakananActivity::class.java)
-            startActivity(giziSeimbangMenu)
+            /*val giziSeimbangMenu = Intent(this, AnekaRagamMakananActivity::class.java)
+            startActivity(giziSeimbangMenu)*/
         }
         binding.cvPhbs.setOnClickListener {
             textToSpeechEngine?.stop()
@@ -184,8 +184,8 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
 
         when {
             check1 -> {
-                val anekaMenu = Intent(this, AnekaRagamMakananActivity::class.java)
-                startActivity(anekaMenu)
+                /*val anekaMenu = Intent(this, AnekaRagamMakananActivity::class.java)
+                startActivity(anekaMenu)*/
             }
             check2 -> {
                 val phbsMenu = Intent(this, PhbsActivity::class.java)

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gray_purple">
+    android:background="@drawable/bg_gray_purple"
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -19,7 +21,6 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/purple_1"
             android:elevation="4dp"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
             app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
             app:navigationIconTint="@color/white">
 
@@ -30,173 +31,186 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/title_gizi_seimbang"
                 android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                android:textColor="@color/white" />
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cv_giziHeader"
-        style="@style/CustomCardViewStyleBottom"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/purple_1"
-        app:cardElevation="4dp"
-        app:cardMaxElevation="4dp"
-        app:layout_constraintTop_toBottomOf="@id/appBar">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:justificationMode="inter_word"
-            android:text="@string/pengertian_gizi_seimbang"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            tools:targetApi="o" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <TextView
-        android:id="@+id/tv_speak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/speech_belum_mulai"
-        android:textSize="14sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_giziHeader" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cv_pilarGizi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="6dp"
-        app:layout_constraintBottom_toTopOf="@id/cv_pesanGizi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_giziHeader">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_giziHeader"
+                style="@style/CustomCardViewStyleBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/purple_1"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="4dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/pengertian_gizi_seimbang"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:targetApi="o" />
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
-                android:id="@+id/tv_pilarGiziSeimbang"
-                android:layout_width="0dp"
+                android:id="@+id/tv_speak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/speech_belum_mulai"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_giziHeader" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_pilarGizi"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="172dp"
-                android:text="@string/title_pilar_gizi_seimbang"
-                android:textColor="@color/purple_1"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/tv_more1"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="6dp"
+                app:layout_constraintBottom_toTopOf="@id/cv_pesanGizi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed" />
+                app:layout_constraintTop_toBottomOf="@id/cv_giziHeader">
 
-            <TextView
-                android:id="@+id/tv_more1"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_pilarGiziSeimbang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="172dp"
+                        android:text="@string/title_pilar_gizi_seimbang"
+                        android:textColor="@color/purple_1"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/tv_more1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tv_more1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="32dp"
+                        android:text="@string/text_read_more"
+                        android:textColor="@color/purple_1"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pilarGiziSeimbang"
+                        app:layout_constraintStart_toStartOf="@id/tv_pilarGiziSeimbang"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pilarGiziSeimbang" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_pilarGiziSeimbang"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_marginTop="-32dp"
+                android:contentDescription="@string/contentDescription_pilarGizi"
+                android:elevation="8dp"
+                android:src="@color/purple_0"
+                app:layout_constraintEnd_toEndOf="@id/cv_pilarGizi"
+                app:layout_constraintTop_toTopOf="@id/cv_pilarGizi" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_pesanGizi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="32dp"
-                android:text="@string/text_read_more"
-                android:textColor="@color/purple_1"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/tv_pilarGiziSeimbang"
-                app:layout_constraintStart_toStartOf="@id/tv_pilarGiziSeimbang"
-                app:layout_constraintTop_toBottomOf="@id/tv_pilarGiziSeimbang" />
+                android:layout_marginTop="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="6dp"
+                app:layout_constraintEnd_toEndOf="@id/cv_pilarGizi"
+                app:layout_constraintStart_toStartOf="@id/cv_pilarGizi"
+                app:layout_constraintTop_toBottomOf="@id/cv_pilarGizi">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_pesanGiziSeimbang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="172dp"
+                        android:text="@string/title_pesan_gizi_seimbang"
+                        android:textColor="@color/purple_1"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/tv_more2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tv_more2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="32dp"
+                        android:text="@string/text_read_more"
+                        android:textColor="@color/purple_1"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pesanGiziSeimbang"
+                        app:layout_constraintStart_toStartOf="@id/tv_pesanGiziSeimbang"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pesanGiziSeimbang" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_pesanGiziSeimbang"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_marginTop="-32dp"
+                android:contentDescription="@string/contentDescription_pesanGizi"
+                android:elevation="8dp"
+                android:src="@color/purple_0"
+                app:layout_constraintEnd_toEndOf="@id/cv_pesanGizi"
+                app:layout_constraintTop_toTopOf="@id/cv_pesanGizi" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_pilarGiziSeimbang"
-        android:layout_width="144dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="-32dp"
-        android:contentDescription="@string/contentDescription_pilarGizi"
-        android:elevation="8dp"
-        android:src="@color/purple_0"
-        app:layout_constraintEnd_toEndOf="@id/cv_pilarGizi"
-        app:layout_constraintTop_toTopOf="@id/cv_pilarGizi" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cv_pesanGizi"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="6dp"
-        app:layout_constraintEnd_toEndOf="@id/cv_pilarGizi"
-        app:layout_constraintStart_toStartOf="@id/cv_pilarGizi"
-        app:layout_constraintTop_toBottomOf="@id/cv_pilarGizi">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_pesanGiziSeimbang"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="172dp"
-                android:text="@string/title_pesan_gizi_seimbang"
-                android:textColor="@color/purple_1"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/tv_more2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed" />
-
-            <TextView
-                android:id="@+id/tv_more2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="32dp"
-                android:text="@string/text_read_more"
-                android:textColor="@color/purple_1"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/tv_pesanGiziSeimbang"
-                app:layout_constraintStart_toStartOf="@id/tv_pesanGiziSeimbang"
-                app:layout_constraintTop_toBottomOf="@id/tv_pesanGiziSeimbang" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_pesanGiziSeimbang"
-        android:layout_width="144dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="-32dp"
-        android:contentDescription="@string/contentDescription_pesanGizi"
-        android:elevation="8dp"
-        android:src="@color/purple_0"
-        app:layout_constraintEnd_toEndOf="@id/cv_pesanGizi"
-        app:layout_constraintTop_toTopOf="@id/cv_pesanGizi" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>

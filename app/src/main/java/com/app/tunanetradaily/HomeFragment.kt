@@ -35,12 +35,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Default
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-//        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-//        requireActivity().window.statusBarColor = Color.parseColor("#7001F7")
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

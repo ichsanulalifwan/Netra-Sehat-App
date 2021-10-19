@@ -76,32 +76,28 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 
             with(binding) {
                 cvMakanan.setOnClickListener {
-                    val actionToAnekaRagamMakanan =
-                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
-                    findNavController().navigate(actionToAnekaRagamMakanan)
+                    actionToDetail()
                 }
                 cvLauk.setOnClickListener {
-                    val actionToPhbs =
-                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
-                    findNavController().navigate(actionToPhbs)
+                    actionToDetail()
                 }
                 cvSayuran.setOnClickListener {
-                    val actionToAktivitasFisik =
-                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAktivitasFisikFragment()
-                    findNavController().navigate(actionToAktivitasFisik)
+                    actionToDetail()
                 }
                 cvBuah.setOnClickListener {
-                    val actionToBeratBadan =
-                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToBeratBadanFragment()
-                    findNavController().navigate(actionToBeratBadan)
+                    actionToDetail()
                 }
                 cvAirPutih.setOnClickListener {
-                    val actionToBeratBadan =
-                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToBeratBadanFragment()
-                    findNavController().navigate(actionToBeratBadan)
+                    actionToDetail()
                 }
             }
         }
+    }
+
+    fun actionToDetail() {
+        val actionToDetail =
+            AnekaRagamMakananFragmentDirections.actionAnekaRagamMakananFragmentToDetailRagamMakananFragment()
+        findNavController().navigate(actionToDetail)
     }
 
     override fun onStart() {
