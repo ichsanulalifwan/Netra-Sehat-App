@@ -21,7 +21,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <!-- Card View for Gizi Seimbang-->
+    <!-- Card View for Bottom Corner Radius-->
     <style name="CustomCardViewStyleBottom" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">
             @style/ShapeAppearanceOverlay_card_custom_bottom_corners
@@ -34,5 +34,20 @@
         <item name="cornerSizeTopLeft">0dp</item>
         <item name="cornerSizeBottomRight">32dp</item>
         <item name="cornerSizeBottomLeft">32dp</item>
+    </style>
+
+    <!-- Card View for Top Corner Radius-->
+    <style name="CustomCardViewStyleTop" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay_card_custom_top_corners
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_top_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">32dp</item>
+        <item name="cornerSizeTopLeft">32dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
     </style>
 </resources>

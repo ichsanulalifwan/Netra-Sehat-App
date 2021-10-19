@@ -69,12 +69,12 @@
     <fragment
         android:id="@+id/detailRagamMakananFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.DetailRagamMakananFragment"
-        android:label="fragment_detail_ragam_makanan"
+        android:label=""
         tools:layout="@layout/fragment_detail_ragam_makanan" />
     <fragment
         android:id="@+id/aktivitasFisikFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.aktivitasfisik.AktivitasFisikFragment"
-        android:label="fragment_aktivitas_fisik"
+        android:label=""
         tools:layout="@layout/fragment_aktivitas_fisik" />
     <fragment
         android:id="@+id/phbsFragment"
