@@ -1,14 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".giziseimbang.pilar.anekaragammakanan.AnekaRagamMakananFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        tools:context=".activity.PilarGiziSeimbangActivity">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="4 Pilar Gizi Seimbang"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_speak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=". . . . ."
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_makanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@id/tv_speak">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_cover_makanan"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_makanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/dark_blue" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_title_makanan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="Makanan Pokok"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_cover_makanan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_cover_makanan"
+                    app:layout_constraintTop_toTopOf="@id/img_cover_makanan" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_lauk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@id/cv_makanan">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_cover_lauk"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_lauk"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/dark_blue" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_title_lauk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="Lauk Pauk"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_cover_lauk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_cover_lauk"
+                    app:layout_constraintTop_toTopOf="@id/img_cover_lauk" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_sayuran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@id/cv_lauk">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_cover_sayuran"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_sayuran"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/dark_blue" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_title_sayuran"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="Sayuran"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_cover_sayuran"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_cover_sayuran"
+                    app:layout_constraintTop_toTopOf="@id/img_cover_sayuran" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_buah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@id/cv_sayuran">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_cover_buah"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_buah"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/dark_blue" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_title_buah"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="Buah-buahan"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_cover_buah"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_cover_buah"
+                    app:layout_constraintTop_toTopOf="@id/img_cover_buah" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_airPutih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@id/cv_buah">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_cover_airPutih"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_airPutih"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/dark_blue" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_title_airPutih"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="Ait Putih"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_cover_airPutih"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_cover_airPutih"
+                    app:layout_constraintTop_toTopOf="@id/img_cover_airPutih" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
