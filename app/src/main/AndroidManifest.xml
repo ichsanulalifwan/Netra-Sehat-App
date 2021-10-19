@@ -34,9 +34,6 @@
             android:name=".activity.PhbsActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.AnekaRagamMakananActivity"
-            android:exported="true" />
-        <activity
             android:name=".activity.PesanGiziSeimbangActivity"
             android:exported="true" />
         <activity
