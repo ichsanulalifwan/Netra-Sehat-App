@@ -64,10 +64,10 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             val navHostFragment = NavHostFragment.findNavController(this)
             NavigationUI.setupWithNavController(toolbar, navHostFragment)
 
-            setHasOptionsMenu(true)
+            /*setHasOptionsMenu(true)
+            (activity as AppCompatActivity).setSupportActionBar(toolbar)*/
 
-            (activity as AppCompatActivity).setSupportActionBar(toolbar)
-
+            // Set Navigate to previous page (backstack)
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
             }

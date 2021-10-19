@@ -66,9 +66,6 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
             val navHostFragment = NavHostFragment.findNavController(this)
             NavigationUI.setupWithNavController(toolbar, navHostFragment)
 
-            setHasOptionsMenu(true)
-            (activity as AppCompatActivity).setSupportActionBar(toolbar)
-
             // Set Navigate to previous page (backstack)
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()

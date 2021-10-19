@@ -51,10 +51,10 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
             startActivity(covidMenu)
         }
         binding.cvAktivitasFisik.setOnClickListener {
-            textToSpeechEngine?.stop()
+            /*textToSpeechEngine?.stop()
             stopListening()
             val covidMenu = Intent(this, AktivitasFisikActivity::class.java)
-            startActivity(covidMenu)
+            startActivity(covidMenu)*/
         }
         binding.cvPantauBb.setOnClickListener {
             textToSpeechEngine?.stop()
@@ -192,8 +192,8 @@ class PilarGiziSeimbangActivity : AppCompatActivity(), CoroutineScope, Recogniti
                 startActivity(phbsMenu)
             }
             check3 -> {
-                val aktivitasMenu = Intent(this, AktivitasFisikActivity::class.java)
-                startActivity(aktivitasMenu)
+                /*val aktivitasMenu = Intent(this, AktivitasFisikActivity::class.java)
+                startActivity(aktivitasMenu)*/
             }
             check4 -> {
                 val beratMenu = Intent(this, BeratBadanActivity::class.java)
