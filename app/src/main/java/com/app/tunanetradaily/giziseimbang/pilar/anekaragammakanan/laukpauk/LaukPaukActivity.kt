@@ -1,4 +1,4 @@
-package com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan
+package com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.laukpauk
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

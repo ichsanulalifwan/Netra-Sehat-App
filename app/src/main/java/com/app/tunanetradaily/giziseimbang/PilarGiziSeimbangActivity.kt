@@ -15,7 +15,7 @@ import com.app.tunanetradaily.databinding.ActivityPilarGiziSeimbangBinding
 import com.app.tunanetradaily.giziseimbang.pilar.AktivitasFisikActivity
 import com.app.tunanetradaily.giziseimbang.pilar.AnekaRagamMakananActivity
 import com.app.tunanetradaily.giziseimbang.pilar.BeratBadanActivity
-import com.app.tunanetradaily.giziseimbang.pilar.PhbsActivity
+import com.app.tunanetradaily.giziseimbang.pilar.phbs.PhbsActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

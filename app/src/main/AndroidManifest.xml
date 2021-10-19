@@ -16,19 +16,19 @@
             android:name=".giziseimbang.pilar.anekaragammakanan.makananpokok.JenisMakananPokokActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.AirPutihActivity"
+            android:name=".giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.BuahActivity"
+            android:name=".giziseimbang.pilar.anekaragammakanan.buah.BuahActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.SayuranActivity"
+            android:name=".giziseimbang.pilar.anekaragammakanan.sayur.SayuranActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.LaukPaukActivity"
+            android:name=".giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.MakananPokokActivity"
+            android:name=".giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity"
             android:exported="true" />
         <activity
             android:name=".giziseimbang.pilar.BeratBadanActivity"
@@ -37,7 +37,7 @@
             android:name=".giziseimbang.pilar.AktivitasFisikActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.PhbsActivity"
+            android:name=".giziseimbang.pilar.phbs.PhbsActivity"
             android:exported="true" />
         <activity
             android:name=".giziseimbang.pilar.AnekaRagamMakananActivity"
@@ -72,6 +72,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

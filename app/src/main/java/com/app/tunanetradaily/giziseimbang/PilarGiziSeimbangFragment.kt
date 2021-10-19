@@ -13,15 +13,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
 import com.app.tunanetradaily.databinding.FragmentPilarGiziSeimbangBinding
-import com.app.tunanetradaily.giziseimbang.pilar.AktivitasFisikActivity
-import com.app.tunanetradaily.giziseimbang.pilar.AnekaRagamMakananActivity
-import com.app.tunanetradaily.giziseimbang.pilar.BeratBadanActivity
-import com.app.tunanetradaily.giziseimbang.pilar.PhbsActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -60,17 +60,17 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
             setSpeech()
 
             // Init Toolbar
-//            val toolbar = binding.toolbar
-//            val navHostFragment = NavHostFragment.findNavController(this)
-//            NavigationUI.setupWithNavController(toolbar, navHostFragment)
-//
-//            setHasOptionsMenu(true)
-//
-//            (activity as AppCompatActivity).setSupportActionBar(toolbar)
-//
-//            toolbar.setNavigationOnClickListener {
-//                it.findNavController().navigateUp()
-//            }
+            val toolbar = binding.toolbar
+            val navHostFragment = NavHostFragment.findNavController(this)
+            NavigationUI.setupWithNavController(toolbar, navHostFragment)
+
+            setHasOptionsMenu(true)
+
+            (activity as AppCompatActivity).setSupportActionBar(toolbar)
+
+            toolbar.setNavigationOnClickListener {
+                it.findNavController().navigateUp()
+            }
             with(binding) {
 //                cvAnekaRagam.setOnClickListener {
 //                    textToSpeechEngine?.stop()

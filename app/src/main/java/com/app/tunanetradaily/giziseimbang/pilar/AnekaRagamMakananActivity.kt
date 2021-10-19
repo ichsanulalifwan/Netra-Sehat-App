@@ -12,7 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
 import com.app.tunanetradaily.databinding.ActivityAnekaRagamMakananBinding
-import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.*
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

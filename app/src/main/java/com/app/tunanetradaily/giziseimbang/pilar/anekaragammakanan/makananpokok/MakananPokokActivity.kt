@@ -1,4 +1,4 @@
-package com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan
+package com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.makananpokok
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,15 +9,9 @@ import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.app.tunanetradaily.GiziSeimbangActivity
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
 import com.app.tunanetradaily.databinding.ActivityMakananPokokBinding
-import com.app.tunanetradaily.giziseimbang.pilar.AktivitasFisikActivity
-import com.app.tunanetradaily.giziseimbang.pilar.AnekaRagamMakananActivity
-import com.app.tunanetradaily.giziseimbang.pilar.BeratBadanActivity
-import com.app.tunanetradaily.giziseimbang.pilar.PhbsActivity
-import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.makananpokok.JenisMakananPokokActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

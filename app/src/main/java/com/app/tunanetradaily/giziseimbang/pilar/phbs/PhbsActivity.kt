@@ -1,4 +1,4 @@
-package com.app.tunanetradaily.giziseimbang.pilar
+package com.app.tunanetradaily.giziseimbang.pilar.phbs
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
