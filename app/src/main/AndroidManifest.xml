@@ -19,12 +19,6 @@
             android:name=".giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.buah.BuahActivity"
-            android:exported="true" />
-        <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.sayur.SayuranActivity"
-            android:exported="true" />
-        <activity
             android:name=".giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity"
             android:exported="true" />
         <activity
@@ -56,12 +50,6 @@
             android:exported="true" />
         <activity
             android:name=".Covid19Activity"
-            android:exported="true" />
-        <activity
-            android:name=".GiziSeimbangActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LitkesActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

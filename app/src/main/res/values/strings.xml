@@ -1438,6 +1438,12 @@
     <!--Others String-->
     <string name="speech_belum_mulai">. . . . .</string>
     <string name="text_read_more">Baca selengkapnya</string>
+    <string name="text_porsi">4) Porsi</string>
+    <string name="text_jenis">3) Jenis</string>
+    <string name="text_manfaat">2) Manfaat</string>
+    <string name="text_pengertian">1) Pengertian</string>
+    <string name="text_kandungan">5) Kandungan</string>
+    <string name="text_masalah">6) Masalah jika konsumsi tidak sesuai</string>
 
 
 </resources>

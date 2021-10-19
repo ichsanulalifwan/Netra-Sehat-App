@@ -236,8 +236,8 @@ class LiterasiKesehatanFragment : Fragment(), CoroutineScope, RecognitionListene
             check1 -> {
                 textToSpeechEngine?.stop()
                // stopListening()
-                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
-                startActivity(giziSeimbangMenu)
+//                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
+//                startActivity(giziSeimbangMenu)
                 //finish()
             }
             check7 -> {
@@ -320,8 +320,8 @@ class LiterasiKesehatanFragment : Fragment(), CoroutineScope, RecognitionListene
             check1 -> {
                 textToSpeechEngine?.stop()
                 //stopListening()
-                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
-                startActivity(giziSeimbangMenu)
+//                val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
+//                startActivity(giziSeimbangMenu)
                 //finish()
             }
             check7 -> {
