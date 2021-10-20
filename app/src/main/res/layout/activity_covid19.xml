@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Covid19Activity">
+    tools:context=".activity.Covid19Activity">
 
     <TextView
         android:id="@+id/tv_welcome"

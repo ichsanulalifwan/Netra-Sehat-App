@@ -1,9 +1,8 @@
-package com.app.tunanetradaily
+package com.app.tunanetradaily.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognitionListener
-import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
@@ -13,11 +12,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import com.app.tunanetradaily.MainActivity
+import com.app.tunanetradaily.R
 import com.app.tunanetradaily.databinding.FragmentLiterasiKesehatanBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
 import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess

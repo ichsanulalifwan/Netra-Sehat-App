@@ -40,13 +40,13 @@
             android:name=".activity.PilarGiziSeimbangActivity"
             android:exported="true" />
         <activity
-            android:name=".ContactSahabatNetraActivity"
+            android:name=".activity.ContactSahabatNetraActivity"
             android:exported="true" />
         <activity
-            android:name=".PelayananKesehatanActivity"
+            android:name=".activity.PelayananKesehatanActivity"
             android:exported="true" />
         <activity
-            android:name=".Covid19Activity"
+            android:name=".activity.Covid19Activity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

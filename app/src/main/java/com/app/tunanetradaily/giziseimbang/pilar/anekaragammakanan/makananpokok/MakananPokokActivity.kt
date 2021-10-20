@@ -108,6 +108,7 @@ class MakananPokokActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, this.packageName)
     }
 
     private fun startOver() {
