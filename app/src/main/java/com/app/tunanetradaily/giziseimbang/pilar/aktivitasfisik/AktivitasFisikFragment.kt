@@ -70,10 +70,22 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
                 it.findNavController().navigateUp()
             }
 
-            binding.btnJenisAf.setOnClickListener {
-                val actionToAnekaRagamMakanan =
-                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
-                findNavController().navigate(actionToAnekaRagamMakanan)
+            with(binding) {
+                btnAfRingan.setOnClickListener {
+//                val actionToAnekaRagamMakanan =
+//                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
+//                findNavController().navigate(actionToAnekaRagamMakanan)
+                }
+                btnAfSedang.setOnClickListener {
+//                val actionToAnekaRagamMakanan =
+//                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
+//                findNavController().navigate(actionToAnekaRagamMakanan)
+                }
+                btnAfBerat.setOnClickListener {
+//                val actionToAnekaRagamMakanan =
+//                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
+//                findNavController().navigate(actionToAnekaRagamMakanan)
+                }
             }
         }
     }

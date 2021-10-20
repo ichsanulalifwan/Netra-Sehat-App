@@ -75,7 +75,11 @@
         android:id="@+id/aktivitasFisikFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.aktivitasfisik.AktivitasFisikFragment"
         android:label=""
-        tools:layout="@layout/fragment_aktivitas_fisik" />
+        tools:layout="@layout/fragment_aktivitas_fisik" >
+        <action
+            android:id="@+id/action_aktivitasFisikFragment_to_jenisAktivitasFisikFragment"
+            app:destination="@id/jenisAktivitasFisikFragment" />
+    </fragment>
     <fragment
         android:id="@+id/phbsFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.phbs.PhbsFragment"
@@ -85,6 +89,20 @@
         android:id="@+id/beratBadanFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.beratbadan.BeratBadanFragment"
         android:label="fragment_berat_badan"
-        tools:layout="@layout/fragment_berat_badan" />
+        tools:layout="@layout/fragment_berat_badan" >
+        <action
+            android:id="@+id/action_beratBadanFragment_to_menghitungBbFragment"
+            app:destination="@id/menghitungBbFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jenisAktivitasFisikFragment"
+        android:name="com.app.tunanetradaily.giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment"
+        android:label="fragment_jenis_aktivitas_fisik"
+        tools:layout="@layout/fragment_jenis_aktivitas_fisik" />
+    <fragment
+        android:id="@+id/menghitungBbFragment"
+        android:name="com.app.tunanetradaily.giziseimbang.pilar.beratbadan.MenghitungBbFragment"
+        android:label="fragment_menghitung_bb"
+        tools:layout="@layout/fragment_menghitung_bb" />
 
 </navigation>

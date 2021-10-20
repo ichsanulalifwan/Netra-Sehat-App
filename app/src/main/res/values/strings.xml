@@ -28,6 +28,7 @@
     <string name="title_phbs">Perilaku Hidup Bersih dan Sehat</string>
     <string name="title_aktivitas_fisik">Aktivitas Fisik</string>
     <string name="title_memantau_berat_badan">Memantau Berat Badan</string>
+    <string name="title_pemantauan_berat_badan">Pemantauan Berat Badan</string>
     <string name="title_makanan_pokok">Makanan Pokok</string>
     <string name="title_lauk_pauk">Lauk Pauk</string>
     <string name="title_sayuran">Sayuran</string>
@@ -1140,7 +1141,6 @@
 
     <string name="detail_imt"><![CDATA[Cara orang dewasa menentuka ukuran indeks massa tubuh (IMT) yaitu dengan mengukur ukuran yang berkaitan dengan kekurangan atau 4. Pemantauan Berat Badan kelebihan berat badan. Mempertahankan berat badan normal memungkinkan seseorang dapat mencegah berbagai penyakit tidak menular. Berikut cara menghitungnya menggunakan rumus IMT.\nBatas ambang IMT ditentukan dengan merujuk ketentuan WHO yang membedakan batas ambang normal untuk laki-laki dan perempuan. Di Indonesia, berdasarkan hasil penelitian dan pengalaman klinis tidak dibedakan menurut jenis kelamin, dan batas ambang normal yang digunakan adalah 18.5 - < 25.0. Seseorang dikategorikan menderita obesitas jika IMTnya ≥ 27.0. Cara mempertahankan berat badan normal adalah dengan mempertahankan pola konsumsi BB (kg) IMT = TB2 (m) Ket : BB = Berat Badan (kg) TB = Tinggi Badan makanan dengan susunan gizi seimbang dan beraneka ragam serta mempertahankan kebiasaan latihan fisik/olah raga teratur.]]></string>
     <string name="pengertian_gizi_seimbang">Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang.</string>
-    <string name="pengertian_berat_badan">Berat Badan yang normal, yaitu berat badan yang ideal atau sesuai dengan tinggi badannya. Indikator tersebut dikenal dengan Indeks Masa Tubuh (IMT). Pentingnya pemantauan Berat Badan Normal karena berkaitan dengan penilaian bagaimana Pola Hidup dengan‘Gizi Seimbang terhadap individu sehingga dapat mencegah penyimpangan BB dari BB normal, dan apabila terjadi penyimpangan maka dapat segera dilakukan langkah-langkah pencegahan dan penanganannya.</string>
 
     <!-- Makanan Pokok res-->
     <string name="pengertian_makananPokok">Makanan pokok adalah makanan paling utama yang harus dimakan oleh manusia setiap hari.</string>
@@ -1438,6 +1438,11 @@
     <string name="jenis_aktivitasfisik">Secara umum aktivitas fisik terbagi atas 3 kategori berdasarkan intesitas dan besaran kegiatan yang dilakukan diataranya adalah aktivitas fisik ringan, aktivitas fisik sedang, dan aktivitas fisik berat.</string>
     <string name="masalah_aktivitasfisik">Kurang melakukan aktivitas fisik akibatnya bisa ditebak, yakni menyebabkan kualitas fisik yang rendah sehingga mudah lelah dalam beraktivitas, mudah sakit, pegal-pegal hingga menjadi kurang produktif. Dalam jangka Panjang dapat menyebabkan risiko penyakit degenerative seperti diabetes, obesitas, jantung, dan stroke.</string>
 
+    <!-- Berat Badan res-->
+    <string name="pengertian_berat_badan">Berat Badan yang normal, yaitu berat badan yang ideal atau sesuai dengan tinggi badannya. Indikator tersebut dikenal dengan Indeks Masa Tubuh (IMT). Pentingnya pemantauan Berat Badan Normal karena berkaitan dengan penilaian bagaimana Pola Hidup dengan‘Gizi Seimbang terhadap individu sehingga dapat mencegah penyimpangan BB dari BB normal, dan apabila terjadi penyimpangan maka dapat segera dilakukan langkah-langkah pencegahan dan penanganannya.</string>
+    <string name="manfaat_berat_badan">Manfaat memantau berat badan adalah dapat mengetahui adanya gangguan tumbuh kembang kita. Selain itu juga bermanfaat sebagai tolak ukur tingkat gizi dan untuk mencegah kekurangan gizi.</string>
+    <string name="menentukan_berat_badan">Cara orang dewasa menentukan ukuran indeks massa tubuh (IMT) yaitu dengan mengukur ukuran yang berkaitan dengan kekurangan atau kelebihan berat badan. Mempertahankan berat badan normal memungkinkan seseorang dapat mencegah berbagai penyakit tidak menular. Berikut cara menghitungnya menggunakan rumus IMT. \n\nBatas ambang IMT ditentukan dengan merujuk ketentuan WHO yang membedakan batas ambang normal untuk laki–laki dan perempuan. Di Indonesia, berdasarkan hasil penelitian dan pengalaman klinis tidak dibedakan menurut jenis kelamin, dan batas ambang normal yang digunakan adalah 18.5 – 25.0. Seseorang dikategorikan menderita obesitas jika IMTnya ≥ 27.0. \n\nCara mempertahankan berat badan normal adalah dengan mempertahankan pola konsumsi makanan dengan susunan gizi seimbang dan beraneka ragam serta mempertahankan kebiasaan latihan fisik/olah raga teratur.</string>
+    <string name="masalah_berat_badan">Hal- hal yang terjadi akibat terlalu kekurangan berat badan adalah kekurangan nutrisi, sering merasa lelah, anemia, dan masih banyak lagi. Berat badan rendah dapat meningkatkan risiko terganggunya kepadatan mineral tulang. Kekurangan kalsium dan vitamin D dalam makanan, dapat menyebabkan tulang rapuh dan osteoporosis. \n\nHal-hal yang terjadi akibat kelebihan berat badan adalah berat badan terlalu berat dan terlalu gemuk dapat menyebabkan tekanan darah tinggi, kolesterol tinggi, dan penyumbatan arteri. Selain itu seseorang yang kelebihan berat badan dapat menderita kepikunan, depresi, masalah kesehatan mata, masalah kesehatan gigi dan mulut, infeksi telinga kronis, sleep pnea, asma, tekanan darh tinggi, batu empedu, Polycytic Ovary Syndrome (PCOS), infertisasi pada pria, artritis dan kanker payudara pada perempuan.</string>
     <!--Image Content Description_-->
     <string name="contentDescription_selamat_datang">Gambar Selamat Datang</string>
     <string name="contentDescription_giziSeimbang">Gambar Gizi Seimbang</string>
@@ -1456,5 +1461,19 @@
     <string name="text_pengertian">1) Pengertian</string>
     <string name="text_kandungan">5) Kandungan</string>
     <string name="text_masalah">6) Masalah jika konsumsi tidak sesuai</string>
+
+    <string name="title_pengertian">Pengertian</string>
+    <string name="title_manfaat">Manfaat</string>
+
+    <string name="title_masalah_jaktivitas_fisik">Masalah Jika Kurang Aktivitas Fisik</string>
+    <string name="title_jenis_aktivitas_fisik">Jenis Aktivitas Fisik</string>
+    <string name="title_af_ringan">Aktivitas Fisik Ringan</string>
+    <string name="title_af_sedang">Aktivitas Fisik Sedang</string>
+    <string name="title_af_berat">Aktivitas Fisik Berat</string>
+    
+    <string name="title_masalah_berat_badan">Masalah Berat Badan tidak ideal</string>
+    <string name="title_cara_menentukan_bb">Cara Menentukan Indeks Massa Tubuh</string>
+    <string name="title_menentukan_berat_badan">Menghitung Berat Badan</string>
+    
 
 </resources>

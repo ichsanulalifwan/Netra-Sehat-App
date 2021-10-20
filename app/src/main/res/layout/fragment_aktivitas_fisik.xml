@@ -90,7 +90,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway_semibold"
-                                android:text="Pengertian"
+                                android:text="@string/title_pengertian"
                                 android:textColor="@color/purple_0"
                                 android:textSize="18sp"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +116,57 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/btn_jenis_af"
+                        android:id="@+id/cv_jenis_af"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="@id/cv_pengertian_af"
+                        app:layout_constraintStart_toStartOf="@id/cv_pengertian_af"
+                        app:layout_constraintTop_toBottomOf="@id/cv_pengertian_af">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_jenis_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway_semibold"
+                                android:text="@string/title_jenis_aktivitas_fisik"
+                                android:textColor="@color/purple_0"
+                                android:textSize="18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_jenis_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/raleway"
+                                android:justificationMode="inter_word"
+                                android:text="@string/jenis_aktivitasfisik"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="@id/tv_jenis_af"
+                                app:layout_constraintStart_toStartOf="@id/tv_jenis_af"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_jenis_af"
+                                tools:targetApi="o" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btn_af_ringan"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:clickable="true"
@@ -126,12 +176,12 @@
                         app:cardElevation="6dp"
                         app:cardMaxElevation="8dp"
                         app:cardUseCompatPadding="true"
-                        app:layout_constraintEnd_toEndOf="@id/cv_pengertian_af"
-                        app:layout_constraintStart_toStartOf="@id/cv_pengertian_af"
-                        app:layout_constraintTop_toBottomOf="@id/cv_pengertian_af">
+                        app:layout_constraintEnd_toEndOf="@id/cv_jenis_af"
+                        app:layout_constraintStart_toStartOf="@id/cv_jenis_af"
+                        app:layout_constraintTop_toBottomOf="@id/cv_jenis_af">
 
                         <TextView
-                            android:id="@+id/txt_faq"
+                            android:id="@+id/txt_af_ringan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -140,12 +190,94 @@
                             android:layout_marginEnd="24dp"
                             android:layout_marginBottom="16dp"
                             android:fontFamily="@font/raleway_semibold"
-                            android:text="Jenis Aktivitas Fisik"
+                            android:text="@string/title_af_ringan"
                             android:textColor="@color/purple_0"
-                            android:textSize="18sp" />
+                            android:textSize="14sp" />
 
                         <ImageView
-                            android:id="@+id/icon_next_faq"
+                            android:id="@+id/icon_af_ringan"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/arrow_forward_24"
+                            app:tint="@color/black"
+                            tools:ignore="ContentDescription" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btn_af_sedang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="@id/btn_af_ringan"
+                        app:layout_constraintStart_toStartOf="@id/btn_af_ringan"
+                        app:layout_constraintTop_toBottomOf="@id/btn_af_ringan">
+
+                        <TextView
+                            android:id="@+id/txt_af_sedang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:text="@string/title_af_sedang"
+                            android:textColor="@color/purple_0"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/icon_af_sedang"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/arrow_forward_24"
+                            app:tint="@color/black"
+                            tools:ignore="ContentDescription" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btn_af_berat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="@id/btn_af_sedang"
+                        app:layout_constraintStart_toStartOf="@id/btn_af_sedang"
+                        app:layout_constraintTop_toBottomOf="@id/btn_af_sedang">
+
+                        <TextView
+                            android:id="@+id/txt_af_berat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:text="@string/title_af_berat"
+                            android:textColor="@color/purple_0"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/icon_af_berat"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="end|center_vertical"
@@ -166,7 +298,7 @@
                         app:cardUseCompatPadding="true"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/btn_jenis_af">
+                        app:layout_constraintTop_toBottomOf="@id/btn_af_berat">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -181,7 +313,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway_semibold"
-                                android:text="Masalah Jika Kurang Aktivitas Fisik"
+                                android:text="@string/title_masalah_jaktivitas_fisik"
                                 android:textColor="@color/purple_0"
                                 android:textSize="18sp"
                                 app:layout_constraintEnd_toEndOf="parent"
