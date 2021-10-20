@@ -7,13 +7,13 @@
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.app.tunanetradaily.MainActivity"
+        android:name="com.app.netrasehat.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.app.tunanetradaily.HomeFragment"
+        android:name="com.app.netrasehat.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/navigation_giziSeimbang"
-        android:name="com.app.tunanetradaily.GiziSeimbangFragment"
+        android:name="com.app.netrasehat.GiziSeimbangFragment"
         android:label="fragment_gizi_seimbang"
         tools:layout="@layout/fragment_gizi_seimbang" >
         <action
@@ -45,7 +45,7 @@
 
     <fragment
         android:id="@+id/pilarGiziSeimbangFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.PilarGiziSeimbangFragment"
+        android:name="com.app.netrasehat.giziseimbang.PilarGiziSeimbangFragment"
         android:label="fragment_pilar_gizi_seimbang"
         tools:layout="@layout/fragment_pilar_gizi_seimbang" >
         <action
@@ -63,12 +63,12 @@
     </fragment>
     <fragment
         android:id="@+id/pesanGiziSeimbangFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.PesanGiziSeimbangFragment"
+        android:name="com.app.netrasehat.giziseimbang.PesanGiziSeimbangFragment"
         android:label="fragment_pesan_gizi_seimbang"
         tools:layout="@layout/fragment_pesan_gizi_seimbang" />
     <fragment
         android:id="@+id/anekaRagamMakananFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.AnekaRagamMakananFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.AnekaRagamMakananFragment"
         android:label="fragment_aneka_ragam_makanan"
         tools:layout="@layout/fragment_aneka_ragam_makanan" >
         <action
@@ -77,12 +77,12 @@
     </fragment>
     <fragment
         android:id="@+id/detailRagamMakananFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.DetailRagamMakananFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.DetailRagamMakananFragment"
         android:label=""
         tools:layout="@layout/fragment_detail_ragam_makanan" />
     <fragment
         android:id="@+id/aktivitasFisikFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.pilar.aktivitasfisik.AktivitasFisikFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.aktivitasfisik.AktivitasFisikFragment"
         android:label=""
         tools:layout="@layout/fragment_aktivitas_fisik" >
         <action
@@ -91,12 +91,12 @@
     </fragment>
     <fragment
         android:id="@+id/phbsFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.pilar.phbs.PhbsFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.phbs.PhbsFragment"
         android:label="fragment_phbs"
         tools:layout="@layout/fragment_phbs" />
     <fragment
         android:id="@+id/beratBadanFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.pilar.beratbadan.BeratBadanFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.beratbadan.BeratBadanFragment"
         android:label=""
         tools:layout="@layout/fragment_berat_badan" >
         <action
@@ -105,27 +105,27 @@
     </fragment>
     <fragment
         android:id="@+id/jenisAktivitasFisikFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment"
         android:label=""
         tools:layout="@layout/fragment_jenis_aktivitas_fisik" />
     <fragment
         android:id="@+id/menghitungBbFragment"
-        android:name="com.app.tunanetradaily.giziseimbang.pilar.beratbadan.MenghitungBbFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.beratbadan.MenghitungBbFragment"
         android:label=""
         tools:layout="@layout/fragment_menghitung_bb" />
     <fragment
         android:id="@+id/covid19Fragment"
-        android:name="com.app.tunanetradaily.Covid19Fragment"
+        android:name="com.app.netrasehat.Covid19Fragment"
         android:label="fragment_covid19"
         tools:layout="@layout/fragment_covid19" />
     <fragment
         android:id="@+id/contactSahabatNetraFragment"
-        android:name="com.app.tunanetradaily.ContactSahabatNetraFragment"
+        android:name="com.app.netrasehat.ContactSahabatNetraFragment"
         android:label="fragment_contact_sahabat_netra"
         tools:layout="@layout/fragment_contact_sahabat_netra" />
     <fragment
         android:id="@+id/pelayananKesehatanFragment"
-        android:name="com.app.tunanetradaily.PelayananKesehatanFragment"
+        android:name="com.app.netrasehat.PelayananKesehatanFragment"
         android:label="fragment_pelayanan_kesehatan"
         tools:layout="@layout/fragment_pelayanan_kesehatan" />
 

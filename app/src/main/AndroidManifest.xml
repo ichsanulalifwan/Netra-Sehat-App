@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.app.tunanetradaily">
+    package="com.app.netrasehat">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,43 +13,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TunanetraDaily">
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.makananpokok.JenisMakananPokokActivity"
+            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.makananpokok.JenisMakananPokokActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity"
+            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity"
+            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity"
             android:exported="true" />
         <activity
-            android:name=".giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity"
+            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.BeratBadanActivity"
+            android:name="com.app.netrasehat.activity.BeratBadanActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.AktivitasFisikActivity"
+            android:name="com.app.netrasehat.activity.PhbsActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.PhbsActivity"
+            android:name="com.app.netrasehat.activity.PesanGiziSeimbangActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.PesanGiziSeimbangActivity"
+            android:name="com.app.netrasehat.activity.PilarGiziSeimbangActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.PilarGiziSeimbangActivity"
+            android:name="com.app.netrasehat.activity.ContactSahabatNetraActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.ContactSahabatNetraActivity"
+            android:name="com.app.netrasehat.activity.PelayananKesehatanActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.PelayananKesehatanActivity"
+            android:name="com.app.netrasehat.activity.Covid19Activity"
             android:exported="true" />
         <activity
-            android:name=".activity.Covid19Activity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.app.netrasehat.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
