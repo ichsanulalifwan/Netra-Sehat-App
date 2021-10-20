@@ -22,7 +22,6 @@ import androidx.navigation.ui.NavigationUI
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
 import com.app.tunanetradaily.databinding.FragmentAktivitasFisikBinding
-import com.app.tunanetradaily.giziseimbang.PilarGiziSeimbangFragmentDirections
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -72,19 +71,19 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             with(binding) {
                 btnAfRingan.setOnClickListener {
-//                val actionToAnekaRagamMakanan =
-//                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
-//                findNavController().navigate(actionToAnekaRagamMakanan)
+                    val actionToJenis =
+                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment()
+                    findNavController().navigate(actionToJenis)
                 }
                 btnAfSedang.setOnClickListener {
-//                val actionToAnekaRagamMakanan =
-//                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
-//                findNavController().navigate(actionToAnekaRagamMakanan)
+                    val actionToJenis =
+                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment()
+                    findNavController().navigate(actionToJenis)
                 }
                 btnAfBerat.setOnClickListener {
-//                val actionToAnekaRagamMakanan =
-//                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
-//                findNavController().navigate(actionToAnekaRagamMakanan)
+                    val actionToJenis =
+                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment()
+                    findNavController().navigate(actionToJenis)
                 }
             }
         }

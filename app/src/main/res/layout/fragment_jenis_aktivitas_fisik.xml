@@ -1,14 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_1"
+            android:elevation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            app:navigationIconTint="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_1">
+
+            <TextView
+                android:id="@+id/txt_jenis_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/raleway_extrabold"
+                android:text="@string/title_af_ringan"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_container"
+                style="@style/CustomCardViewStyleTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_jenis_name">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_pengertian_af"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_pengertian_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway_semibold"
+                                android:text="@string/title_pengertian"
+                                android:textColor="@color/purple_0"
+                                android:textSize="18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_pengertian_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/raleway"
+                                android:justificationMode="inter_word"
+                                android:text="@string/pengertian_af_ringan"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="@id/tv_pengertian_af"
+                                app:layout_constraintStart_toStartOf="@id/tv_pengertian_af"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_pengertian_af"
+                                tools:targetApi="o" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_manfaat_af"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="@id/cv_pengertian_af"
+                        app:layout_constraintStart_toStartOf="@id/cv_pengertian_af"
+                        app:layout_constraintTop_toBottomOf="@id/cv_pengertian_af">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_manfaat_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway_semibold"
+                                android:text="@string/title_manfaat"
+                                android:textColor="@color/purple_0"
+                                android:textSize="18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_manfaat_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/raleway"
+                                android:justificationMode="inter_word"
+                                android:text="@string/manfaat_af_ringan"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="@id/tv_manfaat_af"
+                                app:layout_constraintStart_toStartOf="@id/tv_manfaat_af"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_manfaat_af"
+                                tools:targetApi="o" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_contoh_af"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cv_manfaat_af">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_contoh_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway_semibold"
+                                android:text="@string/title_contoh"
+                                android:textColor="@color/purple_0"
+                                android:textSize="18sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_contoh_af"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/raleway"
+                                android:justificationMode="inter_word"
+                                android:text="@string/contoh_af_ringan"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="@id/tv_contoh_af"
+                                app:layout_constraintStart_toStartOf="@id/tv_contoh_af"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_contoh_af"
+                                tools:targetApi="o" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

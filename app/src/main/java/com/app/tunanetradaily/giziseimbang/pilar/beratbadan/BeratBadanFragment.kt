@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
@@ -69,9 +70,9 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
             }
 
             binding.btnTentukanBb.setOnClickListener {
-//                val actionToAnekaRagamMakanan =
-//                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
-//                findNavController().navigate(actionToAnekaRagamMakanan)
+                val actionToMenghitungBb =
+                    BeratBadanFragmentDirections.actionBeratBadanFragmentToMenghitungBbFragment()
+                findNavController().navigate(actionToMenghitungBb)
             }
         }
     }

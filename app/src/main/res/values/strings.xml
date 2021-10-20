@@ -1434,9 +1434,27 @@
     <string name="masalah_airputih">Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat.</string>
 
     <!-- Aktivitas Fisik res-->
+    <string name="title_masalah_jaktivitas_fisik">Masalah Jika Kurang Aktivitas Fisik</string>
+    <string name="title_jenis_aktivitas_fisik">Jenis Aktivitas Fisik</string>
+    <string name="title_af_ringan">Aktivitas Fisik Ringan</string>
+    <string name="title_af_sedang">Aktivitas Fisik Sedang</string>
+    <string name="title_af_berat">Aktivitas Fisik Berat</string>
+
     <string name="pengertian_aktivitasfisik">Aktivitas fisik merupakan setiap gerakan tubuh yang diakibatkan kerja otot rangka dan meningkatkan pengeluaran tenaga serta energi. Aktivitas fisik adalah setiap gerakan tubuh yang jika dilakukan dapat mengeluarkan energi. Aktivitas fisik ini biasanya seperti olahraga fisik, hobi, maupun aktivitas sehari-hari.</string>
     <string name="jenis_aktivitasfisik">Secara umum aktivitas fisik terbagi atas 3 kategori berdasarkan intesitas dan besaran kegiatan yang dilakukan diataranya adalah aktivitas fisik ringan, aktivitas fisik sedang, dan aktivitas fisik berat.</string>
     <string name="masalah_aktivitasfisik">Kurang melakukan aktivitas fisik akibatnya bisa ditebak, yakni menyebabkan kualitas fisik yang rendah sehingga mudah lelah dalam beraktivitas, mudah sakit, pegal-pegal hingga menjadi kurang produktif. Dalam jangka Panjang dapat menyebabkan risiko penyakit degenerative seperti diabetes, obesitas, jantung, dan stroke.</string>
+    <!-- Jenis Aktivitas Fisik Ringan res-->
+    <string name="pengertian_af_ringan">Aktivitas fisik ringan yaitu aktivitas yang memerlukan sedikit pergerakan dan energy. Tidak menyebabkan perubahan berarti pada jumlah hembusan nafas dan tidak menyesakkan.</string>
+    <string name="manfaat_af_ringan">Manfaat aktivitas fisik ringan adalah membuatmu merasa lebih bahagia, membantu menurunkan berat badan, mengurangi risiko penyakit kronis dan menambah gairah dalam beraktivitas sehari-hari.</string>
+    <string name="contoh_af_ringan">Contohnya berdiri, berjalan santai, makan, duduk membaca atau di depan komputer, dan lain-lain. Jangka waktu aktivitas yang dilakukan adalah kurang dari 60 menit. Energi yang dikeluarkan 3,5 Kcal/menit.</string>
+    <!-- Jenis Aktivitas Fisik Sedang res-->
+    <string name="pengertian_af_sedang">Aktivitas fisik sedang yaitu kegiatan yang membutuhkan gerakan otot yang terus menerus dengan intensitas ringan dan tidak menimbulkan pegurasan energy yang besar.</string>
+    <string name="manfaat_af_sedang">Manfaat aktivitas fisik sedang adalah mengendalikan berat badan, mengendalikan tekanan darah, menurunkan risiko keropos tulang (osteoporosis) pada wanita, mencegah Diabetes Melitus atau kencing manis, mengendalikan kadar kolesterol, meningkatkan daya tahan dan sistem kekebalan tubuh, dan memperbaiki kelenturan sendi dan kekuatan otot.</string>
+    <string name="contoh_af_sedang">Contohnya membersihkan rumah, memindahkan/ mengangkat perabot ringan, berkebun, bersepeda dengan kecepatan sedang dan lain–lain. Durasi kegiatan ini antara 30 sampai 60 menit. Energi yang dikeluarkan dalam aktivitas ini yakni 3,5–7 Kcal/menit.</string>
+     <!-- Jenis Aktivitas Fisik Berat res-->
+    <string name="pengertian_af_berat">Aktivitas fisik berat adalah kegiatan yang terus menerus dilakukan minimal selama 10 menit sampai denyut nadi dan napas meningkat lebih dari biasanya.</string>
+    <string name="manfaat_af_berat">Manfaat aktivitas fisik berat adalah mengontrol berat badan ideal, menurunkan risiko penyakit berbahaya, menjaga kesehatan tulang dan otot, menjaga kesehatan kulit,menjaga kesehatan otak, meningkatkan daya tahan dan sistem kekebalan tubuh.</string>
+    <string name="contoh_af_berat">Contohnya contohnya ialah menimba air, mendaki gunung, lari cepat, pus up, sit up, menebang pohon, mencangkul, dll.</string>
 
     <!-- Berat Badan res-->
     <string name="pengertian_berat_badan">Berat Badan yang normal, yaitu berat badan yang ideal atau sesuai dengan tinggi badannya. Indikator tersebut dikenal dengan Indeks Masa Tubuh (IMT). Pentingnya pemantauan Berat Badan Normal karena berkaitan dengan penilaian bagaimana Pola Hidup dengan‘Gizi Seimbang terhadap individu sehingga dapat mencegah penyimpangan BB dari BB normal, dan apabila terjadi penyimpangan maka dapat segera dilakukan langkah-langkah pencegahan dan penanganannya.</string>
@@ -1448,7 +1466,6 @@
     <string name="contentDescription_giziSeimbang">Gambar Gizi Seimbang</string>
     <string name="contentDescription_pesanGizi">Gambar Pesan Gizi Seimbang</string>
     <string name="contentDescription_pilarGizi">Gambar Pilar Gizi Seimbang</string>
-
 
     <!--Others String-->
     <string name="speech_belum_mulai">. . . . .</string>
@@ -1464,16 +1481,10 @@
 
     <string name="title_pengertian">Pengertian</string>
     <string name="title_manfaat">Manfaat</string>
-
-    <string name="title_masalah_jaktivitas_fisik">Masalah Jika Kurang Aktivitas Fisik</string>
-    <string name="title_jenis_aktivitas_fisik">Jenis Aktivitas Fisik</string>
-    <string name="title_af_ringan">Aktivitas Fisik Ringan</string>
-    <string name="title_af_sedang">Aktivitas Fisik Sedang</string>
-    <string name="title_af_berat">Aktivitas Fisik Berat</string>
+    <string name="title_contoh">Contoh</string>
     
     <string name="title_masalah_berat_badan">Masalah Berat Badan tidak ideal</string>
     <string name="title_cara_menentukan_bb">Cara Menentukan Indeks Massa Tubuh</string>
     <string name="title_menentukan_berat_badan">Menghitung Berat Badan</string>
-    
 
 </resources>

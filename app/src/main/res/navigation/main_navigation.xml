@@ -88,7 +88,7 @@
     <fragment
         android:id="@+id/beratBadanFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.beratbadan.BeratBadanFragment"
-        android:label="fragment_berat_badan"
+        android:label=""
         tools:layout="@layout/fragment_berat_badan" >
         <action
             android:id="@+id/action_beratBadanFragment_to_menghitungBbFragment"
@@ -97,12 +97,12 @@
     <fragment
         android:id="@+id/jenisAktivitasFisikFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment"
-        android:label="fragment_jenis_aktivitas_fisik"
+        android:label=""
         tools:layout="@layout/fragment_jenis_aktivitas_fisik" />
     <fragment
         android:id="@+id/menghitungBbFragment"
         android:name="com.app.tunanetradaily.giziseimbang.pilar.beratbadan.MenghitungBbFragment"
-        android:label="fragment_menghitung_bb"
+        android:label=""
         tools:layout="@layout/fragment_menghitung_bb" />
 
 </navigation>
