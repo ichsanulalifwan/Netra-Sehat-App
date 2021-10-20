@@ -16,4 +16,6 @@
     <color name="gray1">#EEF2F8</color>
     <color name="dark_blue">#232E3E</color>
     <color name="purple_gradient1">#7001F7</color>
+    <color name="green_summary">#4E9F3D</color>
+    <color name="red_summary">#4E9F3D</color>
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tunanetra Daily</string>
+    <string name="app_name">Netra Sehat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_message">
@@ -1451,7 +1451,7 @@
     <string name="pengertian_af_sedang">Aktivitas fisik sedang yaitu kegiatan yang membutuhkan gerakan otot yang terus menerus dengan intensitas ringan dan tidak menimbulkan pegurasan energy yang besar.</string>
     <string name="manfaat_af_sedang">Manfaat aktivitas fisik sedang adalah mengendalikan berat badan, mengendalikan tekanan darah, menurunkan risiko keropos tulang (osteoporosis) pada wanita, mencegah Diabetes Melitus atau kencing manis, mengendalikan kadar kolesterol, meningkatkan daya tahan dan sistem kekebalan tubuh, dan memperbaiki kelenturan sendi dan kekuatan otot.</string>
     <string name="contoh_af_sedang">Contohnya membersihkan rumah, memindahkan/ mengangkat perabot ringan, berkebun, bersepeda dengan kecepatan sedang dan lain–lain. Durasi kegiatan ini antara 30 sampai 60 menit. Energi yang dikeluarkan dalam aktivitas ini yakni 3,5–7 Kcal/menit.</string>
-     <!-- Jenis Aktivitas Fisik Berat res-->
+    <!-- Jenis Aktivitas Fisik Berat res-->
     <string name="pengertian_af_berat">Aktivitas fisik berat adalah kegiatan yang terus menerus dilakukan minimal selama 10 menit sampai denyut nadi dan napas meningkat lebih dari biasanya.</string>
     <string name="manfaat_af_berat">Manfaat aktivitas fisik berat adalah mengontrol berat badan ideal, menurunkan risiko penyakit berbahaya, menjaga kesehatan tulang dan otot, menjaga kesehatan kulit,menjaga kesehatan otak, meningkatkan daya tahan dan sistem kekebalan tubuh.</string>
     <string name="contoh_af_berat">Contohnya contohnya ialah menimba air, mendaki gunung, lari cepat, pus up, sit up, menebang pohon, mencangkul, dll.</string>
@@ -1482,9 +1482,19 @@
     <string name="title_pengertian">Pengertian</string>
     <string name="title_manfaat">Manfaat</string>
     <string name="title_contoh">Contoh</string>
-    
+
     <string name="title_masalah_berat_badan">Masalah Berat Badan tidak ideal</string>
     <string name="title_cara_menentukan_bb">Cara Menentukan Indeks Massa Tubuh</string>
-    <string name="title_menentukan_berat_badan">Menghitung Berat Badan</string>
+    <string name="title_menentukan_berat_badan">Menghitung Indeks Massa Tubuh</string>
+    <string name="title_berat_badan">Berat Badan</string>
+    <string name="title_satuan_kg">Kg</string>
+    <string name="title_tinggi_badan">Tinggi Badan</string>
+    <string name="title_satuan_meter">m</string>
+    <string name="title_hitung_imt">Hitung Indeks Massa Tubuh</string>
+
+    <!--Hasil Indeks Massa Tubuh-->
+    <string name="result_imt_1">Anda Kekurangan Berat Badan</string>
+    <string name="result_imt_2">Berat Badan Anda Ideal</string>
+    <string name="result_imt_3">Anda Kelebihan Berat Badan</string>
 
 </resources>
