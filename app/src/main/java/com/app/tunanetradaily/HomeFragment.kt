@@ -1,6 +1,8 @@
 package com.app.tunanetradaily
 
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -14,6 +16,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.app.tunanetradaily.activity.Covid19Activity
+import com.app.tunanetradaily.activity.PelayananKesehatanActivity
 import com.app.tunanetradaily.databinding.FragmentHomeBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -60,19 +64,75 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 }
 
                 cvCovid19.setOnClickListener {
-                    Toast.makeText(context, "cvCovid19 Clicked", Toast.LENGTH_LONG).show()
+                    val actionToCovid19 =
+                        HomeFragmentDirections.actionNavigationHomeToCovid19Fragment()
+                    findNavController().navigate(actionToCovid19)
                 }
 
                 cvPelayananKesehatan.setOnClickListener {
-                    Toast.makeText(context, "cvPelayananKesehatan Clicked", Toast.LENGTH_LONG)
-                        .show()
+                    val actionToPelayanan =
+                        HomeFragmentDirections.actionNavigationHomeToPelayananKesehatanFragment()
+                    findNavController().navigate(actionToPelayanan)
                 }
 
                 cvContactPerson.setOnClickListener {
-                    Toast.makeText(context, "cvContactPerson Clicked", Toast.LENGTH_LONG).show()
+                    openWhatsApp(6282193593522, "Hi, Sahabat Netra")
+//                    val actionToContact =
+//                        HomeFragmentDirections.actionNavigationHomeToContactSahabatNetraFragment()
+//                    findNavController().navigate(actionToContact)
                 }
             }
         }
+    }
+
+    private fun openWhatsApp(phoneNumber: Long, message: String) {
+//        try {
+//            val packageManager = requireActivity().packageManager
+//            val intent = Intent(Intent.ACTION_VIEW)
+//            val url =
+//                "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + URLEncoder.encode(
+//                    message,
+//                    "UTF-8"
+//                )
+//            intent.setPackage("com.whatsapp")
+//            intent.data = Uri.parse(url)
+//            if (intent.resolveActivity(packageManager) != null) {
+//                startActivity(intent)
+//            } else {
+//                Toast.makeText(
+//                    context,
+//                    getString(R.string.no_whatsapp),
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            }
+//        } catch (e: Exception) {
+//            Log.e("ERROR WHATSAPP", e.toString())
+//            Toast.makeText(context, "ERROR WHATSAPP $e", Toast.LENGTH_SHORT).show()
+//        }
+
+        if (isWhatappInstalled()) {
+            val i = Intent(
+                Intent.ACTION_VIEW, Uri.parse(
+                    "https://api.whatsapp.com/send?phone=" + phoneNumber.toString() +
+                            "&text=" + message
+                )
+            )
+            startActivity(i)
+        } else {
+            Toast.makeText(context, "Whatsapp is not installed", Toast.LENGTH_SHORT)
+                .show()
+        }
+    }
+
+    private fun isWhatappInstalled(): Boolean {
+        val packageManager: PackageManager = requireActivity().packageManager
+        val whatsappInstalled: Boolean = try {
+            packageManager.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES)
+            true
+        } catch (e: PackageManager.NameNotFoundException) {
+            false
+        }
+        return whatsappInstalled
     }
 
     override fun onStart() {
@@ -109,7 +169,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 Log.i(TAG, "TTS On Done")
                 val ttsLoop = utteranceId.equals("tts0") ||
                         utteranceId.equals("tts1") ||
-                        utteranceId.equals("welcomeText")
+                        utteranceId.equals("litkesText")
 //                if (ttsLoop) {
 //                    startListening()
 //                }
@@ -225,11 +285,9 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 //finish()
             }
             check4 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
-                val cpSahabatNetraMenu = Intent(context, ContactSahabatNetraActivity::class.java)
-                startActivity(cpSahabatNetraMenu)
-                //finish()
+//                val cpSahabatNetraMenu = Intent(context, ContactSahabatNetraActivity::class.java)
+//                startActivity(cpSahabatNetraMenu)
+                openWhatsApp(6282193593522, "Hi, Sahabat Netra")
             }
             check0 -> {
                 //textToSpeechEngine?.stop()

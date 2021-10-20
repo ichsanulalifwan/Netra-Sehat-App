@@ -242,7 +242,7 @@
                             android:fontFamily="@font/raleway_semibold"
                             android:text="@string/title_menentukan_berat_badan"
                             android:textColor="@color/purple_0"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
 
                         <ImageView
                             android:id="@+id/icon_next_faq"

@@ -21,6 +21,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
+import com.app.tunanetradaily.activity.PhbsActivity
 import com.app.tunanetradaily.databinding.FragmentPilarGiziSeimbangBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -71,6 +72,7 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
             }
+
             with(binding) {
                 cvAnekaRagam.setOnClickListener {
                     val actionToAnekaRagamMakanan =
@@ -78,9 +80,11 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                     findNavController().navigate(actionToAnekaRagamMakanan)
                 }
                 cvPhbs.setOnClickListener {
-                    val actionToPhbs =
-                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
-                    findNavController().navigate(actionToPhbs)
+                    val actionToPhbs = Intent(context, PhbsActivity::class.java)
+                    startActivity(actionToPhbs)
+//                    val actionToPhbs =
+//                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
+//                    findNavController().navigate(actionToPhbs)
                 }
                 cvAktivitasFisik.setOnClickListener {
                     val actionToAktivitasFisik =
@@ -122,7 +126,6 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
                 Log.i(TAG, "TTS On Start")
-
             }
 
             override fun onDone(utteranceId: String?) {
@@ -219,20 +222,34 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
         binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
             check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
+                val actionToAnekaRagamMakanan =
+                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAnekaRagamMakananFragment()
+                findNavController().navigate(actionToAnekaRagamMakanan)
             }
             check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
+                val actionToPhbs = Intent(context, PhbsActivity::class.java)
+                startActivity(actionToPhbs)
+//                    val actionToPhbs =
+//                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
+//                    findNavController().navigate(actionToPhbs)
+            }
+            check3 -> {
+                val actionToAktivitasFisik =
+                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToAktivitasFisikFragment()
+                findNavController().navigate(actionToAktivitasFisik)
+            }
+            check4 -> {
+                val actionToBeratBadan =
+                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToBeratBadanFragment()
+                findNavController().navigate(actionToBeratBadan)
             }
             check8 -> {
                 navController.popBackStack()

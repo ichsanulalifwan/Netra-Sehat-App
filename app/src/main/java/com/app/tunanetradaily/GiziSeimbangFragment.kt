@@ -36,7 +36,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
     private lateinit var navController: NavController
-    private var loopCode: Int? = 0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -118,13 +117,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                if (utteranceId == "tts1") {
-                    loopCode = 1
-                    startListening()
-                } else if (utteranceId == "tts3") {
-                    loopCode = 3
-                    startListening()
-                }
+                startListening()
             }
 
             override fun onError(utteranceId: String?) {
@@ -226,55 +219,45 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
-        if (loopCode == 1) {
-            when {
-                check1 -> {
-                    val actionToPilarGizi =
-                        GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-                    findNavController().navigate(actionToPilarGizi)
-                }
-                check2 -> {
-                    val actionToPesanGizi =
-                        GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-                    findNavController().navigate(actionToPesanGizi)
-                }
-                check8 -> {
-                    /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                    startActivity(backPreviousMenu)*/
-                    //fragmentManager?.popBackStack()
-                    navController.popBackStack()
-                    //finish()
-                }
-                check9 -> {
-                    val backMainMenu = Intent(context, MainActivity::class.java)
-                    startActivity(backMainMenu)
-                    activity?.let { finishAffinity(it) }
-                }
-                check0 -> {
-                    activity?.finishAffinity()
-                    exitProcess(0)
-                }
-                else -> {
-                    val messageNoMatch =
-                        "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                    textToSpeechEngine?.speak(
-                        messageNoMatch,
-                        TextToSpeech.QUEUE_FLUSH,
-                        null,
-                        "tts3"
-                    )
-                    Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
-                }
+        when {
+            check1 -> {
+                val actionToPilarGizi =
+                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
+                findNavController().navigate(actionToPilarGizi)
             }
-        } else if (loopCode == 3) {
-            when {
-                check1 -> {
-                    activity?.finishAffinity()
-                    exitProcess(0)
-                }
+            check2 -> {
+                val actionToPesanGizi =
+                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
+                findNavController().navigate(actionToPesanGizi)
+            }
+            check8 -> {
+                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
+                startActivity(backPreviousMenu)*/
+                //fragmentManager?.popBackStack()
+                navController.popBackStack()
+                //finish()
+            }
+            check9 -> {
+                val backMainMenu = Intent(context, MainActivity::class.java)
+                startActivity(backMainMenu)
+                activity?.let { finishAffinity(it) }
+            }
+            check0 -> {
+                activity?.finishAffinity()
+                exitProcess(0)
+            }
+            else -> {
+                val messageNoMatch =
+                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+                textToSpeechEngine?.speak(
+                    messageNoMatch,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "tts3"
+                )
+                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {
