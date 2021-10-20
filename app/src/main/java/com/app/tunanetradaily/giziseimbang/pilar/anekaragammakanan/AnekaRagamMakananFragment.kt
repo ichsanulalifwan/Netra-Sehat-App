@@ -22,8 +22,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.tunanetradaily.MainActivity
 import com.app.tunanetradaily.R
+import com.app.tunanetradaily.activity.PhbsActivity
 import com.app.tunanetradaily.databinding.FragmentAnekaRagamMakananBinding
 import com.app.tunanetradaily.giziseimbang.PilarGiziSeimbangFragmentDirections
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity
+import com.app.tunanetradaily.giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -73,10 +77,14 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 
             with(binding) {
                 cvMakanan.setOnClickListener {
-                    actionToDetail()
+                    val actionToMakananPokok = Intent(context, MakananPokokActivity::class.java)
+                    startActivity(actionToMakananPokok)
+                    //actionToDetail()
                 }
                 cvLauk.setOnClickListener {
-                    actionToDetail()
+                    val actionToLauk = Intent(context, LaukPaukActivity::class.java)
+                    startActivity(actionToLauk)
+                    //actionToDetail()
                 }
                 cvSayuran.setOnClickListener {
                     actionToDetail()
@@ -85,7 +93,9 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
                     actionToDetail()
                 }
                 cvAirPutih.setOnClickListener {
-                    actionToDetail()
+                    val actionToAirPutih = Intent(context, AirPutihActivity::class.java)
+                    startActivity(actionToAirPutih)
+                    //actionToDetail()
                 }
             }
         }
@@ -107,7 +117,7 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }

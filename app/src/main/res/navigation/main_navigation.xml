@@ -19,6 +19,15 @@
         <action
             android:id="@+id/action_homeFragment_to_navigation_giziSeimbang"
             app:destination="@id/navigation_giziSeimbang" />
+        <action
+            android:id="@+id/action_navigation_home_to_covid19Fragment"
+            app:destination="@id/covid19Fragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_contactSahabatNetraFragment"
+            app:destination="@id/contactSahabatNetraFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_pelayananKesehatanFragment"
+            app:destination="@id/pelayananKesehatanFragment" />
     </fragment>
 
     <fragment
@@ -104,5 +113,20 @@
         android:name="com.app.tunanetradaily.giziseimbang.pilar.beratbadan.MenghitungBbFragment"
         android:label=""
         tools:layout="@layout/fragment_menghitung_bb" />
+    <fragment
+        android:id="@+id/covid19Fragment"
+        android:name="com.app.tunanetradaily.Covid19Fragment"
+        android:label="fragment_covid19"
+        tools:layout="@layout/fragment_covid19" />
+    <fragment
+        android:id="@+id/contactSahabatNetraFragment"
+        android:name="com.app.tunanetradaily.ContactSahabatNetraFragment"
+        android:label="fragment_contact_sahabat_netra"
+        tools:layout="@layout/fragment_contact_sahabat_netra" />
+    <fragment
+        android:id="@+id/pelayananKesehatanFragment"
+        android:name="com.app.tunanetradaily.PelayananKesehatanFragment"
+        android:label="fragment_pelayanan_kesehatan"
+        tools:layout="@layout/fragment_pelayanan_kesehatan" />
 
 </navigation>
