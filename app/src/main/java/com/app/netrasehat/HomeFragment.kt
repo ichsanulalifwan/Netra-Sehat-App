@@ -1,5 +1,6 @@
 package com.app.netrasehat
 
+import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -14,6 +15,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.app.netrasehat.activity.Covid19Activity
@@ -86,30 +88,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     }
 
     private fun openWhatsApp(phoneNumber: Long, message: String) {
-//        try {
-//            val packageManager = requireActivity().packageManager
-//            val intent = Intent(Intent.ACTION_VIEW)
-//            val url =
-//                "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + URLEncoder.encode(
-//                    message,
-//                    "UTF-8"
-//                )
-//            intent.setPackage("com.whatsapp")
-//            intent.data = Uri.parse(url)
-//            if (intent.resolveActivity(packageManager) != null) {
-//                startActivity(intent)
-//            } else {
-//                Toast.makeText(
-//                    context,
-//                    getString(R.string.no_whatsapp),
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
-//        } catch (e: Exception) {
-//            Log.e("ERROR WHATSAPP", e.toString())
-//            Toast.makeText(context, "ERROR WHATSAPP $e", Toast.LENGTH_SHORT).show()
-//        }
-
         if (isWhatappInstalled()) {
             val i = Intent(
                 Intent.ACTION_VIEW, Uri.parse(

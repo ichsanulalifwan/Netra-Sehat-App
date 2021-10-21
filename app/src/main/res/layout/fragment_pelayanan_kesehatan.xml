@@ -208,6 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
                 android:clickable="true"
                 android:focusable="true"
                 app:cardBackgroundColor="@color/white"
@@ -215,6 +216,7 @@
                 app:cardElevation="6dp"
                 app:cardMaxElevation="8dp"
                 app:cardUseCompatPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/btn_rumahsakit"
                 app:layout_constraintStart_toStartOf="@id/btn_rumahsakit"
                 app:layout_constraintTop_toBottomOf="@id/btn_apotek">
