@@ -20,7 +20,9 @@
     <string name="title_gizi_seimbang">Gizi Seimbang</string>
     <string name="title_covid_19">Covid-19</string>
     <string name="title_pelayanan_kesehatan">Pelayanan\nKesehatan</string>
+    <string name="title_pelayanan_kesehatan_terdekat">Pelayanan Kesehatan Terdekat</string>
     <string name="title_cp_sahabat_netra">Contact Person\nSahabat Netra</string>
+    <string name="title_cp_sahabat_netra2">Contact Person Sahabat Netra</string>
     <string name="title_pilar_gizi_seimbang">4 Pilar Gizi Seimbang</string>
     <string name="title_pesan_gizi_seimbang">10 Pesan Gizi Seimbang</string>
     <string name="title_mengonsumsi_aneka">Mengonsumsi Aneka Ragam Makanan</string>
@@ -1496,5 +1498,11 @@
     <string name="result_imt_1">Anda Kekurangan Berat Badan</string>
     <string name="result_imt_2">Berat Badan Anda Ideal</string>
     <string name="result_imt_3">Anda Kelebihan Berat Badan</string>
+
+    <!--Pelayanan Kesehatan Terdekat Res-->
+    <string name="title_rumah_sakit">Rumah Sakit</string>
+    <string name="title_puskesmas">Puskesmas</string>
+    <string name="title_apotek">Apotek</string>
+    <string name="title_klinik">Klinik</string>
 
 </resources>
