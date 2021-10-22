@@ -74,6 +74,7 @@
                         android:text="@string/title_protokol_covid"
                         android:textColor="@color/purple_0"
                         android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:targetApi="o" />
 
@@ -83,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="@string/title_cuci_tangan"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt1"
                         tools:targetApi="o" />
@@ -96,7 +97,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/protokol_covid19_cucitangan"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt2"
                         tools:targetApi="o" />
@@ -108,7 +109,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/title_pakai_masker"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt3"
                         tools:targetApi="o" />
@@ -121,7 +122,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/protokol_covid19_pakaimasker"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt4"
                         tools:targetApi="o" />
@@ -133,7 +134,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/title_menjaga_jarak"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt5"
                         tools:targetApi="o" />
@@ -146,7 +147,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/protokol_covid19_menjagajarak"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt6"
                         tools:targetApi="o" />
@@ -158,7 +159,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/title_menghindari_kerumunan"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt7"
                         tools:targetApi="o" />
@@ -171,7 +172,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/protokol_covid19_hindarikerumunan"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt8"
                         tools:targetApi="o" />
@@ -183,7 +184,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/title_mengurangi_mobilitas"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt9"
                         tools:targetApi="o" />
@@ -196,7 +197,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/protokol_covid19_mengurangimobilitas"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt10"
                         tools:targetApi="o" />
@@ -210,6 +211,7 @@
                         android:text="@string/title_menjaga_imunitas_tubuh"
                         android:textColor="@color/purple_0"
                         android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintTop_toBottomOf="@id/txt11"
                         tools:targetApi="o" />
 
@@ -221,7 +223,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/caramencegah_covid19_menjagaimunitas"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt12"
                         tools:targetApi="o" />

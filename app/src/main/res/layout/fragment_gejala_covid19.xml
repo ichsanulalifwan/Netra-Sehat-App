@@ -72,7 +72,7 @@
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="@string/gejala_covid19"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:targetApi="o" />
@@ -84,7 +84,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/penggolangan_gejala_covid19"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt1"
                         tools:targetApi="o" />

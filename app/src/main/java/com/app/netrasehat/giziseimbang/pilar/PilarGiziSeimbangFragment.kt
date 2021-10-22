@@ -80,11 +80,9 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                     findNavController().navigate(actionToAnekaRagamMakanan)
                 }
                 cvPhbs.setOnClickListener {
-                    val actionToPhbs = Intent(context, PhbsActivity::class.java)
-                    startActivity(actionToPhbs)
-//                    val actionToPhbs =
-//                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
-//                    findNavController().navigate(actionToPhbs)
+                    val actionToPhbs =
+                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
+                    findNavController().navigate(actionToPhbs)
                 }
                 cvAktivitasFisik.setOnClickListener {
                     val actionToAktivitasFisik =

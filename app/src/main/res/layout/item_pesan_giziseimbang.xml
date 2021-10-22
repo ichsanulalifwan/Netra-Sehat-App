@@ -22,18 +22,18 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="56dp"
         android:fontFamily="@font/raleway_bold"
-        android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textColor="@color/purple_1"
+        android:textSize="14sp"
         tools:text="Biasakan Menkonsumsi Lauk Pauk Yang Mengandung Protein Tinggi" />
 
     <ImageView
         android:id="@+id/ic_next_pesan"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_gravity="end|center_vertical"
         android:layout_marginEnd="24dp"
         android:src="@drawable/arrow_forward_24"
-        app:tint="@color/black"
+        app:tint="@color/purple_1"
         tools:ignore="ContentDescription" />
 
 </com.google.android.material.card.MaterialCardView>

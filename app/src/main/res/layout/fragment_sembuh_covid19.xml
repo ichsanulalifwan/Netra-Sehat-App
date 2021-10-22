@@ -72,7 +72,7 @@
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="@string/sembuhdari_covid19"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:targetApi="o" />
@@ -81,11 +81,12 @@
                         android:id="@+id/txt2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
                         android:justificationMode="inter_word"
                         android:text="@string/title_kriteria_sembuh_dari_covid_19"
                         android:textColor="@color/purple_0"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         app:layout_constraintTop_toBottomOf="@id/txt1"
                         tools:targetApi="o" />
 
@@ -97,7 +98,7 @@
                         android:layout_marginTop="2dp"
                         android:justificationMode="inter_word"
                         android:text="@string/kriteriasembuh_covid19"
-                        android:textColor="@color/black"
+                        android:textColor="@color/purple_1"
                         android:textSize="14sp"
                         app:layout_constraintTop_toBottomOf="@id/txt2"
                         tools:targetApi="o" />

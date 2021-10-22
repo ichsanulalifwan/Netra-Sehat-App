@@ -1475,7 +1475,7 @@
     <string name="fungsi_phbs_5">Gigi ini berfungsi untuk menghancurkan dan mengunyah makanan. Gigi geraham belakang atau molar. Terletak di belakang geraham depan, fungsi gigi ini adalah untuk mengunyah dan menggiling makanan menjadi lebih halus.</string>
     <string name="fungsi_phbs_6">Fungsi mata yang paling umum yakni sebagai indra penglihatan. Mata dapat digunakan untuk melihat objek yang jauh dan dekat dan juga sebagai penerima informasi yang kemudian di proses oleh otak.</string>
     <string name="fungsi_phbs_7">Telinga adalah organ pendengaran yang memiliki fungsi menangkap dan mengubah bunyi berupa energi mekanis menjadi energi elektris secara efisien dan diteruskan ke otak untuk disadari dan dimengerti. Selain untuk mendengarkan suara atau bunyi, fungsi telinga lainnya yakni untuk keseimbangan. Keseimbangan dicapai melalui kombinasi organ sensorik di telinga bagian dalam, input visual, dan informasi yang diterima dari reseptor dalam tubuh, terutama di sekitar sendi.
-        \n\nHidung berfungsi sebagai indera penciuman tetapi juga memantau temperatur dan kelembapan udara yang dihirup serta mencegah masuknya partikel asing kedalam sistem pernafasan. Dalam rongga hidung terdapat bulu –bulu halus dan lender keluar dari ke kelenjar di dinding rongga hidung. Fungsi bulu dan lender ialah menyaring udara yang masuk dari kotoran dan debu, sehingga udara yang masuk ke paru paru lebih bersih.</string>
+        \n\nHidung berfungsi sebagai indera penciuman tetapi juga memantau temperatur dan kelembapan udara yang dihirup serta mencegah masuknya partikel asing kedalam sistem pernafasan. Dalam rongga hidung terdapat bulu –bulu halus dan lender keluar dari ke kelenjar di dinding rongga hidung. Fungsi bulu dan lender ialah menyaring udara yang masuk dari kotoran dan debu, sehingga udara yang masuk ke paru lebih bersih.</string>
     <string name="fungsi_phbs_8">a.) Untuk mencegah terjadinya infeksi
         \nb.) Mempertahankan kebersihan genitalia
         \nc.) Meningkatkan kenyamanan serta mempertahankan personal hygiene
@@ -1592,7 +1592,7 @@
         \nh.) Jangan menggunakan alat pembersih kimiawi tertentu karena akan merusak keasaman vagina yang berfungsi menumbuhkan bakteri atau kuman yang masuk.
         \ni.) Demikian juga tidak diperbolehkan menggunakan deodorant atau spray, cairan pembasuh (douches), sabun yang keras, serta tissue yang berwarna dan berparfum. Utamanya pada wanita Rangsangan dari bahan ini dapat menimbulkan peradangan dari liang senggama dan bibir kemaluan dengan keluhan gatal dan keputihan.
         \nj.) Hindari penggunaan handuk atau washlap milik orang lain untuk mengeringkan organ genital
-        \nk.) Rajinlah mencukur dan membersihkan rambut organ intim secara rutin, minimalnya 40 hari sekali. Karena jika dibiarkan terlalu lebat bakteri akan bersarang pada celah celah rambut.
+        \nk.) Rajinlah mencukur dan membersihkan rambut organ intim secara rutin, minimalnya 40 hari sekali. Karena jika dibiarkan terlalu lebat bakteri akan bersarang pada celah rambut.
         \nl.) Hindari penggunaan celana dalam yang terlalu ketat. Karena jika terlalu ketat akan telalu menekan dan menyebabkan tidak lancarnya peredaran darah.
         \nm.) Selalu gunakan celana dalam yang bersih dan terbuat dari bahan katun (100%). Bahan lain misalnya nylon, polyester, dan bahan sintesis lain yang kecil daya serapnya, hanya akan membuat gerah, panas dan membuat organ genital menjadi lembab.
         \nn.) Gantilah Celana dalam Anda dengan celana dalam yang benar-benar bersih minimal 2x sehari. Mengganti celana dalam secara rutin dengan celana dalam yang bersih akan menghidarkan lebih banyak bakteri pada organ vital kita.
@@ -1784,7 +1784,7 @@
     <string name="jenisvaksin_covid19">a. Vaksin Sinovac
         \n Vaksin ini dibuat dari partikel virus corona penyebab Covid-19, SARS-CoV-2 yang dimatikan. Selanjutnya, vaksin ini akan memicu sistem kekebalan tubuh terhadap virus corona, tanpa menimbulkan respons penyakit yang serius. Metode inactivated virus, bukanlah teknologi baru dalam pengembangan vaksin. Sebab, metode ini juga sering digunakan dalam pengembangan vaksin lain, seperti vaksin polio dan flu.
         \n\nb. Vaksin Pfizer.
-        \n Vaksin Pfizer adalah vaksin mRNA (messenger RNA). Jenis vaksin ini akan memicu sistem sistem kekebalan tubuh membentuk spike protein, yang nantinya akan membantu tubuh membentuk antibodi yang dapat melawan virus Corona.
+        \n Vaksin Pfizer adalah vaksin mRNA (messenger RNA). Jenis vaksin ini akan memicu sistem kekebalan tubuh membentuk spike protein, yang nantinya akan membantu tubuh membentuk antibodi yang dapat melawan virus Corona.
         \n\nc. Vaksin Novavax
         \n NVX-CoV2373 dibuat menggunakan teknologi nanopartikel rekombinan Novavax untuk menghasilkan antigen yang berasal dari protein lonjakan virus corona (S) dan ditambahkan dengan Matrix-M berbasis saponin. Meski berasal dari urutan genetik SARS-Cov-2, NVX-CoV2373 mengandung antigen protein yang dimurnikan dan tidak dapat bereplikasi, serta tidak bisa menyebabkan infeksi Covid-19. Vaksin tersebut menghasilkan antibodi dalam jumlah yang sangat tinggi
         \n\nd. Vaksin COVAX/GAVI

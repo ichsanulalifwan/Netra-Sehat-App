@@ -32,7 +32,7 @@
             android:fontFamily="@font/raleway_extrabold"
             android:text="@string/title_selamat_datang"
             android:textColor="@color/white"
-            android:textSize="34sp" />
+            android:textSize="32sp" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
