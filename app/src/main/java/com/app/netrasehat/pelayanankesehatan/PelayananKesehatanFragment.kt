@@ -1,6 +1,7 @@
-package com.app.netrasehat
+package com.app.netrasehat.pelayanankesehatan
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -12,14 +13,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityCompat.finishAffinity
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.app.netrasehat.databinding.FragmentGiziSeimbangBinding
+import com.app.netrasehat.MainActivity
+import com.app.netrasehat.R
+import com.app.netrasehat.databinding.FragmentPelayananKesehatanBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -28,11 +31,11 @@ import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
-class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
+class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
-    private var _binding: FragmentGiziSeimbangBinding? = null
+    private var _binding: FragmentPelayananKesehatanBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
     private lateinit var navController: NavController
@@ -45,8 +48,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
-        _binding = FragmentGiziSeimbangBinding.inflate(inflater, container, false)
+        _binding = FragmentPelayananKesehatanBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -63,27 +65,35 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             val navHostFragment = NavHostFragment.findNavController(this)
             NavigationUI.setupWithNavController(toolbar, navHostFragment)
 
-            /*setHasOptionsMenu(true)
-            (activity as AppCompatActivity).setSupportActionBar(toolbar)*/
-
             // Set Navigate to previous page (backstack)
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
             }
 
+            // Navigate to Google Maps
             with(binding) {
-                cvPilarGizi.setOnClickListener {
-                    val actionToPilarGizi =
-                        GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-                    findNavController().navigate(actionToPilarGizi)
+                btnRumahsakit.setOnClickListener {
+                    openGoogleMaps("Rumah Sakit")
                 }
-                cvPesanGizi.setOnClickListener {
-                    val actionToPesanGizi =
-                        GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-                    findNavController().navigate(actionToPesanGizi)
+                btnPuskesmas.setOnClickListener {
+                    openGoogleMaps("Puskesmas")
                 }
+                btnApotek.setOnClickListener {
+                    openGoogleMaps("Apotek")
+                }
+                btnKlinik.setOnClickListener {
+                    openGoogleMaps("Klinik")
+                }
+
             }
         }
+    }
+
+    private fun openGoogleMaps(location: String) {
+        val gmmIntentUri = Uri.parse("geo:0,0?q=$location")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        startActivity(mapIntent)
     }
 
     override fun onStart() {
@@ -184,8 +194,8 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
+        //val text = "Mendengarkan . . ."
+        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -203,7 +213,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
+        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -212,7 +222,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
+        //binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
@@ -221,14 +231,14 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         when {
             check1 -> {
-                val actionToPilarGizi =
-                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-                findNavController().navigate(actionToPilarGizi)
+//                val actionToPilarGizi =
+//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
+//                findNavController().navigate(actionToPilarGizi)
             }
             check2 -> {
-                val actionToPesanGizi =
-                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-                findNavController().navigate(actionToPesanGizi)
+//                val actionToPesanGizi =
+//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
+//                findNavController().navigate(actionToPesanGizi)
             }
             check8 -> {
                 /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
@@ -240,7 +250,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
-                activity?.let { finishAffinity(it) }
+                activity?.let { ActivityCompat.finishAffinity(it) }
             }
             check0 -> {
                 activity?.finishAffinity()
@@ -270,16 +280,16 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     private fun getErrorText(errorCode: Int): String {
         val message: String = when (errorCode) {
-            SpeechRecognizer.ERROR_AUDIO -> "Audio recording error"
-            SpeechRecognizer.ERROR_CLIENT -> "Client side error"
-            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "Insufficient permissions"
-            SpeechRecognizer.ERROR_NETWORK -> "Network error"
-            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "Network timeout"
-            SpeechRecognizer.ERROR_NO_MATCH -> "No match"
-            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "RecognitionService busy"
-            SpeechRecognizer.ERROR_SERVER -> "error from server"
-            SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "No speech input"
-            else -> "Didn't understand, please try again."
+            SpeechRecognizer.ERROR_AUDIO -> "Kesalahan perekaman audio, silakan coba lagi."
+            SpeechRecognizer.ERROR_CLIENT -> "Kesalahan sisi klien, silakan coba lagi."
+            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "izin tidak mencukupi, silakan coba lagi."
+            SpeechRecognizer.ERROR_NETWORK -> "Kesalahan jaringan, silakan coba lagi."
+            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "batas waktu jaringan, silakan coba lagi."
+            SpeechRecognizer.ERROR_NO_MATCH -> "Tidak ada kecocokan, silakan coba lagi."
+            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "Servis Pengenalan suara sibuk, silakan coba lagi."
+            SpeechRecognizer.ERROR_SERVER -> "kesalahan dari server, silakan coba lagi."
+            SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "Tidak ada masukan ucapan, silakan coba lagi."
+            else -> "Tidak dapat dipahami, silakan coba lagi."
         }
         return message
     }
@@ -298,6 +308,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     }
 
     companion object {
-        private const val TAG = "GiziSeimbangFragment"
+        private const val TAG = "PelayananKesehatan"
     }
 }

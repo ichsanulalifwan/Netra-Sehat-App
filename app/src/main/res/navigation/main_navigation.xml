@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/navigation_giziSeimbang"
-        android:name="com.app.netrasehat.GiziSeimbangFragment"
+        android:name="com.app.netrasehat.giziseimbang.GiziSeimbangFragment"
         android:label="fragment_gizi_seimbang"
         tools:layout="@layout/fragment_gizi_seimbang">
         <action
@@ -143,12 +143,12 @@
     </fragment>
     <fragment
         android:id="@+id/contactSahabatNetraFragment"
-        android:name="com.app.netrasehat.ContactSahabatNetraFragment"
+        android:name="com.app.netrasehat.contactsahabatnetra.ContactSahabatNetraFragment"
         android:label="fragment_contact_sahabat_netra"
         tools:layout="@layout/fragment_contact_sahabat_netra" />
     <fragment
         android:id="@+id/pelayananKesehatanFragment"
-        android:name="com.app.netrasehat.PelayananKesehatanFragment"
+        android:name="com.app.netrasehat.pelayanankesehatan.PelayananKesehatanFragment"
         android:label="fragment_pelayanan_kesehatan"
         tools:layout="@layout/fragment_pelayanan_kesehatan" />
     <fragment

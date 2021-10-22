@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_gray_purple"
     android:fitsSystemWindows="true"
-    tools:context=".GiziSeimbangFragment">
+    tools:context=".giziseimbang.GiziSeimbangFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
