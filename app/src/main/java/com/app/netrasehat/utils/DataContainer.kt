@@ -3,6 +3,7 @@ package com.app.netrasehat.utils
 import android.content.Context
 import com.app.netrasehat.R
 import com.app.netrasehat.model.Pesan
+import com.app.netrasehat.model.Phbs
 
 object DataContainer {
 
@@ -91,5 +92,100 @@ object DataContainer {
         )
 
         return pesan
+    }
+
+    fun generatePhbs(context: Context): List<Phbs> {
+
+        val phbs = ArrayList<Phbs>()
+
+        phbs.add(
+            Phbs(
+                1,
+                context.getString(R.string.title_phbs_1),
+                context.getString(R.string.pengertian_phbs_1),
+                context.getString(R.string.fungsi_phbs_1),
+                context.getString(R.string.caramerawat_phbs_1),
+                11
+            )
+        )
+
+        phbs.add(
+            Phbs(
+                2,
+                context.getString(R.string.title_phbs_2),
+                context.getString(R.string.pengertian_phbs_2),
+                context.getString(R.string.fungsi_phbs_2),
+                context.getString(R.string.caramerawat_phbs_2),
+                11
+            )
+        )
+
+        phbs.add(
+            Phbs(
+                3,
+                context.getString(R.string.title_phbs_3),
+                context.getString(R.string.pengertian_phbs_3),
+                context.getString(R.string.fungsi_phbs_3),
+                context.getString(R.string.caramerawat_phbs_3),
+                11
+            )
+        )
+
+        phbs.add(
+            Phbs(
+                4,
+                context.getString(R.string.title_phbs_4),
+                context.getString(R.string.pengertian_phbs_4),
+                context.getString(R.string.fungsi_phbs_4),
+                context.getString(R.string.caramerawat_phbs_4),
+                11
+            )
+        )
+
+        phbs.add(
+            Phbs(
+                5,
+                context.getString(R.string.title_phbs_5),
+                context.getString(R.string.pengertian_phbs_5),
+                context.getString(R.string.fungsi_phbs_5),
+                context.getString(R.string.caramerawat_phbs_5),
+                11
+            )
+        )
+
+        phbs.add(
+            Phbs(
+                6,
+                context.getString(R.string.title_phbs_6),
+                context.getString(R.string.pengertian_phbs_6),
+                context.getString(R.string.fungsi_phbs_6),
+                context.getString(R.string.caramerawat_phbs_6),
+                11
+            )
+        )
+
+        phbs.add(
+            Phbs(
+                7,
+                context.getString(R.string.title_phbs_7),
+                context.getString(R.string.pengertian_phbs_7),
+                context.getString(R.string.fungsi_phbs_7),
+                context.getString(R.string.caramerawat_phbs_7),
+                11
+            )
+        )
+
+        phbs.add(
+            Phbs(
+                8,
+                context.getString(R.string.title_phbs_8),
+                context.getString(R.string.pengertian_phbs_8),
+                context.getString(R.string.fungsi_phbs_8),
+                context.getString(R.string.caramerawat_phbs_8),
+                11
+            )
+        )
+
+        return phbs
     }
 }

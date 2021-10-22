@@ -1441,6 +1441,178 @@
     <string name="kandungan_airputih">Kandungan dalam air minum adalah Kalsium, Natrium, Selenium, Kalium, Silika dan Zink.</string>
     <string name="masalah_airputih">Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat.</string>
 
+    <!-- Perilaku Hidup Bersih dan Sehat (PHBS) res-->
+    <string name="title_phbs_1">Perawatan Diri Pada Kulit</string>
+    <string name="title_phbs_2">Perawatan Diri Pada Kaki Dan Tangan</string>
+    <string name="title_phbs_3">Perawatan Diri Pada Kuku</string>
+    <string name="title_phbs_4">Perawatan Diri Pada Kulit Kepala Dan Rambut</string>
+    <string name="title_phbs_5">Perawatan Diri Pada Kebersihan Gigi Dan Mulut</string>
+    <string name="title_phbs_6">Perawatan Diri Pada Kebersihan Mata</string>
+    <string name="title_phbs_7">Perawatan Diri Pada Kebersihan Telinga Dan Hidung</string>
+    <string name="title_phbs_8">Perawatan Diri Pada Kebersihan Genetalia</string>
+
+    <string name="pengertian_phbs_1">Kulit adalah suatu organ pembungkus seluruh permukaan luar tubuh. Kulit merupakan salah satu bagian penting dari tubuh yang dapat melindungi tubuh dari berbagai kuman.</string>
+    <string name="pengertian_phbs_2">Definisi tangan secara luas adalah anggota badan dari siku sampai ke ujung jari tangan, sedangkan definisi yang sempit adalah anggota badan dari pergelangan sampai ujung jari tangan (bagian dalamnya disebut telapak tangan).
+    \nKaki adalah salah satu anggota tubuh yang digunakan untuk berjalan. Kaki terdiri dari beberapa bagian, termasuk telapak kaki, sendi yang bekerja dalam suatu sistem terpadu sehingga memungkinkan bagi inang untuk berjalan.</string>
+    <string name="pengertian_phbs_3">Kuku merupakan pelengkap kulit. Kuku yang sehat berwarna merah muda. Menjaga kebersihan kuku merupakan salah satu aspek penting dalam mempertahankan perawatan diri karena kuman dapat masuk ke dalam tubuh melalui kuku.</string>
+    <string name="pengertian_phbs_4">Rambut merupakan bagian dari tubuh yang memiliki fungsi sebagai proteksi serta pengatur suhu, melalui rambut perubahan status kesehatan diri dapat diidentifikasi. Rambut yang bersih tak hanya menghindarkan aroma tak sedap, tetapi juga menghindari gangguan pada kulit kepala seperti ketombe, mudah rontok atau bahkan kutu rambut.</string>
+    <string name="pengertian_phbs_5">Gigi adalah jaringan tubuh yang sangat keras dibandingkan dengan jaringan yang lainnya. Strukturnya yang berlapis-lapis mulai dari email yang keras, dentin (tulang gigi) di dalamnya, pulpa yang berisi pembuluh darah, pembuluh saraf, dan bagian lain yang memperkokoh gigi.</string>
+    <string name="pengertian_phbs_6">Mata adalah organ penglihatan. Mata mendeteksi cahaya dan mengubahnya menjadi impuls elektrokimia pada sel saraf. Mata adalah bagian yang sangat penting, karena merupakan salah satu dari panca indera manusia.</string>
+    <string name="pengertian_phbs_7">Telinga adalah organ indera yang bertanggung jawab untuk pendengaran. Setiap bagian telinga memiliki peranan penting dalam menyediakan informasi bunyi ke otak. Secara umum telinga terbagi atas telinga luar, telinga tengah dan telinga dalam.
+        \n\nHidung adalah organ penciuman yang terletak di tengah-tengah wajah. Tubuh bisa mendapatkan oksigen melalui organ hidung yang menangkap udara. Selain berfungsi menangkap udara, hidung juga berfungsi sebagai indera yang bisa menangkap aroma, dan membersihkan udara luar yang masuk.</string>
+    <string name="pengertian_phbs_8">Genatalia hygiene atau kebersihan genital adalah menjaga kebersihan organ vital baik pria maupun wanita. Suatu tindakan memelihara kebersihan dan kesehatan seseorang untuk kesejahteraan fisik dan psikis.</string>
+
+    <string name="fungsi_phbs_1">Kulit secara umum mempunyai berbagai fungsi, (Hidayat, 2008) diantaranya :
+        \n\na.) Melindungi tubuh dari masuknya berbagai kuman dan juga dapat menjaga keutuhan kulit.
+        \nb.) Mengatur keseimbangan suhu tubuh dan membantu produksi keringat serta penguapan.
+        \nc.) Sebagai alat peraba yang dapat membantu tubuh menerima rangsangan dari luar melalui rasa sakit, sentuhan, tekanan, atau suhu.
+        \nd.) Sebagai alat ekskresi keringat melalui pengeluaran air, garam, dan nitrogen.
+        \ne.) Mengatur keseimbangan cairan dan elektrolit yang bertugas mencegah pengeluaran cairan tubuh secara berlebihan.
+        \nf.) Memproduksi dan menyerap vitamin D dari sinar ultraviolet matahari.</string>
+    <string name="fungsi_phbs_2">Tangan adalah salah satu bagian tubuh yang fungsinya dirancang untuk menggenggam agar gerakan yang dilakukan tepat dan organ ini berfungsi sebagai sentuhan atau rabaan pada benda-benda di sekelilingnya. Kaki memiliki fungsi untuk berdiri dan berjalan untuk memindahkan tubuh dari satu tempat ke tempat lainnya.</string>
+    <string name="fungsi_phbs_3">Fungsi kuku paling utama adalah melindungi ujung jari. Dengan adanya kuku, jari manusia akan terlindungi dari virus dan bakteri penyebab penyakit.</string>
+    <string name="fungsi_phbs_4">Rambut bermanfaat mencegah infeksi daerah kepala. Kebersihan rambut bisa membantu melancarkan sirkulasi darah pada kulit kepala. Rambut yang bersih juga membantu mengurangi stres dan membantu jaringan metabolisme agar tetap tumbuh dan berkembang secara normal. Kutu rambut pun tidak diberi kesempatan untuk hidup.</string>
+    <string name="fungsi_phbs_5">Gigi ini berfungsi untuk menghancurkan dan mengunyah makanan. Gigi geraham belakang atau molar. Terletak di belakang geraham depan, fungsi gigi ini adalah untuk mengunyah dan menggiling makanan menjadi lebih halus.</string>
+    <string name="fungsi_phbs_6">Fungsi mata yang paling umum yakni sebagai indra penglihatan. Mata dapat digunakan untuk melihat objek yang jauh dan dekat dan juga sebagai penerima informasi yang kemudian di proses oleh otak.</string>
+    <string name="fungsi_phbs_7">Telinga adalah organ pendengaran yang memiliki fungsi menangkap dan mengubah bunyi berupa energi mekanis menjadi energi elektris secara efisien dan diteruskan ke otak untuk disadari dan dimengerti. Selain untuk mendengarkan suara atau bunyi, fungsi telinga lainnya yakni untuk keseimbangan. Keseimbangan dicapai melalui kombinasi organ sensorik di telinga bagian dalam, input visual, dan informasi yang diterima dari reseptor dalam tubuh, terutama di sekitar sendi.
+        \n\nHidung berfungsi sebagai indera penciuman tetapi juga memantau temperatur dan kelembapan udara yang dihirup serta mencegah masuknya partikel asing kedalam sistem pernafasan. Dalam rongga hidung terdapat bulu –bulu halus dan lender keluar dari ke kelenjar di dinding rongga hidung. Fungsi bulu dan lender ialah menyaring udara yang masuk dari kotoran dan debu, sehingga udara yang masuk ke paru paru lebih bersih.</string>
+    <string name="fungsi_phbs_8">a.) Untuk mencegah terjadinya infeksi
+        \nb.) Mempertahankan kebersihan genitalia
+        \nc.) Meningkatkan kenyamanan serta mempertahankan personal hygiene
+    </string>
+
+    <string name="caramerawat_phbs_1">Kulit dapat dirawat dengan rajin membersihkannya. Umumnya kulit dibersihkan dengan cara mandi. Ketika mandi sebaiknya menggunakan jenis sabun yang banyak mengandung lemak nabati karena dapat mencegah hilangnya kelembapan dan menghaluskan kulit.
+        \n\nBerikut adalah cara membersihkan kulit :
+        \na.) Biasakan mandi 2 kali sehari atau setelah beraktivitas
+        \nb.) Gunakan sabun yang tidak bersifat iritatif
+        \nc.) Sabuni seluruh tubuh, terutama area lipatan kulit seperti sela-sela jari, ketiak, belakang telinga, dll.
+        \nd.) Jangan gunakan sabun mandi untuk wajah
+        \ne.) Segera keringkan tubuh dengan handuk yang lembut dari wajah, tangan, badan, hingga kaki.
+        \nf.) Hindari penggunaan pakaian, handuk, selimut, sabun mandi, dan sarung secara berjamaah
+        \ng.) Hindari penggunaan pakaian yang lembab/basah (karena keringat/sebab lain)
+        \nh.) Gunakan obat anti jamur kulit (bila perlu)Siap-
+    </string>
+    <string name="caramerawat_phbs_2">Ketidaknyamanan dan munculnya penyakit seperti panu, bisulan pada kaki dan tangan dihasilkan karena perawatan yang kurang. Bersihkan tangan dan kaki sehari minimal 2x/hr atau setiap kotor.
+        \n\nCara merawat tangan dan kaki adalah sebagai berikut :
+        \na) Mencuci tangan menggunakan sabun dan air bersih mengalir. Sabun dapat membersihkan kotoran dan membunuh kuman. Cuci tangan setiap tangan kita kotor (setelah memegang uang, memegang binatang, berkebun), setelah buang air besar atau buang air kecil, sebelum makan dan sebelum memegang makanan.
+        \nb) Gunakan alas kaki untuk menjaga kebersihan dan kesehatan pada kaki. Alas kaki yang digunakan haruslah berbahan lembut, aman, dan nyaman karena akan mempengaruhi masalah kaki dan kuku.
+        \nc) Sepatu yang sempit atau kurang pas dapat menyebabkan luka kulit tertentu dan mengganggu sirkulasi kaki. Begitu kaki berkeringat, keringatnya akan menempel ke sepatu, sehingga menjadi tempat tumbuhnya bakteri yang bisa menyebabkan penyakit-penyakit di kaki. Untuk menjaga sepatunya tetap bersih dengan cara mencuci, menyikat, dan menyemirnya.
+        \nd) Setelah pulang sekolah segerahlah buka sepatu terlebih dan bersihkan kaki agar bakteri tidak menempel di kaki setelah beraktivitas diluar.
+        \ne) Biasakan mencuci kaki dan mengeringkannya dengan baik. Cuci kaki dengan baik ketika mandi atau sebelum pergi tidur. Keringkan dengan baik menggunakan handuk bersih.
+        \n\nCara membersihkan tangan adalah sebagai berikut :
+        \n1. Cuci tangan dengan air mengalir
+        \n2. Tuang sabun pada telapak tangan
+        \n3. gosok tangan secara merata
+        \n4. gosok punggung dan sela jari tangan
+        \n5. bersihkan ujung jari bergantian
+        \n6. kucek ujung jari ke telapak tangan
+        \n7. gosok dan putar ibu jari bergantian
+        \n8. Bersihkan pergelangan lalu bilas &amp; lap
+        \n9. tangan jadi bersih dan sehat
+    </string>
+    <string name="caramerawat_phbs_3">Cara merawat kuku yaitu sebagai berikut :
+        \na) Kuku jari tangan dapat dipotong dengan pengikir atau memotongnya dalam bentuk oval/mengikuti bentuk jari.
+        \nb) Jangan memotong kuku terlalu pendek karena bisa melukai selaput kulit dan kulit disekitar kuku.
+        \nc) Jangan membersihkan kotoran dibalik kuku dengan benda tajam, sebab akan merusak jaringan dibawah kuku
+        \nd) Potong kuku seminggu sekali atau sesuai kebutuhan</string>
+    <string name="caramerawat_phbs_4">Cara merawat rambut adalah sebagai berikut :
+        \na) Keramas dengan menggunakan shampoo, agar kebersihan rambut dan kulit kepala terjaga.
+        \nb) Rapikan dan bersihkan rambut dengan menggunakan sisir. Penyisiran pada rambut karena dapat mencegah rambut menjadi kusut dan dapat membentuk gaya rambut.
+        \nc) Pijat-pijat kulit kepala pada saat mencuci rambut.
+        \nd) Gunting rambut agar terlihat rapi.
+        \n\nCara menyisir rambut adalah sebagai berikut :
+        \n1. Siapkan sisir.
+        \n2. Sisir rambut sebelah kanan.
+        \n3. Sisir rambut bagian belakang.
+        \n4. Sisir rambut sebelah kiri.
+    </string>
+    <string name="caramerawat_phbs_5">Cara merawat gigi dengan selalu menggosok gigi. Menggosok gigi adalah untuk membersihkan gigi dari sisa makanan yang menempel pada gigi, sebaiknya sesudah makan dan sebelum tidur.
+        \n\n<b>Alat &amp; Bahan Menggosok Gigi</b>
+        \nAlat utuk menggosok gigi aalah sikat gigi dan pasta gigi yang mengandung fluor, air bersih, dan gelas bersih
+        \n\n<b>Cara Menggosok Gigi</b>
+        \nCara menggosok gigi yang baik yaitu sebagai berikut :
+        \na.) Siapkan sikat gigi dan pasta gigi yang mengandung fluor, oleskan pasta gigi pada sikat
+        \nb.) gigi, kira – kira sebesar satu butir kacang tanah
+        \nc.) Berkumurlah sebelum menyikat gigi
+        \nd.) Sikatlah semua permukaan gigi dengan gerakan maju mundur dan pendek-pendek
+        \n\nPermukaan gigi yang perlu mendapat perhatian kalau menggosok gigi adalah :
+        \na.) Bagian yang berbatasan dengan gusi
+        \nb.) Di rahang bawah permukaan gigi yang menghadap lidah
+        \nc.) Geraham di rahang atas : permukaan geraham yang menghadap ke pipi
+        \n\nGerakan menggosok gigi yang adalah sebagai berikut :
+        \na.) Menggosok gigi yang berbatasan dengan gusi → horizontal berulang –
+        \nb.) ulang pada satu tempat dulu, sebelum pindah ke tempat lain
+        \nc.) Dataran pengunyah dari geraham juga disikat dengan gerakan horizontal
+        \nd.) Sikat gigi jangan ditekan sewaktu menggosok gigi (coklat, dll)
+        \ne.) selama 2 menit dan sedikitnya 8 kali gerakan untuk setiap permukaan
+        \nf.) Sikatlah permukaan gigi yang menghadap pipi dan bibir, menghadap langit – langi/lidah
+        \ng.) Sikatlah permukan gigi yang dipakai untuk mengunyah
+        \nh.) Berkumurlah dengan air bersih satu kali saja
+        \ni.) Bersihkan sikat gigi dengan air bersih
+        \n\nSikat gigi yang baik adalah sebagai berikut :
+        \n1. Kepala sikat gigi harus kecil ( ukuran sama dengan sikat gigi untuk anak –anak )
+        \n2. Bulu – bulu sikat harus sama panjang, sehingga membentuk permukaan
+        \n3. yang datar, dan bulu sikat terbuat dari nilon yang tidak terlalu kaku,
+        \n4. disusun berderet 2 atau 3
+        \n5. Tangkai sikat harus lurus dan mudah dipegang
+    </string>
+    <string name="caramerawat_phbs_6">Secara normal tidak ada perawatan khusus yang diperlukan untuk mata karena secara terus menerus dibersihkan oleh air mata, dan kelopak mata dan bulu mata mencegah masuknya partikel asing. Pembersihan mata biasanya dilakukan selama mandi dan melibatkan pembersihan dengan waslap. Tujuan menjaga kebersihan mata adalah untuk mempertahankan kesehatan mata dan mencegah infeksi. Mata yang sehat akan tampak jernih dan bersih dari kotoran. Kotoran mata dapat menempel pada bulu mata dan sudut mata.
+        \n\nCara merawat mata antara lain:
+        \na.) Usaplah kotoran mata dari sudut mata bagian dalam ke sudut bagian luar.
+        \nb.) Saat mengusap mata, gunakanlah kain yang paling bersih dan lembut &amp; air hangat yang bersih.
+        \nc.) Lindungi mata dari kemasukan debu dan kotoran.
+        \nd.) Bisa dilakukan 2 kali sehari
+        \ne.) Bila mengunakan kaca mata,hendaklah selalu di pakai.
+        \nf.) Bila mata sakit cepat periksakan ke dokter.
+    </string>
+    <string name="caramerawat_phbs_7">Cara-cara merawat telinga adalah sebagai berikut:
+        \na.) Bersihkan telinga secara rutin (1x/1-2 mg) lakukan dengan hati-hati menggunakan alat yang bersih dan aman.
+        \nb.) Bersihkan daun telinga pada waktu mandi, harus lebih diperhatikan lekuk daun telinga dan lipatan yang ada dibelakang daun telinga, karena pada bagian ini sering terdapat kotoran (daki).
+        \nc.) Gosok semua lekuk dan lipatan belakang dengan handuk atau kapas yang diberi sabun agar semua menjadi bersih.
+        \nd.) Saat membersihkan telinga bagian luar, hendaklah kita tetap memperhatikan telinga bagian dalam.
+        \ne.) Bila ada kotoran yang menyumbat telinga, keluarkan secara pelan dengan menggunakan penyedot telinga.
+        \nf.) Bila menggunakan air yang di semprotkan lakukan dengan hati-hati agar tidak menimbulkan kerusakan pada telinga akibat tekanan air yang berlebihan.
+        \ng.) Aliran air yang masuk hendaklah diarahkan kesaluran telinga dan bukan langsung kegendang telinga.
+        \nh.) Tidak di perbolehkan menggunakan alat yang tajam seperti peniti atau jepit rambut untuk membersihkan kotoran telinga karena dapat menusuk gendang telinga.
+        \n\nCara-caa merawat hidung adalah sebagai berikut:
+        \na.) Jaga agar lubang hidung agar tidak kemasukan air atau benda kecil.
+        \nb.) Jangan biarkan benda kecil masuk kedalam hidung, sebab nantinya dapat terhisap dan menyumbat jalan napas dan menyebabkan luka pada membran mukosa.
+        \nc.) Sewaktu mengeluarkan debu dari lubang hidung, hembuskan secara perlahan dengan membiarkan ke dua lubang hidung tetap terbuka.
+        \nd.) Jangan mengeluarkan kotoran dari lubang hidung dengan menggunakan jari karena dapat mengiritasi mukosa hidung.
+        \ne.) Bersihkan hidung juga menggunakan kapas, sapu tangan atau tisue yang bersih.
+    </string>
+    <string name="caramerawat_phbs_8">Cara perawatan seperti layaknya organ tubuh yang lain, organ reproduksi seksual juga harus diberi perawatan dengan baik. Berikut beberapa saran yang bisa dilakukan terkait dengan perawatan sistem reproduksi:
+        \na.) Upayakan untuk senantiasa menjaga kebersihan.
+        \nb.) Usahakan agar senantiasa kering dan tidak lembab, karena keadaan basah memudahkan berjangkitnya infeksi dari luar.
+        \nc.) Selalu mencuci tangan sebelum menyentuh organ genital
+        \nd.) Rajinlah membersihkan organ reproduksi kita, terutama apabila telah buang air kecil atau buang air besar. Bersihkanlah dan bilaslah dengan air, dan gunakan tissue lalu bersihkan lagi dengan membilasnya dengan air. Tissue memang akan menyerap air yang keluar tetapi tissue tidak dapat membersihkan bakteri yang menempel pada organ vital kita.
+        \ne.) Gunakan air yang mengalir seperti dari kran karena akan membuat bakteri yang ada ikut terbuang bersamaan dengan air tersebut.
+        \nf.) Jaga kelembapan suhu organ intim, karena jika terlalu lembab atau suhunya terlalu tinggi akan menyebabkan organ intim tidak sehat.
+        \ng.) Jangan menggunakan alat-alat bantuan untuk masturbasi, karena hal ini bisa menyebabkan robeknya selaput dara dan infeksi pada vagina atau penis.
+        \nh.) Jangan menggunakan alat pembersih kimiawi tertentu karena akan merusak keasaman vagina yang berfungsi menumbuhkan bakteri atau kuman yang masuk.
+        \ni.) Demikian juga tidak diperbolehkan menggunakan deodorant atau spray, cairan pembasuh (douches), sabun yang keras, serta tissue yang berwarna dan berparfum. Utamanya pada wanita Rangsangan dari bahan ini dapat menimbulkan peradangan dari liang senggama dan bibir kemaluan dengan keluhan gatal dan keputihan.
+        \nj.) Hindari penggunaan handuk atau washlap milik orang lain untuk mengeringkan organ genital
+        \nk.) Rajinlah mencukur dan membersihkan rambut organ intim secara rutin, minimalnya 40 hari sekali. Karena jika dibiarkan terlalu lebat bakteri akan bersarang pada celah celah rambut.
+        \nl.) Hindari penggunaan celana dalam yang terlalu ketat. Karena jika terlalu ketat akan telalu menekan dan menyebabkan tidak lancarnya peredaran darah.
+        \nm.) Selalu gunakan celana dalam yang bersih dan terbuat dari bahan katun (100%). Bahan lain misalnya nylon, polyester, dan bahan sintesis lain yang kecil daya serapnya, hanya akan membuat gerah, panas dan membuat organ genital menjadi lembab.
+        \nn.) Gantilah Celana dalam Anda dengan celana dalam yang benar-benar bersih minimal 2x sehari. Mengganti celana dalam secara rutin dengan celana dalam yang bersih akan menghidarkan lebih banyak bakteri pada organ vital kita.
+        \no.) Hindari penggunaan parfum yang berlebih. Karena kebanyakan parfum mengandung bahan kimia yang tidak baik bagi kesehatan. Apalagi organ vital kita yang sangat sensitif.
+        \np.) Hindari hubungan intim pada saat haid. Karena dalam darah haid mengandung banyak bakteri sehingga nantinya akan menyebabkan penyakit.
+        \nq.) (Bagi Wanita) gunakan pembalut yang benar-benar higienis, pilihlah pembalut yang terpercaya. gantilah pembalut secara rutin agar bakteri tidak bersarang pada organ intim.
+        \n\nHal yang tidak kalah pentingnya dalam perawatan sistem reproduksi bagi perempuan adalah:
+        \na.) Pada saat haid, pembuluh darah dalam rahim sangat mudah terkena infeksi, karena itu kebersihan vagina harus dijaga karena kuman mudah sekali masuk dan dapat menimbulkan penyakit pada saluran reproduksi.
+        \nb.) Selama haid mungkin timbul rasa nyeri pada pinggang dan panggul, hal ini disebabkan adanya peregangan pada otot rahim
+        \nc.) Untuk menjaga kebersihan, dalam melakukan perawatan sistem reproduksi, pergunakan pembalut selama haid harus diganti secara teratur 2-3 kali atau setelah mandi dan buang air kecil.
+        \nd.) Jika pemakaian pembalut yang dibuang, sebaiknya dibungkus sebelum dibuang ke tempat sampah. Untuk pembalut lainnya (dari kain) sebaiknya sebelum dicuci, rendam terlebih dahulu memakai sabun pada tempat tertutup.
+        \n\nAda beberapa tips untuk mencukur daerah kemaluan:
+        \na.) Lakukan bertahap jangan lantas mencukurnya hingga benar-benar bersih dan gundul. Selain mengagetkan, mencukur halus tanpa meninggalkan sedikitpun rambut bisa membuat kulit vagina teriritasi.
+        \nb.) Untuk menjaga kebersihan, dalam melakukan perawatan sistem reproduksi, pergunakan pembalut selama haid harus diganti secara teratur 2-3 kali atau setelah mandi dan buang air kecil.
+        \nc.) Jika pemakaian pembalut yang dibuang, sebaiknya dibungkus sebelum dibuang ke tempat sampah. Untuk pembalut lainnya (dari kain) sebaiknya sebelum dicuci, rendam terlebih dahulu memakai sabun pada tempat tertutup.
+        \nd.) Basuh air hangat sebelum bercukur. Hal ini akan melembutkan rambut dan membuatnya lebih mudah digunting.
+        \ne.) Lakukan pelan-pelan, jangan mencukur terlalu keras atau menekannya ke arah kulit. Buatlah satu kali cukuran saja, kemudian pindah ke daerah berikutnya.
+        \nf.) Oleskan pelembap. Setelah mencukur, berikan pelembab pada vulva untuk menyejukkan kulit. Bila khawatir iritasi, cukup oleskan baby oil untuk mengurangi iritasi yang mungkin muncul.
+    </string>
+
     <!-- Aktivitas Fisik res-->
     <string name="title_masalah_jaktivitas_fisik">Masalah Jika Kurang Aktivitas Fisik</string>
     <string name="title_jenis_aktivitas_fisik">Jenis Aktivitas Fisik</string>

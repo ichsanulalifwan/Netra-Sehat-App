@@ -15,7 +15,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -23,13 +22,8 @@ import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
-import com.app.netrasehat.databinding.FragmentPesanGiziSeimbangBinding
 import com.app.netrasehat.databinding.FragmentPhbsBinding
-import com.app.netrasehat.giziseimbang.pesan.PesanGiziSeimbangFragmentDirections
-import com.app.netrasehat.giziseimbang.pesan.PesanGiziSeimbangViewModel
-import com.app.netrasehat.model.Pesan
 import com.app.netrasehat.model.Phbs
-import com.app.netrasehat.ui.PesanAdapter
 import com.app.netrasehat.ui.PhbsAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -44,7 +38,7 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
     private lateinit var phbsAdapter: PhbsAdapter
-    private lateinit var viewModel: PesanGiziSeimbangViewModel
+    private lateinit var viewModel: PhbsViewModel
     private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentPhbsBinding? = null
     private val binding get() = _binding!!
@@ -63,7 +57,7 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
-        )[PesanGiziSeimbangViewModel::class.java]
+        )[PhbsViewModel::class.java]
 
         return binding.root
     }
@@ -82,11 +76,11 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
             }
 
             // getListPesan
-            val dataPesanGizi = viewModel.getPesan(requireActivity())
+            val dataPhbs = viewModel.getPhbsData(requireActivity())
 
             // Init Adapter and rv
             phbsAdapter = PhbsAdapter()
-            phbsAdapter.setDataPhbs(dataPesanGizi)
+            phbsAdapter.setDataPhbs(dataPhbs)
             setupRecyclerView()
             // Navigate to detail pesan
             onItemSelected()
