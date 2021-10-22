@@ -273,6 +273,6 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
     }
 
     companion object {
-        private const val TAG = "BeratBadanFragment"
+        private const val TAG = "HitungBeratBadan"
     }
 }

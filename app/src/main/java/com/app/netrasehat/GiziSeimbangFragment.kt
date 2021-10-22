@@ -96,7 +96,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                textToSpeech()
+                //textToSpeech()
             }
         }
     }

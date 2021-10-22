@@ -45,7 +45,7 @@
 
     <fragment
         android:id="@+id/pilarGiziSeimbangFragment"
-        android:name="com.app.netrasehat.giziseimbang.PilarGiziSeimbangFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.PilarGiziSeimbangFragment"
         android:label="fragment_pilar_gizi_seimbang"
         tools:layout="@layout/fragment_pilar_gizi_seimbang" >
         <action
@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/pesanGiziSeimbangFragment"
-        android:name="com.app.netrasehat.giziseimbang.PesanGiziSeimbangFragment"
+        android:name="com.app.netrasehat.giziseimbang.pesan.PesanGiziSeimbangFragment"
         android:label="fragment_pesan_gizi_seimbang"
         tools:layout="@layout/fragment_pesan_gizi_seimbang" />
     <fragment

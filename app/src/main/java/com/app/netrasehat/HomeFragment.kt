@@ -123,7 +123,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech welcome message
-                textToSpeech()
+                //textToSpeech()
             }
         }
     }

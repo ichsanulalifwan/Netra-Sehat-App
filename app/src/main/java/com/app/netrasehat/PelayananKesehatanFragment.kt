@@ -1,6 +1,5 @@
 package com.app.netrasehat
 
-import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -47,7 +46,6 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         _binding = FragmentPelayananKesehatanBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -84,9 +82,8 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
                 btnKlinik.setOnClickListener {
                     openGoogleMaps("Klinik")
                 }
+
             }
-
-
         }
     }
 
@@ -281,16 +278,16 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
 
     private fun getErrorText(errorCode: Int): String {
         val message: String = when (errorCode) {
-            SpeechRecognizer.ERROR_AUDIO -> "Audio recording error"
-            SpeechRecognizer.ERROR_CLIENT -> "Client side error"
-            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "Insufficient permissions"
-            SpeechRecognizer.ERROR_NETWORK -> "Network error"
-            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "Network timeout"
-            SpeechRecognizer.ERROR_NO_MATCH -> "No match"
-            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "RecognitionService busy"
-            SpeechRecognizer.ERROR_SERVER -> "error from server"
-            SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "No speech input"
-            else -> "Didn't understand, please try again."
+            SpeechRecognizer.ERROR_AUDIO -> "Kesalahan perekaman audio, silakan coba lagi."
+            SpeechRecognizer.ERROR_CLIENT -> "Kesalahan sisi klien, silakan coba lagi."
+            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "izin tidak mencukupi, silakan coba lagi."
+            SpeechRecognizer.ERROR_NETWORK -> "Kesalahan jaringan, silakan coba lagi."
+            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "batas waktu jaringan, silakan coba lagi."
+            SpeechRecognizer.ERROR_NO_MATCH -> "Tidak ada kecocokan, silakan coba lagi."
+            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "Servis Pengenalan suara sibuk, silakan coba lagi."
+            SpeechRecognizer.ERROR_SERVER -> "kesalahan dari server, silakan coba lagi."
+            SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "Tidak ada masukan ucapan, silakan coba lagi."
+            else -> "Tidak dapat dipahami, silakan coba lagi."
         }
         return message
     }
