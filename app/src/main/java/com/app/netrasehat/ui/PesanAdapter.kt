@@ -1,38 +1,57 @@
 package com.app.netrasehat.ui
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.app.netrasehat.databinding.ItemPesanGiziseimbangBinding
-import com.bumptech.glide.Glide
+import com.app.netrasehat.model.Pesan
 
-class PesanAdapter : RecyclerView.Adapter<PesanAdapter.PesanViewHolder>()  {
+class PesanAdapter : RecyclerView.Adapter<PesanAdapter.PesanViewHolder>() {
+
+    private lateinit var onItemClickListener: OnItemClickListener
+    private var listPesan = ArrayList<Pesan>()
+
+    fun setDataPesan(pesan: List<Pesan>?) {
+        if (pesan == null) return
+        this.listPesan.clear()
+        this.listPesan.addAll(pesan)
+        notifyDataSetChanged()
+    }
+
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
+        this.onItemClickListener = onItemClickListener
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): PesanAdapter.PesanViewHolder {
-        TODO("Not yet implemented")
+        val itemPesanBinding = ItemPesanGiziseimbangBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent, false
+        )
+        return PesanViewHolder(itemPesanBinding)
     }
 
     override fun onBindViewHolder(holder: PesanAdapter.PesanViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(listPesan[position])
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = listPesan.size
 
     inner class PesanViewHolder(private val binding: ItemPesanGiziseimbangBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(movie: MovieResultsItem) {
+        fun bind(pesan: Pesan) {
             with(binding) {
-                tvTitle.text = movie.title
-                tvRelaseDate.text = movie.releaseDate
-                tvOverviewItem.text = movie.overview
+                titlePesan.text = pesan.title
                 itemView.setOnClickListener {
-                    onItemClickListener.onMovieClicked(movie)
+                    onItemClickListener.onPesanClicked(pesan)
                 }
             }
         }
+    }
+
+    interface OnItemClickListener {
+        fun onPesanClicked(pesan: Pesan)
     }
 }

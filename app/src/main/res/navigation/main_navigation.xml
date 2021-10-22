@@ -15,7 +15,7 @@
         android:id="@+id/navigation_home"
         android:name="com.app.netrasehat.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_navigation_giziSeimbang"
             app:destination="@id/navigation_giziSeimbang" />
@@ -34,7 +34,7 @@
         android:id="@+id/navigation_giziSeimbang"
         android:name="com.app.netrasehat.GiziSeimbangFragment"
         android:label="fragment_gizi_seimbang"
-        tools:layout="@layout/fragment_gizi_seimbang" >
+        tools:layout="@layout/fragment_gizi_seimbang">
         <action
             android:id="@+id/action_navigation_giziSeimbang_to_pilarGiziSeimbangFragment"
             app:destination="@id/pilarGiziSeimbangFragment" />
@@ -47,7 +47,7 @@
         android:id="@+id/pilarGiziSeimbangFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.PilarGiziSeimbangFragment"
         android:label="fragment_pilar_gizi_seimbang"
-        tools:layout="@layout/fragment_pilar_gizi_seimbang" >
+        tools:layout="@layout/fragment_pilar_gizi_seimbang">
         <action
             android:id="@+id/action_pilarGiziSeimbangFragment_to_anekaRagamMakananFragment"
             app:destination="@id/anekaRagamMakananFragment" />
@@ -65,12 +65,16 @@
         android:id="@+id/pesanGiziSeimbangFragment"
         android:name="com.app.netrasehat.giziseimbang.pesan.PesanGiziSeimbangFragment"
         android:label="fragment_pesan_gizi_seimbang"
-        tools:layout="@layout/fragment_pesan_gizi_seimbang" />
+        tools:layout="@layout/fragment_pesan_gizi_seimbang">
+        <action
+            android:id="@+id/action_pesanGiziSeimbangFragment_to_detailPesanGiziFragment"
+            app:destination="@id/detailPesanGiziFragment" />
+    </fragment>
     <fragment
         android:id="@+id/anekaRagamMakananFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.AnekaRagamMakananFragment"
         android:label="fragment_aneka_ragam_makanan"
-        tools:layout="@layout/fragment_aneka_ragam_makanan" >
+        tools:layout="@layout/fragment_aneka_ragam_makanan">
         <action
             android:id="@+id/action_anekaRagamMakananFragment_to_detailRagamMakananFragment"
             app:destination="@id/detailRagamMakananFragment" />
@@ -84,7 +88,7 @@
         android:id="@+id/aktivitasFisikFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.aktivitasfisik.AktivitasFisikFragment"
         android:label=""
-        tools:layout="@layout/fragment_aktivitas_fisik" >
+        tools:layout="@layout/fragment_aktivitas_fisik">
         <action
             android:id="@+id/action_aktivitasFisikFragment_to_jenisAktivitasFisikFragment"
             app:destination="@id/jenisAktivitasFisikFragment" />
@@ -98,7 +102,7 @@
         android:id="@+id/beratBadanFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.beratbadan.BeratBadanFragment"
         android:label=""
-        tools:layout="@layout/fragment_berat_badan" >
+        tools:layout="@layout/fragment_berat_badan">
         <action
             android:id="@+id/action_beratBadanFragment_to_menghitungBbFragment"
             app:destination="@id/menghitungBbFragment" />
@@ -117,7 +121,7 @@
         android:id="@+id/covid19Fragment"
         android:name="com.app.netrasehat.covid19.Covid19Fragment"
         android:label="fragment_covid19"
-        tools:layout="@layout/fragment_covid19" >
+        tools:layout="@layout/fragment_covid19">
         <action
             android:id="@+id/action_covid19Fragment_to_gejalaCovid19Fragment"
             app:destination="@id/gejalaCovid19Fragment" />
@@ -177,5 +181,14 @@
         android:name="com.app.netrasehat.covid19.VaksinCovid19Fragment"
         android:label="fragment_vaksin_covid19"
         tools:layout="@layout/fragment_vaksin_covid19" />
+    <fragment
+        android:id="@+id/detailPesanGiziFragment"
+        android:name="com.app.netrasehat.giziseimbang.pesan.DetailPesanGiziFragment"
+        android:label=""
+        tools:layout="@layout/fragment_detail_pesan_gizi">
+        <argument
+            android:name="pesanId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

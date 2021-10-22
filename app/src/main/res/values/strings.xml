@@ -2,9 +2,15 @@
     <string name="app_name">Netra Sehat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="welcome_message">
         Selamat Datang di Aplikasi Kesehatan Harian Tunanetra.
     </string>
+
+    <string name="menu_kembali">
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
     <string name="menu_litkes">
         Katakan 1 untuk Gizi Seimbang, Katakan 2 untuk informasi Covid-19,
         Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat, Katakan 4 untuk Kontak Person Sahabat Netra,
@@ -1463,6 +1469,69 @@
     <string name="manfaat_berat_badan">Manfaat memantau berat badan adalah dapat mengetahui adanya gangguan tumbuh kembang kita. Selain itu juga bermanfaat sebagai tolak ukur tingkat gizi dan untuk mencegah kekurangan gizi.</string>
     <string name="menentukan_berat_badan">Cara orang dewasa menentukan ukuran indeks massa tubuh (IMT) yaitu dengan mengukur ukuran yang berkaitan dengan kekurangan atau kelebihan berat badan. Mempertahankan berat badan normal memungkinkan seseorang dapat mencegah berbagai penyakit tidak menular. Berikut cara menghitungnya menggunakan rumus IMT. \n\nBatas ambang IMT ditentukan dengan merujuk ketentuan WHO yang membedakan batas ambang normal untuk laki–laki dan perempuan. Di Indonesia, berdasarkan hasil penelitian dan pengalaman klinis tidak dibedakan menurut jenis kelamin, dan batas ambang normal yang digunakan adalah 18.5 – 25.0. Seseorang dikategorikan menderita obesitas jika IMTnya ≥ 27.0. \n\nCara mempertahankan berat badan normal adalah dengan mempertahankan pola konsumsi makanan dengan susunan gizi seimbang dan beraneka ragam serta mempertahankan kebiasaan latihan fisik/olah raga teratur.</string>
     <string name="masalah_berat_badan">Hal- hal yang terjadi akibat terlalu kekurangan berat badan adalah kekurangan nutrisi, sering merasa lelah, anemia, dan masih banyak lagi. Berat badan rendah dapat meningkatkan risiko terganggunya kepadatan mineral tulang. Kekurangan kalsium dan vitamin D dalam makanan, dapat menyebabkan tulang rapuh dan osteoporosis. \n\nHal-hal yang terjadi akibat kelebihan berat badan adalah berat badan terlalu berat dan terlalu gemuk dapat menyebabkan tekanan darah tinggi, kolesterol tinggi, dan penyumbatan arteri. Selain itu seseorang yang kelebihan berat badan dapat menderita kepikunan, depresi, masalah kesehatan mata, masalah kesehatan gigi dan mulut, infeksi telinga kronis, sleep pnea, asma, tekanan darh tinggi, batu empedu, Polycytic Ovary Syndrome (PCOS), infertisasi pada pria, artritis dan kanker payudara pada perempuan.</string>
+
+    <!-- 10 Pesan Gizi Seimbang res-->
+    <string name="title_pesan_giziseimbang_1">Bersyukur dan Nikmati Semua Jenis Makanan</string>
+    <string name="title_pesan_giziseimbang_2">Banyak Makan Sayur dan Cukup Buah</string>
+    <string name="title_pesan_giziseimbang_3">Biaskan Menkonsumsi Lauk Pauk Yang Mengandung Protein Tinggi</string>
+    <string name="title_pesan_giziseimbang_4">Biasakan Mengkonsumsi Aneka Ragam Makanan Pokok</string>
+    <string name="title_pesan_giziseimbang_5">Batasi Konsumsi Pangan Manis, Asin Dan Berlemak</string>
+    <string name="title_pesan_giziseimbang_6">Biasakan Sarapan yang Bergizi</string>
+    <string name="title_pesan_giziseimbang_7">Biasakan Minum Air Putih yang Cukup dan Aman</string>
+    <string name="title_pesan_giziseimbang_8">Biasakan Membaca Label Pada Kemasan Pangan</string>
+    <string name="title_pesan_giziseimbang_9">Cuci tangan pakai sabun dengan air bersih mengalir</string>
+    <string name="title_pesan_giziseimbang_10">Lakukan Aktivitas Fisik Yang Cukup dan Pertahankan Berat Badan Normal</string>
+
+    <string name="pesan_giziseimbang_1">Kualitas makanan dipengaruhi oleh variasi makanan yang dikonsumsi. Semakin bervariasi semakin memenuhi standar gizi. yakni mengkonsumsi lima kelompok pangan setiap hari atau setiap kali makan yaitu ; makanan pokok, lauk, sayur, buah dan minuman.
+        \n\nSetiap sebelum makan diharapkan berdoa dan bersyukur dengan setiap jenis makanan yang tersedia. Rasa syukur dalam menikmati makanan dan tidak tergesa-gesa membuat makanan mudah dikunyah, dicerna dan serap oleh tubuh secara lebih baik.</string>
+    <string name="pesan_giziseimbang_2">Sayuran dan buah merupakan sumber vitamin, mineral dan serat pangan yang berperan dalam mengatur metabolisme dan fungsi organ.
+        \n\nKonsumsi sayur dan buah yang tinggi dapat menjaga nilai normal tekanan darah, kadar gula, dan kolesterol, juga merupakan resiko sulit buang air besar, kegemukan dan berperan mencegah penyakit tidak menular. Konsumsi sayur dan buah yang cukup menjadi salah satu indikator sederhana tercapainya gizi seimbang.
+        \n\nBadan Kesehatan Dunia (WHO) menganjurkan konsumsi sayuran dan buah-buahan untuk hidup sehat sejumlah 400 g perorang perhari.
+        \n\nTerdiri dari 250 g sayur (setara dengan 2 1/2 porsi atau 2 1/2 gelas sayur setelah dimasak dan ditiriskan) dan 150 g buah (setara dengan 3 buah pisang ambon ukuran sedang atau 1 1/2 potong pepaya ukuran sedang atau 3 buah jeruk ukuran sedang).</string>
+    <string name="pesan_giziseimbang_3">Kebutuhan pangan hewani 2-4 porsi (setara dengan 70 - 140 g /2-4 potong daging sapi ukuran sedang atau 80-160 g /2-4 potong daging ayam ukuran sedang atau 80-160 g /2-4 potong ikan ukuran sedang), sehari.
+        \n\nPangan protein nabati 2-4 porsi sehari (setara dengan 100-200 g /4-8 potong tempe ukuran sedang atau 200-400 g /4-8 potong tahu ukuran sedang) tergantung kelompok umur dan kondisi fisiologis (hamil, menyusui, lansia, anak, remaja, dewasa).
+        \n\nSusu sebagai bagian dari pangan hewani yang dikonsumsi berupa minuman dianjurkan terutama bagi ibu hamil, ibu menyusui serta anak-anak.
+        \n\nMereka yang mengalami diare atau intoleransi laktosa karena minum susu tidak dianjurkan minum susu hewani. Konsumsi telur, susu kedele dan ikan merupakan salah satu alternative solusinya.</string>
+    <string name="pesan_giziseimbang_4">Makanan pokok adalah pangan utama sumber karbonhidrat yang telah menjadi bagian dari budaya makan bangsa indonesia, contohnya beras, jagung, singkong, ubi, talas, garut, sorgum, sagu. Disamping mengandung karbohidrat, bahan makanan pokok biasanya mengandung vitamin B1, B2 dan beberapa mineral.
+        \n\nCara mewujudkan pola konsumsi makanan pokok yang beragam adalah dengan mengonsumsi lebih dari satu jenis makanan pokok dalam sehari atau sekali makan. Salah satu cara mengangkat citra pangan karbohidrat lokal adalah dengan mencampur makanan karbohidrat lokal dengan terigu, seperti pengembangan produk boga yang beragam misalnya, roti atau mie campuran tepung.
+        \n\nSingkong dengan tepung terigu, pembuatan roti gulung pisang, singkong goreng keju dan lain-lain.</string>
+    <string name="pesan_giziseimbang_5">Gula, garam, dan lemak berhubungan dengan resiko penyakit degeneratif, seperti: diabetes mellitus, hipertensi, penyakit pembuluh darah dan jantung.
+        \n\nOleh karena itu batasi konsumsinya, yakni: Gula maks 50 g /hari, garam 1 sdt/hari, lemak maks 5sdm.
+        \n\n<b>a. Membatasi konsumsi gula</b>
+        \nKurangi secara perlahan penggunaan gula, baik pada minuman teh/kopi maupun saat membubuhkan pada masakan. Jika meningkatkan rasa pada minuman, tambahkan jeruk nipis pada minuman the dan atau madu, bukan menambahkan gula.
+        \n\nHal- hal yang harus dihindari yaitu :
+        \n\t\t<b>1) Batasi minuman bersoda.</b>
+        \n\t\t<b>2) Ganti makanan penutup/dessert yang manis dengan buah atau sayursayuran.</b>
+        \n\t\t<b>3) Kurangi atau batasi mengkonsumsi es krim.</b>
+        \n\t\t<b>4) Kurangi konsumsi coklatyang mengandung gula.</b>
+        \n\t\t<b>5) Hindari minuman beralkohol.</b>
+        \n\n<b>b. Konsumsi Garam Secukupnya</b>
+        \n Rasa asin yang berasal dari makanan adalah karena kandungan garam (NaCl) yang ada dalam makanan tersebut. Konsumsi natrium yang berlebihan akan mempengaruhi kesehatan terutama meningkatkan tekanan darah. Karena itu dianjurkan mengonsumsi garam sekedarnya dengan cara menyajikan makanan rendah natrium:
+        \n\n\t\t1.) Gunakan garam beriodium untuk konsumsi.
+        \n\t\t2.) Jika membeli pangan kemasan dalam kaleng, seperti sayuran, kacangkacangan atau ikan, baca label informasi nilai gizi dan pilih yang rendah natrium.
+        \n\t\t3.) Jika tidak tersedia pangan kemasan dalam kaleng yang rendah natrium, pangan dalam kemasan tersebut perlu dicuci terlebih dahulu agar sebagian garam dapat terbuang
+        \n\t\t4.) Gunakan mentega atau margarine tanpa garam (unsalted)
+        \n\t\t5.) Jika mengonsumsi mi instan gunakan sebagian saja bumbu dalam sachet bumbu yang tersedia dalam kemasan mi instan
+        \n\t\t6.) Coba bumbu yang berbeda untuk meningkatkan rasa makanan, seperti jahe atau bawang putih.
+        \n\t\t7.) Mengonsumsi lebih banyak pangan sumber kalium dapat membantu menurunkan tekanan darah. Pangan sumber kalium adalah kismis, kentang, pisang, kacang (beans) dan yoghurt.
+        \n\n<b>c. Konsumsi lemak sesuai takaran yang dianjurkan</b>
+        \nLemak yang terdapat di dalam makanan, berguna untuk meningkatkan jumlah energi, membantu penyerapan vitamin A, D, E dan K serta menambah lezatnya hidangan. Konsumsi lemak dan minyak dalam hidangan sehari-hari dianjurkan tidak lebih dari 25% kebutuhan energi.
+        \n\nJika mengonsumsi lemak secara berlebihan akan mengakibatkan berkurangnya konsumsi makanan lain. Hal ini disebabkan karena lemak berada didalam sistem pencernaan relatif lebih lama dibandingkan dengan protein dan karbohidrat, sehingga lemak menimbulkan rasa kenyang yang lebih lama.</string>
+    <string name="pesan_giziseimbang_6">Sarapan adalah kegiatan makan dan minum yang dilakukan antara bangun pagi sampai jam 9 untuk memenuhi sebagian kebutuhan gizi harian (15-30% kebutuhan gizi) dalam rangka mewujudkan hidup sehat, aktif, dan produktif.
+        \n\nSarapan pagi menyediakan tubuh dengan zat gizi yang diperlukan untuk berfikir, bekerja dan melakukan aktifitas fisik secara optimal setelah bangun pagi.
+        \n\nMembiasakan sarapan berari membiasakan disiplin bangun pagi dan beraktifitas pagi serta tercegah dari makanan berlebihan dikala makan kudapan atau makan siang. Oleh karena itu sarapan merupakan perilaku penting dalam mewujudkan gizi seimbang.</string>
+    <string name="pesan_giziseimbang_7">Air merupakan zat gizi esensial yang dibutuhkan tubuh dalam jumlah banyak untuk hidup sehat. Air diperlukan untuk pertumbuhan dan perkembangan yang optimal. Berbagai faktor yang mempengaruhi kebutuhan air adalah tahapan pertumbuhan, laju metabolisme, aktifitas fisik, laju pernafasan, suhu tubuh, jenis dan jumlah padatan yang dikeluarkan ginjal, pola konsumsi pangan, dan lingkungan
+        \n\nPemenuhan kebutuhan air tubuh dilakukan melalui konsumsi makanan dan minuman. Sebagian besar (dua-pertiga) air yg dibutuhkan tubuh dilakukan melalui minuman yaitu sekitar dua liter atau delapan gelas sehari.
+        \n\nBagi remaja dan dewasa yang melakukan kegiatan ringan pada kondisi temperatur harian di kantor/rumah tropis. Pekerja yang berkeringat, olahragawan, ibu hamil dan ibu menyusui memerlukan tambahan kebutuhan air lebih banyak dari dua liter.
+        \n\nAir yang dibutuhkan tubuh selain jumlahnya yang cukup untuk memenuhi kebutuhan juga harus aman yang berarti bebas dari kuman penyakit dan bahan-bahan berbahaya.</string>
+    <string name="pesan_giziseimbang_8">Label adalah keterangan tentang isi, jenis, komposisi zat gizi, tanggal kadaluarsa dan keterangan penting lain yang dicantumkan pada kemasan. Semua keterangan yang rinci pada label makanan yang dikemas sangat membantu konsumen untuk mengetahui bahan-bahan yang terkandung dalam makanan tersebut.
+        \n\nSelain itu dapat memperkirakan bahaya yang mungkin terjadi pada konsumen yang berisiko tinggi karena punya penyakit tertentu. Oleh karena itu dianjurkan untuk membaca label pangan yang dikemas terutama keterangan tentang informasi kandungan zat gizi dan tanggal kadaluarsa sebelum membeli atau mengonsumsi makanan tersebut.</string>
+    <string name="pesan_giziseimbang_9">Pentingnya cuci tangan secara baik dan benar agar tejaga kebersihan dan bebas dari bakteri/ kuman pencemar, serta mencegah penyebaran penyakit.
+        \n\nKapan saat tepat cuci tangan: sebelum dan sesudah makan atau memegang makanan, sesudah BAB, sesudah memegang binatang dan sesudah berkebun.</string>
+    <string name="pesan_giziseimbang_10">Aktivitas fisik dikategorikan cukup apabila seseorang melakukan latihan fisik atau olah raga selama 30 menit setiap hari atau minimal 3-5 hari dalam seminggu.
+        \n\nBeberapa aktivitas fisik yang dapat dilakukan antara lain aktivitas fisik sehari-hari seperti berjalan kaki, berkebun, menyapu, mencuci, mengepel, naik turun tangga dan lain- lain.
+        \n\nUntuk orang dewasa digunakan ukuran indeks massa tubuh (IMT) yaitu ukuran yang berkaitan dengan kekurangan atau kelebihan berat badan. Mempertahankan berat badan normal memungkinkan seseorang dapat mencegah berbagai penyakit tidak menular.</string>
+
 
     <!-- Covid-19 res-->
     <string name="title_gejala_covid19">Gejala Terkena Virus Covid-19</string>

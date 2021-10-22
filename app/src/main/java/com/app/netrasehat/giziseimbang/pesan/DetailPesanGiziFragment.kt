@@ -19,13 +19,12 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
-import com.app.netrasehat.databinding.FragmentPesanGiziSeimbangBinding
+import com.app.netrasehat.databinding.FragmentDetailPesanGiziBinding
 import com.app.netrasehat.model.Pesan
-import com.app.netrasehat.ui.PesanAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -34,16 +33,16 @@ import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
-class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
+class DetailPesanGiziFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
-    private lateinit var navController: NavController
-    private lateinit var pesanAdapter: PesanAdapter
-    private lateinit var viewModel: PesanGiziSeimbangViewModel
-    private var _binding: FragmentPesanGiziSeimbangBinding? = null
+    private lateinit var viewModel: DetailPesanGiziViewModel
+    private lateinit var dataPesan: Pesan
+    private var _binding: FragmentDetailPesanGiziBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
+    private val args by navArgs<DetailPesanGiziFragmentArgs>()
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -53,13 +52,13 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentPesanGiziSeimbangBinding.inflate(inflater, container, false)
+        _binding = FragmentDetailPesanGiziBinding.inflate(inflater, container, false)
 
         // Init viewModel
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
-        )[PesanGiziSeimbangViewModel::class.java]
+        )[DetailPesanGiziViewModel::class.java]
 
         return binding.root
     }
@@ -77,15 +76,15 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 it.findNavController().navigateUp()
             }
 
-            // getListPesan
-            val dataPesanGizi = viewModel.getPesan(requireActivity())
+            // Set Detail Pesan
+            val pesanId = args.pesanId
+            viewModel.setPesan(pesanId)
 
-            // Init Adapter and rv
-            pesanAdapter = PesanAdapter()
-            pesanAdapter.setDataPesan(dataPesanGizi)
-            setupRecyclerView()
-            // Navigate to detail pesan
-            onItemSelected()
+            // Get Pesan
+            dataPesan = viewModel.getDetailPesan(requireActivity())
+
+            // Populate Pesan
+            populateData(dataPesan)
 
             // Init speechRecognizer
             setSpeech()
@@ -102,48 +101,41 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                dataPesan.apply {
+                    textToSpeech(title, desc)
+                }
             }
         }
     }
 
-    private fun setupRecyclerView() {
-        with(binding.rvPesan) {
-            layoutManager = LinearLayoutManager(context)
-            setHasFixedSize(true)
-            adapter = pesanAdapter
+    private fun populateData(pesan: Pesan) {
+        binding.apply {
+            titlePesanGiziseimbang.text = pesan.title
+            pesanGiziseimbang.text = pesan.desc
         }
     }
 
-    private fun onItemSelected() {
-        pesanAdapter.setOnItemClickListener(object : PesanAdapter.OnItemClickListener {
-            override fun onPesanClicked(pesan: Pesan) {
-                val actionToDetailPesan =
-                    PesanGiziSeimbangFragmentDirections.actionPesanGiziSeimbangFragmentToDetailPesanGiziFragment(
-                        pesan.id
-                    )
-                findNavController().navigate(actionToDetailPesan)
-            }
-        })
-    }
-
-    private fun textToSpeech() {
+    private fun textToSpeech(judul: String, pesan: String) {
         // Get the text from local string resource
-        val giziSeimbang = getString(R.string.menu_pesanGiziSeimbang)
+        val menuPilihan = getString(R.string.menu_kembali)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(judul, TextToSpeech.QUEUE_FLUSH, null, "judul")
+        textToSpeechEngine?.speak(pesan, TextToSpeech.QUEUE_ADD, null, "pesan")
+        textToSpeechEngine?.speak(menuPilihan, TextToSpeech.QUEUE_ADD, null, "menuPilihan")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
                 Log.i(TAG, "TTS On Start")
-
             }
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("noMatch")
+                if (textParam) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -165,7 +157,6 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -204,8 +195,6 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -223,7 +212,6 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -232,26 +220,13 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
-            }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
-            }
             check8 -> {
-                navController.popBackStack()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
@@ -265,7 +240,7 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
+                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
                 Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
             }
         }

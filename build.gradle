@@ -11,7 +11,7 @@ buildscript {
         navigation_version = '2.3.5'
         recyclerview_version = '1.2.1'
 
-        //lifecycle_version = '2.3.1'
+        lifecycle_version = '2.3.1'
         //room_version = '2.3.0'
 
         // testing
