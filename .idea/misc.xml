@@ -12,6 +12,7 @@
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout-v26/fragment_aktivitas_fisik.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout-v26/fragment_detail_covid19.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout-v26/fragment_detail_pesan_gizi.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout-v26/fragment_detail_phbs.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout-v26/fragment_gizi_seimbang.xml" value="0.4" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_air_putih.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_aktivitas_fisik.xml" value="0.264" />
@@ -31,21 +32,25 @@
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_phbs.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_pilar_gizi_seimbang.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/activity_sayuran.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/detail_phbs_fragment.xml" value="0.176" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_aktivitas_fisik.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_aneka_ragam_makanan.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_aneka_ragam_makanan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_berat_badan.xml" value="0.2" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_cara_mencegah_covid19.xml" value="0.3181499649614576" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_cara_penularan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_contact_sahabat_netra.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_covid19.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_covid19.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_jenis_makanan.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_pesan_gizi.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_phbs.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_ragam_makanan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_ragam_makananragment.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_gejala_covid19.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_gizi_seimbang.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_home.xml" value="0.536" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_jenis_aktivitas_fisik.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_jenis_ragam_makanan.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_literasi_kesehatan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_menghitung_bb.xml" value="0.2" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_pelayanan_kesehatan.xml" value="0.264" />
@@ -55,9 +60,11 @@
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_pilar_gizi_seimbang.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_sembuh_covid19.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_vaksin_covid19.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_anekaragam_makanan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pesan_giziseimbang.xml" value="0.4" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_phbs.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_phbs.xml" value="0.4" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pilargizi.xml" value="0.4" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_ragam_makanan.xml" value="0.264" />
       </map>
     </option>
   </component>

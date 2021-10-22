@@ -97,7 +97,11 @@
         android:id="@+id/phbsFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.phbs.PhbsFragment"
         android:label=""
-        tools:layout="@layout/fragment_phbs" />
+        tools:layout="@layout/fragment_phbs" >
+        <action
+            android:id="@+id/action_phbsFragment_to_detailPhbsFragment"
+            app:destination="@id/detailPhbsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/beratBadanFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.beratbadan.BeratBadanFragment"
@@ -188,6 +192,15 @@
         tools:layout="@layout/fragment_detail_pesan_gizi">
         <argument
             android:name="pesanId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPhbsFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.phbs.DetailPhbsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_detail_phbs" >
+        <argument
+            android:name="phbsId"
             app:argType="integer" />
     </fragment>
 

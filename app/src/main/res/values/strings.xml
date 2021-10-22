@@ -1443,12 +1443,12 @@
 
     <!-- Perilaku Hidup Bersih dan Sehat (PHBS) res-->
     <string name="title_phbs_1">Perawatan Diri Pada Kulit</string>
-    <string name="title_phbs_2">Perawatan Diri Pada Kaki Dan Tangan</string>
+    <string name="title_phbs_2">Perawatan Diri Pada Kaki dan Tangan</string>
     <string name="title_phbs_3">Perawatan Diri Pada Kuku</string>
-    <string name="title_phbs_4">Perawatan Diri Pada Kulit Kepala Dan Rambut</string>
+    <string name="title_phbs_4">Perawatan Diri Pada Kulit Kepala dan Rambut</string>
     <string name="title_phbs_5">Perawatan Diri Pada Kebersihan Gigi Dan Mulut</string>
     <string name="title_phbs_6">Perawatan Diri Pada Kebersihan Mata</string>
-    <string name="title_phbs_7">Perawatan Diri Pada Kebersihan Telinga Dan Hidung</string>
+    <string name="title_phbs_7">Perawatan Diri Pada Kebersihan Telinga dan Hidung</string>
     <string name="title_phbs_8">Perawatan Diri Pada Kebersihan Genetalia</string>
 
     <string name="pengertian_phbs_1">Kulit adalah suatu organ pembungkus seluruh permukaan luar tubuh. Kulit merupakan salah satu bagian penting dari tubuh yang dapat melindungi tubuh dari berbagai kuman.</string>
@@ -1462,7 +1462,7 @@
         \n\nHidung adalah organ penciuman yang terletak di tengah-tengah wajah. Tubuh bisa mendapatkan oksigen melalui organ hidung yang menangkap udara. Selain berfungsi menangkap udara, hidung juga berfungsi sebagai indera yang bisa menangkap aroma, dan membersihkan udara luar yang masuk.</string>
     <string name="pengertian_phbs_8">Genatalia hygiene atau kebersihan genital adalah menjaga kebersihan organ vital baik pria maupun wanita. Suatu tindakan memelihara kebersihan dan kesehatan seseorang untuk kesejahteraan fisik dan psikis.</string>
 
-    <string name="fungsi_phbs_1">Kulit secara umum mempunyai berbagai fungsi, (Hidayat, 2008) diantaranya :
+    <string name="fungsi_phbs_1">Kulit secara umum mempunyai berbagai fungsi, diantaranya :
         \n\na.) Melindungi tubuh dari masuknya berbagai kuman dan juga dapat menjaga keutuhan kulit.
         \nb.) Mengatur keseimbangan suhu tubuh dan membantu produksi keringat serta penguapan.
         \nc.) Sebagai alat peraba yang dapat membantu tubuh menerima rangsangan dari luar melalui rasa sakit, sentuhan, tekanan, atau suhu.
@@ -1490,7 +1490,7 @@
         \ne.) Segera keringkan tubuh dengan handuk yang lembut dari wajah, tangan, badan, hingga kaki.
         \nf.) Hindari penggunaan pakaian, handuk, selimut, sabun mandi, dan sarung secara berjamaah
         \ng.) Hindari penggunaan pakaian yang lembab/basah (karena keringat/sebab lain)
-        \nh.) Gunakan obat anti jamur kulit (bila perlu)Siap-
+        \nh.) Gunakan obat anti jamur kulit (bila perlu)
     </string>
     <string name="caramerawat_phbs_2">Ketidaknyamanan dan munculnya penyakit seperti panu, bisulan pada kaki dan tangan dihasilkan karena perawatan yang kurang. Bersihkan tangan dan kaki sehari minimal 2x/hr atau setiap kotor.
         \n\nCara merawat tangan dan kaki adalah sebagai berikut :
@@ -1574,7 +1574,7 @@
         \nf.) Bila menggunakan air yang di semprotkan lakukan dengan hati-hati agar tidak menimbulkan kerusakan pada telinga akibat tekanan air yang berlebihan.
         \ng.) Aliran air yang masuk hendaklah diarahkan kesaluran telinga dan bukan langsung kegendang telinga.
         \nh.) Tidak di perbolehkan menggunakan alat yang tajam seperti peniti atau jepit rambut untuk membersihkan kotoran telinga karena dapat menusuk gendang telinga.
-        \n\nCara-caa merawat hidung adalah sebagai berikut:
+        \n\nCara-cara merawat hidung adalah sebagai berikut:
         \na.) Jaga agar lubang hidung agar tidak kemasukan air atau benda kecil.
         \nb.) Jangan biarkan benda kecil masuk kedalam hidung, sebab nantinya dapat terhisap dan menyumbat jalan napas dan menyebabkan luka pada membran mukosa.
         \nc.) Sewaktu mengeluarkan debu dari lubang hidung, hembuskan secara perlahan dengan membiarkan ke dua lubang hidung tetap terbuka.
@@ -1810,6 +1810,8 @@
     <string name="text_pengertian">1) Pengertian</string>
     <string name="text_kandungan">5) Kandungan</string>
     <string name="text_masalah">6) Masalah jika konsumsi tidak sesuai</string>
+    <string name="text_fungsi">2) Fungsi</string>
+    <string name="text_cara_merawat">3) Cara Merawat</string>
 
     <string name="title_pengertian">Pengertian</string>
     <string name="title_manfaat">Manfaat</string>
