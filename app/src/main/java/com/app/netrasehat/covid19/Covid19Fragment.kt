@@ -1,4 +1,4 @@
-package com.app.netrasehat
+package com.app.netrasehat.covid19
 
 import android.content.Intent
 import android.os.Bundle
@@ -19,6 +19,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.app.netrasehat.MainActivity
+import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentCovid19Binding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -67,23 +69,39 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                 it.findNavController().navigateUp()
             }
 
-            // Navigate to Google Maps
+            // Navigate to Sub Menu
             with(binding) {
-//                btnRumahsakit.setOnClickListener {
-//                    openGoogleMaps("Rumah Sakit")
-//                }
-//                btnPuskesmas.setOnClickListener {
-//                    openGoogleMaps("Puskesmas")
-//                }
-//                btnApotek.setOnClickListener {
-//                    openGoogleMaps("Apotek")
-//                }
-//                btnKlinik.setOnClickListener {
-//                    openGoogleMaps("Klinik")
-//                }
+                btnGejalaCovid19.setOnClickListener {
+                    val action =
+                        Covid19FragmentDirections.actionCovid19FragmentToGejalaCovid19Fragment()
+                    findNavController().navigate(action)
+                }
+                btnPenularanCovid19.setOnClickListener {
+                    val action =
+                        Covid19FragmentDirections.actionCovid19FragmentToCaraPenularanFragment()
+                    findNavController().navigate(action)
+                }
+                btnMencegahCovid19.setOnClickListener {
+                    val action =
+                        Covid19FragmentDirections.actionCovid19FragmentToCaraMencegahCovid19Fragment()
+                    findNavController().navigate(action)
+                }
+                btnPenangananCovid19.setOnClickListener {
+                    val action =
+                        Covid19FragmentDirections.actionCovid19FragmentToPenangananCovid19Fragment()
+                    findNavController().navigate(action)
+                }
+                btnSembuhCovid19.setOnClickListener {
+                    val action =
+                        Covid19FragmentDirections.actionCovid19FragmentToSembuhCovid19Fragment()
+                    findNavController().navigate(action)
+                }
+                btnVaksinCovid19.setOnClickListener {
+                    val action =
+                        Covid19FragmentDirections.actionCovid19FragmentToVaksinCovid19Fragment()
+                    findNavController().navigate(action)
+                }
             }
-
-
         }
     }
 
@@ -221,14 +239,14 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
         when {
             check1 -> {
-                val actionToPilarGizi =
+                /*val actionToPilarGizi =
                     GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-                findNavController().navigate(actionToPilarGizi)
+                findNavController().navigate(actionToPilarGizi)*/
             }
             check2 -> {
-                val actionToPesanGizi =
+                /*val actionToPesanGizi =
                     GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-                findNavController().navigate(actionToPesanGizi)
+                findNavController().navigate(actionToPesanGizi)*/
             }
             check8 -> {
                 /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)

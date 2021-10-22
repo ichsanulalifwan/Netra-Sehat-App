@@ -115,9 +115,28 @@
         tools:layout="@layout/fragment_menghitung_bb" />
     <fragment
         android:id="@+id/covid19Fragment"
-        android:name="com.app.netrasehat.Covid19Fragment"
+        android:name="com.app.netrasehat.covid19.Covid19Fragment"
         android:label="fragment_covid19"
-        tools:layout="@layout/fragment_covid19" />
+        tools:layout="@layout/fragment_covid19" >
+        <action
+            android:id="@+id/action_covid19Fragment_to_gejalaCovid19Fragment"
+            app:destination="@id/gejalaCovid19Fragment" />
+        <action
+            android:id="@+id/action_covid19Fragment_to_caraPenularanFragment"
+            app:destination="@id/caraPenularanFragment" />
+        <action
+            android:id="@+id/action_covid19Fragment_to_caraMencegahCovid19Fragment"
+            app:destination="@id/caraMencegahCovid19Fragment" />
+        <action
+            android:id="@+id/action_covid19Fragment_to_penangananCovid19Fragment"
+            app:destination="@id/penangananCovid19Fragment" />
+        <action
+            android:id="@+id/action_covid19Fragment_to_sembuhCovid19Fragment"
+            app:destination="@id/sembuhCovid19Fragment" />
+        <action
+            android:id="@+id/action_covid19Fragment_to_vaksinCovid19Fragment"
+            app:destination="@id/vaksinCovid19Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/contactSahabatNetraFragment"
         android:name="com.app.netrasehat.ContactSahabatNetraFragment"
@@ -128,5 +147,35 @@
         android:name="com.app.netrasehat.PelayananKesehatanFragment"
         android:label="fragment_pelayanan_kesehatan"
         tools:layout="@layout/fragment_pelayanan_kesehatan" />
+    <fragment
+        android:id="@+id/caraMencegahCovid19Fragment"
+        android:name="com.app.netrasehat.covid19.CaraMencegahCovid19Fragment"
+        android:label="fragment_cara_mencegah_covid19"
+        tools:layout="@layout/fragment_cara_mencegah_covid19" />
+    <fragment
+        android:id="@+id/caraPenularanFragment"
+        android:name="com.app.netrasehat.covid19.CaraPenularanFragment"
+        android:label="fragment_cara_penularan"
+        tools:layout="@layout/fragment_cara_penularan" />
+    <fragment
+        android:id="@+id/gejalaCovid19Fragment"
+        android:name="com.app.netrasehat.covid19.GejalaCovid19Fragment"
+        android:label="fragment_gejala_covid19"
+        tools:layout="@layout/fragment_gejala_covid19" />
+    <fragment
+        android:id="@+id/penangananCovid19Fragment"
+        android:name="com.app.netrasehat.covid19.PenangananCovid19Fragment"
+        android:label="fragment_penanganan_covid19"
+        tools:layout="@layout/fragment_penanganan_covid19" />
+    <fragment
+        android:id="@+id/sembuhCovid19Fragment"
+        android:name="com.app.netrasehat.covid19.SembuhCovid19Fragment"
+        android:label="fragment_sembuh_covid19"
+        tools:layout="@layout/fragment_sembuh_covid19" />
+    <fragment
+        android:id="@+id/vaksinCovid19Fragment"
+        android:name="com.app.netrasehat.covid19.VaksinCovid19Fragment"
+        android:label="fragment_vaksin_covid19"
+        tools:layout="@layout/fragment_vaksin_covid19" />
 
 </navigation>
