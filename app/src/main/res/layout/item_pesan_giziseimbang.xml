@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_anekaRagam"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/gray_purple1"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <TextView
+        android:id="@+id/title_pesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:text="Biasakan Menkonsumsi Lauk Pauk Yang Mengandung Protein Tinggi" />
+
+    <ImageView
+        android:id="@+id/ic_next_pesan"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/arrow_forward_24"
+        app:tint="@color/black"
+        tools:ignore="ContentDescription" />
+
+</com.google.android.material.card.MaterialCardView>
