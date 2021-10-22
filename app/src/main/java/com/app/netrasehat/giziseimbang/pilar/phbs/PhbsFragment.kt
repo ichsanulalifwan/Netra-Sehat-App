@@ -116,11 +116,9 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     private fun onItemSelected() {
         phbsAdapter.setOnItemClickListener(object : PhbsAdapter.OnItemClickListener {
             override fun onItemClicked(phbs: Phbs) {
-//                val actionToDetailPesan =
-//                    PesanGiziSeimbangFragmentDirections.actionPesanGiziSeimbangFragmentToDetailPesanGiziFragment(
-//                        phbs.id
-//                    )
-//                findNavController().navigate(actionToDetailPesan)
+                val actionToDetailPhbs =
+                    PhbsFragmentDirections.actionPhbsFragmentToDetailPhbsFragment(phbs.id)
+                findNavController().navigate(actionToDetailPhbs)
             }
         })
     }
