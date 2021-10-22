@@ -96,7 +96,7 @@
     <fragment
         android:id="@+id/phbsFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.phbs.PhbsFragment"
-        android:label="fragment_phbs"
+        android:label=""
         tools:layout="@layout/fragment_phbs" />
     <fragment
         android:id="@+id/beratBadanFragment"

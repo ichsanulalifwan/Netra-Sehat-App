@@ -51,12 +51,13 @@
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_pelayanan_kesehatan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_penanganan_covid19.xml" value="0.2912123155869147" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_pesan_gizi_seimbang.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_phbs.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_phbs.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_pilar_gizi_seimbang.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_sembuh_covid19.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_vaksin_covid19.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pesan_giziseimbang.xml" value="0.2" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pilargizi.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pesan_giziseimbang.xml" value="0.4" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_phbs.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pilargizi.xml" value="0.4" />
       </map>
     </option>
   </component>
