@@ -15,7 +15,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -39,9 +38,9 @@ class DetailPesanGiziFragment : Fragment(), CoroutineScope, RecognitionListener 
     private lateinit var sttIntent: Intent
     private lateinit var viewModel: DetailPesanGiziViewModel
     private lateinit var dataPesan: Pesan
+    private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentDetailPesanGiziBinding? = null
     private val binding get() = _binding!!
-    private var textToSpeechEngine: TextToSpeech? = null
     private val args by navArgs<DetailPesanGiziFragmentArgs>()
 
     private val job = Job()
@@ -284,6 +283,6 @@ class DetailPesanGiziFragment : Fragment(), CoroutineScope, RecognitionListener 
     }
 
     companion object {
-        private const val TAG = "PesanGiziSeimbang"
+        private const val TAG = "DetailPesanGizi"
     }
 }

@@ -38,7 +38,6 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
-    private lateinit var navController: NavController
     private lateinit var pesanAdapter: PesanAdapter
     private lateinit var viewModel: PesanGiziSeimbangViewModel
     private var _binding: FragmentPesanGiziSeimbangBinding? = null
@@ -251,7 +250,7 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
 //                findNavController().navigate(actionToPesanGizi)
             }
             check8 -> {
-                navController.popBackStack()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
