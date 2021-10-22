@@ -1463,6 +1463,118 @@
     <string name="manfaat_berat_badan">Manfaat memantau berat badan adalah dapat mengetahui adanya gangguan tumbuh kembang kita. Selain itu juga bermanfaat sebagai tolak ukur tingkat gizi dan untuk mencegah kekurangan gizi.</string>
     <string name="menentukan_berat_badan">Cara orang dewasa menentukan ukuran indeks massa tubuh (IMT) yaitu dengan mengukur ukuran yang berkaitan dengan kekurangan atau kelebihan berat badan. Mempertahankan berat badan normal memungkinkan seseorang dapat mencegah berbagai penyakit tidak menular. Berikut cara menghitungnya menggunakan rumus IMT. \n\nBatas ambang IMT ditentukan dengan merujuk ketentuan WHO yang membedakan batas ambang normal untuk laki–laki dan perempuan. Di Indonesia, berdasarkan hasil penelitian dan pengalaman klinis tidak dibedakan menurut jenis kelamin, dan batas ambang normal yang digunakan adalah 18.5 – 25.0. Seseorang dikategorikan menderita obesitas jika IMTnya ≥ 27.0. \n\nCara mempertahankan berat badan normal adalah dengan mempertahankan pola konsumsi makanan dengan susunan gizi seimbang dan beraneka ragam serta mempertahankan kebiasaan latihan fisik/olah raga teratur.</string>
     <string name="masalah_berat_badan">Hal- hal yang terjadi akibat terlalu kekurangan berat badan adalah kekurangan nutrisi, sering merasa lelah, anemia, dan masih banyak lagi. Berat badan rendah dapat meningkatkan risiko terganggunya kepadatan mineral tulang. Kekurangan kalsium dan vitamin D dalam makanan, dapat menyebabkan tulang rapuh dan osteoporosis. \n\nHal-hal yang terjadi akibat kelebihan berat badan adalah berat badan terlalu berat dan terlalu gemuk dapat menyebabkan tekanan darah tinggi, kolesterol tinggi, dan penyumbatan arteri. Selain itu seseorang yang kelebihan berat badan dapat menderita kepikunan, depresi, masalah kesehatan mata, masalah kesehatan gigi dan mulut, infeksi telinga kronis, sleep pnea, asma, tekanan darh tinggi, batu empedu, Polycytic Ovary Syndrome (PCOS), infertisasi pada pria, artritis dan kanker payudara pada perempuan.</string>
+
+    <!-- Covid-19 res-->
+    <string name="pengertian_covid19">\t\tCovid-19 adalah penyakit yang disebabkan oleh virus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). Virus COVID-19 menyerang saluran pernapasan dan mudah menular ke orang lain. Virus ini bisa menyebabkan gangguan ringan pada sistem pernapasan, infeksi paru-paru yang berat, hingga kematian. \n\n\t\tSARS-CoV-2 adalah virus yang tersusun atas protein yang disebut kapsid yang dibungkus dengan lemak yang disebut envelope. Pada bungkusnya ini ditemukan berbagai protein yang diperlukan bagi virus untuk menempel dan menginfeksi tubuh kita. Bungkus yang berasal dari lemak inilah yang jadi alasan kenapa penting untuk selalu mencuci tangan dengan sabun.</string>
+    <string name="gejala_covid19">Para peneliti China menemukan bahwa gejala yang paling umum ditemukan di rumah sakit pada penderita Covid-19 adalah sebagai berikut :
+    \n  a. Demam: 99%
+    \n  b. Kelelahan: 70%
+    \n  c. Batuk kering: 59%
+    \n  d. Kehilangan nafsu makan: 40%
+    </string>
+    <string name="carapenularan_covid19">Penularan virus corona bisa terjadi melalui berbagai hal berikut :
+        \na. Droplets atau tetesan cairan yang berasal dari batuk dan bersin dari orang yang terindikasi terkena virus.
+        \nb. Kontak pribadi seperti menyentuh dan berjabat tangan.
+        \nc. Menyentuh benda atau permukaan dengan virus di atasnya, kemudian menyentuh mulut, hidung, atau mata sebelum mencuci tangan.
+        \nd. Kontaminasi tinja (jarang terjadi).
+        \nSebuah studi terbaru menunjukkan potensi penularannya melalui udara. Ketika seseorang batuk atau bersin dan mengeluarkan cairan mengandung virus, berpotensi akan menyebar ke udara dan bisa langsung masuk ke tubuh orang lain jika berada dalam posisi berdekatan. Kita dapat tertular saat menghirup udara yang mengandung virus jika berada terlalu dekat dengan orang yang sudah terinfeksi Covid-19. Para peneliti menemukan bahwa virus itu bisa bertahan dalam jangka waktu tertentu di udara dan menempel di permukaan benda, bergantung pada beberapa faktor, seperti panas dan kelembapan. \nVirus ini dapat bertahan di udara sebagai aerosol selama 3 jam. Ketika virus menempel di permukaan padat, virus ini tidak cepat mati bahkan dapat bertahan beberapa hari. Oleh karena itu kita harus berhati-hati menyentuh permukaan benda. \nMenurut CDC, terdapat tiga kategori transmisi virus SARS-CoV-2, yaitu inhalasi virus, penumpukan virus pada membran mukosa yang terpapar udara (mukosa mulut, hidung atau mata), dan kontak tidak langsung ketika seseorang yang telah memegang permukaan benda yang mengandung virus kemudian menyentuh mata, hidung atau mulut. Sebagian besar penularan adalah melalui droplet namun demikian penularan melalui udara (airborne) sampai saat ini masih terus dikembangkan dan kemungkinan juga terjadi penularan melalui udara. Apabila seseorang yang mengandung virus SARS-CoV-2 ini bersin maka droplet yang berukuran besar akan jatuh sedangkan droplet nuclei yang berukran sangat kecil akan terbang dan melayang-layang di udara dalam jangka waktu tertentu.</string>
+    <string name="caramencegah_covid19"></string>
+    <string name="protokol_covid19_cucitangan">Beberapa kasus penularan diprediksi terjadi ketika tangan yang menyentuh permukaan terkontaminasi oleh virus dan tidak sengaja memegang wajah sehingga virus berpindah dari tangan ke hidung atau mulut. Jadi  biasakan diri rajin mencuci tangan kapanpun dan dimananpun. Virus akan mati jika kita rajin mencuci tangan dengan sabun minumal 20 detik dengan mengikuti rangkain berikut ini : </string>
+    <string name="protokol_covid19_pakaimasker">Sesuai protokoler kesehatan dianjurkan selalu memakai masker ketika bepergian, baik dalam keadaan sehat maupun sakit. Dalam penggunaannya, biasanya ada tiga jenis masker yang digunakan untuk melindungi diri dari Covid-19 yaitu masker kain, masker bedah, dan masker N95. \n Masker kain digunakan maksimal 4 jam dan bisa dicuci untuk digunakan lagi, sedangkan masker bedah dan masker N95 digunakan hanya sekali pakai, dan dibuang di tempat sampah. Cara menggunakan masker yaitu : \na. Pakailah masker dan pastikan dari area hidung sampai dagu bawah tertutup.\nb. Jika menyentuh permukaan masker, jika tersentuh maka segeralah mencuci tangan dengan sabun atau hand sanitizer \nc.	Saat melepas masker pastikan yang dipegang adalah tali masker, bukan permukaan masker, dan hindari menyentuh permukaan masker agar terhindar dari kuman dan virus. </string>
+    <string name="protokol_covid19_menjagajarak">Physical distangcing adalah menjaga jarak fiski dari orang lain. Kalau lagi ada di tempat umum, harus jaga jarak dari orang lain setidaknya 2 meter. Hal ini karena ketika seseorang batuk atau bersin, mereka menyemprotkan tetesan cairan kecil dari hidung atau mulut mereka yang mungkin mengandung virus. Jika terlalu dekat, kamu bisa menghirup tetesan air, termasuk virus covid-19 jika orang tersebut sedang batuk.</string>
+    <string name="protokol_covid19_hindarikerumunan">Kita diminta untuk menjauhi kerumunan saat berada di luar rumah. Ingat, semakin banyak dan sering Anda bertemu orang, kemungkinan terinfeksi covid-19 bisa semakin tinggi.</string>
+    <string name="protokol_covid19_mengurangimobilitas"> Penularan covid-19 terjadi waktu orang yang sakit kontak dengan orang yang sehat. Untuk mencegah terjadinya penularan maka sementara waktu kita kurangi mobilitas dengan tidak  melakukan aktifitas kegiatan sosial. Aktivitas sosial tersebut antara lain : \na.	Bekerja di kantor dan belajar di sekolah \nb.	Beribadah di tempat ibadah \nc.	Berwisata, konser musik \nd.	Duduk di warung kopi, rumah makan, tempat olahraga dan pasar. \ne.	Bermain di taman bermain \nf.	Mengunjungi keluarga di hari raya atau momen lainnya \n Jika terpaksa harus keluar rumah maka hal-hal yang dilakukan adalah sebagai berikut :
+        \na.	Memakai masker dan lengan panjang
+        \nb.	Tutup siku kalau batuk atau bersin
+        \nc.	Jaga jarak dengan orang lain dan hindari tempat ramai
+        \nd.	Hindari pakai transportasi umum
+        \ne.	Hindari menyentuh langsung tombol saklar, lift, pegangan tangga/lift dan lainnya
+        \nf.	Cuci tangan sesering mungkin kalau sudah menyentuh permukaan benda
+        \ng.	Hindari menyentuh wajah, hidung dan mata
+        \nh.	Pakai tissu atau sarung tangan plastik kalau   harus menyentuh benda-benda di arae umum.
+        \nJikalau telah beraktifitas di luar rumah dan pergi ke tempat yang berpotensi untuk membawa virus ke rumah, maka hal-hal yang harus dilakukan adalah:
+        \na.	Lepaskan sendal dan sepatu sebelum masuk rumah
+        \nb.	Baju dan masker kain langsung dicuci, masker sekali pakai langsung buang di tempat sampah tertutup.
+        \nc.	Taruh tas, dompet, kunci, hp, dan barang yang sering disentuh di satu tempat. Lap dengan desinfketan setelah dipakai.
+        \nd.	Segera cuci tangan dan mandi
+    </string>
+    <string name="caramencegah_covid19_menjagaimunitas">Menjaga imunitas tubuh dengan mengamalkan pola gizi seimbang.</string>
+    <string name="penanganan_covid19">Ketika terdapat minimal tiga gejala terinfeksi covid-19 maka sebaiknya periksa dan laporkan untuk mendapat pelayanan kesehatan sesuai ketentuan. Pakai kendaraan pribadi, pakai masker dan laporkan kondisimu kepada relawan covid-19. Pastikan jika gejalanya masih ringan karantina mandiri terlebih dahulu, jika parah maka harus di isolasi atau karantina di rumah di ruangan yang terpisah dan menunggu penanganan lebih intensif. Karantina mandiri di rumah berarti bahwa semua anggota harus tinggal di dalam rumah. Tujuan karantina mandiri adalah agar tidak menularkan virus yang memungkinkan sudah terdapat dibadan.
+        \n Hal-hal yang dilakukan saat isolasi mandiri dan karantina mandiri adalah sebagai berikut :
+        \n a.	Hubungi penyedia layanan kesehatan atau hotlibe covid-19 untuk mendapatkan informasi terkait tempat dan waktu untuk menjalani tes
+        \n b.	Taati prosedur pelacakan kontak untuk menghentikan penyebaran virus.
+        \n c.	Jika tes tidak tersedia, tetaplah di rumah dan jangan lakukan kontak dengan orang lain selama 14 hari.
+        \n d.	Selama karantina jangan pergi kantor, sekolah atau tempat umum
+        \n e.	Tinggal dan jangan pergi dan terima tamu dari luar
+        \n f.	Tetap berjarak dengan sesama anggota keluarga minimal 1 meter
+        \n g.	Kenakan masker medis untuk melindungi anggota keluarga lain termaksud ketika meminta perawatan medis
+        \n h.	Pastikan ventilasi ruangan selalu baik
+        \n i.	Cek Saturasi secara berkala minimal setiap 6 jam dengan saturasi normal di atas 94
+        \n j.	Semua anggota keluarga harus ikut lakukan karantina mandiri selama 14 hari
+        \n k.	Pakai kamar mandi terpisah dengan anggota keluarga
+        \n l.	Gunakan alat makan terpisah dari anggota keluarga lain.
+        \n m.	Tinggal dan jangan kontak dengan orang lain. Jika semakin parah tandanya sulit bernapas, sulit bicara dan bergerak, bingung, atau merasa nyeri di dada, segera hubungi relawan covid-19 terdekat untuk pemeriksaan lebih lanjut.
+        \n n.	Isolasi akan selesai ketika melalui serangkaian tes dan dinyatakan sembuh dari covid-19.
+        \n Berikut adalah prosedur pemeriksaan covid -19 jika parah dan harus ke rumah sakit di Indonesia:
+        \n a.	Langkah awal jika Anda ingin memeriksakan diri, yaitu dengan mendatangi fasilitas layanan kesehatan terdekat. Anda dapat pergi ke puskesmas, rumah sakit, klinik, atau praktik dokter.
+        \n b.	Jika memang menurut diagnosis dokter Anda patut dirujuk, maka dokter akan memberikan surat pengantar pemeriksaan untuk diberikan ke fasilitas rujukan.
+        \n c.	Mendatangi fasilitas rujukan. Untuk Anda yang memenuhi kriteria sebagai PDP maupun ODP.
+        \n Berikut alur pemeriksaan covid-19 pada yang sejauh ini diterapkan di Indonesia.
+    </string>
+    <string name="pemeriksaan_covid19">Prosedur penanganan Pemeriksaan Antibody virus Corona atau SARS CoV2 dapat dilakukan dengan beberapa cara:
+        \n a.	PCR Test
+        \n Pemeriksaan PCR Test adalah salah satu pemeriksaan untuk menegakkan diagnosa Covid-19 dengan sampel swab bagian belakang hidung atau tenggorokan untuk mendeteksi adanya virus SARS-CoV2.
+        \n Pemeriksaan ini memiliki tingkat akurasi yang lebih tinggi untuk mendiagnosis kondisi terpapar Covid-19, sebab sekali virus Corona menginfeksi tubuh maka virus akan terdeteksi melalui pemeriksaan tersebut.
+        \n b.	Rapid Test Antibodi
+        \n Pemeriksaan rapid Test Antibodi IgG dan IgM melalui tes darah menggunakan alat tes.
+        \n c.	Rapid Test Antigen (Swab Antigen)
+        \n Swab antigen Covid-19 adalah tes usap untuk mendeteksi keberadaan antigen virus SARS-CoV-2 yang mengindikasikan terjadinya infeksi oleh virus tersebut pada tubuh seseorang. Tes mengambil sampel lewat usapan dari dalam hidung (nasofaring) atau tenggorok (orofaring).
+        \n WHO menganjurkan penggunaan alat tes antigen setidaknya dengan sensitivitas 80 persen dan spesifitas 97 persen. Tes swab antigen dilakukan oleh tenaga kesehatan terlatih di laboratorium khusus. Terdapat dua kemungkinan hasil tes swab antigen, yaitu positif dan negatif.\n
+        \n Jika positif
+        \n 1)	Dilakukan tes konfirmasi dengan pemeriksaan RT-PCR
+        \n 2)	Isolasi sesuai dengan kondisi
+        \n 3)	Menerapkan protokol kesehatan \n
+        \n Jika negative
+        \n 1)	Hasil negatif tidak menghilangkan kemungkinan terinfeksi virus SARS-CoV-2
+        \n 2)	Disarankan mengulang tes antigen atau menjalani tes konfirmasi dengan RT-PCR, terutama jika bergejala atau pernah berkontak erat dengan pasien terkonfirmasi Covid-19
+        \n 3)	Hasil negatif mungkin terjadi ketika kuantitas antigen spesimen kurang dari batas deteksi alat.\n
+        \n d. Test Antibodi Serologi
+        \n Pemeriksaan yang dilakukan untuk mengetahui apakah seseorang sudah mempunyai antibody (kekebalan) terhadap virus tertentu. Apabila seseorang terinfeksi virus SARS CoV2, maka tubuh orang tersebut akan membentuk antibody spesifik terhadap virus SARS CoV2.
+    </string>
+    <string name="sembuhdari_covid19">Syarat seseorang sembuh dari covid-19 adalah sudah tidak menjalani isolasi dan adanya surat keterangan sehat dari dokter. Kriteria lepas isolasi adalah sebagai berikut :
+        \n Gejala berat/ktiris yaitu selesai isolasi minimal 10  hari + 3 hari bebas gejala, dan Swab PCR 1 x  negatif. Gejala ringan/sedang yaitu selesai  isolasi minimal 10 hari + 3 hari bebas gejala. Tanpa gejala selesai isolasi minimal 10 hari.
+        \n Hasil Swab akan tetap terbaca positif jika CT Value belum berada pada angka 40. Pakar biologi molekuler Ahmad Rusdan Utomo mengatakan batas maksimal hasil CT Value biasanya adalah 40. Seseorang dapat dikatakan memiliki jumlah material virus yang banyak pada tubuhnya apabila hasil CT Value-nya berada di bawah 25. Tapi kalau CT Value sudah di atas 35 maka tingkat virulensinya sudah sangat rendah atau bisa saja virusnya telah mati dan yang tersisa tinggal bangkainya saja.
+        \n Meskipun sudah sembuh masih tetap bisa terinfeksi kembali (reinfeksi) hal ini karena waktu terbentuknya imunitas/kekebalan alami setelah terkena covid berbeda-beda pada setiap orang. Selang waktu terjadinya reinfeksi sangat bervariasi mulai dari beberapa minggu hingga bulan setelah dinyatakan sembuh. Oleh karena itu hal yang perlu dilakukan adalah tetap menerapkan protokol kesehatan yaitu 5 M (menjaga jarak, mencuci tangan, memakai masker, menjahui kerumunan, mengurangi mobilitas).
+    </string>
+    <string name="kriteriasembuh_covid19">Pasien dinyatakan selesai isolasi setelah memenuhi beberapa kriteria berikut ini:
+        \na)	Pasien tanpa gejala: tes RT-PCR tidak diperlukan*. Isolasi selesai setelah 10 hari terhitung sejak keluarnya hasil tes yang positif.
+        \nb)	Pasien gejala ringan-sedang: tes RT-PCR tidak perlu*. Bagi pasien gejala sedang dengan komorbid atau kondisinya berisiko memburuk, bisa dilakukan tes RT-PCR. Isolasi selesai setelah 10 hari sejak munculnya gejala awal plus setidaknya 3 hari tanpa gejala demam dan gangguan pernapasan.
+        \nc)	Pasien gejala berat/kritis: perlu menjalani tes RT-PCR. Isolasi selesai setelah hasil tes RT-PCR follow-up negatif plus setidaknya 3 hari tak menunjukkan gejala demam dan gangguan pernapasan. Jika tak bisa menjalani tes RT-PCR, isolasi selesai setelah dirawat 10 hari di rumah sakit sejak muncul gejala awal plus 3 hari bebas dari gejala demam dan gangguan pernapasan. Pasien ini dialihkan ke ruang rawat non-isolasi atau pulang.
+        \nd)	Kriteria Sembuh
+        \nKriteria sembuh sama bagi pasien tanpa gejala, gejala ringan, sedang, berat atau kritis, yaitu:
+        \n1.)	Memenuhi kriteria selesai isolasi
+        \n2.)	Mendapat surat selesai pemantauan dari fasilitas pelayanan kesehatan atau dokter penanggung jawab pelayanan
+        \ne)	Kriteria Pemulangan
+        \nPasien dibolehkan pulang setelah memenuhi kriteria selesai isolasi dan kriteria klinis, yakni:
+        \n1.)	Dokter penanggung jawab membolehkan pasien pulang berdasarkan kajian klinis menyeluruh, meliputi radiologi dan pemeriksaan darah
+        \n2.)	Pasien tidak lagi membutuhkan perawatan atau tindakan terkait dengan Covid-19 maupun masalah kesehatan lain
+        \n3.)	Khusus bagi pasien dengan gejala berat atau kritis, setelah pemulangan harus menjalani isolasi mandiri minimal 7 hari untuk pemulihan dan pemantauan gejala yang mungkin muncul kembali.
+    </string>
+    <string name="vaksin_covid19">Vaksinasi COVID-19 bertujuan untuk mempercepat penanggulangan COVID-19 di Indonesia bersama dengan penerapan protokol kesehatan. Selain itu, vaksinasi ini diharapkan dapat memutus rantai penularan secara menyeluruh, dengan mentargetkan sekitar 70% kelompok sasaran untuk mencapai herd immunity.
+    \nEnam jenis vaksin ini meliputi Sinovac Biotech Ltd, Pfizer Inc and BioN tech, PT Biofarma (Persero), AstraZeneca, Sinopharm, dan Moderna yang sudah diamankan dan digunakan Indonesia untuk menghentikan pandemi Covid-19:
+    </string>
+    <string name="jenisvaksin_covid19">a.	Vaksin Sinovac
+        \n Vaksin ini dibuat dari partikel virus corona penyebab Covid-19, SARS-CoV-2 yang dimatikan. Selanjutnya, vaksin ini akan memicu sistem kekebalan tubuh terhadap virus corona, tanpa menimbulkan respons penyakit yang serius. Metode inactivated virus, bukanlah teknologi baru dalam pengembangan vaksin. Sebab, metode ini juga sering digunakan dalam pengembangan vaksin lain, seperti vaksin polio dan flu.
+        \n b.	Vaksin Pfizer.
+        \n Vaksin Pfizer adalah vaksin mRNA (messenger RNA). Jenis vaksin ini akan memicu sistem sistem kekebalan tubuh membentuk spike protein, yang nantinya akan membantu tubuh membentuk antibodi yang dapat melawan virus Corona.
+        \n c.	Vaksin Novavax
+        \n NVX-CoV2373 dibuat menggunakan teknologi nanopartikel rekombinan Novavax untuk menghasilkan antigen yang berasal dari protein lonjakan virus corona (S) dan ditambahkan dengan Matrix-M berbasis saponin. Meski berasal dari urutan genetik SARS-Cov-2, NVX-CoV2373 mengandung antigen protein yang dimurnikan dan tidak dapat bereplikasi, serta tidak bisa menyebabkan infeksi Covid-19. Vaksin tersebut menghasilkan antibodi dalam jumlah yang sangat tinggi
+        \n d.	Vaksin COVAX/GAVI
+        \n GAVI-COVAX adalah vaksin produksi GAVI (Global Alliance for Vaccine and Immunization), yang bekerjasama dengan mitra aliansi United Nations Children's Fund (UNICEF) dan World Health Organization (WHO). Vaksin ini untuk lansia umur 60 tahun keatas.
+        \n e.	Vaksin AstraZeneca.
+        \n Vaksin AstraZeneca atau AZD1222 adalah vaksin untuk mencegah penyakit COVID-19. Vaksin ini merupakan hasil kerja sama antara Universitas Oxford dan AstraZeneca yang dikembangkan sejak Februari 2020. Vaksin AstraZeneca untuk COVID-19 telah menjalani uji klinis di Inggris, Brazil, dan Afrika Selatan. Vaksin ini memiliki nilai efikasi (efek perlindungan terhadap COVID-19) sebesar 63,09%.
+    </string>
+
     <!--Image Content Description_-->
     <string name="contentDescription_selamat_datang">Gambar Selamat Datang</string>
     <string name="contentDescription_giziSeimbang">Gambar Gizi Seimbang</string>
