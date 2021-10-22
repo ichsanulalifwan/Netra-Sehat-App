@@ -20,7 +20,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
-import com.app.netrasehat.databinding.FragmentCovid19Binding
+import com.app.netrasehat.databinding.FragmentVaksinCovid19Binding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -33,7 +33,7 @@ class VaksinCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
-    private var _binding: FragmentCovid19Binding? = null
+    private var _binding: FragmentVaksinCovid19Binding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
     private lateinit var navController: NavController
@@ -46,7 +46,7 @@ class VaksinCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCovid19Binding.inflate(inflater, container, false)
+        _binding = FragmentVaksinCovid19Binding.inflate(inflater, container, false)
         return binding.root
     }
 

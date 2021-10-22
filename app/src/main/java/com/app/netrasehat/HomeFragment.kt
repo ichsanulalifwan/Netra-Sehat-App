@@ -255,8 +255,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             check3 -> {
                 //textToSpeechEngine?.stop()
                 //stopListening()
-                val pelayananKesehatanMenu = Intent(context, PelayananKesehatanActivity::class.java)
-                startActivity(pelayananKesehatanMenu)
+//                val pelayananKesehatanMenu = Intent(context, PelayananKesehatanActivity::class.java)
+//                startActivity(pelayananKesehatanMenu)
                 //finish()
             }
             check4 -> {
