@@ -28,11 +28,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/raleway_extrabold"
             android:text="@string/title_selamat_datang"
             android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textSize="34sp" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
@@ -87,11 +87,11 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/raleway_extrabold"
                 android:text="@string/title_gizi_seimbang"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/purple_1"
                 android:textSize="11sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_giziSeimbang" />
@@ -138,11 +138,11 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/raleway_extrabold"
                 android:text="@string/title_covid_19"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/purple_1"
                 android:textSize="11sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_covid19" />
@@ -192,11 +192,11 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/raleway_extrabold"
                 android:text="@string/title_pelayanan_kesehatan"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/purple_1"
                 android:textSize="11sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_pelayananKesehatan" />
@@ -242,11 +242,11 @@
                 android:layout_width="104dp"
                 android:layout_height="34dp"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway_extrabold"
                 android:text="@string/title_cp_sahabat_netra"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/purple_1"
                 android:textSize="11sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_contactPerson" />
