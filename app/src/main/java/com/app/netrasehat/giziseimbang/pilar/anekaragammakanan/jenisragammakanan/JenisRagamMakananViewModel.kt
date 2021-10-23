@@ -3,7 +3,6 @@ package com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.jenisragammakana
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.app.netrasehat.model.JenisJenisMakanan
-import com.app.netrasehat.model.RagamMakanan
 import com.app.netrasehat.utils.DataContainer
 
 class JenisRagamMakananViewModel : ViewModel() {
@@ -18,5 +17,5 @@ class JenisRagamMakananViewModel : ViewModel() {
         DataContainer.generateJenisSayuran(context)
 
     fun getJenisBuah(context: Context): List<JenisJenisMakanan> =
-        DataContainer.(context)
+        DataContainer.generateJenisBuah(context)
 }

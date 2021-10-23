@@ -27,9 +27,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Jenis - Jenis"
+                android:fontFamily="@font/raleway_bold"
                 android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                tools:text="Jenis - Jenis" />
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 

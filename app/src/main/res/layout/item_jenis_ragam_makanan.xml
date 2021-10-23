@@ -36,7 +36,7 @@
             android:ellipsize="end"
             android:fontFamily="@font/raleway_semibold"
             android:maxLines="2"
-            android:textColor="@color/black"
+            android:textColor="@color/dark_blue"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

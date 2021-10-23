@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".giziseimbang.pesan.PesanGiziSeimbangFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -27,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:fontFamily="@font/raleway_bold"
                 android:text="@string/title_pesan_gizi_seimbang"
                 android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
                 android:textColor="@color/white" />

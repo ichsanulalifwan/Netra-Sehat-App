@@ -40,7 +40,7 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
     private lateinit var sttIntent: Intent
     private lateinit var adapterJenisMakanan: JenisMakananAdapter
     private lateinit var viewModel: JenisRagamMakananViewModel
-    private lateinit var dataJenisMakananPokok: List<JenisJenisMakanan>
+    private lateinit var dataJenisMakanan: List<JenisJenisMakanan>
     private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentAnekaRagamMakananBinding? = null
     private val binding get() = _binding!!
@@ -79,20 +79,33 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
             }
 
             // get type Jenis Ragam Makanan
-            val typeJenisRagamMakanan = args.typeMakanan
-
-            // check JenisRagamMakanan and get List JenisRagamMakanan
-            when (typeJenisRagamMakanan) {
-                1 -> dataJenisMakananPokok = viewModel.getJenisMakananPokok(requireActivity())
-                2 -> dataJenisMakananPokok = viewModel.getJenisLaukPauk(requireActivity())
-                3 -> dataJenisMakananPokok = viewModel.getJenisSayuran(requireActivity())
-                4 -> dataJenisMakananPokok = viewModel.getJenisBuah(requireActivity())
+            // check JenisRagamMakanan and get List JenisRagamMakanan and set title page
+            binding.apply {
+                when (args.typeMakanan) {
+                    1 -> {
+                        dataJenisMakanan = viewModel.getJenisMakananPokok(requireActivity())
+                        toolbarTitle.text = "Jenis-Jenis Makanan Pokok"
+                    }
+                    2 -> {
+                        dataJenisMakanan = viewModel.getJenisLaukPauk(requireActivity())
+                        toolbarTitle.text = "Jenis-Jenis Lauk Pauk"
+                    }
+                    3 -> {
+                        dataJenisMakanan = viewModel.getJenisSayuran(requireActivity())
+                        toolbarTitle.text = "Jenis-Jenis Sayuran"
+                    }
+                    4 -> {
+                        dataJenisMakanan = viewModel.getJenisBuah(requireActivity())
+                        toolbarTitle.text = "Jenis-Jenis Buah"
+                    }
+                }
             }
 
             // Init Adapter and rv
             adapterJenisMakanan = JenisMakananAdapter()
-            adapterJenisMakanan.setData(dataJenisMakananPokok)
+            adapterJenisMakanan.setData(dataJenisMakanan)
             setupRecyclerView()
+
             // Navigate to detail JenisRagamMakanan
             onItemSelected()
 

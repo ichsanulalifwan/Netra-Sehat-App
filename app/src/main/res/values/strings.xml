@@ -1374,7 +1374,7 @@
     <string name="jenis_jenis_sayuran_1">Jenis olahan sayur kelor yaitu sayur bobor daun kelor, sayur bening daun kelor, sayur kelor santan labu kuning, cumi oseng daun kelor, dan sayur santan daun kelor telur puyuh.</string>
     <string name="porsi_jenis_sayuran_1">Satu porsi sayur bayam untuk sekali makan sebanyak 250 gram atau setara dengan 8 sendok sayur (setiap sendok sayur mengandung 30 gram sayur sop).</string>
     <string name="kandungan_jenis_sayuran_1">Sayur kelor mengandung protein sebesar gram, karbohidrat 1,8–2 gram, zat besi 0,8 miligram, magnesium 8,8 miligram, kalium 70 miligram, kalsium 38–40 miligram, vitamin C 11 miligram, dan vitamin A 600 UI.</string>
-    <string name="masalah_jenis_sayuran_1masalah_jenis_sayuran_1">Masalah yang timbul jika mengonsumsi sayur kelor secara berlebihan yaitu menurunkan tekanan darah karena daun kelor mengandung alkaloid, menganggu fungsi liver serta bagi penderita diabetes yang mengonsumsi obat-obatan kimia tidak disarankan untuk mengonsumsi secara bersamaan karena bisa menurunkan kadar gula dibawah batas normal sehingga mengalami hipoglikemia.</string>
+    <string name="masalah_jenis_sayuran_1">Masalah yang timbul jika mengonsumsi sayur kelor secara berlebihan yaitu menurunkan tekanan darah karena daun kelor mengandung alkaloid, menganggu fungsi liver serta bagi penderita diabetes yang mengonsumsi obat-obatan kimia tidak disarankan untuk mengonsumsi secara bersamaan karena bisa menurunkan kadar gula dibawah batas normal sehingga mengalami hipoglikemia.</string>
     <!-- Sayur Asem res-->
     <string name="title_jenis_sayuran_2">Sayur Asem</string>
     <string name="pengertian_jenis_sayuran_2">Sayur asem merupakan sayur khas Indonesia yang melambangkan keragaman karena isi sayurannya yang beraneka ragam seperti kacang panjang, jagung manis, labu, kacang tanah, melinjo, terung, nangka, jagung manis, daun melinjo. Ciri khas sayur kuah ini seperti namanya adalah rasa asem.</string>
@@ -1562,143 +1562,126 @@
     <string name="kandungan_jenis_buah_9">Kandungan jambu air adalah sebagai sumber vitamin C dan A, serat, kalsium, tiamin, niasin, potasium, myricetin, hexahydroxyflavone, fenolik, flavonoid dan zat besi.</string>
     <string name="masalah_jenis_buah_9">Jambu air mengandung senyawa asam hidrosianat yang sifatnya toksik bagi tubuh, sehingga konsumsi buah ini harus diperhatikan dan tidak berlebih. Jambu air juga mengandung komponen metalik mineral. Walaupun jumlahnya sedikit, konsumsi buah ini tetap harus dalam batas normal.</string>
     <!-- Jambu Biji res-->
-    <string name="title_jenis_buah_9">Jambu Biji</string>
-    <string name="pengertian_jenis_buah_9">Jambu biji adalah buah yang berbentuk lonjong dengan kulit hijau muda atau kuning mengandung biji yang bisa dimakan. Terlebih lagi, daun jambu biji digunakan sebagai racikan herbal dan ekstrak daunnya banyak dijadikan suplemen.</string>
-    <string name="manfaat_jenis_buah_9">Manfaat buah jambu biji yaitu dapat membantu menurunkan kadar darah, meningkatkan jantung, dapat membantu meringankan nyeri, menyehatkan sistem pencernaan, dapat membantu menurunkan berat badan, memiliki efek antikanker, dapat meningkatkan sistem kekebalan tubuh dan baik untuk kesehatan kulit.</string>
-    <string name="jenis_jenis_buah_9">Jenis jambu biji yang banyak dikonsumsi masyarakat Indonesia adalah jambu Kristal, Jambu Sukun, Jambu Tanjung Barat Atau Pasar Minggu, Jambu Bangkok, Jambu Getas Merah, Jambu Astralia dan Jambu Tukan</string>
-    <string name="porsi_jenis_buah_9">Satu porsi jambu biji untuk sekali makan sebanyak 250 gram atau setara dengan 1 buah jambu biji ukuran sedang.</string>
-    <string name="kandungan_jenis_buah_9">Satu buah jambu biji terkandung berbagai nutrisi berikut. Kalori: 112 Lemak: 1,6g Sodium: 3,3mg Karbohidrat: 23,6g Serat: 8,9g Gula: 14,7g Protein: 4,2g.</string>
-    <string name="masalah_jenis_buah_9">Masalah yang terjadi ketika memakan jambu biji secara berlebihan yaitu akan menyebabkan diare bagi ibu hamil yang sebaiknya mengkonsumsi jambu tidak melebihi 300 gram sehari, menyebabkan gangguan lambung, merusak gigi, dan dapat meningkatkan kadar gula dalam tubuh tinggi.</string>
+    <string name="title_jenis_buah_10">Jambu Biji</string>
+    <string name="pengertian_jenis_buah_10">Jambu biji adalah buah yang berbentuk lonjong dengan kulit hijau muda atau kuning mengandung biji yang bisa dimakan. Terlebih lagi, daun jambu biji digunakan sebagai racikan herbal dan ekstrak daunnya banyak dijadikan suplemen.</string>
+    <string name="manfaat_jenis_buah_10">Manfaat buah jambu biji yaitu dapat membantu menurunkan kadar darah, meningkatkan jantung, dapat membantu meringankan nyeri, menyehatkan sistem pencernaan, dapat membantu menurunkan berat badan, memiliki efek antikanker, dapat meningkatkan sistem kekebalan tubuh dan baik untuk kesehatan kulit.</string>
+    <string name="jenis_jenis_buah_10">Jenis jambu biji yang banyak dikonsumsi masyarakat Indonesia adalah jambu Kristal, Jambu Sukun, Jambu Tanjung Barat Atau Pasar Minggu, Jambu Bangkok, Jambu Getas Merah, Jambu Astralia dan Jambu Tukan</string>
+    <string name="porsi_jenis_buah_10">Satu porsi jambu biji untuk sekali makan sebanyak 250 gram atau setara dengan 1 buah jambu biji ukuran sedang.</string>
+    <string name="kandungan_jenis_buah_10">Satu buah jambu biji terkandung berbagai nutrisi berikut. Kalori: 112 Lemak: 1,6g Sodium: 3,3mg Karbohidrat: 23,6g Serat: 8,9g Gula: 14,7g Protein: 4,2g.</string>
+    <string name="masalah_jenis_buah_10">Masalah yang terjadi ketika memakan jambu biji secara berlebihan yaitu akan menyebabkan diare bagi ibu hamil yang sebaiknya mengkonsumsi jambu tidak melebihi 300 gram sehari, menyebabkan gangguan lambung, merusak gigi, dan dapat meningkatkan kadar gula dalam tubuh tinggi.</string>
     <!-- Jeruk Bali res-->
-    <string name="title_jenis_buah_9">Jeruk Bali</string>
-    <string name="pengertian_jenis_buah_9">Jeruk bali (Citrus grandis atau Citrus Maxima) merupakan sejenis buah sitrus yang beratnya bisa mencapai 1–2 kg. Daging buahnya berbulir dengan warna merah-oranye dan rasa yang cenderung terasa manis bercampur asam dan sedikit getir.</string>
-    <string name="manfaat_jenis_buah_9">Manfaat jeruk bali meningkatkan sistem kekebalan tubuh, menyehatkan pencernaan, mengurangi risiko batu ginjal, mengurangi resiko kanker, menjaga kesehatan jantung dan menjaga kesehatan otak.</string>
-    <string name="jenis_jenis_buah_9">Jenis jeruk mempunyai adalah Jeruk Bali Honey Pomelo, Jeruk Bali Banpieyu, Shantian Pamelo, Dan Jeruk Bali Madu.</string>
-    <string name="porsi_jenis_buah_9">Satu porsi jeruk bali untuk sekali makan sebanyak 60 gram atau setara dengan 1 juring jeruk bali.</string>
-    <string name="kandungan_jenis_buah_9">Kandunagn jeruk bali yaitu vitamin C. Dalam sepiring jeruk bali (sekitar 100 gram), mengandung 60 mg vitamin C dan 40 kalori.</string>
-    <string name="masalah_jenis_buah_9">Bahaya apabila mengonsumsi jeruk bali bersamaan dengan obat-obatan akan menyebabkan penyakit yang serius dapat memicu sakit ginjal batu ginjal disebabkan oleh kalsium orang yang tinggi jeruk bali terbukti meningkatkan kadar kalsium oksida yang dapat menyebabkan pembentukan batu.</string>
+    <string name="title_jenis_buah_11">Jeruk Bali</string>
+    <string name="pengertian_jenis_buah_11">Jeruk bali (Citrus grandis atau Citrus Maxima) merupakan sejenis buah sitrus yang beratnya bisa mencapai 1–2 kg. Daging buahnya berbulir dengan warna merah-oranye dan rasa yang cenderung terasa manis bercampur asam dan sedikit getir.</string>
+    <string name="manfaat_jenis_buah_11">Manfaat jeruk bali meningkatkan sistem kekebalan tubuh, menyehatkan pencernaan, mengurangi risiko batu ginjal, mengurangi resiko kanker, menjaga kesehatan jantung dan menjaga kesehatan otak.</string>
+    <string name="jenis_jenis_buah_11">Jenis jeruk mempunyai adalah Jeruk Bali Honey Pomelo, Jeruk Bali Banpieyu, Shantian Pamelo, Dan Jeruk Bali Madu.</string>
+    <string name="porsi_jenis_buah_11">Satu porsi jeruk bali untuk sekali makan sebanyak 60 gram atau setara dengan 1 juring jeruk bali.</string>
+    <string name="kandungan_jenis_buah_11">Kandunagn jeruk bali yaitu vitamin C. Dalam sepiring jeruk bali (sekitar 100 gram), mengandung 60 mg vitamin C dan 40 kalori.</string>
+    <string name="masalah_jenis_buah_11">Bahaya apabila mengonsumsi jeruk bali bersamaan dengan obat-obatan akan menyebabkan penyakit yang serius dapat memicu sakit ginjal batu ginjal disebabkan oleh kalsium orang yang tinggi jeruk bali terbukti meningkatkan kadar kalsium oksida yang dapat menyebabkan pembentukan batu.</string>
     <!-- Jeruk Mandarin res-->
-    <string name="title_jenis_buah_9">Jeruk Mandarin</string>
-    <string name="pengertian_jenis_buah_9">Jeruk mandarin adalah buah yang masuk dalam genus citrus. Kulit jeruk mandarin berwarna oranye tua, kasar dan melindungi bagian yang manis dan berair di dalamnya. Buah ini tumbuh di pohon jeruk berbunga kecil sampai sedang. Ketika matang buahnya berubah dari hijau tua ke warna oranye tua.</string>
-    <string name="manfaat_jenis_buah_9">Manfaat dari jeruk mandarin yaitu menurunkan panas mencegah kolesterol, mencegah penyakit TBC, mengatasi penyakit hipertensi, memperlancar pencernaan, meningkatkan stamina tubuh, mengasah motoric dan mengurangi resiko kanker hati.</string>
-    <string name="jenis_jenis_buah_9">Jenis Jeruk Mandarin adalah Ponkan, Lukan, Swatow, Kinno, Mikan, Clementine, Mandelo, Dekopon, Honey Murcott, Tangerine dan Sour Orange</string>
-    <string name="porsi_jenis_buah_9">Satu porsi jeruk mandarin untuk sekali makan sebanyak 100 gram atau setara dengan 1 buah jeruk mandarin ukuran sedang.</string>
-    <string name="kandungan_jenis_buah_9">Satu buah jeruk mandarin berukuran sedang (88 gram) mengandung 47 kalori, 12 gram karbohidrat, 0,7 gram protein, 0,3 gram lemak, dan 2 gram serat.Buah oranye terang ini pun mengandung berbagai vitamin dan mineral yang penting untuk tubuh. Contohnya, vitamin C, vitamin A, vitamin B, kalium, kalsium, mangan, serta magnesium.</string>
-    <string name="masalah_jenis_buah_9">Jeruk mandarin kaya akan vitamin, terutama vitamin C. Namun, konsumsi jeruk mandarin berlebihan akan membuat tubuh kelebihan vitamin C yang akan berdampak pada memberatkan kerja ginjal sehingga meningkatkan risiko penyakit ginjal seperti batu ginjal dan gagal ginjal.</string>
+    <string name="title_jenis_buah_12">Jeruk Mandarin</string>
+    <string name="pengertian_jenis_buah_12">Jeruk mandarin adalah buah yang masuk dalam genus citrus. Kulit jeruk mandarin berwarna oranye tua, kasar dan melindungi bagian yang manis dan berair di dalamnya. Buah ini tumbuh di pohon jeruk berbunga kecil sampai sedang. Ketika matang buahnya berubah dari hijau tua ke warna oranye tua.</string>
+    <string name="manfaat_jenis_buah_12">Manfaat dari jeruk mandarin yaitu menurunkan panas mencegah kolesterol, mencegah penyakit TBC, mengatasi penyakit hipertensi, memperlancar pencernaan, meningkatkan stamina tubuh, mengasah motoric dan mengurangi resiko kanker hati.</string>
+    <string name="jenis_jenis_buah_12">Jenis Jeruk Mandarin adalah Ponkan, Lukan, Swatow, Kinno, Mikan, Clementine, Mandelo, Dekopon, Honey Murcott, Tangerine dan Sour Orange</string>
+    <string name="porsi_jenis_buah_12">Satu porsi jeruk mandarin untuk sekali makan sebanyak 100 gram atau setara dengan 1 buah jeruk mandarin ukuran sedang.</string>
+    <string name="kandungan_jenis_buah_12">Satu buah jeruk mandarin berukuran sedang (88 gram) mengandung 47 kalori, 12 gram karbohidrat, 0,7 gram protein, 0,3 gram lemak, dan 2 gram serat.Buah oranye terang ini pun mengandung berbagai vitamin dan mineral yang penting untuk tubuh. Contohnya, vitamin C, vitamin A, vitamin B, kalium, kalsium, mangan, serta magnesium.</string>
+    <string name="masalah_jenis_buah_12">Jeruk mandarin kaya akan vitamin, terutama vitamin C. Namun, konsumsi jeruk mandarin berlebihan akan membuat tubuh kelebihan vitamin C yang akan berdampak pada memberatkan kerja ginjal sehingga meningkatkan risiko penyakit ginjal seperti batu ginjal dan gagal ginjal.</string>
     <!-- Kedondong res-->
-    <string name="title_jenis_buah_9">Kedondong</string>
-    <string name="pengertian_jenis_buah_9">Kedondong (ambarella) adalah buah yang memiliki bentuk oval dengan diameter kurang lebih 5 cm. Buah kedondong memiliki daging berserat yang renyah dan terdapat biji tunggal yang berserabut. Buah ini memiliki rasa manis asam, seperti perpaduan nanas dan mangga. Saat matang, warna buah akan berubah menjadi kuning keemasan.</string>
-    <string name="manfaat_jenis_buah_9">Manfaat buah kedongdong yaitu menjaga kesehatan kulit, membantu mengobati batuk, meningkatkan sistem kekebalan tubuh, membantu mengatasi masalah pencernaan, meningkatkan kemampuan penglihatan, membantu menurunkan berat badan, memberi energi, mengurangi risiko penyakit kardiovaskular mengurangi risiko diabetes, dan mengurangi risiko hipertensi.</string>
-    <string name="jenis_jenis_buah_9">Jenis kedodong adalah Kedondong Karimun Jawa, Kedondong Bangkok, dan Kedondong Kendeng.</string>
-    <string name="porsi_jenis_buah_9">Satu porsi kedondong untuk sekali makan sebanyak 50 gram atau setara dengan 1 buah kedondong ukuran sedang.</string>
-    <string name="kandungan_jenis_buah_9">Kandungan dalam satu buah kedongdong yang rata beratnya 100 g terkandung sekitar 40 kalori dan beragam nutrisi yaitu 1 g protein dan serat, 12 g karbohidrat, 0,1 g lemak, 230 IU vitamin A, 30 mg vitamin C, 2,8 mg zat besi, 15 mg kalsium, 65 mg fosfor.</string>
-    <string name="masalah_jenis_buah_9">Mengkonsumsi kedondong dalam jumlah yang banyak memiliki dampak seperti menyebabkan rasa mual dan muntah karena kedondong memiliki rasa asam yang tinggi. Apabila asam lambung naik hingga ke kerongkongan, maka dapat menyebabkan rasa perih dan panas di dada. Ketika kadar vitamin c pada buah ini maka berbentuk oksalat yang dapat mengikat mineral dapat menyebabkan timbulnya batu ginjal.</string>
+    <string name="title_jenis_buah_13">Kedondong</string>
+    <string name="pengertian_jenis_buah_13">Kedondong (ambarella) adalah buah yang memiliki bentuk oval dengan diameter kurang lebih 5 cm. Buah kedondong memiliki daging berserat yang renyah dan terdapat biji tunggal yang berserabut. Buah ini memiliki rasa manis asam, seperti perpaduan nanas dan mangga. Saat matang, warna buah akan berubah menjadi kuning keemasan.</string>
+    <string name="manfaat_jenis_buah_13">Manfaat buah kedongdong yaitu menjaga kesehatan kulit, membantu mengobati batuk, meningkatkan sistem kekebalan tubuh, membantu mengatasi masalah pencernaan, meningkatkan kemampuan penglihatan, membantu menurunkan berat badan, memberi energi, mengurangi risiko penyakit kardiovaskular mengurangi risiko diabetes, dan mengurangi risiko hipertensi.</string>
+    <string name="jenis_jenis_buah_13">Jenis kedodong adalah Kedondong Karimun Jawa, Kedondong Bangkok, dan Kedondong Kendeng.</string>
+    <string name="porsi_jenis_buah_13">Satu porsi kedondong untuk sekali makan sebanyak 50 gram atau setara dengan 1 buah kedondong ukuran sedang.</string>
+    <string name="kandungan_jenis_buah_13">Kandungan dalam satu buah kedongdong yang rata beratnya 100 g terkandung sekitar 40 kalori dan beragam nutrisi yaitu 1 g protein dan serat, 12 g karbohidrat, 0,1 g lemak, 230 IU vitamin A, 30 mg vitamin C, 2,8 mg zat besi, 15 mg kalsium, 65 mg fosfor.</string>
+    <string name="masalah_jenis_buah_13">Mengkonsumsi kedondong dalam jumlah yang banyak memiliki dampak seperti menyebabkan rasa mual dan muntah karena kedondong memiliki rasa asam yang tinggi. Apabila asam lambung naik hingga ke kerongkongan, maka dapat menyebabkan rasa perih dan panas di dada. Ketika kadar vitamin c pada buah ini maka berbentuk oksalat yang dapat mengikat mineral dapat menyebabkan timbulnya batu ginjal.</string>
     <!-- Mangga res-->
-    <string name="title_jenis_buah_9">Mangga</string>
-    <string name="pengertian_jenis_buah_9">Mangga adalah buah yang rasanya manis dan kecut sehingga kita seyogyanya pandai memilih atau memetik manga yang masak. Manga juga bisa dibuat rujak ketika masih mengkal dan menjadi penambah rasa asam pada ikan bakar.</string>
-    <string name="manfaat_jenis_buah_9">Manfaat mangga yaitu dapat membantu dalam penambahan berat badan, pergerakan usus yang sehat dan teratur dan membantu menjaga kesehatan usus besar.</string>
-    <string name="jenis_jenis_buah_9">Jenis manga yaitu Mangga gedong gincu, Mangga arumanis, Mangga manalagi, Mangga apel, Mangga alpukat, Mangga golek, Mangga Malibu, Mangga madu, Mangga nam dok mai, Mangga kweni/ pakel, dan Mangga Indramayu / cengkir.</string>
-    <string name="porsi_jenis_buah_9">Satu porsi mangga untuk sekali makan sebanyak 60 gram atau setara dengan 1 iris buah manga.</string>
-    <string name="kandungan_jenis_buah_9">Kandungan nutrisi mangga yaitu mengandung sekitar 20 vitamin dan mineral yang berbeda, mengandung mineral seperti, besi, tembaga, kalium dan beberapa mineral, seperti selenium, mangan, fosfor, seng dan kalsium. Buah ini juga juga mengandung karbohidrat tinggi. Kaya akan vitamin A, vitamin C dan vitamin B. Walaupun tidak banyak mangga juga mengandung vitamin E dan vitamin K. Memiliki beberapa senyawa lain seperti, lutein, asam galat, asam anakardat dan kriptozantin.</string>
-    <string name="masalah_jenis_buah_9">Banyak mengonsumsi mangga bisa menimbulkan efek samping bagi kesehatan. seperti, iritasi, kenaikan berat badan, meningkatkan gula darah, berpotensi karsinogenik, menyebabkan masalah gastrointestinal, terjadi infeksi salmonella, tidak baik bagi orang dengan Arthritis, dan menimbulkan reaksi alergi.</string>
+    <string name="title_jenis_buah_14">Mangga</string>
+    <string name="pengertian_jenis_buah_14">Mangga adalah buah yang rasanya manis dan kecut sehingga kita seyogyanya pandai memilih atau memetik manga yang masak. Manga juga bisa dibuat rujak ketika masih mengkal dan menjadi penambah rasa asam pada ikan bakar.</string>
+    <string name="manfaat_jenis_buah_14">Manfaat mangga yaitu dapat membantu dalam penambahan berat badan, pergerakan usus yang sehat dan teratur dan membantu menjaga kesehatan usus besar.</string>
+    <string name="jenis_jenis_buah_14">Jenis manga yaitu Mangga gedong gincu, Mangga arumanis, Mangga manalagi, Mangga apel, Mangga alpukat, Mangga golek, Mangga Malibu, Mangga madu, Mangga nam dok mai, Mangga kweni/ pakel, dan Mangga Indramayu / cengkir.</string>
+    <string name="porsi_jenis_buah_14">Satu porsi mangga untuk sekali makan sebanyak 60 gram atau setara dengan 1 iris buah manga.</string>
+    <string name="kandungan_jenis_buah_14">Kandungan nutrisi mangga yaitu mengandung sekitar 20 vitamin dan mineral yang berbeda, mengandung mineral seperti, besi, tembaga, kalium dan beberapa mineral, seperti selenium, mangan, fosfor, seng dan kalsium. Buah ini juga juga mengandung karbohidrat tinggi. Kaya akan vitamin A, vitamin C dan vitamin B. Walaupun tidak banyak mangga juga mengandung vitamin E dan vitamin K. Memiliki beberapa senyawa lain seperti, lutein, asam galat, asam anakardat dan kriptozantin.</string>
+    <string name="masalah_jenis_buah_14">Banyak mengonsumsi mangga bisa menimbulkan efek samping bagi kesehatan. seperti, iritasi, kenaikan berat badan, meningkatkan gula darah, berpotensi karsinogenik, menyebabkan masalah gastrointestinal, terjadi infeksi salmonella, tidak baik bagi orang dengan Arthritis, dan menimbulkan reaksi alergi.</string>
     <!-- Buah Naga res-->
-    <string name="title_jenis_buah_9">Buah Naga</string>
-    <string name="pengertian_jenis_buah_9">Buah naga atau pitaya adalah buah yang hanya tumbuh di daerah tropis dan subtropis, seperti Amerika Selatan dan Asia. Bentuk tanamannya pun unik karena memiliki batang yang menyerupai kaktus besar.</string>
-    <string name="manfaat_jenis_buah_9">Manfaat buah naga untuk kesehatan, mulai dari melawan penyakit kronis hingga, kaya akan serat, meningkatkan kesehatan usus, memperkuat sistem kekebalan tubuh, dan meningkatkan kadar zat besi.</string>
-    <string name="jenis_jenis_buah_9">Jenis buah naga adalah Buah Naga Merah, Buah Naga Varintorn, Buah Naga Putih, Buah Naga Helgaka, Buah Naga Hitam., Buah Naga, dan Buah Naga Kuning.</string>
-    <string name="porsi_jenis_buah_9">Satu porsi naga untuk sekali makan sebanyak 80 gram atau setara dengan 1 potong sedang buah naga.</string>
-    <string name="kandungan_jenis_buah_9">Buah naga termasuk jenis buah yang rendah kalori. Dalam seporsi buah naga (sekitar 100 gram) hanya terdapat sekitar 60 kalori. Buah ini juga sama sekali tidak mengandung lemak.</string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
-    <!-- Jambu res-->
-    <string name="title_jenis_buah_9">Jambu</string>
-    <string name="pengertian_jenis_buah_9"></string>
-    <string name="manfaat_jenis_buah_9"></string>
-    <string name="jenis_jenis_buah_9"></string>
-    <string name="porsi_jenis_buah_9"></string>
-    <string name="kandungan_jenis_buah_9"></string>
-    <string name="masalah_jenis_buah_9"></string>
+    <string name="title_jenis_buah_15">Buah Naga</string>
+    <string name="pengertian_jenis_buah_15">Buah naga atau pitaya adalah buah yang hanya tumbuh di daerah tropis dan subtropis, seperti Amerika Selatan dan Asia. Bentuk tanamannya pun unik karena memiliki batang yang menyerupai kaktus besar.</string>
+    <string name="manfaat_jenis_buah_15">Manfaat buah naga untuk kesehatan, mulai dari melawan penyakit kronis hingga, kaya akan serat, meningkatkan kesehatan usus, memperkuat sistem kekebalan tubuh, dan meningkatkan kadar zat besi.</string>
+    <string name="jenis_jenis_buah_15">Jenis buah naga adalah Buah Naga Merah, Buah Naga Varintorn, Buah Naga Putih, Buah Naga Helgaka, Buah Naga Hitam., Buah Naga, dan Buah Naga Kuning.</string>
+    <string name="porsi_jenis_buah_15">Satu porsi naga untuk sekali makan sebanyak 80 gram atau setara dengan 1 potong sedang buah naga.</string>
+    <string name="kandungan_jenis_buah_15">Buah naga termasuk jenis buah yang rendah kalori. Dalam seporsi buah naga (sekitar 100 gram) hanya terdapat sekitar 60 kalori. Buah ini juga sama sekali tidak mengandung lemak.</string>
+    <string name="masalah_jenis_buah_15">Bahaya buah naga apabila dikonsumsi secara berlebihan yaitu tidak bisa terserap dengan baik saat melewati usus sehingga terjadi gangguan pencernaan dengan gejala sakit perut, hingga penyumbatan usus</string>
+    <!-- Nanas res-->
+    <string name="title_jenis_buah_16">Nanas</string>
+    <string name="pengertian_jenis_buah_16">Buah nanas merupakan buah yang rasanya manis dengan daging buah yang lunak. Memiliki banyak bulu halus disekitar kulitnya. Buah ini bisa dikonsumsi secara langsung dengan tambahan garam agar tidak gatal maupun dijadikan rujak bersama dengan buah lainnya.</string>
+    <string name="manfaat_jenis_buah_16">Manfaat buah nanas yaitu mencegah penyakit, sebagai antioksidan, melancarkan pencernaan, mengurangi risiko kanker, meningkatkan sistem imun, dan mempercepat pemulihan setelah operasi.</string>
+    <string name="jenis_jenis_buah_16">Terdapat 4 jenis golongan nanas, yaitu, Cayene (daun halus, tidak berduri, buah besar), Queen (daun pendek berduri tajam, buah lonjong mirip kerucut), Spanyol/Spanish (daun panjang kecil, berduri halus sampai kasar, buah bulat dengan mata datar) dan Abacaxi (daun panjang berduri kasar, buah silindris atau seperti piramida).</string>
+    <string name="porsi_jenis_buah_16">Satu porsi nanas untuk sekali makan sebanyak 100 gram atau setara dengan 1 potong sedang buah nanas.</string>
+    <string name="kandungan_jenis_buah_16">Buah nanas mengandung vitamin C tinggi dan mineral mangan. Nanas juga diperkaya oleh vitamin B1. Satu cup potongan nanas (atau sekitar 165 gram) hanya memiliki 50 kalori, nanas termasuk buah yang rendah lemak (0,12 gram), bebas kolesterol, serta kandungan natrium-nya pun kecil (sekitar 1 miligram). Meski begitu, dalam jumlah yang sama, nanas mengandung gula sebanyak 9,85 gram.</string>
+    <string name="masalah_jenis_buah_16">Nanas mengandung enzim bernama bromelain. Enzim ini diketahui dapat menyebabkan mual, diare, dan gangguan pencernaan, khususnya jika dikonsumsi secara berlebihan.</string>
+    <!-- Nangka res-->
+    <string name="title_jenis_buah_17">Nangka</string>
+    <string name="pengertian_jenis_buah_17">Buah nangka (Artocarpus heterophyllus) merupakan salah satu jenis buah yang mudah ditemukan di Indonesia. Tekstur kulit buah nangka sedikit berduri dan warnanya hijau kekuningan, sedangkan dagingnya berwarna kuning dan memiliki aroma yang khas.</string>
+    <string name="manfaat_jenis_buah_17">Manfaat buah nangka adaah melawan kanker, mengurangi risiko penyakit kardiovaskular, memperbaiki sistem pencernaan, mempercepat proses pemulihan luka, menjaga fungsi penglihatan tetap baik, dan mengontrol diabetes</string>
+    <string name="jenis_jenis_buah_17">Jenis buah nangka adalah nangka Madu, Nangka Mini, Nangka Cempedak, Nangka Nangkadak, Nangka Sri Bajong, Nangka Merah, Nangka Celeng Atau Nangka Bilulang, dan Nangka Dulang.</string>
+    <string name="porsi_jenis_buah_17">Dalam seporsi buah nangka (sekitar 100 – 150 gram), terdapat sekitar 100 – 160 kalor. Satu porsi nangka untuk sekali makan sebanyak 30 gram atau setara dengan 1 buah namgka ukuran sedang.</string>
+    <string name="kandungan_jenis_buah_17">Kandungan buah nangka adalah vitamin A, C, tiamin, kalium, kalsium, riboflavin, zat besi, niasin, dan seng. Kandungan nutrisi buah nangka dalam satu cup (165 gram) diketahui memiliki 155 kalori, 39,6 gram karbohidrat, 2,4 gram protein, 0,5 gram lemak, 2,6 gram serat.</string>
+    <string name="masalah_jenis_buah_17">Bagi orang yang alergi lateks atau serbuk sari, sebaiknya hindari mengonsumsi nangka. Nangka juga mengandung potasium tinggi, yang bisa berbahaya bagi penderita penyakit ginjal kronis (PGK) atau gagal ginjal akut. Orang dengan kondisi ini dapat mengalami hiperkalemia jika mengonsumsi banyak kalium.</string>
+    <!-- Pear res-->
+    <string name="title_jenis_buah_18">Pear</string>
+    <string name="pengertian_jenis_buah_18">Pir adalah buah berbentuk bel dengan perpaduan rasa manis dan masam. Buah ini sejak dulu dianggap sebagai salah satu asupan makanan dengan gizi yang seimbang, sebab kandungan gizinya sangat melimpah dan beragam.</string>
+    <string name="manfaat_jenis_buah_18">Pir adalah buah berbentuk bel dengan perpaduan rasa manis dan masam. Buah ini sejak dulu dianggap sebagai salah satu asupan makanan dengan gizi yang seimbang, sebab kandungan gizinya sangat melimpah dan beragam.</string>
+    <string name="jenis_jenis_buah_18">Jenis buah pir yaitu pir red blush, Pir Packham, Pir Forelle, Pir Williams, Pir Seckel, Pir Bosc, dan Pir Anjou.</string>
+    <string name="porsi_jenis_buah_18">Satu porsi pear untuk sekali makan sebanyak 120 gram atau setara dengan 1 buah pear ukuran sedang.</string>
+    <string name="kandungan_jenis_buah_18">Buah pir mempunyai kandungan nutrisi yang meliputi protein, karbohidrat, serat, vitamin A, vitamin C, vitamin E dan vitamin K. Semua kandungan dalam buah pir tentu memberikan manfaat bagi kesehatan tubuh.</string>
+    <string name="masalah_jenis_buah_18">Bahaya makan buah pir terlalu banyak dikonsumsi antaranya kelebihan vitamin C, kelebihan vitamin A, kelebihan zat besi, kelebihan kalium, hingga kegemukan karena penumpukan kalori. Kelebihan zat-zat ini tentunya dapat mengganggu kesehatan.</string>
+    <!-- Rambutan res-->
+    <string name="title_jenis_buah_19">Rambutan</string>
+    <string name="pengertian_jenis_buah_19">Rambutan adalah buah yang mempunyai ciri khas rambut pada kulitnya dengan rasa segar dan nikmat ketika dimakan. Isi buahnya berbetuk bulat kenyal dan berair.</string>
+    <string name="manfaat_jenis_buah_19">Kandungan nutrisi pada buah rambutan memberikan manfaat seperti melancarkan pencernaan, membantu menurunkan berat badan, meningkatkan daya tahan tubuh, menurunkan risiko diabetes dan membantu mengontrol tekanan darah.</string>
+    <string name="jenis_jenis_buah_19">Jenis-jenis rambutan adalah Rambutan Rapiah, Rambutan Binjai, Rambutan Aceh, Rambutan Lebak Bulus, dan Rambutan Sibongkok.</string>
+    <string name="porsi_jenis_buah_19">Satu porsi rambutan untuk sekali makan sebanyak 50 gram atau setara dengan lima buah rambutan.</string>
+    <string name="kandungan_jenis_buah_19">Dalam setiap 100 gr buah rambutan terdapat sekitar 69 kalori, 58 mg vitamin C dan 18,1 gr karbohidrat. Buah rambutan termasuk salah satu jenis buah yang tinggi akan kandungan serat yaitu 2 gr dalam setiap 100 gr buahnya sehingga buah ini mudah untuk dicerna dan cocok untuk membantu program diet.</string>
+    <string name="masalah_jenis_buah_19">Masalah yang timbul akibat terlalu sering mengonsumsi rambuan adalah kulit rambutan mungkin memiliki sifat beracun, terutama ketika dimakan secara teratur dan dalam jumlah besar. Biji pada buah rambutan ternyata memiliki efek narkotik dan analgesik, sehingga bisa menimbulkan gejala berupa mengantuk, koma, hingga kematian. Gejala tersebut memang baru dijumpai pada hewan. Namun, tidak ada salahnya menghindari konsumsi biji dan kulit rambutan guna menghindari risiko tersebut.</string>
+    <!-- Salak res-->
+    <string name="title_jenis_buah_20">Salak</string>
+    <string name="pengertian_jenis_buah_20">Salak adalah buah yang memiliki kulit berwarna coklat dan bersisik kasar, sehingga dikenal juga dengan nama snake fruit.</string>
+    <string name="manfaat_jenis_buah_20">Manfaat salak menunjang kesehatan mata menjaga daya tahan tubuh tetap baik menambah stamina menjaga kesehatan jantung menghindari tubuh dari penyakit kronis menjaga kesehatan mengontrol gula darah pankreas meningkatkan memori membantu menurunkan berat badan dan menyehatkan pencernaan.</string>
+    <string name="jenis_jenis_buah_20">Jenis buah salak adalah Salak madu Salak Gading, Salak Pondoh dan Salak gula Pasir.</string>
+    <string name="porsi_jenis_buah_20">Satu porsi salak untuk sekali makan sebanyak 40 gram atau setara satu buah salak ukuran sedang.</string>
+    <string name="kandungan_jenis_buah_20">Salak mengandung kalsium, fosfor, kalium, vitamin A, vitamin B, vitamin C, karbohidrat, protein, zat besi, dan juga serat. Kandungan tersebut tentu saja sangat dibutuhkan bagi tubuh.</string>
+    <string name="masalah_jenis_buah_20">Kandugan buah salak ternyata bisa membuat perut luka saat terlalu banyak mengonsumsinya. Seseorang yang menderita penyakit maag pun tidak baik atau tidak dianjurkan untuk mengkonsumsi buah ini.</string>
+    <!-- Sawo res-->
+    <string name="title_jenis_buah_21">Sawo</string>
+    <string name="pengertian_jenis_buah_21">Sawo adalah buah hidangan pencuci mulut karena teksturnya yang lembut serta rasa dan aromanya yang manis. Dalam mengonsumsi sawo bisa dengan cara dimakan langsung atau dengan menjadikannya jus maupun selai.</string>
+    <string name="manfaat_jenis_buah_21">Manfaat buah sawo yaitu melancarkan pencernaan, membantu menurunkan berat badan, menangkal radikal bebas, redakan demam dan radang, meningkatkan sistem kekebalan tubuh.</string>
+    <string name="jenis_jenis_buah_21">Jenis buah sawo yang biasanya dimakan masayarakat Indonesia adalah Sawo Mentega, Sawo Kecik, Sawo Duren, Sawo Mentimun, Sawo Putih, Sawo Manila, Sawo Hitam, Sawo Hijau dan Sawo Mamey Sapote.</string>
+    <string name="porsi_jenis_buah_21">Satu porsi sawo untuk sekali makan sebanyak 70 gram atau setara satu buah sawo ukuran sedang.</string>
+    <string name="kandungan_jenis_buah_21">Dalam 1 buah sawo terkandung kurang lebih 140 kalori. Selain itu, ada berbagai nutrisi lainnya yang juga bermanfaat bagi tubuh, yaitu mengandung karbohidrat, serat, lemak, Mineral, seperti kalsium, potasium, magnesium, dan zat besi, Vitamin, termasuk vitamin C, vitamin A, dan vitamin B6. Buah sawo juga mengandung antioksidan, di antaranya adalah polifenol dan karotenoid.</string>
+    <string name="masalah_jenis_buah_21">Mengonsumsi terlalu banyak sawo dapat menyebabkan peningkatan berat badan, gangguan pencernaan dan sakit perut, konsumsi sawo mentah bahkan dapat menyebabkan tukak lambung, masalah pernapasan, dan iritasi tenggorokan.</string>
+    <!-- Semangka res-->
+    <string name="title_jenis_buah_22">Semangka</string>
+    <string name="pengertian_jenis_buah_22">Semangka (Citrullus Lanatus) adalah buah yang berasal dari Afrika Selatan dan kini sudah bisa dijumpai di seluruh dunia. Buah dengan kulit berwarna hijau ini memiliki bagian dalam yang berwarna merah atau merah jambu dengan biji yang banyak.</string>
+    <string name="manfaat_jenis_buah_22">Manfaat dari buah semangka yaitu menjaga kesehatan jantung, memenuhi kebutuhan cairan tubuh, meningkatkan kesehatan rambut dan kulit, mencegah pembentukan batu ginjal, membantu mengendalikan gula darah, dan mengatasi nyeri otot. Buah semangka kuning dapat digunakan untuk menurunkan tekanan darah pada penderita hipertensi.</string>
+    <string name="jenis_jenis_buah_22">Jenis semangka yang populer yaitu Semangka tanpa biji, Semangka hibrida, Semangka piknik, Semangka kulkas atau ice box dan Semangka daging kuning.</string>
+    <string name="porsi_jenis_buah_22">Satu porsi semangka untuk sekali makan sebanyak 100 gram atau setara sepotong buah semangka.</string>
+    <string name="kandungan_jenis_buah_22">Kandungan semangka yaitu Vitamin C sebanyak 21% dari kebutuhan tubuh, Vitamin A sebanyak 18% dari kebutuhan tubuh, Kalium sebanyak 5% dari kebutuhan tubuh, Magnesium sebanyak 4% dari kebutuhan tubuh, Vitamin B1, B5 dan B6 sebanyak 3% dari kebutuhan tubuh. Selain itu, buah semangka juga tinggi antioksidan penting seperti beta-karoten dan likopen.</string>
+    <string name="masalah_jenis_buah_22">Konsumsi semangka terlalu banyak tentu dapat berdampak buruk terhadap kesehatan akibat asupan likopen dan kalium yang berlebihan, seperti mual, diare, perut kembung, masalah pencernaan, dan hiperkalemia.</string>
+    <!-- Stroberi res-->
+    <string name="title_jenis_buah_23">Stroberi</string>
+    <string name="pengertian_jenis_buah_23">Strawberry adalah buah yang sangat kaya akan antioksidan dan senyawa tumbuhan, yang diketahui memiliki manfaat untuk kesehatan jantung dan pengendalian gula darah. Buah ini juga dapat membantu meningkatkan fungsi otak dan meningkatkan kesehatan mata dan kulit, radang sendi, dan asam urat.</string>
+    <string name="manfaat_jenis_buah_23">Strawberry memiliki manfaat untuk kesehatan jantung dan pengendalian gula darah. Buah ini juga dapat membantu meningkatkan fungsi otak dan meningkatkan kesehatan mata dan kulit, mencegah radang sendi, asam urat, dan mencegah kanker</string>
+    <string name="jenis_jenis_buah_23">Berdasarkan varietasnya, maka strawberry dapat dibedakan menjadi beberapa jenis yaitu Jewel Strawberries, White Jewel, Sweet Charlie, Nyoho, Chandler, Ozark Beauty, Oso Grande, Dan Sparkle.</string>
+    <string name="porsi_jenis_buah_23">Satu porsi stroberi untuk sekali makan sebanyak 100 gram atau setara 6 buah stroberi</string>
+    <string name="kandungan_jenis_buah_23">Buah strowberi memiliki banyak kandungan gizi yaitu, vitamin C, karbohidrat, protein, polifenol, folat, mangan, air, serat, dan kalium. Buah stroberi juga hanya sedikit mengandung kalori dan lemak, serta memiliki indeks glikemik yang rendah.</string>
+    <string name="masalah_jenis_buah_23">Bila makan stroberi setengah matang atau masih mentah, maka bisa mengalami masalah sensasi terbakar di mulut, membahayakan tubuh, karena menghambat penyerapan nutrisi, membahayakan kesehatan pencernaan. Memakan straoberi dalam jumlah banyak juga dapat menyebabkan alergi karena stroberi mengandung histamin dalam jumlah banyak. Selain itu juga ada unsur-unsur yang dapat menyebabkan pusing, mual dan gatal.</string>
 
-
+    <!-- Jambu res-->
+    <string name="title_jenis_">Jambu</string>
+    <string name="pengertian_jenis_">Jambu</string>
+    <string name="manfaat_jenis">Jambu</string>
+    <string name="jenis_jenis_">Jambu</string>
+    <string name="porsi_jenis_">Jambu</string>
+    <string name="kandungan_jenis_">Jambu</string>
+    <string name="masalah_jenis_">Jambu</string>
 
     <!-- Perilaku Hidup Bersih dan Sehat (PHBS) res-->
     <string name="title_phbs_1">Perawatan Diri Pada Kulit</string>

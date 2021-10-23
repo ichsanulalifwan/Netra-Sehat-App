@@ -684,4 +684,310 @@ object DataContainer {
 
         return data
     }
+
+    fun generateJenisBuah(context: Context): List<JenisJenisMakanan> {
+
+        val data = ArrayList<JenisJenisMakanan>()
+
+        data.add(
+            JenisJenisMakanan(
+                1,
+                context.getString(R.string.title_jenis_buah_1),
+                context.getString(R.string.pengertian_jenis_buah_1),
+                context.getString(R.string.manfaat_jenis_buah_1),
+                context.getString(R.string.jenis_jenis_buah_1),
+                context.getString(R.string.porsi_jenis_buah_1),
+                context.getString(R.string.kandungan_jenis_buah_1),
+                context.getString(R.string.masalah_jenis_buah_1)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                2,
+                context.getString(R.string.title_jenis_buah_2),
+                context.getString(R.string.pengertian_jenis_buah_2),
+                context.getString(R.string.manfaat_jenis_buah_2),
+                context.getString(R.string.jenis_jenis_buah_2),
+                context.getString(R.string.porsi_jenis_buah_2),
+                context.getString(R.string.kandungan_jenis_buah_2),
+                context.getString(R.string.masalah_jenis_buah_2)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                3,
+                context.getString(R.string.title_jenis_buah_3),
+                context.getString(R.string.pengertian_jenis_buah_3),
+                context.getString(R.string.manfaat_jenis_buah_3),
+                context.getString(R.string.jenis_jenis_buah_3),
+                context.getString(R.string.porsi_jenis_buah_3),
+                context.getString(R.string.kandungan_jenis_buah_3),
+                context.getString(R.string.masalah_jenis_buah_3)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                4,
+                context.getString(R.string.title_jenis_buah_4),
+                context.getString(R.string.pengertian_jenis_buah_4),
+                context.getString(R.string.manfaat_jenis_buah_4),
+                context.getString(R.string.jenis_jenis_buah_4),
+                context.getString(R.string.porsi_jenis_buah_4),
+                context.getString(R.string.kandungan_jenis_buah_4),
+                context.getString(R.string.masalah_jenis_buah_4)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                5,
+                context.getString(R.string.title_jenis_buah_5),
+                context.getString(R.string.pengertian_jenis_buah_5),
+                context.getString(R.string.manfaat_jenis_buah_5),
+                context.getString(R.string.jenis_jenis_buah_5),
+                context.getString(R.string.porsi_jenis_buah_5),
+                context.getString(R.string.kandungan_jenis_buah_5),
+                context.getString(R.string.masalah_jenis_buah_5)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                6,
+                context.getString(R.string.title_jenis_buah_6),
+                context.getString(R.string.pengertian_jenis_buah_6),
+                context.getString(R.string.manfaat_jenis_buah_6),
+                context.getString(R.string.jenis_jenis_buah_6),
+                context.getString(R.string.porsi_jenis_buah_6),
+                context.getString(R.string.kandungan_jenis_buah_6),
+                context.getString(R.string.masalah_jenis_buah_6)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                7,
+                context.getString(R.string.title_jenis_buah_7),
+                context.getString(R.string.pengertian_jenis_buah_7),
+                context.getString(R.string.manfaat_jenis_buah_7),
+                context.getString(R.string.jenis_jenis_buah_7),
+                context.getString(R.string.porsi_jenis_buah_7),
+                context.getString(R.string.kandungan_jenis_buah_7),
+                context.getString(R.string.masalah_jenis_buah_7)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                8,
+                context.getString(R.string.title_jenis_buah_8),
+                context.getString(R.string.pengertian_jenis_buah_8),
+                context.getString(R.string.manfaat_jenis_buah_8),
+                context.getString(R.string.jenis_jenis_buah_8),
+                context.getString(R.string.porsi_jenis_buah_8),
+                context.getString(R.string.kandungan_jenis_buah_8),
+                context.getString(R.string.masalah_jenis_buah_8)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                9,
+                context.getString(R.string.title_jenis_buah_9),
+                context.getString(R.string.pengertian_jenis_buah_9),
+                context.getString(R.string.manfaat_jenis_buah_9),
+                context.getString(R.string.jenis_jenis_buah_9),
+                context.getString(R.string.porsi_jenis_buah_9),
+                context.getString(R.string.kandungan_jenis_buah_9),
+                context.getString(R.string.masalah_jenis_buah_9)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                10,
+                context.getString(R.string.title_jenis_buah_10),
+                context.getString(R.string.pengertian_jenis_buah_10),
+                context.getString(R.string.manfaat_jenis_buah_10),
+                context.getString(R.string.jenis_jenis_buah_10),
+                context.getString(R.string.porsi_jenis_buah_10),
+                context.getString(R.string.kandungan_jenis_buah_10),
+                context.getString(R.string.masalah_jenis_buah_10)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                11,
+                context.getString(R.string.title_jenis_buah_11),
+                context.getString(R.string.pengertian_jenis_buah_11),
+                context.getString(R.string.manfaat_jenis_buah_11),
+                context.getString(R.string.jenis_jenis_buah_11),
+                context.getString(R.string.porsi_jenis_buah_11),
+                context.getString(R.string.kandungan_jenis_buah_11),
+                context.getString(R.string.masalah_jenis_buah_11)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                12,
+                context.getString(R.string.title_jenis_buah_12),
+                context.getString(R.string.pengertian_jenis_buah_12),
+                context.getString(R.string.manfaat_jenis_buah_12),
+                context.getString(R.string.jenis_jenis_buah_12),
+                context.getString(R.string.porsi_jenis_buah_12),
+                context.getString(R.string.kandungan_jenis_buah_12),
+                context.getString(R.string.masalah_jenis_buah_12)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                13,
+                context.getString(R.string.title_jenis_buah_13),
+                context.getString(R.string.pengertian_jenis_buah_13),
+                context.getString(R.string.manfaat_jenis_buah_13),
+                context.getString(R.string.jenis_jenis_buah_13),
+                context.getString(R.string.porsi_jenis_buah_13),
+                context.getString(R.string.kandungan_jenis_buah_13),
+                context.getString(R.string.masalah_jenis_buah_13)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                14,
+                context.getString(R.string.title_jenis_buah_14),
+                context.getString(R.string.pengertian_jenis_buah_14),
+                context.getString(R.string.manfaat_jenis_buah_14),
+                context.getString(R.string.jenis_jenis_buah_14),
+                context.getString(R.string.porsi_jenis_buah_14),
+                context.getString(R.string.kandungan_jenis_buah_14),
+                context.getString(R.string.masalah_jenis_buah_14)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                15,
+                context.getString(R.string.title_jenis_buah_15),
+                context.getString(R.string.pengertian_jenis_buah_15),
+                context.getString(R.string.manfaat_jenis_buah_15),
+                context.getString(R.string.jenis_jenis_buah_15),
+                context.getString(R.string.porsi_jenis_buah_15),
+                context.getString(R.string.kandungan_jenis_buah_15),
+                context.getString(R.string.masalah_jenis_buah_15)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                16,
+                context.getString(R.string.title_jenis_buah_16),
+                context.getString(R.string.pengertian_jenis_buah_16),
+                context.getString(R.string.manfaat_jenis_buah_16),
+                context.getString(R.string.jenis_jenis_buah_16),
+                context.getString(R.string.porsi_jenis_buah_16),
+                context.getString(R.string.kandungan_jenis_buah_16),
+                context.getString(R.string.masalah_jenis_buah_16)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                17,
+                context.getString(R.string.title_jenis_buah_17),
+                context.getString(R.string.pengertian_jenis_buah_17),
+                context.getString(R.string.manfaat_jenis_buah_17),
+                context.getString(R.string.jenis_jenis_buah_17),
+                context.getString(R.string.porsi_jenis_buah_17),
+                context.getString(R.string.kandungan_jenis_buah_17),
+                context.getString(R.string.masalah_jenis_buah_17)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                18,
+                context.getString(R.string.title_jenis_buah_18),
+                context.getString(R.string.pengertian_jenis_buah_18),
+                context.getString(R.string.manfaat_jenis_buah_18),
+                context.getString(R.string.jenis_jenis_buah_18),
+                context.getString(R.string.porsi_jenis_buah_18),
+                context.getString(R.string.kandungan_jenis_buah_18),
+                context.getString(R.string.masalah_jenis_buah_18)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                19,
+                context.getString(R.string.title_jenis_buah_19),
+                context.getString(R.string.pengertian_jenis_buah_19),
+                context.getString(R.string.manfaat_jenis_buah_19),
+                context.getString(R.string.jenis_jenis_buah_19),
+                context.getString(R.string.porsi_jenis_buah_19),
+                context.getString(R.string.kandungan_jenis_buah_19),
+                context.getString(R.string.masalah_jenis_buah_19)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                20,
+                context.getString(R.string.title_jenis_buah_20),
+                context.getString(R.string.pengertian_jenis_buah_20),
+                context.getString(R.string.manfaat_jenis_buah_20),
+                context.getString(R.string.jenis_jenis_buah_20),
+                context.getString(R.string.porsi_jenis_buah_20),
+                context.getString(R.string.kandungan_jenis_buah_20),
+                context.getString(R.string.masalah_jenis_buah_20)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                21,
+                context.getString(R.string.title_jenis_buah_21),
+                context.getString(R.string.pengertian_jenis_buah_21),
+                context.getString(R.string.manfaat_jenis_buah_21),
+                context.getString(R.string.jenis_jenis_buah_21),
+                context.getString(R.string.porsi_jenis_buah_21),
+                context.getString(R.string.kandungan_jenis_buah_21),
+                context.getString(R.string.masalah_jenis_buah_21)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                22,
+                context.getString(R.string.title_jenis_buah_22),
+                context.getString(R.string.pengertian_jenis_buah_22),
+                context.getString(R.string.manfaat_jenis_buah_22),
+                context.getString(R.string.jenis_jenis_buah_22),
+                context.getString(R.string.porsi_jenis_buah_22),
+                context.getString(R.string.kandungan_jenis_buah_22),
+                context.getString(R.string.masalah_jenis_buah_22)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                23,
+                context.getString(R.string.title_jenis_buah_23),
+                context.getString(R.string.pengertian_jenis_buah_23),
+                context.getString(R.string.manfaat_jenis_buah_23),
+                context.getString(R.string.jenis_jenis_buah_23),
+                context.getString(R.string.porsi_jenis_buah_23),
+                context.getString(R.string.kandungan_jenis_buah_23),
+                context.getString(R.string.masalah_jenis_buah_23)
+            )
+        )
+
+        return data
+    }
 }
