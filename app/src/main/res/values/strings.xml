@@ -53,6 +53,43 @@
         Katakan 7 untuk Vaksin Covid-19.
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+    <string name="menu_gejalacovid19">
+        Katakan 1 untuk penjelasan gejala Covid-19, Katakan 2 untuk Penggolongan gejala Covid-19,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_caraMencegah">
+        Katakan 1 untuk Protokol Covid-19, Katakan 2 untuk Menjaga Imunitas Tubuh,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_protoklcovid19">
+        Katakan 1 untuk Cuci Tangan, Katakan 2 untuk Pakai Masker,
+        Katakan 3 untuk Menjaga Jarak, Katakan 4 untuk Menghindari Kerumunan, Katakan 5 untuk Mengurangi mobilitas,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_penangananCovid19">
+        Katakan 1 untuk Penjelasan Penanganan Covid-19, Katakan 2 untuk Pemeriksaan Covid-19,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_sembuhCovid19">
+        Katakan 1 untuk Penjelasan Sembuh dari Covid-19, Katakan 2 untuk Kriteria Sembuh dari Covid-19,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_kriteriaSembuhCovid19">
+        Katakan 1 untuk Pasien tanpa gejala, Katakan 2 untuk pasien gejala ringan hingga sedang,
+        Katakan 3 untuk pasien gejala berat atau kritis, Katakan 4 untuk Kriteria sembuh dan pemulangan.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_vaksin19">
+        Katakan 1 untuk Penjelasan Vaksin Covid-19, Katakan 2 untuk Jenis Vaksin Covid-19,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_jenisVaksin19">
+        Katakan 1 untuk Vaksin Sinovac, Katakan 2 untuk Vaksin Pfizer,
+        Katakan 3 untuk Vaksin Novavax, Katakan 4 untuk Vaksin COVAX atau GAVI, Katakan 5 untuk Vaksin AstraZeneca.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
+
     <string name="menu_pelayanan_kesehatan">
         Katakan 1 untuk Rumah Sakit terdekat, Katakan 2 untuk Puskesmas terdekat,
         Katakan 3 untuk Apotek terdekat, Katakan 4 untuk Klinik terdekat.
@@ -1978,8 +2015,23 @@
 
     <string name="pengertian_covid19">\t\tCovid-19 adalah penyakit yang disebabkan oleh virus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). Virus COVID-19 menyerang saluran pernapasan dan mudah menular ke orang lain. Virus ini bisa menyebabkan gangguan ringan pada sistem pernapasan, infeksi paru-paru yang berat, hingga kematian. \n\n\t\tSARS-CoV-2 adalah virus yang tersusun atas protein yang disebut kapsid yang dibungkus dengan lemak yang disebut envelope. Pada bungkusnya ini ditemukan berbagai protein yang diperlukan bagi virus untuk menempel dan menginfeksi tubuh kita. Bungkus yang berasal dari lemak inilah yang jadi alasan kenapa penting untuk selalu mencuci tangan dengan sabun.</string>
     <string name="gejala_covid19">\t\tPara peneliti China menemukan bahwa gejala yang paling umum ditemukan di rumah sakit pada penderita Covid-19 adalah sebagai berikut : \na. Demam: 99%\nb. Kelelahan: 70%\nc. Batuk kering: 59%\nd. Kehilangan nafsu makan: 40%</string>
+    <string name="gejala_covid192">Para peneliti China menemukan bahwa gejala yang paling umum ditemukan di rumah sakit pada penderita Covid-19 adalah sebagai berikut :
+    a. Demam: 99%
+    b. Kelelahan: 70%
+    c. Batuk kering: 59%
+    d. Kehilangan nafsu makan: 40%.
+        Kita bisa saja membawa virus dalam tubuh namun bisa terlihat gejalanya karena daya tahan tubuh kuat. Tapi virus masih berusaha hidup paling tidak 7-14 di dalam tubuh kita.
+    Berikut ini adalah kelompok yang rentan terdampak covid-19 yaitu sebagai berikut :
+    a) Orang yang merawat pasien
+    b) Orang hamil
+    c) Orang yang lanjut usia
+    d) Orang yang mempunyai riwayat penyakit tertentu seperti, diabetes militus, tekanan darah tinggi (hipertensi), sakit
+    pernapasan kronis, sakit jantung, kanker dan lainnya.
+    </string>
+    <string name="penggolangan_gejala_covid192">\t\tPenggolongan gejala yang timbul akibat terinfeksi Covid–19, adalah sebagai berikut: \n\n1) Gejala Ringan\na) Demam 38˚ \nb)Batuk Kering \nc)Kelelahan \n\n2) Gejala Sedang \na) Rasa tidak nyaman dan nyeri \nb) Nyeri tenggorokan \nc) Diare \nd) Konjungtivitis (mata merah) \ne) Sakit kepala \nf) Hilangnya indera perasa atau penciuman \ng) Ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki \n\n3) Gejala Berat \na) Kesulitan bernapas atau sesak napas \nb) Nyeri dada atau rasa tertekan pada dada \nc) Hilangnya kemampuan berbicara atau bergerak.</string>
     <string name="penggolangan_gejala_covid19">\t\tPenggolongan gejala yang timbul akibat terinfeksi Covid–19, adalah sebagai berikut: \n\n1) Gejala Ringan\na) Demam 38˚ \nb)Batuk Kering \nc)Kelelahan \n\n2) Gejala Sedang \na) Rasa tidak nyaman dan nyeri \nb) Nyeri tenggorokan \nc) Diare \nd) Konjungtivitis (mata merah) \ne) Sakit kepala \nf) Hilangnya indera perasa atau penciuman \ng) Ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki \n\n3) Gejala Berat \na) Kesulitan bernapas atau sesak napas \nb) Nyeri dada atau rasa tertekan pada dada \nc) Hilangnya kemampuan berbicara atau bergerak \n\n\t\tKita bisa saja membawa virus dalam tubuh namun bisa terlihat gejalanya karena daya tahan tubuh kuat. Tapi virus masih berusaha hidup paling tidak 7–14 di dalam tubuh kita. \n\n\t\tBerikut ini adalah kelompok yang rentan terdampak covid-19 yaitu sebagai berikut:\na) Orang yang merawat pasien \nb) Orang hamil \nc) Orang yang lanjut usia \nd) Orang yang mempunyai riwayat penyakit tertentu seperti, diabetes militus, tekanan darah tinggi (hipertensi), sakit pernapasan kronis, sakit jantung, kanker dan lainnya</string>
-    <string name="carapenularan_covid19">\t\tPenularan virus corona bisa terjadi melalui berbagai hal berikut :\na. Droplets atau tetesan cairan yang berasal dari batuk dan bersin dari orang yang terindikasi terkena virus.\nb. Kontak pribadi seperti menyentuh dan berjabat tangan.\nc. Menyentuh benda atau permukaan dengan virus di atasnya, kemudian menyentuh mulut, hidung, atau mata sebelum mencuci tangan.\nd. Kontaminasi tinja (jarang terjadi).\n\t\tSebuah studi terbaru menunjukkan potensi penularannya melalui udara. Ketika seseorang batuk atau bersin dan mengeluarkan cairan mengandung virus, berpotensi akan menyebar ke udara dan bisa langsung masuk ke tubuh orang lain jika berada dalam posisi berdekatan. Kita dapat tertular saat menghirup udara yang mengandung virus jika berada terlalu dekat dengan orang yang sudah terinfeksi Covid-19. Para peneliti menemukan bahwa virus itu bisa bertahan dalam jangka waktu tertentu di udara dan menempel di permukaan benda, bergantung pada beberapa faktor, seperti panas dan kelembapan.\n\t\tVirus ini dapat bertahan di udara sebagai aerosol selama 3 jam. Ketika virus menempel di permukaan padat, virus ini tidak cepat mati bahkan dapat bertahan beberapa hari. Oleh karena itu kita harus berhati-hati menyentuh permukaan benda.\n\n\t\tMenurut CDC, terdapat tiga kategori transmisi virus SARS-CoV-2, yaitu inhalasi virus, penumpukan virus pada membran mukosa yang terpapar udara (mukosa mulut, hidung atau mata), dan kontak tidak langsung ketika seseorang yang telah memegang permukaan benda yang mengandung virus kemudian menyentuh mata, hidung atau mulut. Sebagian besar penularan adalah melalui droplet namun demikian penularan melalui udara (airborne) sampai saat ini masih terus dikembangkan dan kemungkinan juga terjadi penularan melalui udara. Apabila seseorang yang mengandung virus SARS-CoV-2 ini bersin maka droplet yang berukuran besar akan jatuh sedangkan droplet nuclei yang berukran sangat kecil akan terbang dan melayang-layang di udara dalam jangka waktu tertentu.</string>
+    <string name="carapenularan_covid19">\t\tPenularan virus corona bisa terjadi melalui berbagai hal berikut :\na. Droplets atau tetesan cairan yang berasal dari batuk dan bersin dari orang yang terindikasi terkena virus.\nb. Kontak pribadi seperti menyentuh dan berjabat tangan.\nc. Menyentuh benda atau permukaan dengan virus di atasnya, kemudian menyentuh mulut, hidung, atau mata sebelum mencuci tangan.\nd. Kontaminasi tinja (jarang terjadi).\n\t\tSebuah studi terbaru menunjukkan potensi penularannya melalui udara. Ketika seseorang batuk atau bersin dan mengeluarkan cairan mengandung virus, berpotensi akan menyebar ke udara dan bisa langsung masuk ke tubuh orang lain jika berada dalam posisi berdekatan. Kita dapat tertular saat menghirup udara yang mengandung virus jika berada terlalu dekat dengan orang yang sudah terinfeksi Covid-19. Para peneliti menemukan bahwa virus itu bisa bertahan dalam jangka waktu tertentu di udara dan menempel di permukaan benda, bergantung pada beberapa faktor, seperti panas dan kelembapan.\n\t\tVirus ini dapat bertahan di udara sebagai aerosol selama 3 jam. Ketika virus menempel di permukaan padat, virus ini tidak cepat mati bahkan dapat bertahan beberapa hari. Oleh karena itu kita harus berhati-hati menyentuh permukaan benda.
+        \n\n\t\tMenurut CDC, terdapat tiga kategori transmisi virus SARS-CoV-2, yaitu inhalasi virus, penumpukan virus pada membran mukosa yang terpapar udara (mukosa mulut, hidung atau mata), dan kontak tidak langsung ketika seseorang yang telah memegang permukaan benda yang mengandung virus kemudian menyentuh mata, hidung atau mulut. Sebagian besar penularan adalah melalui droplet namun demikian penularan melalui udara (airborne) sampai saat ini masih terus dikembangkan dan kemungkinan juga terjadi penularan melalui udara. Apabila seseorang yang mengandung virus SARS-CoV-2 ini bersin maka droplet yang berukuran besar akan jatuh sedangkan droplet nuclei yang berukran sangat kecil akan terbang dan melayang-layang di udara dalam jangka waktu tertentu.</string>
     <string name="protokol_covid19_cucitangan">Beberapa kasus penularan diprediksi terjadi ketika tangan yang menyentuh permukaan terkontaminasi oleh virus dan tidak sengaja memegang wajah sehingga virus berpindah dari tangan ke hidung atau mulut. Jadi  biasakan diri rajin mencuci tangan kapanpun dan dimananpun. Virus akan mati jika kita rajin mencuci tangan dengan sabun minumal 20 detik dengan mengikuti rangkain berikut ini : </string>
     <string name="protokol_covid19_pakaimasker">Sesuai protokoler kesehatan dianjurkan selalu memakai masker ketika bepergian, baik dalam keadaan sehat maupun sakit. Dalam penggunaannya, biasanya ada tiga jenis masker yang digunakan untuk melindungi diri dari Covid-19 yaitu masker kain, masker bedah, dan masker N95. \n Masker kain digunakan maksimal 4 jam dan bisa dicuci untuk digunakan lagi, sedangkan masker bedah dan masker N95 digunakan hanya sekali pakai, dan dibuang di tempat sampah. Cara menggunakan masker yaitu : \na. Pakailah masker dan pastikan dari area hidung sampai dagu bawah tertutup.\nb. Jika menyentuh permukaan masker, jika tersentuh maka segeralah mencuci tangan dengan sabun atau hand sanitizer \nc.	Saat melepas masker pastikan yang dipegang adalah tali masker, bukan permukaan masker, dan hindari menyentuh permukaan masker agar terhindar dari kuman dan virus. </string>
     <string name="protokol_covid19_menjagajarak">Physical distangcing adalah menjaga jarak fiski dari orang lain. Kalau lagi ada di tempat umum, harus jaga jarak dari orang lain setidaknya 2 meter. Hal ini karena ketika seseorang batuk atau bersin, mereka menyemprotkan tetesan cairan kecil dari hidung atau mulut mereka yang mungkin mengandung virus. Jika terlalu dekat, kamu bisa menghirup tetesan air, termasuk virus covid-19 jika orang tersebut sedang batuk.</string>
@@ -2043,6 +2095,12 @@
         \n2.)	Pasien tidak lagi membutuhkan perawatan atau tindakan terkait dengan Covid-19 maupun masalah kesehatan lain
         \n3.)	Khusus bagi pasien dengan gejala berat atau kritis, setelah pemulangan harus menjalani isolasi mandiri minimal 7 hari untuk pemulihan dan pemantauan gejala yang mungkin muncul kembali.
     </string>
+    <string name="kriteriasembuh1">Pasien tanpa gejala: tes RT-PCR tidak diperlukan*. Isolasi selesai setelah 10 hari terhitung sejak keluarnya hasil tes yang positif.</string>
+    <string name="kriteriasembuh2">Pasien gejala ringan-sedang: tes RT-PCR tidak perlu*. Bagi pasien gejala sedang dengan komorbid atau kondisinya berisiko memburuk, bisa dilakukan tes RT-PCR. Isolasi selesai setelah 10 hari sejak munculnya gejala awal plus setidaknya 3 hari tanpa gejala demam dan gangguan pernapasan.</string>
+    <string name="kriteriasembuh3">Pasien gejala berat/kritis: perlu menjalani tes RT-PCR. Isolasi selesai setelah hasil tes RT-PCR follow-up negatif plus setidaknya 3 hari tak menunjukkan gejala demam dan gangguan pernapasan. Jika tak bisa menjalani tes RT-PCR, isolasi selesai setelah dirawat 10 hari di rumah sakit sejak muncul gejala awal plus 3 hari bebas dari gejala demam dan gangguan pernapasan. Pasien ini dialihkan ke ruang rawat non-isolasi atau pulang.</string>
+    <string name="kriteriasembuh4">Kriteria sembuh sama bagi pasien tanpa gejala, gejala ringan, sedang, berat atau kritis, yaitu: 1.) Memenuhi kriteria selesai isolasi 2.) Mendapat surat selesai pemantauan dari fasilitas pelayanan kesehatan atau dokter penanggung jawab pelayanan.
+        Kriteria Pemulangan Pasien dibolehkan pulang setelah memenuhi kriteria selesai isolasi dan kriteria klinis, yakni: 1.) Dokter penanggung jawab membolehkan pasien pulang berdasarkan kajian klinis menyeluruh, meliputi radiologi dan pemeriksaan darah 2.) Pasien tidak lagi membutuhkan perawatan atau tindakan terkait dengan Covid-19 maupun masalah kesehatan lain 3.) Khusus bagi pasien dengan gejala berat atau kritis, setelah pemulangan harus menjalani isolasi mandiri minimal 7 hari untuk pemulihan dan pemantauan gejala yang mungkin muncul kembali.</string>
+
     <string name="vaksin_covid19">\t\tVaksinasi COVID-19 bertujuan untuk mempercepat penanggulangan COVID-19 di Indonesia bersama dengan penerapan protokol kesehatan. Selain itu, vaksinasi ini diharapkan dapat memutus rantai penularan secara menyeluruh, dengan mentargetkan sekitar 70% kelompok sasaran untuk mencapai herd immunity.</string>
     <string name="jenisvaksin_covid19">a. Vaksin Sinovac
         \n Vaksin ini dibuat dari partikel virus corona penyebab Covid-19, SARS-CoV-2 yang dimatikan. Selanjutnya, vaksin ini akan memicu sistem kekebalan tubuh terhadap virus corona, tanpa menimbulkan respons penyakit yang serius. Metode inactivated virus, bukanlah teknologi baru dalam pengembangan vaksin. Sebab, metode ini juga sering digunakan dalam pengembangan vaksin lain, seperti vaksin polio dan flu.
@@ -2055,6 +2113,11 @@
         \n\ne. Vaksin AstraZeneca.
         \n Vaksin AstraZeneca atau AZD1222 adalah vaksin untuk mencegah penyakit COVID-19. Vaksin ini merupakan hasil kerja sama antara Universitas Oxford dan AstraZeneca yang dikembangkan sejak Februari 2020. Vaksin AstraZeneca untuk COVID-19 telah menjalani uji klinis di Inggris, Brazil, dan Afrika Selatan. Vaksin ini memiliki nilai efikasi (efek perlindungan terhadap COVID-19) sebesar 63,09%.
     </string>
+    <string name="jenisVaksin1">Vaksin Sinovac. Vaksin ini dibuat dari partikel virus corona penyebab Covid-19, SARS-CoV-2 yang dimatikan. Selanjutnya, vaksin ini akan memicu sistem kekebalan tubuh terhadap virus corona, tanpa menimbulkan respons penyakit yang serius. Metode inactivated virus, bukanlah teknologi baru dalam pengembangan vaksin. Sebab, metode ini juga sering digunakan dalam pengembangan vaksin lain, seperti vaksin polio dan flu.</string>
+    <string name="jenisVaksin2">Vaksin Pfizer. Vaksin Pfizer adalah vaksin mRNA (messenger RNA). Jenis vaksin ini akan memicu sistem kekebalan tubuh membentuk spike protein, yang nantinya akan membantu tubuh membentuk antibodi yang dapat melawan virus Corona.</string>
+    <string name="jenisVaksin3">Vaksin Novavax. NVX-CoV2373 dibuat menggunakan teknologi nanopartikel rekombinan Novavax untuk menghasilkan antigen yang berasal dari protein lonjakan virus corona (S) dan ditambahkan dengan Matrix-M berbasis saponin. Meski berasal dari urutan genetik SARS-Cov-2, NVX-CoV2373 mengandung antigen protein yang dimurnikan dan tidak dapat bereplikasi, serta tidak bisa menyebabkan infeksi Covid-19. Vaksin tersebut menghasilkan antibodi dalam jumlah yang sangat tinggi</string>
+    <string name="jenisVaksin4">Vaksin COVAX atau GAVI. GAVI-COVAX adalah vaksin produksi GAVI (Global Alliance for Vaccine and Immunization), yang bekerjasama dengan mitra aliansi United Nations Children\'s Fund (UNICEF) dan World Health Organization (WHO). Vaksin ini untuk lansia umur 60 tahun keatas.</string>
+    <string name="jenisVaksin5">Vaksin AstraZeneca. Vaksin AstraZeneca atau AZD1222 adalah vaksin untuk mencegah penyakit COVID-19. Vaksin ini merupakan hasil kerja sama antara Universitas Oxford dan AstraZeneca yang dikembangkan sejak Februari 2020. Vaksin AstraZeneca untuk COVID-19 telah menjalani uji klinis di Inggris, Brazil, dan Afrika Selatan. Vaksin ini memiliki nilai efikasi (efek perlindungan terhadap COVID-19) sebesar 63,09%.</string>
 
     <!--Image Content Description_-->
     <string name="contentDescription_selamat_datang">Gambar Selamat Datang</string>

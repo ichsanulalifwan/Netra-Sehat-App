@@ -14,9 +14,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
@@ -36,7 +36,7 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentSembuhCovid19Binding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
+    private var loopCode: Int? = 0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -80,18 +80,18 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val giziSeimbang = getString(R.string.menu_giziSeimbang)
+        val menu = getString(R.string.menu_sembuhCovid19)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_FLUSH, null, "menu")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -100,7 +100,12 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val ttsLoop = utteranceId.equals("menu")
+                        || utteranceId.equals("wrongTts")
+                        || utteranceId.equals("menukriteriaSembuh")
+                if (ttsLoop) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -122,7 +127,7 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -151,12 +156,6 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
 
-        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
-        sttIntent.putExtra(
-            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
-            1000
-        )
-        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
         // start again
         startListening()
     }
@@ -167,8 +166,6 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -186,7 +183,6 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -195,42 +191,137 @@ class SembuhCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
-        when {
-            check8 -> {
-                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                startActivity(backPreviousMenu)*/
-                //fragmentManager?.popBackStack()
-                navController.popBackStack()
-                //finish()
+        if (loopCode == 0) {
+            when {
+                check1 -> {
+                    val sembuhCovid19 = getString(R.string.sembuhdari_covid19)
+                    val menu = getString(R.string.menu_sembuhCovid19)
+                    textToSpeechEngine?.speak(
+                        sembuhCovid19,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "sembuhCovid19"
+                    )
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                }
+                check2 -> {
+                    val kriteriaSembuh = getString(R.string.menu_kriteriaSembuhCovid19)
+                    textToSpeechEngine?.speak(
+                        kriteriaSembuh,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "menukriteriaSembuh"
+                    )
+                    loopCode = 1
+                }
+                check8 -> {
+                    findNavController().navigateUp()
+                }
+                check9 -> {
+                    backToMainMenu()
+                }
+                check0 -> {
+                    exitApp()
+                }
+                else -> {
+                    wrongOption()
+                }
             }
-            check9 -> {
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
-            }
-            check0 -> {
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-            else -> {
-                val messageNoMatch =
-                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(
-                    messageNoMatch,
-                    TextToSpeech.QUEUE_FLUSH,
-                    null,
-                    "tts3"
-                )
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+        } else if (loopCode == 1) {
+            when {
+                check1 -> {
+                    val option1 = getString(R.string.kriteriasembuh1)
+                    val menuKriteria = getString(R.string.menu_kriteriaSembuhCovid19)
+                    textToSpeechEngine?.speak(option1, TextToSpeech.QUEUE_FLUSH, null, "option1")
+                    textToSpeechEngine?.speak(
+                        menuKriteria,
+                        TextToSpeech.QUEUE_ADD,
+                        null,
+                        "menukriteriaSembuh"
+                    )
+                }
+                check2 -> {
+                    val option2 = getString(R.string.kriteriasembuh2)
+                    val menuKriteria = getString(R.string.menu_kriteriaSembuhCovid19)
+                    textToSpeechEngine?.speak(option2, TextToSpeech.QUEUE_FLUSH, null, "option2")
+                    textToSpeechEngine?.speak(
+                        menuKriteria,
+                        TextToSpeech.QUEUE_ADD,
+                        null,
+                        "menukriteriaSembuh"
+                    )
+                }
+                check3 -> {
+                    val option3 = getString(R.string.kriteriasembuh3)
+                    val menuKriteria = getString(R.string.menu_kriteriaSembuhCovid19)
+                    textToSpeechEngine?.speak(option3, TextToSpeech.QUEUE_FLUSH, null, "option3")
+                    textToSpeechEngine?.speak(
+                        menuKriteria,
+                        TextToSpeech.QUEUE_ADD,
+                        null,
+                        "menukriteriaSembuh"
+                    )
+                }
+                check4 -> {
+                    val option4 = getString(R.string.kriteriasembuh4)
+                    val menuKriteria = getString(R.string.menu_kriteriaSembuhCovid19)
+                    textToSpeechEngine?.speak(option4, TextToSpeech.QUEUE_FLUSH, null, "option4")
+                    textToSpeechEngine?.speak(
+                        menuKriteria,
+                        TextToSpeech.QUEUE_ADD,
+                        null,
+                        "menukriteriaSembuh"
+                    )
+                }
+                check8 -> {
+                    loopCode = 0
+                    val menu = getString(R.string.menu_sembuhCovid19)
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_FLUSH, null, "menu")
+                }
+                check9 -> {
+                    backToMainMenu()
+                }
+                check0 -> {
+                    exitApp()
+                }
+                else -> {
+                    wrongOption()
+                }
             }
         }
+    }
+
+    private fun backToMainMenu() {
+        val backMainMenu = Intent(context, MainActivity::class.java)
+        startActivity(backMainMenu)
+        activity?.let {
+            ActivityCompat.finishAffinity(it)
+        }
+    }
+
+    private fun exitApp() {
+        activity?.finishAffinity()
+        exitProcess(0)
+    }
+
+    private fun wrongOption() {
+        val messageNoMatch =
+            "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+        textToSpeechEngine?.speak(
+            messageNoMatch,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "wrongTts"
+        )
+        Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {

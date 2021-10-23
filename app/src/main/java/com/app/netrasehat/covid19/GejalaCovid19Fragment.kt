@@ -14,9 +14,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
@@ -36,7 +36,6 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentGejalaCovid19Binding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -80,18 +79,17 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val giziSeimbang = getString(R.string.menu_giziSeimbang)
-
+        val menu = getString(R.string.menu_gejalacovid19)
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_FLUSH, null, "menu")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -100,7 +98,10 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val ttsLoop = utteranceId.equals("menu") || utteranceId.equals("wrongTts")
+                if (ttsLoop) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -122,7 +123,7 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -151,12 +152,6 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
 
-        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
-        sttIntent.putExtra(
-            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
-            1000
-        )
-        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
         // start again
         startListening()
     }
@@ -167,8 +162,6 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -186,7 +179,6 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -195,7 +187,6 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
@@ -203,12 +194,20 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
+            check1 -> {
+                val gejalaCovid19 = getString(R.string.gejala_covid192)
+                val menu = getString(R.string.menu_gejalacovid19)
+                textToSpeechEngine?.speak(gejalaCovid19, TextToSpeech.QUEUE_FLUSH, null, "gejalaCovid19")
+                textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+            }
+            check2 -> {
+                val penggolongan = getString(R.string.penggolangan_gejala_covid192)
+                val menu = getString(R.string.menu_gejalacovid19)
+                textToSpeechEngine?.speak(penggolongan, TextToSpeech.QUEUE_FLUSH, null, "penggolongan")
+                textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+            }
             check8 -> {
-                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                startActivity(backPreviousMenu)*/
-                //fragmentManager?.popBackStack()
-                navController.popBackStack()
-                //finish()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
@@ -226,9 +225,9 @@ class GejalaCovid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                     messageNoMatch,
                     TextToSpeech.QUEUE_FLUSH,
                     null,
-                    "tts3"
+                    "wrongTts"
                 )
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }
