@@ -1,4 +1,4 @@
-package com.app.netrasehat.activity
+package com.app.netrasehat.litkes
 
 import android.content.Intent
 import android.os.Bundle

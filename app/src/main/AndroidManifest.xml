@@ -16,39 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TunanetraDaily">
         <activity
-            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.makananpokok.JenisMakananPokokActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.activity.BeratBadanActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.activity.PhbsActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.activity.PesanGiziSeimbangActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.activity.PilarGiziSeimbangActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.activity.ContactSahabatNetraActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.activity.PelayananKesehatanActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.app.netrasehat.activity.Covid19Activity"
-            android:exported="true" />
-        <activity
             android:name="com.app.netrasehat.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -62,11 +29,11 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-<!--        <service-->
-<!--            android:name="MyNavigationService"-->
-<!--            android:foregroundServiceType="location">-->
-<!--            &lt;!&ndash; Any inner elements would go here. &ndash;&gt;-->
-<!--        </service>-->
+        <!--        <service-->
+        <!--            android:name="MyNavigationService"-->
+        <!--            android:foregroundServiceType="location">-->
+        <!--            &lt;!&ndash; Any inner elements would go here. &ndash;&gt;-->
+        <!--        </service>-->
     </application>
 
 </manifest>
