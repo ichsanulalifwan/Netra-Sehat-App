@@ -14,12 +14,14 @@
     <string name="menu_litkes">
         Katakan 1 untuk Gizi Seimbang, Katakan 2 untuk informasi Covid-19,
         Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat, Katakan 4 untuk Kontak Person Sahabat Netra,
-        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+        Katakan 0 untuk Keluar.
     </string>
 
     <string name="opsi7">
         katakan 7 untuk opsi selanjutnya
     </string>
+
+    <string name="notif_error_wa">Anda Tidak Memiliki Aplikasi Whatsapp</string>
 
     <!-- Title Menu -->
     <string name="title_selamat_datang">Selamat\nDatang</string>
@@ -120,18 +122,23 @@
         Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
-    <string name="menu_PHBS">
+    <string name="menu_phbs1">
         Katakan 1 untuk Perawatan diri pada kulit, Katakan 2 untuk Perawatan diri pada kaki dan tangan,
         Katakan 3 untuk Perawatan diri pada kuku, Katakan 4 untuk Perawatan diri pada kulit kepala dan rambut,
         Katakan 5 untuk Perawatan diri pada kebersihan gigi dan mulut, Katakan 6 untuk Perawatan diri pada kebersihan mata,
-        Katakan 7 untuk PPerawatan diri pada kebersihan telinga dan hidung, Katakan 8 untuk Perawatan diri pada kebersihan genetalia,
-        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
-    <string name="subMenu_PHBS">
+    <string name="menu_phbs2">
+        Katakan 1 untuk Perawatan diri pada kebersihan telinga dan hidung, Katakan 2 untuk Perawatan diri pada kebersihan genetalia.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
+    <string name="subMenu_phbs">
         Katakan 1 untuk Pengertian, Katakan 2 untuk Fungsi, Katakan 3 untuk Cara Merawat,
         Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
-    <string name="pengertian_PHBS1">
+    <string name="pengertian_phbs1">
         Kulit adalah suatu organ pembungkus seluruh permukaan luar tubuh. Kulit merupakan salah satu bagian penting dari tubuh yang dapat melindungi tubuh dari berbagai kuman.
         Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>

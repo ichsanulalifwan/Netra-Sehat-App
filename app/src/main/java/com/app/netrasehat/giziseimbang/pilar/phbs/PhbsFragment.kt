@@ -42,6 +42,7 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentPhbsBinding? = null
     private val binding get() = _binding!!
+    private var loopCode: Int? = 0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -100,7 +101,7 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
@@ -116,20 +117,18 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     private fun onItemSelected() {
         phbsAdapter.setOnItemClickListener(object : PhbsAdapter.OnItemClickListener {
             override fun onItemClicked(phbs: Phbs) {
-                val actionToDetailPhbs =
-                    PhbsFragmentDirections.actionPhbsFragmentToDetailPhbsFragment(phbs.id)
-                findNavController().navigate(actionToDetailPhbs)
+                navigateToDetail(phbs.id)
             }
         })
     }
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val giziSeimbang = getString(R.string.menu_pesanGiziSeimbang)
+        val phbs1 = getString(R.string.menu_phbs1)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(phbs1, TextToSpeech.QUEUE_FLUSH, null, "phbs1")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -226,40 +225,105 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
         val recognizedText = matches?.get(0)
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
+        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
+        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
+        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
-        when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
+        if (loopCode == 0) {
+            when {
+                check1 -> {
+                    navigateToDetail(1)
+                }
+                check2 -> {
+                    navigateToDetail(2)
+                }
+                check3 -> {
+                    navigateToDetail(3)
+                }
+                check4 -> {
+                    navigateToDetail(4)
+                }
+                check5 -> {
+                    navigateToDetail(5)
+                }
+                check6 -> {
+                    navigateToDetail(6)
+                }
+                check7 -> {
+                    val phbs2 = getString(R.string.menu_phbs2)
+                    textToSpeechEngine?.speak(phbs2, TextToSpeech.QUEUE_FLUSH, null, "phbs2")
+                    loopCode = 1
+                }
+                check8 -> {
+                    findNavController().navigateUp()
+                }
+                check9 -> {
+                    backToMainMenu()
+                }
+                check0 -> {
+                    exitApp()
+                }
+                else -> {
+                    wrongOption()
+                }
             }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
-            }
-            check8 -> {
-                findNavController().navigateUp()
-            }
-            check9 -> {
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
-            }
-            check0 -> {
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-            else -> {
-                val messageNoMatch =
-                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+        } else if (loopCode == 1) {
+            when {
+                check1 -> {
+                    navigateToDetail(7)
+                }
+                check2 -> {
+                    navigateToDetail(8)
+                }
+                check8 -> {
+                    findNavController().navigateUp()
+                }
+                check9 -> {
+                    backToMainMenu()
+                }
+                check0 -> {
+                    exitApp()
+                }
+                else -> {
+                    wrongOption()
+                }
             }
         }
+    }
+
+    private fun navigateToDetail(id: Int) {
+        val actionToDetailPhbs = PhbsFragmentDirections.actionPhbsFragmentToDetailPhbsFragment(id)
+        findNavController().navigate(actionToDetailPhbs)
+    }
+
+    private fun backToMainMenu() {
+        val backMainMenu = Intent(context, MainActivity::class.java)
+        startActivity(backMainMenu)
+        activity?.let {
+            ActivityCompat.finishAffinity(it)
+        }
+    }
+
+    private fun exitApp() {
+        activity?.finishAffinity()
+        exitProcess(0)
+    }
+
+    private fun wrongOption() {
+        val messageNoMatch =
+            "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+        textToSpeechEngine?.speak(
+            messageNoMatch,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "wrongTts"
+        )
+        Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {

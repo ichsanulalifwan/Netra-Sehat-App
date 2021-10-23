@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -37,7 +36,6 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
     private var _binding: FragmentPilarGiziSeimbangBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -107,7 +105,7 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
@@ -118,7 +116,7 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(pilarGiziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(pilarGiziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "pilarGizi")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -188,8 +186,8 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
+//        val text = "Mendengarkan . . ."
+//        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -207,7 +205,7 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
+//        binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -216,7 +214,7 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
+//        binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
@@ -232,9 +230,9 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 findNavController().navigate(actionToAnekaRagamMakanan)
             }
             check2 -> {
-//                    val actionToPhbs =
-//                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
-//                    findNavController().navigate(actionToPhbs)
+                val actionToPhbs =
+                    PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
+                findNavController().navigate(actionToPhbs)
             }
             check3 -> {
                 val actionToAktivitasFisik =
@@ -247,7 +245,7 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 findNavController().navigate(actionToBeratBadan)
             }
             check8 -> {
-                navController.popBackStack()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
@@ -261,8 +259,8 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "wrongTts")
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }

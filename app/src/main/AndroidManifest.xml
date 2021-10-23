@@ -29,11 +29,11 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <!--        <service-->
-        <!--            android:name="MyNavigationService"-->
-        <!--            android:foregroundServiceType="location">-->
-        <!--            &lt;!&ndash; Any inner elements would go here. &ndash;&gt;-->
-        <!--        </service>-->
+<!--                <service-->
+<!--                    android:name="MyNavigationService"-->
+<!--                    android:foregroundServiceType="location">-->
+<!--                    &lt;!&ndash; Any inner elements would go here. &ndash;&gt;-->
+<!--                </service>-->
     </application>
 
 </manifest>

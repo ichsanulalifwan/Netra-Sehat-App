@@ -102,9 +102,9 @@ class DetailPhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-//                dataPhbs.apply {
-//                    textToSpeech(judul, pengertian)
-//                }
+                dataPhbs.apply {
+                    textToSpeech(judul, pengertian)
+                }
             }
         }
     }

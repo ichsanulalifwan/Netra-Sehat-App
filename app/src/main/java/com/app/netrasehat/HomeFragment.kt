@@ -74,7 +74,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 }
 
                 cvContactPerson.setOnClickListener {
-                    openWhatsApp(6282193593522, "Hi, Sahabat Netra")
+                    openWhatsApp()
 //                    val actionToContact =
 //                        HomeFragmentDirections.actionNavigationHomeToContactSahabatNetraFragment()
 //                    findNavController().navigate(actionToContact)
@@ -83,7 +83,9 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         }
     }
 
-    private fun openWhatsApp(phoneNumber: Long, message: String) {
+    private fun openWhatsApp() {
+        val phoneNumber = 6282193593522
+        val message = "Hi, Sahabat Netra"
         if (isWhatappInstalled()) {
             val i = Intent(
                 Intent.ACTION_VIEW, Uri.parse(
@@ -93,7 +95,9 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             )
             startActivity(i)
         } else {
-            Toast.makeText(context, "Whatsapp is not installed", Toast.LENGTH_SHORT)
+            val errorWa = getString(R.string.notif_error_wa)
+            textToSpeechEngine?.speak(errorWa, TextToSpeech.QUEUE_FLUSH, null, "errorWa")
+            Toast.makeText(context, "Aplikasi Whatsapp tidak terinstal", Toast.LENGTH_SHORT)
                 .show()
         }
     }
@@ -119,7 +123,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech welcome message
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
@@ -141,13 +145,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                val ttsLoop = utteranceId.equals("tts0") ||
-                        utteranceId.equals("tts1") ||
-                        utteranceId.equals("litkesText")
-//                if (ttsLoop) {
-//                    startListening()
-//                }
-
+                val ttsLoop = utteranceId.equals("litkesText") ||
+                        utteranceId.equals("wrongTts") || utteranceId.equals("errorWa")
                 if (ttsLoop) {
                     startListening()
                 }
@@ -174,7 +173,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
-        sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
+        //sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
         //sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1)
     }
 
@@ -194,8 +193,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
+//        val text = "Mendengarkan . . ."
+//        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -213,9 +212,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
-        //textToSpeechEngine?.stop()
-        //stopListening()
+//        binding.tvSpeak.text = errorMessage
         // val messageNoMatch = "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
 //        textToSpeechEngine?.speak(errorMessage, TextToSpeech.QUEUE_FLUSH, null, "tts0")
         startOver()
@@ -226,7 +223,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
+//        binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
@@ -235,31 +232,22 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         when {
             check1 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
-                //val giziSeimbangMenu = Intent(context, GiziSeimbangActivity::class.java)
-                //startActivity(giziSeimbangMenu)
-                //finish()
                 val actionToGiziSeumbang =
                     HomeFragmentDirections.actionHomeFragmentToNavigationGiziSeimbang()
                 findNavController().navigate(actionToGiziSeumbang)
             }
             check2 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
-                //finish()
+                val actionToCovid19 =
+                    HomeFragmentDirections.actionNavigationHomeToCovid19Fragment()
+                findNavController().navigate(actionToCovid19)
             }
             check3 -> {
-                //textToSpeechEngine?.stop()
-                //stopListening()
-//                val pelayananKesehatanMenu = Intent(context, PelayananKesehatanActivity::class.java)
-//                startActivity(pelayananKesehatanMenu)
-                //finish()
+                val actionToPelayanan =
+                    HomeFragmentDirections.actionNavigationHomeToPelayananKesehatanFragment()
+                findNavController().navigate(actionToPelayanan)
             }
             check4 -> {
-//                val cpSahabatNetraMenu = Intent(context, ContactSahabatNetraActivity::class.java)
-//                startActivity(cpSahabatNetraMenu)
-                openWhatsApp(6282193593522, "Hi, Sahabat Netra")
+                openWhatsApp()
             }
             check0 -> {
                 //textToSpeechEngine?.stop()
@@ -268,11 +256,15 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
                 exitProcess(0)
             }
             else -> {
-                startOver()
-                /*val messageNoMatch =
+                val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts1")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()*/
+                textToSpeechEngine?.speak(
+                    messageNoMatch,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "wrongTts"
+                )
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -299,7 +291,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
-        sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
 
         // start again
         startListening()

@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -37,7 +36,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentGiziSeimbangBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -98,7 +96,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
@@ -109,7 +107,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "giziSeimbang")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -141,7 +139,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -176,6 +173,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
             1000
         )
         sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
+        //sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
         // start again
         startListening()
     }
@@ -186,8 +184,8 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
+//        val text = "Mendengarkan . . ."
+//        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -205,7 +203,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
+//        binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -214,7 +212,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
+//        binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
@@ -233,11 +231,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
                 findNavController().navigate(actionToPesanGizi)
             }
             check8 -> {
-                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                startActivity(backPreviousMenu)*/
-                //fragmentManager?.popBackStack()
-                navController.popBackStack()
-                //finish()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
@@ -255,9 +249,9 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
                     messageNoMatch,
                     TextToSpeech.QUEUE_FLUSH,
                     null,
-                    "tts3"
+                    "wrongTts"
                 )
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }

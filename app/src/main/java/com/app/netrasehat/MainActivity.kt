@@ -223,7 +223,7 @@ class MainActivity : AppCompatActivity() {
 
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
-                    Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "location permission denied", Toast.LENGTH_LONG).show()
 
                     // Check if we are in a state where the user has denied the permission and
                     // selected Don't ask again
@@ -269,7 +269,7 @@ class MainActivity : AppCompatActivity() {
 
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
-                    Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Background Location permission denied", Toast.LENGTH_LONG).show()
                 }
                 return
             }
