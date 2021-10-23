@@ -1431,6 +1431,8 @@
 
 
     <!-- Aneka Ragam Makanan res-->
+    <string name="title_jenis_jenis_makanan">Penjelasan Lanjut Jenis-Jenis </string>
+
     <string name="title_ragam_makanan_1">Makanan Pokok</string>
     <string name="pengertian_ragam_makanan_1">Makanan pokok adalah makanan paling utama yang harus dimakan oleh manusia setiap hari.</string>
     <string name="manfaat_ragam_makanan_1">Manfaat makanan pokok adalah sebagai sumber energi, dan merupakan penghasil karbohidrat yang dibutuhkan oleh tubuh. Selain itu, karbohidrat dapat bermanfaat untuk meningkatkan metabolisme tubuh, menyeimbangkan asam basa dalam tubuh, pembentuk sel, jaringan serta organ, memperlancar pencernaan dan penyerapan kalsium serta membantu membentuk protein dan lemak.</string>

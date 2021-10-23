@@ -93,11 +93,14 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
             // Populate RagamMakanan
             populateData(dataRagamMakanan)
+            // Set button behavior
+            setBtnJenisJenis(dataRagamMakanan)
 
             // Init speechRecognizer
             setSpeech()
         }
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -125,6 +128,23 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
             detailPorsiRagamMakanan.text = data.porsi
             detailKandunganRagamMakanan.text = data.kandungan
             detailMasalahRagamMakanan.text = data.masalah
+        }
+    }
+
+    // Set Button jenis-jenis text and navigation
+    private fun setBtnJenisJenis(data: RagamMakanan) {
+        val text = getString(R.string.title_jenis_jenis_makanan) + data.judul
+        val jenisId = data.id
+
+        binding.apply {
+            btnJenisJenis.text = text
+
+            btnJenisJenis.setOnClickListener {
+                val actionToListJenis =
+                    DetailRagamMakananFragmentDirections
+                        .actionDetailRagamMakananFragmentToJenisRagamMakananFragment(jenisId)
+                findNavController().navigate(actionToListJenis)
+            }
         }
     }
 

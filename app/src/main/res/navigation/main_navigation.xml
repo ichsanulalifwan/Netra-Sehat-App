@@ -87,6 +87,9 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailRagamMakananFragment_to_jenisRagamMakananFragment"
+            app:destination="@id/jenisRagamMakananFragment" />
     </fragment>
     <fragment
         android:id="@+id/aktivitasFisikFragment"
@@ -205,6 +208,27 @@
         tools:layout="@layout/fragment_detail_phbs" >
         <argument
             android:name="phbsId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/jenisRagamMakananFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.jenisragammakanan.JenisRagamMakananFragment"
+        android:label="fragment_jenis_ragam_makanan"
+        tools:layout="@layout/fragment_jenis_ragam_makanan" >
+        <action
+            android:id="@+id/action_jenisRagamMakananFragment_to_detailJenisMakananFragment"
+            app:destination="@id/detailJenisMakananFragment" />
+        <argument
+            android:name="typeMakanan"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailJenisMakananFragment"
+        android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.jenisragammakanan.DetailJenisMakananFragment"
+        android:label="fragment_detail_jenis_makanan"
+        tools:layout="@layout/fragment_detail_jenis_makanan" >
+        <argument
+            android:name="jenisMakananId"
             app:argType="integer" />
     </fragment>
 

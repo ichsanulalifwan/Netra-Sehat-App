@@ -241,6 +241,31 @@
                 tools:targetApi="o"
                 tools:text="@string/masalah_laukpauk" />
 
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btn_jenis_jenis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:elevation="0dp"
+                android:focusable="true"
+                android:fontFamily="@font/raleway_medium"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/purple_0"
+                android:textSize="12sp"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_masalah_ragam_makanan"
+                app:strokeColor="@color/purple_0"
+                app:strokeWidth="1dp"
+                tools:text="@string/title_jenis_jenis_makanan_1" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
