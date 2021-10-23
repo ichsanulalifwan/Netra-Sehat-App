@@ -153,7 +153,7 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val giziSeimbang = getString(R.string.menu_pesanGiziSeimbang)
+        val giziSeimbang = getString(R.string.menu_giziSeimbang)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function

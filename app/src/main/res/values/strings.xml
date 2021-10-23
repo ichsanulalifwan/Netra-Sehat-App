@@ -213,13 +213,16 @@
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
-    <string name="menu_pesanGiziSeimbang">
+    <string name="menu_pesanGiziSeimbang1">
         Katakan 1 untuk Bersyukur dan Nikmati Semua Jenis Makanan, Katakan 2 untuk Banyak Makan Sayur dan Cukup Buah,
         Katakan 3 untuk Biaskan Mengonsumsi Lauk Pauk Yang Mengandung Protein Tinggi, Katakan 4 untuk Biasakan Mengonsumsi Aneka Ragam Makanan Pokok,
-        Katakan 5 untuk Batasi Konsumsi Pangan Manis, Asin Dan Berlemak, Katakan 6 untuk Biasakan Sarapan yang Bergizi,
-        Katakan 7 untuk Biasakan Minum Air Putih yang Cukup dan Aman, Katakan 8 untuk Biasakan Membaca Label Pada Kemasan Pangan,
-        Katakan 9 untuk Cuci tangan pakai sabun dengan air bersih mengalir, Katakan 10 untuk Lakukan Aktivitas Fisik Yang Cukup dan Pertahankan Berat Badan Normal.
-        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+        Katakan 5 untuk Batasi Konsumsi Pangan Manis, Asin Dan Berlemak, Katakan 6 untuk Biasakan Sarapan yang Bergizi.
+        Katakan 7 untuk Pilihan selanjutnya, Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_pesanGiziSeimbang2">
+        Katakan 1 untuk Biasakan Minum Air Putih yang Cukup dan Aman, Katakan 2 untuk Biasakan Membaca Label Pada Kemasan Pangan,
+        Katakan 3 untuk Cuci tangan pakai sabun dengan air bersih mengalir, Katakan 4 untuk Lakukan Aktivitas Fisik Yang Cukup dan Pertahankan Berat Badan Normal.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
     <string name="menu_penjelasanPesan1">

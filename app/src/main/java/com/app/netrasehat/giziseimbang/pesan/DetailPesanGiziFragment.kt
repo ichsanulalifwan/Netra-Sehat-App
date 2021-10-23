@@ -240,7 +240,7 @@ class DetailPesanGiziFragment : Fragment(), CoroutineScope, RecognitionListener 
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
                 textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }
