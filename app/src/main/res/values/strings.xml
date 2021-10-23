@@ -105,13 +105,17 @@
     </string>
     <string name="menu_anekaRagamMakanan">
         Katakan 1 untuk Makanan Pokok, Katakan 2 untuk Lauk Pauk,
-        Katakan 3 untuk Sayuran, Katakan 4 untuk Buah-buahan, Katakan 5 untuk Air Putih,
+        Katakan 3 untuk Sayuran, Katakan 4 untuk Buah-buahan, Katakan 5 untuk Air Putih.
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
     <string name="menu_detail_anekaRagamMakanan">
         Katakan 1 untuk Pengertian, Katakan 2 untuk Manfaat, Katakan 3 untuk Jenis, Katakan 4 untuk Porsi,
         Katakan 5 untuk Kandungan, Katakan 6 untuk Masalah jika konsumsi tidak sesuai,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_detail_anekaRagamMakanan2">
+        Katakan 1 untuk Pengertian, Katakan 2 untuk Manfaat, Katakan 3 untuk Jenis, Katakan 4 untuk Porsi.
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
@@ -132,14 +136,20 @@
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
+
     <string name="menu_laukPauk">
         Katakan 1 untuk Penjelasan Lauk Pauk, Katakan 2 untuk Jenis-Jenis Lauk Pauk,
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
-    <string name="menu_jenisLaukPauk">
-        Katakan 1 untuk Ayam, Katakan 2 untuk Daging, Katakan 3 untuk Ikan, Katakan 4 untuk Telur, Katakan 5 untuk Kepiting,
-        Katakan 6 untuk Udang, Katakan 7 untuk Cumi-Cumi, Katakan 8 untuk Tempe, Katakan 9 untuk Tahu.
-        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+    <string name="menu_jenisLaukPauk1">
+        Katakan 1 untuk Ayam, Katakan 2 untuk Daging, Katakan 3 untuk Ikan, Katakan 4 untuk Telur,
+        Katakan 5 untuk Kepiting,Katakan 6 untuk Udang.
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_jenisLaukPauk2">
+        Katakan 1 untuk  Cumi-Cumi, Katakan 2 untuk Tempe, Katakan 3 untuk Tahu.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
 
@@ -147,24 +157,51 @@
         Katakan 1 untuk Penjelasan Sayuran, Katakan 2 untuk Jenis-Jenis Sayuran,
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
-    <string name="menu_jenisSayuran">
-        Katakan 1 untuk Sayur Asem, Katakan 2 untuk Sayur Sop, Katakan 3 untuk Sayur Bayam Bening, Katakan 4 untuk Sayur Lodeh, Katakan 5 untuk Tumis Sawi,
-        Katakan 6 untuk Tumis Kacang Panjang, Katakan 7 untuk Tumis Kangkung, Katakan 8 untuk Tumis Tauge, Katakan 9 untuk Wortel Rebus,
-        Katakan 10 untuk Buncis Rebus, Katakan 11 untuk Labu Siam, Katakan 12 untuk Balado Terong, Katakan 13 untuk Terong Bulat Hijau, Katakan 14 untuk Terong Bulat Ungu.
-        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+    <string name="menu_jenisSayuran1">
+        Katakan 1 untuk Sayur Kelor, Katakan 2 untuk Sayur Asem, Katakan 3 untuk Sayur Sop, Katakan 4 untuk Sayur Bayam Bening,
+        Katakan 5 untuk Sayur Lodeh, Katakan 6 untuk Tumis Sawi,
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+    <string name="menu_jenisSayuran2">
+        Katakan 1 untuk Tumis Kacang Panjang, Katakan 2 untuk Tumis Kangkung, Katakan 3 untuk Tumis Tauge,
+        Katakan 4 untuk Wortel Rebus, Katakan 5 untuk Buncis Rebus, Katakan 6 untuk Labu Siam.
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_jenisSayuran3">
+        Katakan 1 untuk Balado Terong, Katakan 2 untuk Terong Bulat Hijau, Katakan 3 untuk Terong Bulat Ungu.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
 
     <string name="menu_buah">
         Katakan 1 untuk Penjelasan Buah-buahan, Katakan 2 untuk Jenis-Jenis Buah-buahan,
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
-    <string name="menu_jenisBuah">
-        Katakan 1 untuk Alpukat, Katakan 2 untuk Anggur, Katakan 3 untuk Apel, Katakan 4 untuk Belimbing, Katakan 5 untuk Durian,
-        Katakan 6 untuk Jambu air, Katakan 7 untuk Jambu biji, Katakan 8 untuk Jeruk Bali, Katakan 9 untuk Jeruk Mandarin,
-        Katakan 10 untuk Kedondong, Katakan 11 untuk Mangga, Katakan 12 untuk Buah Naga, Katakan 13 untuk Nanas, Katakan 14 untuk Nangka,
-        Katakan 15 untuk Pear, Katakan 16 untuk Pepaya, Katakan 17 untuk Pisang, Katakan 18 untuk Rambutan, Katakan 19 untuk Salak, Katakan 20 untuk Sawo,
-        Katakan 21 untuk Semangka, Katakan 22 untuk Sirsak, Katakan 23 untuk Stroberi,
-        Katakan 77 untuk kembali, Katakan 99 untuk ke menu utama, Katakan 0 untuk Keluar.
+    <string name="menu_jenisBuah1">
+        Katakan 1 untuk Apel, Katakan 2 untuk Pepaya, Katakan 3 untuk Pisang, Katakan 4 untuk Sirsak,
+        Katakan 5 untuk Alpukat, Katakan 6 untuk Anggur.
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_jenisBuah2">
+        Katakan 1 untuk Belimbing, Katakan 2 untuk Durian, Katakan 3 untuk Jambu air, Katakan 4 untuk Jambu biji,
+        Katakan 5 untuk Jeruk Bali, Katakan 6 untuk Jeruk Mandarin.
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_jenisBuah3">
+        Katakan 1 untuk Kedondong, Katakan 2 untuk Mangga, Katakan 3 untuk Buah Naga, Katakan 4 untuk Nanas,
+        Katakan 5 untuk Nangka, Katakan 6 untuk Pear.
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_jenisBuah4">
+        Katakan 1 untuk Rambutan, Katakan 2 untuk Salak, Katakan 3 untuk Sawo, Katakan 4 untuk Semangka,
+        Katakan 5 untuk Stroberi.
+        Katakan 7 untuk Pilihan selanjutnya,
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
     <string name="menu_airPutih">
@@ -2175,5 +2212,11 @@
     <string name="title_pakai_masker">2) Pakai Masker</string>
     <string name="title_cuci_tangan">1) Cuci Tangan</string>
     <string name="title_protokol_covid">a. Protokol Covid</string>
+
+
+    <string name="toolbar_title1">Jenis-Jenis Makanan Pokok</string>
+    <string name="toolbar_title2">Jenis-Jenis Lauk Pauk</string>
+    <string name="toolbar_title3">Jenis-Jenis Sayuran</string>
+    <string name="toolbar_title4">Jenis-Jenis Buah</string>
 
 </resources>

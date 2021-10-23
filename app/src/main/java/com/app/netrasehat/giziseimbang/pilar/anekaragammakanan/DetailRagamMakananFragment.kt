@@ -114,9 +114,7 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-//                dataPhbs.apply {
-//                    textToSpeech(judul, pengertian)
-//                }
+                textToSpeech()
             }
         }
     }
@@ -150,15 +148,26 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         }
     }
 
-    private fun textToSpeech(judul: String, pesan: String) {
+    private fun textToSpeech() {
         // Get the text from local string resource
-        val menuPilihan = getString(R.string.menu_kembali)
+        val menuDetailRagamMakanan = getString(R.string.menu_detail_anekaRagamMakanan)
+        val menuDetailRagamMakana2 = getString(R.string.menu_detail_anekaRagamMakanan2)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(judul, TextToSpeech.QUEUE_FLUSH, null, "judul")
-        textToSpeechEngine?.speak(pesan, TextToSpeech.QUEUE_ADD, null, "pesan")
-        textToSpeechEngine?.speak(menuPilihan, TextToSpeech.QUEUE_ADD, null, "menuPilihan")
+        if (args.id == 1) {
+            textToSpeechEngine?.speak(
+                menuDetailRagamMakana2,
+                TextToSpeech.QUEUE_FLUSH,
+                null, "menuDetailRagamMakanan"
+            )
+        } else {
+            textToSpeechEngine?.speak(
+                menuDetailRagamMakanan,
+                TextToSpeech.QUEUE_FLUSH,
+                null, "menuDetailRagamMakanan"
+            )
+        }
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -167,7 +176,8 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("noMatch")
+                val textParam = utteranceId.equals("menuDetailRagamMakanan")
+                        || utteranceId.equals("wrongTts")
                 if (textParam) {
                     startListening()
                 }
@@ -192,6 +202,7 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -255,30 +266,170 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
+        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
+        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
+        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
+        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
+        val ragamMakananId = args.id
+        val menuDetailRagamMakanan = getString(R.string.menu_detail_anekaRagamMakanan)
+        val menuDetailRagamMakana2 = getString(R.string.menu_detail_anekaRagamMakanan2)
 
-        when {
-            check8 -> {
-                findNavController().navigateUp()
+        if (ragamMakananId == 1) {
+            when {
+                check1 -> check1(menuDetailRagamMakana2)
+                check2 -> check2(menuDetailRagamMakana2)
+                check3 -> check3()
+                check4 -> check4(menuDetailRagamMakana2)
+                check8 -> findNavController().navigateUp()
+                check9 -> backToMainMenu()
+                check0 -> exitApp()
+                else -> wrongOption()
             }
-            check9 -> {
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
-            }
-            check0 -> {
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-            else -> {
-                val messageNoMatch =
-                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+        } else {
+            when {
+                check1 -> check1(menuDetailRagamMakanan)
+                check2 -> check2(menuDetailRagamMakanan)
+                check3 -> {
+                    if (ragamMakananId == 5) {
+                        val option = dataRagamMakanan.jenis
+                        textToSpeechEngine?.speak(
+                            option,
+                            TextToSpeech.QUEUE_FLUSH,
+                            null,
+                            "option"
+                        )
+                        textToSpeechEngine?.speak(
+                            menuDetailRagamMakanan,
+                            TextToSpeech.QUEUE_ADD,
+                            null,
+                            "menuDetailRagamMakanan"
+                        )
+                    } else check3()
+                }
+                check4 -> check4(menuDetailRagamMakanan)
+                check5 -> {
+                    val option = dataRagamMakanan.kandungan
+                    textToSpeechEngine?.speak(
+                        option,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "option"
+                    )
+                    textToSpeechEngine?.speak(
+                        menuDetailRagamMakanan,
+                        TextToSpeech.QUEUE_ADD,
+                        null,
+                        "menuDetailRagamMakanan"
+                    )
+                }
+                check6 -> {
+                    val option = dataRagamMakanan.masalah
+                    textToSpeechEngine?.speak(
+                        option,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "option"
+                    )
+                    textToSpeechEngine?.speak(
+                        menuDetailRagamMakanan,
+                        TextToSpeech.QUEUE_ADD,
+                        null,
+                        "menuDetailRagamMakanan"
+                    )
+                }
+                check8 -> findNavController().navigateUp()
+                check9 -> backToMainMenu()
+                check0 -> exitApp()
+                else -> wrongOption()
             }
         }
+    }
+
+    private fun check1(menuDetailMakanan: String) {
+        val option = dataRagamMakanan.pengertian
+        textToSpeechEngine?.speak(
+            option,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "option"
+        )
+        textToSpeechEngine?.speak(
+            menuDetailMakanan,
+            TextToSpeech.QUEUE_ADD,
+            null,
+            "menuDetailRagamMakanan"
+        )
+    }
+
+    private fun check2(menuDetailMakanan: String) {
+        val option = dataRagamMakanan.manfaat
+        textToSpeechEngine?.speak(
+            option,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "option"
+        )
+        textToSpeechEngine?.speak(
+            menuDetailMakanan,
+            TextToSpeech.QUEUE_ADD,
+            null,
+            "menuDetailRagamMakanan"
+        )
+    }
+
+    private fun check3() {
+        val actionToListJenis =
+            DetailRagamMakananFragmentDirections
+                .actionDetailRagamMakananFragmentToJenisRagamMakananFragment(
+                    dataRagamMakanan.id
+                )
+        findNavController().navigate(actionToListJenis)
+    }
+
+    private fun check4(menuDetailMakanan: String) {
+        val option = dataRagamMakanan.porsi
+        textToSpeechEngine?.speak(
+            option,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "option"
+        )
+        textToSpeechEngine?.speak(
+            menuDetailMakanan,
+            TextToSpeech.QUEUE_ADD,
+            null,
+            "menuDetailRagamMakanan"
+        )
+    }
+
+    private fun backToMainMenu() {
+        val backMainMenu = Intent(context, MainActivity::class.java)
+        startActivity(backMainMenu)
+        activity?.let {
+            ActivityCompat.finishAffinity(it)
+        }
+    }
+
+    private fun exitApp() {
+        activity?.finishAffinity()
+        exitProcess(0)
+    }
+
+    private fun wrongOption() {
+        val messageNoMatch =
+            "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+        textToSpeechEngine?.speak(
+            messageNoMatch,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "wrongTts"
+        )
+        Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {

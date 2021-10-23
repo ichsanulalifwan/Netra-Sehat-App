@@ -131,7 +131,7 @@ class DetailPesanGiziFragment : Fragment(), CoroutineScope, RecognitionListener 
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("noMatch")
+                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("wrongTts")
                 if (textParam) {
                     startListening()
                 }
@@ -156,6 +156,7 @@ class DetailPesanGiziFragment : Fragment(), CoroutineScope, RecognitionListener 
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -239,7 +240,7 @@ class DetailPesanGiziFragment : Fragment(), CoroutineScope, RecognitionListener 
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
+                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "wrongTts")
                 Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }

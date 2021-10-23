@@ -45,6 +45,7 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
     private var _binding: FragmentAnekaRagamMakananBinding? = null
     private val binding get() = _binding!!
     private val args by navArgs<JenisRagamMakananFragmentArgs>()
+    private var loopCode: Int? = 0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -85,19 +86,19 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
                 when (typeMakanan) {
                     1 -> {
                         dataJenisMakanan = viewModel.getJenisMakananPokok(requireActivity())
-                        toolbarTitle.text = "Jenis-Jenis Makanan Pokok"
+                        toolbarTitle.text = getString(R.string.toolbar_title1)
                     }
                     2 -> {
                         dataJenisMakanan = viewModel.getJenisLaukPauk(requireActivity())
-                        toolbarTitle.text = "Jenis-Jenis Lauk Pauk"
+                        toolbarTitle.text = getString(R.string.toolbar_title2)
                     }
                     3 -> {
                         dataJenisMakanan = viewModel.getJenisSayuran(requireActivity())
-                        toolbarTitle.text = "Jenis-Jenis Sayuran"
+                        toolbarTitle.text = getString(R.string.toolbar_title3)
                     }
                     4 -> {
                         dataJenisMakanan = viewModel.getJenisBuah(requireActivity())
-                        toolbarTitle.text = "Jenis-Jenis Buah"
+                        toolbarTitle.text = getString(R.string.toolbar_title4)
                     }
                 }
             }
@@ -125,7 +126,7 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
@@ -142,22 +143,61 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
         adapterJenisMakanan.setOnItemClickListener(object :
             JenisMakananAdapter.OnItemClickListener {
             override fun onItemClicked(data: JenisJenisMakanan) {
-                val actionToDetail =
-                    JenisRagamMakananFragmentDirections.actionJenisRagamMakananFragmentToDetailJenisMakananFragment(
-                        data.id, typeMakanan
-                    )
-                findNavController().navigate(actionToDetail)
+                navigateToDetail(data.id, typeMakanan)
             }
         })
     }
 
-    private fun textToSpeech() {
-        // Get the text from local string resource
-        val giziSeimbang = getString(R.string.menu_giziSeimbang)
+    private fun navigateToDetail(id: Int, type: Int) {
+        val actionToDetail =
+            JenisRagamMakananFragmentDirections.actionJenisRagamMakananFragmentToDetailJenisMakananFragment(
+                id, type
+            )
+        findNavController().navigate(actionToDetail)
+    }
 
-        // Lollipop and above requires an additional ID to be passed.
-        // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+    private fun textToSpeech() {
+        // Get the text from local string resource by typeMakanan
+        val menuJenisMakanan: String
+
+        when (args.typeMakanan) {
+            1 -> {
+                menuJenisMakanan = getString(R.string.menu_jenisMakananPokok)
+                textToSpeechEngine?.speak(
+                    menuJenisMakanan,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "menuUtama"
+                )
+            }
+            2 -> {
+                menuJenisMakanan = getString(R.string.menu_jenisLaukPauk1)
+                textToSpeechEngine?.speak(
+                    menuJenisMakanan,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "menuUtama"
+                )
+            }
+            3 -> {
+                menuJenisMakanan = getString(R.string.menu_jenisSayuran1)
+                textToSpeechEngine?.speak(
+                    menuJenisMakanan,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "menuUtama"
+                )
+            }
+            4 -> {
+                menuJenisMakanan = getString(R.string.menu_jenisBuah1)
+                textToSpeechEngine?.speak(
+                    menuJenisMakanan,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "menuUtama"
+                )
+            }
+        }
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -254,40 +294,245 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
         val recognizedText = matches?.get(0)
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
+        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
+        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
+        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
-        when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
+        when (val typeMakanan = args.typeMakanan) {
+            1 -> {
+                when {
+                    check1 -> navigateToDetail(1, typeMakanan)
+                    check2 -> navigateToDetail(2, typeMakanan)
+                    check3 -> navigateToDetail(3, typeMakanan)
+                    check4 -> navigateToDetail(4, typeMakanan)
+                    check5 -> navigateToDetail(5, typeMakanan)
+                    check6 -> navigateToDetail(6, typeMakanan)
+                    check7 -> navigateToDetail(7, typeMakanan)
+                    check8 -> findNavController().navigateUp()
+                    check9 -> backToMainMenu()
+                    check0 -> exitApp()
+                    else -> wrongOption()
+                }
             }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
+            2 -> {
+                if (loopCode == 0) {
+                    when {
+                        check1 -> navigateToDetail(1, typeMakanan)
+                        check2 -> navigateToDetail(2, typeMakanan)
+                        check3 -> navigateToDetail(3, typeMakanan)
+                        check4 -> navigateToDetail(4, typeMakanan)
+                        check5 -> navigateToDetail(5, typeMakanan)
+                        check6 -> navigateToDetail(6, typeMakanan)
+                        check7 -> {
+                            val menuJenisLaukPauk2 = getString(R.string.menu_jenisLaukPauk2)
+                            textToSpeechEngine?.speak(
+                                menuJenisLaukPauk2,
+                                TextToSpeech.QUEUE_FLUSH,
+                                null,
+                                "menuUtama"
+                            )
+                            loopCode = 1
+                        }
+                        check8 -> findNavController().navigateUp()
+                        check9 -> backToMainMenu()
+                        check0 -> exitApp()
+                        else -> wrongOption()
+                    }
+                } else if (loopCode == 1) {
+                    when {
+                        check1 -> navigateToDetail(7, typeMakanan)
+                        check2 -> navigateToDetail(8, typeMakanan)
+                        check3 -> navigateToDetail(9, typeMakanan)
+                        check8 -> findNavController().navigateUp()
+                        check9 -> backToMainMenu()
+                        check0 -> exitApp()
+                        else -> wrongOption()
+                    }
+                }
             }
-            check8 -> {
-                findNavController().navigateUp()
+            3 -> {
+                when (loopCode) {
+                    0 -> {
+                        when {
+                            check1 -> navigateToDetail(1, typeMakanan)
+                            check2 -> navigateToDetail(2, typeMakanan)
+                            check3 -> navigateToDetail(3, typeMakanan)
+                            check4 -> navigateToDetail(4, typeMakanan)
+                            check5 -> navigateToDetail(5, typeMakanan)
+                            check6 -> navigateToDetail(6, typeMakanan)
+                            check7 -> {
+                                val menuJenisSayuran2 = getString(R.string.menu_jenisSayuran2)
+                                textToSpeechEngine?.speak(
+                                    menuJenisSayuran2,
+                                    TextToSpeech.QUEUE_FLUSH,
+                                    null,
+                                    "menuUtama"
+                                )
+                                loopCode = 1
+                            }
+                            check8 -> findNavController().navigateUp()
+                            check9 -> backToMainMenu()
+                            check0 -> exitApp()
+                            else -> wrongOption()
+                        }
+                    }
+                    1 -> {
+                        when {
+                            check1 -> navigateToDetail(7, typeMakanan)
+                            check2 -> navigateToDetail(8, typeMakanan)
+                            check3 -> navigateToDetail(9, typeMakanan)
+                            check4 -> navigateToDetail(10, typeMakanan)
+                            check5 -> navigateToDetail(11, typeMakanan)
+                            check6 -> navigateToDetail(12, typeMakanan)
+                            check7 -> {
+                                val menuJenisSayuran3 = getString(R.string.menu_jenisSayuran3)
+                                textToSpeechEngine?.speak(
+                                    menuJenisSayuran3,
+                                    TextToSpeech.QUEUE_FLUSH,
+                                    null,
+                                    "menuUtama"
+                                )
+                                loopCode = 2
+                            }
+                            check8 -> findNavController().navigateUp()
+                            check9 -> backToMainMenu()
+                            check0 -> exitApp()
+                            else -> wrongOption()
+                        }
+                    }
+                    2 -> {
+                        when {
+                            check1 -> navigateToDetail(13, typeMakanan)
+                            check2 -> navigateToDetail(14, typeMakanan)
+                            check3 -> navigateToDetail(15, typeMakanan)
+                            check8 -> findNavController().navigateUp()
+                            check9 -> backToMainMenu()
+                            check0 -> exitApp()
+                            else -> wrongOption()
+                        }
+                    }
+                }
             }
-            check9 -> {
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
-            }
-            check0 -> {
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-            else -> {
-                val messageNoMatch =
-                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+            4 -> {
+                when (loopCode) {
+                    0 -> {
+                        when {
+                            check1 -> navigateToDetail(1, typeMakanan)
+                            check2 -> navigateToDetail(2, typeMakanan)
+                            check3 -> navigateToDetail(3, typeMakanan)
+                            check4 -> navigateToDetail(4, typeMakanan)
+                            check5 -> navigateToDetail(5, typeMakanan)
+                            check6 -> navigateToDetail(6, typeMakanan)
+                            check7 -> {
+                                val menuJenisBuah2 = getString(R.string.menu_jenisBuah2)
+                                textToSpeechEngine?.speak(
+                                    menuJenisBuah2,
+                                    TextToSpeech.QUEUE_FLUSH,
+                                    null,
+                                    "menuUtama"
+                                )
+                                loopCode = 1
+                            }
+                            check8 -> findNavController().navigateUp()
+                            check9 -> backToMainMenu()
+                            check0 -> exitApp()
+                            else -> wrongOption()
+                        }
+                    }
+                    1 -> {
+                        when {
+                            check1 -> navigateToDetail(7, typeMakanan)
+                            check2 -> navigateToDetail(8, typeMakanan)
+                            check3 -> navigateToDetail(9, typeMakanan)
+                            check4 -> navigateToDetail(10, typeMakanan)
+                            check5 -> navigateToDetail(11, typeMakanan)
+                            check6 -> navigateToDetail(12, typeMakanan)
+                            check7 -> {
+                                val menuJenisBuah3 = getString(R.string.menu_jenisBuah3)
+                                textToSpeechEngine?.speak(
+                                    menuJenisBuah3,
+                                    TextToSpeech.QUEUE_FLUSH,
+                                    null,
+                                    "menuUtama"
+                                )
+                                loopCode = 2
+                            }
+                            check8 -> findNavController().navigateUp()
+                            check9 -> backToMainMenu()
+                            check0 -> exitApp()
+                            else -> wrongOption()
+                        }
+                    }
+                    2 -> {
+                        when {
+                            check1 -> navigateToDetail(13, typeMakanan)
+                            check2 -> navigateToDetail(14, typeMakanan)
+                            check3 -> navigateToDetail(15, typeMakanan)
+                            check4 -> navigateToDetail(16, typeMakanan)
+                            check5 -> navigateToDetail(17, typeMakanan)
+                            check6 -> navigateToDetail(18, typeMakanan)
+                            check7 -> {
+                                val menuJenisBuah4 = getString(R.string.menu_jenisBuah4)
+                                textToSpeechEngine?.speak(
+                                    menuJenisBuah4,
+                                    TextToSpeech.QUEUE_FLUSH,
+                                    null,
+                                    "menuUtama"
+                                )
+                                loopCode = 3
+                            }
+                            check8 -> findNavController().navigateUp()
+                            check9 -> backToMainMenu()
+                            check0 -> exitApp()
+                            else -> wrongOption()
+                        }
+                    }
+                    3 -> {
+                        when {
+                            check1 -> navigateToDetail(19, typeMakanan)
+                            check2 -> navigateToDetail(20, typeMakanan)
+                            check3 -> navigateToDetail(21, typeMakanan)
+                            check4 -> navigateToDetail(22, typeMakanan)
+                            check5 -> navigateToDetail(23, typeMakanan)
+                            check8 -> findNavController().navigateUp()
+                            check9 -> backToMainMenu()
+                            check0 -> exitApp()
+                            else -> wrongOption()
+                        }
+                    }
+                }
             }
         }
+    }
+
+    private fun backToMainMenu() {
+        val backMainMenu = Intent(context, MainActivity::class.java)
+        startActivity(backMainMenu)
+        activity?.let {
+            ActivityCompat.finishAffinity(it)
+        }
+    }
+
+    private fun exitApp() {
+        activity?.finishAffinity()
+        exitProcess(0)
+    }
+
+    private fun wrongOption() {
+        val messageNoMatch =
+            "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+        textToSpeechEngine?.speak(
+            messageNoMatch,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "wrongTts"
+        )
+        Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {

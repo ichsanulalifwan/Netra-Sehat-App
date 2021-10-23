@@ -100,7 +100,7 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
@@ -114,24 +114,29 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
     }
 
     private fun onItemSelected() {
-        adapterRagamMakanan.setOnItemClickListener(object : RagamMakananAdapter.OnItemClickListener {
+        adapterRagamMakanan.setOnItemClickListener(object :
+            RagamMakananAdapter.OnItemClickListener {
             override fun onItemClicked(data: RagamMakanan) {
-                val actionToDetail =
-                    AnekaRagamMakananFragmentDirections.actionAnekaRagamMakananFragmentToDetailRagamMakananFragment(
-                        data.id
-                    )
-                findNavController().navigate(actionToDetail)
+                navigateToDetail(data.id)
             }
         })
     }
 
+    private fun navigateToDetail(id: Int) {
+        val actionToDetail =
+            AnekaRagamMakananFragmentDirections.actionAnekaRagamMakananFragmentToDetailRagamMakananFragment(
+                id
+            )
+        findNavController().navigate(actionToDetail)
+    }
+
     private fun textToSpeech() {
         // Get the text from local string resource
-        //val giziSeimbang = getString(R.string.menu_pesanGiziSeimbang)
+        val menu = getString(R.string.menu_anekaRagamMakanan)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        //textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_FLUSH, null, "menu")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -163,6 +168,7 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -228,20 +234,28 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
         val recognizedText = matches?.get(0)
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
+        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
             check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
+                navigateToDetail(1)
             }
             check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
+                navigateToDetail(2)
+            }
+            check3 -> {
+                navigateToDetail(3)
+            }
+            check4 -> {
+                navigateToDetail(4)
+            }
+            check5 -> {
+                navigateToDetail(5)
             }
             check8 -> {
                 findNavController().navigateUp()
@@ -249,7 +263,9 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
+                activity?.let {
+                    ActivityCompat.finishAffinity(it)
+                }
             }
             check0 -> {
                 activity?.finishAffinity()
@@ -258,8 +274,13 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                textToSpeechEngine?.speak(
+                    messageNoMatch,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "wrongTts"
+                )
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }
