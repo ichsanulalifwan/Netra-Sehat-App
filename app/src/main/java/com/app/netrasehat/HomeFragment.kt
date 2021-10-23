@@ -193,8 +193,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-//        val text = "Mendengarkan . . ."
-//        binding.tvSpeak.text = text
+        val text = "Mendengarkan . . ."
+        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -212,7 +212,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-//        binding.tvSpeak.text = errorMessage
+        binding.tvSpeak.text = errorMessage
         // val messageNoMatch = "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
 //        textToSpeechEngine?.speak(errorMessage, TextToSpeech.QUEUE_FLUSH, null, "tts0")
         startOver()
@@ -223,7 +223,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-//        binding.tvSpeak.text = recognizedText
+        binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"

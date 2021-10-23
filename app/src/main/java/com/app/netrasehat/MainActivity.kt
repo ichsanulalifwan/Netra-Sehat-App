@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         ) {
             requestRecordAudioPermission()
         } else {
-            checkLocationPermission()
+            //checkLocationPermission()
         }
     }
 
@@ -281,7 +281,7 @@ class MainActivity : AppCompatActivity() {
                             Manifest.permission.RECORD_AUDIO
                         ) == PackageManager.PERMISSION_GRANTED
                     ) {
-                        checkLocationPermission()
+                        //checkLocationPermission()
                     }
                     Toast.makeText(this, "Record Audio Permission Granted", Toast.LENGTH_SHORT).show()
                 } else {
