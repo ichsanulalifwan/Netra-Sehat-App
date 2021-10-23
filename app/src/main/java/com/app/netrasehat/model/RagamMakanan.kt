@@ -5,6 +5,7 @@ class RagamMakanan(
     val judul: String,
     val pengertian: String,
     val manfaat: String,
+    val jenis: String,
     val porsi: String,
     val kandungan: String?= "",
     val masalah: String? = "",

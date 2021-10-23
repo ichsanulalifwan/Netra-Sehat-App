@@ -82,7 +82,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/raleway_bold"
                 android:text="@string/text_pengertian"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_ragam_makanan" />
@@ -94,11 +94,13 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/raleway"
-                android:textColor="@color/black"
-                android:textSize="11sp"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_pengertian_ragam_makanan"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_pengertian_ragam_makanan"
+                tools:targetApi="o"
                 tools:text="@string/pengertian_makananPokok" />
 
             <TextView
@@ -108,7 +110,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/raleway_bold"
                 android:text="@string/text_manfaat"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
                 app:layout_constraintTop_toBottomOf="@id/detail_pengertian_ragam_makanan" />
@@ -120,11 +122,13 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/raleway"
-                android:textColor="@color/black"
-                android:textSize="11sp"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_manfaat_ragam_makanan"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_manfaat_ragam_makanan"
+                tools:targetApi="o"
                 tools:text="@string/manfaat_makanan_pokok" />
 
             <TextView
@@ -134,7 +138,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/raleway_bold"
                 android:text="@string/text_jenis"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
                 app:layout_constraintTop_toBottomOf="@id/detail_manfaat_ragam_makanan" />
@@ -146,8 +150,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/raleway"
-                android:textColor="@color/black"
-                android:textSize="11sp"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_jenis_ragam_makanan"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_jenis_ragam_makanan"
@@ -160,7 +164,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/raleway_bold"
                 android:text="@string/text_porsi"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
                 app:layout_constraintTop_toBottomOf="@id/detail_jenis_ragam_makanan" />
@@ -172,11 +176,13 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/raleway"
-                android:textColor="@color/black"
-                android:textSize="11sp"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_porsi_ragam_makanan"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_porsi_ragam_makanan"
+                tools:targetApi="o"
                 tools:text="@string/porsi_makanan_pokok" />
 
             <TextView
@@ -186,7 +192,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/raleway_bold"
                 android:text="@string/text_kandungan"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
                 app:layout_constraintTop_toBottomOf="@id/detail_porsi_ragam_makanan" />
@@ -198,11 +204,13 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/raleway"
-                android:textColor="@color/black"
-                android:textSize="11sp"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_kandungan_ragam_makanan"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_kandungan_ragam_makanan"
+                tools:targetApi="o"
                 tools:text="@string/kandungan_laukpauk" />
 
             <TextView
@@ -212,7 +220,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/raleway_bold"
                 android:text="@string/text_masalah"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
                 app:layout_constraintTop_toBottomOf="@id/detail_kandungan_ragam_makanan" />
@@ -224,23 +232,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/raleway"
-                android:textColor="@color/black"
-                android:textSize="11sp"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="@id/tv_masalah_ragam_makanan"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_masalah_ragam_makanan"
+                tools:targetApi="o"
                 tools:text="@string/masalah_laukpauk" />
-
-            <TextView
-                android:id="@+id/tv_speak"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/speech_belum_mulai"
-                android:textSize="14sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

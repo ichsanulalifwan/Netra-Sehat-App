@@ -14,13 +14,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentDetailRagamMakananBinding
+import com.app.netrasehat.model.RagamMakanan
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -33,10 +36,12 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
+    private lateinit var viewModel: DetailRagamMakananViewModel
+    private lateinit var dataRagamMakanan: RagamMakanan
+    private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentDetailRagamMakananBinding? = null
     private val binding get() = _binding!!
-    private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
+    private val args by navArgs<DetailRagamMakananFragmentArgs>()
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -47,6 +52,13 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentDetailRagamMakananBinding.inflate(inflater, container, false)
+
+        // Init viewModel
+        viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        )[DetailRagamMakananViewModel::class.java]
+
         return binding.root
     }
 
@@ -55,26 +67,35 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
         if (activity != null) {
 
-            // Init speechRecognizer
-            setSpeech()
-
             // Init Toolbar
             val toolbar = binding.topAppBar
             val navHostFragment = NavHostFragment.findNavController(this)
             NavigationUI.setupWithNavController(toolbar, navHostFragment)
-
-            // Set Navigate to previous page (backstack)
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
             }
 
-//            with(binding) {
-//                cvMakanan.setOnClickListener {
-//                    val actionToDetail =
-//                        AnekaRagamMakananFragmentDirections.actionAnekaRagamMakananFragmentToDetailRagamMakananFragment()
-//                    findNavController().navigate(actionToDetail)
-//                }
-//            }
+            // Set Detail RagamMakanan
+            val ragamMakananId = args.id
+            viewModel.setRagamMakanan(ragamMakananId)
+
+            if (ragamMakananId == 1) {
+                binding.apply {
+                    tvKandunganRagamMakanan.visibility = View.GONE
+                    detailKandunganRagamMakanan.visibility = View.GONE
+                    tvMasalahRagamMakanan.visibility = View.GONE
+                    detailMasalahRagamMakanan.visibility = View.GONE
+                }
+            }
+
+            // Get RagamMakanan
+            dataRagamMakanan = viewModel.getDetailRagamMakanan(requireActivity())
+
+            // Populate RagamMakanan
+            populateData(dataRagamMakanan)
+
+            // Init speechRecognizer
+            setSpeech()
         }
     }
 
@@ -88,28 +109,46 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+//                dataPhbs.apply {
+//                    textToSpeech(judul, pengertian)
+//                }
             }
         }
     }
 
-    private fun textToSpeech() {
+    private fun populateData(data: RagamMakanan) {
+        binding.apply {
+            tvTitleRagamMakanan.text = data.judul
+            detailPengertianRagamMakanan.text = data.pengertian
+            detailManfaatRagamMakanan.text = data.manfaat
+            detailJenisRagamMakanan.text = data.jenis
+            detailPorsiRagamMakanan.text = data.porsi
+            detailKandunganRagamMakanan.text = data.kandungan
+            detailMasalahRagamMakanan.text = data.masalah
+        }
+    }
+
+    private fun textToSpeech(judul: String, pesan: String) {
         // Get the text from local string resource
-        val anekaRagamMakanan = getString(R.string.menu_anekaRagamMakanan)
+        val menuPilihan = getString(R.string.menu_kembali)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(anekaRagamMakanan, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(judul, TextToSpeech.QUEUE_FLUSH, null, "judul")
+        textToSpeechEngine?.speak(pesan, TextToSpeech.QUEUE_ADD, null, "pesan")
+        textToSpeechEngine?.speak(menuPilihan, TextToSpeech.QUEUE_ADD, null, "menuPilihan")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
                 Log.i(TAG, "TTS On Start")
-
             }
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("noMatch")
+                if (textParam) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -131,7 +170,6 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -170,8 +208,6 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -189,7 +225,6 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -198,26 +233,13 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
-            }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
-            }
             check8 -> {
-                navController.popBackStack()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
@@ -231,7 +253,7 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
+                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
                 Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
             }
         }
@@ -275,6 +297,6 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
     }
 
     companion object {
-        private const val TAG = "DetailAnekaRagamMakanan"
+        private const val TAG = "DetailRagamMakanan"
     }
 }

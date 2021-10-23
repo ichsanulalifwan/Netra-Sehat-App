@@ -200,6 +200,7 @@ object DataContainer {
                 context.getString(R.string.title_ragam_makanan_1),
                 context.getString(R.string.pengertian_ragam_makanan_1),
                 context.getString(R.string.manfaat_ragam_makanan_1),
+                context.getString(R.string.jenis_ragam_makanan_1),
                 context.getString(R.string.porsi_ragam_makanan_1)
             )
         )
@@ -210,6 +211,7 @@ object DataContainer {
                 context.getString(R.string.title_ragam_makanan_2),
                 context.getString(R.string.pengertian_ragam_makanan_2),
                 context.getString(R.string.manfaat_ragam_makanan_2),
+                context.getString(R.string.jenis_ragam_makanan_2),
                 context.getString(R.string.porsi_ragam_makanan_2),
                 context.getString(R.string.kandungan_ragam_makanan_2),
                 context.getString(R.string.masalah_ragam_makanan_2)
@@ -222,6 +224,7 @@ object DataContainer {
                 context.getString(R.string.title_ragam_makanan_3),
                 context.getString(R.string.pengertian_ragam_makanan_3),
                 context.getString(R.string.manfaat_ragam_makanan_3),
+                context.getString(R.string.jenis_ragam_makanan_3),
                 context.getString(R.string.porsi_ragam_makanan_3),
                 context.getString(R.string.kandungan_ragam_makanan_3),
                 context.getString(R.string.masalah_ragam_makanan_3)
@@ -234,6 +237,7 @@ object DataContainer {
                 context.getString(R.string.title_ragam_makanan_4),
                 context.getString(R.string.pengertian_ragam_makanan_4),
                 context.getString(R.string.manfaat_ragam_makanan_4),
+                context.getString(R.string.jenis_ragam_makanan_4),
                 context.getString(R.string.porsi_ragam_makanan_4),
                 context.getString(R.string.kandungan_ragam_makanan_4),
                 context.getString(R.string.masalah_ragam_makanan_4)
@@ -246,6 +250,7 @@ object DataContainer {
                 context.getString(R.string.title_ragam_makanan_5),
                 context.getString(R.string.pengertian_ragam_makanan_5),
                 context.getString(R.string.manfaat_ragam_makanan_5),
+                context.getString(R.string.jenis_ragam_makanan_5),
                 context.getString(R.string.porsi_ragam_makanan_5),
                 context.getString(R.string.kandungan_ragam_makanan_5),
                 context.getString(R.string.masalah_ragam_makanan_5)
