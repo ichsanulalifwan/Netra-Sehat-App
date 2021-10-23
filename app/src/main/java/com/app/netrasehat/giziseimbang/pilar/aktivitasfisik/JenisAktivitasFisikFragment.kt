@@ -37,6 +37,7 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
     private lateinit var viewModel: JenisAktivitasFisikViewModel
+    private lateinit var dataAktivitas: AktivitasFisik
     private var _binding: FragmentJenisAktivitasFisikBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
@@ -84,7 +85,7 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
             viewModel.setJenisAktivitas(typeAktivitas)
 
             // Get Aktivitas Fisik
-            val dataAktivitas = viewModel.getDetailAktivitas(requireActivity())
+            dataAktivitas = viewModel.getDetailAktivitas(requireActivity())
 
             // Populate Aktivitas Fisik
             populateData(dataAktivitas)
@@ -101,7 +102,9 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                dataAktivitas.apply {
+                    textToSpeech(pengertian, manfaat, contoh)
+                }
             }
         }
     }
@@ -115,13 +118,16 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
         }
     }
 
-    private fun textToSpeech() {
+    private fun textToSpeech(pengertian: String, manfaat: String, contoh: String) {
         // Get the text from local string resource
-        val pilarGiziSeimbang = getString(R.string.menu_pilarGiziSeimbang)
+        val menuPilihan = getString(R.string.menu_kembali)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(pilarGiziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(pengertian, TextToSpeech.QUEUE_FLUSH, null, "pengertian")
+        textToSpeechEngine?.speak(manfaat, TextToSpeech.QUEUE_ADD, null, "manfaat")
+        textToSpeechEngine?.speak(contoh, TextToSpeech.QUEUE_ADD, null, "contoh")
+        textToSpeechEngine?.speak(menuPilihan, TextToSpeech.QUEUE_ADD, null, "menuPilihan")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -131,7 +137,10 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("noMatch")
+                if (textParam) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -153,7 +162,7 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -192,8 +201,6 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -211,7 +218,6 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -220,24 +226,11 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
-            }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
-            }
             check8 -> {
                 findNavController().navigateUp()
             }
@@ -253,8 +246,8 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }

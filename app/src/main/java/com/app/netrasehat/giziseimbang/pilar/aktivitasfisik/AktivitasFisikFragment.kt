@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -37,7 +36,7 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentAktivitasFisikBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
+    private var loopCode: Int? = 0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -71,19 +70,13 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             with(binding) {
                 btnAfRingan.setOnClickListener {
-                    val actionToJenis =
-                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment(1)
-                    findNavController().navigate(actionToJenis)
+                    navigateToDetail(1)
                 }
                 btnAfSedang.setOnClickListener {
-                    val actionToJenis =
-                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment(2)
-                    findNavController().navigate(actionToJenis)
+                    navigateToDetail(2)
                 }
                 btnAfBerat.setOnClickListener {
-                    val actionToJenis =
-                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment(3)
-                    findNavController().navigate(actionToJenis)
+                    navigateToDetail(3)
                 }
             }
         }
@@ -99,18 +92,26 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
 
+    private fun navigateToDetail(id: Int) {
+        val actionToJenis =
+            AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment(
+                id
+            )
+        findNavController().navigate(actionToJenis)
+    }
+
     private fun textToSpeech() {
         // Get the text from local string resource
-        val pilarGiziSeimbang = getString(R.string.menu_pilarGiziSeimbang)
+        val menu = getString(R.string.menu_aktivitasFisik)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(pilarGiziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_FLUSH, null, "menu")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -142,7 +143,7 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -181,8 +182,6 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -200,7 +199,6 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -209,43 +207,75 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
-        when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
+        if (loopCode == 0) {
+            when {
+                check1 -> {
+                    val pengertian = getString(R.string.pengertian_aktivitasfisik)
+                    val menu = getString(R.string.menu_aktivitasFisik)
+                    textToSpeechEngine?.speak(pengertian, TextToSpeech.QUEUE_FLUSH, null, "pengertian")
+                    // back to previous menu
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                }
+                check2 -> {
+                    val jenis = getString(R.string.menu_jenisAktivitasFisik)
+                    textToSpeechEngine?.speak(jenis, TextToSpeech.QUEUE_FLUSH, null, "jenis")
+                    loopCode = 1
+                }
+                check3 -> {
+                    val masalah = getString(R.string.masalah_aktivitasfisik)
+                    val menu = getString(R.string.menu_aktivitasFisik)
+                    textToSpeechEngine?.speak(masalah, TextToSpeech.QUEUE_FLUSH, null, "masalah")
+                    // back to previous menu
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                }
+                check8 -> findNavController().navigateUp()
+                check9 -> backToMainMenu()
+                check0 -> exitApp()
+                else -> wrongOption()
             }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
-            }
-            check8 -> {
-                navController.popBackStack()
-            }
-            check9 -> {
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
-            }
-            check0 -> {
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-            else -> {
-                val messageNoMatch =
-                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+        } else if (loopCode == 1) {
+            when {
+                check1 -> navigateToDetail(1)
+                check2 -> navigateToDetail(2)
+                check3 -> navigateToDetail(3)
+                check8 -> findNavController().navigateUp()
+                check9 -> backToMainMenu()
+                check0 -> exitApp()
+                else -> wrongOption()
             }
         }
+    }
+
+    private fun backToMainMenu() {
+        val backMainMenu = Intent(context, MainActivity::class.java)
+        startActivity(backMainMenu)
+        activity?.let {
+            ActivityCompat.finishAffinity(it)
+        }
+    }
+
+    private fun exitApp() {
+        activity?.finishAffinity()
+        exitProcess(0)
+    }
+
+    private fun wrongOption() {
+        val messageNoMatch =
+            "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+        textToSpeechEngine?.speak(
+            messageNoMatch,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "wrongTts"
+        )
+        Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {

@@ -279,9 +279,8 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                     Covid19FragmentDirections.actionCovid19FragmentToVaksinCovid19Fragment()
                 findNavController().navigate(action)
             }
-            check8 -> {
-                findNavController().navigateUp()
-            }
+            check8 -> findNavController().navigateUp()
+
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)

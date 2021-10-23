@@ -232,7 +232,7 @@
     </string>
 
     <string name="menu_aktivitasFisik">
-        Katakan 1 untuk Pengertian, Katakan 2 untuk Jenis, Katakan 3 untuk Masalah Jika Kurang aktivitas fisik.
+        Katakan 1 untuk Pengertian, Katakan 2 untuk Jenis Aktivitas Fisik, Katakan 3 untuk Masalah Jika Kurang aktivitas fisik.
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
     <string name="menu_jenisAktivitasFisik">

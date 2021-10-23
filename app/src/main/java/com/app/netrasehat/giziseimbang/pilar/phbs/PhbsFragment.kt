@@ -275,24 +275,12 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
             }
         } else if (loopCode == 1) {
             when {
-                check1 -> {
-                    navigateToDetail(7)
-                }
-                check2 -> {
-                    navigateToDetail(8)
-                }
-                check8 -> {
-                    findNavController().navigateUp()
-                }
-                check9 -> {
-                    backToMainMenu()
-                }
-                check0 -> {
-                    exitApp()
-                }
-                else -> {
-                    wrongOption()
-                }
+                check1 -> navigateToDetail(7)
+                check2 -> navigateToDetail(8)
+                check8 -> findNavController().navigateUp()
+                check9 -> backToMainMenu()
+                check0 -> exitApp()
+                else -> wrongOption()
             }
         }
     }
