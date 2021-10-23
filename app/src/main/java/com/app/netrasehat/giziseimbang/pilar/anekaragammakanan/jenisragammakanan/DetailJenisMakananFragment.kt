@@ -110,16 +110,13 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-//                dataPhbs.apply {
-//                    textToSpeech(judul, pengertian)
-//                }
+                textToSpeech()
             }
         }
     }
 
     private fun populateData(data: JenisJenisMakanan) {
         binding.apply {
-//            collapsToolbar.title = data.judul
             tvTitleRagamMakanan.text = data.judul
             detailPengertianRagamMakanan.text = data.pengertian
             detailManfaatRagamMakanan.text = data.manfaat
@@ -130,15 +127,13 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         }
     }
 
-    private fun textToSpeech(judul: String, pesan: String) {
+    private fun textToSpeech() {
         // Get the text from local string resource
-        val menuPilihan = getString(R.string.menu_kembali)
+        val menuDetailJenisMakanan = getString(R.string.menu_detail_anekaRagamMakanan)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(judul, TextToSpeech.QUEUE_FLUSH, null, "judul")
-        textToSpeechEngine?.speak(pesan, TextToSpeech.QUEUE_ADD, null, "pesan")
-        textToSpeechEngine?.speak(menuPilihan, TextToSpeech.QUEUE_ADD, null, "menuPilihan")
+        textToSpeechEngine?.speak(menuDetailJenisMakanan, TextToSpeech.QUEUE_FLUSH, null, "menu")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -147,7 +142,8 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("noMatch")
+                val textParam = utteranceId.equals("menu")
+                        || utteranceId.equals("wrongTts")
                 if (textParam) {
                     startListening()
                 }
@@ -172,6 +168,7 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -235,11 +232,103 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
+        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
+        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
+        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
+        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
+        val menuDetailJenisMakanan = getString(R.string.menu_detail_anekaRagamMakanan)
 
         when {
+            check1 -> {
+                val option = dataJenisMakanan.pengertian
+                textToSpeechEngine?.speak(
+                    option,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "option"
+                )
+                textToSpeechEngine?.speak(
+                    menuDetailJenisMakanan,
+                    TextToSpeech.QUEUE_ADD,
+                    null,
+                    "menu"
+                )
+            }
+            check2 -> {
+                val option = dataJenisMakanan.manfaat
+                textToSpeechEngine?.speak(
+                    option,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "option"
+                )
+                textToSpeechEngine?.speak(
+                    menuDetailJenisMakanan,
+                    TextToSpeech.QUEUE_ADD,
+                    null,
+                    "menu"
+                )
+            }
+            check3 -> {
+                val option = dataJenisMakanan.jenis
+                textToSpeechEngine?.speak(option, TextToSpeech.QUEUE_FLUSH, null, "option")
+                textToSpeechEngine?.speak(
+                    menuDetailJenisMakanan,
+                    TextToSpeech.QUEUE_ADD,
+                    null,
+                    "menu"
+                )
+            }
+            check4 -> {
+                val option = dataJenisMakanan.porsi
+                textToSpeechEngine?.speak(
+                    option,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "option"
+                )
+                textToSpeechEngine?.speak(
+                    menuDetailJenisMakanan,
+                    TextToSpeech.QUEUE_ADD,
+                    null,
+                    "menu"
+                )
+            }
+            check5 -> {
+                val option = dataJenisMakanan.kandungan
+                textToSpeechEngine?.speak(
+                    option,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "option"
+                )
+                textToSpeechEngine?.speak(
+                    menuDetailJenisMakanan,
+                    TextToSpeech.QUEUE_ADD,
+                    null,
+                    "menu"
+                )
+            }
+            check6 -> {
+                val option = dataJenisMakanan.masalah
+                textToSpeechEngine?.speak(
+                    option,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "option"
+                )
+                textToSpeechEngine?.speak(
+                    menuDetailJenisMakanan,
+                    TextToSpeech.QUEUE_ADD,
+                    null,
+                    "menu"
+                )
+            }
             check8 -> {
                 findNavController().navigateUp()
             }
@@ -255,8 +344,13 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                textToSpeechEngine?.speak(
+                    messageNoMatch,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "wrongTts"
+                )
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }
