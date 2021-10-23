@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -37,7 +36,6 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentCovid19Binding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -115,18 +113,18 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val giziSeimbang = getString(R.string.menu_giziSeimbang)
+        val covid19 = getString(R.string.menu_covid19)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(covid19, TextToSpeech.QUEUE_FLUSH, null, "covid19")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -135,7 +133,13 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val ttsLoop =
+                    utteranceId.equals("covid19")
+                            || utteranceId.equals("wrongTts")
+                            || utteranceId.equals("covidloop")
+                if (ttsLoop) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -157,7 +161,7 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -186,12 +190,6 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
 
-        /*sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1000)
-        sttIntent.putExtra(
-            RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
-            1000
-        )
-        sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1500)*/
         // start again
         startListening()
     }
@@ -202,8 +200,6 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -221,7 +217,6 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -230,30 +225,62 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
+        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
+        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
+        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
             check1 -> {
-                /*val actionToPilarGizi =
-                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-                findNavController().navigate(actionToPilarGizi)*/
+                val pengertianCovid = getString(R.string.pengertian_covid19)
+                val covid19 = getString(R.string.menu_covid19)
+                textToSpeechEngine?.speak(
+                    pengertianCovid,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "pengertianCovid"
+                )
+                // back to previous menu
+                textToSpeechEngine?.speak(covid19, TextToSpeech.QUEUE_ADD, null, "covidloop")
             }
             check2 -> {
-                /*val actionToPesanGizi =
-                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-                findNavController().navigate(actionToPesanGizi)*/
+                val action =
+                    Covid19FragmentDirections.actionCovid19FragmentToGejalaCovid19Fragment()
+                findNavController().navigate(action)
+            }
+            check3 -> {
+                val action =
+                    Covid19FragmentDirections.actionCovid19FragmentToCaraPenularanFragment()
+                findNavController().navigate(action)
+            }
+            check4 -> {
+                val action =
+                    Covid19FragmentDirections.actionCovid19FragmentToCaraMencegahCovid19Fragment()
+                findNavController().navigate(action)
+            }
+            check5 -> {
+                val action =
+                    Covid19FragmentDirections.actionCovid19FragmentToPenangananCovid19Fragment()
+                findNavController().navigate(action)
+            }
+            check6 -> {
+                val action =
+                    Covid19FragmentDirections.actionCovid19FragmentToSembuhCovid19Fragment()
+                findNavController().navigate(action)
+            }
+            check7 -> {
+                val action =
+                    Covid19FragmentDirections.actionCovid19FragmentToVaksinCovid19Fragment()
+                findNavController().navigate(action)
             }
             check8 -> {
-                /*val backPreviousMenu = Intent(this@LitkesActivity, MainActivity::class.java)
-                startActivity(backPreviousMenu)*/
-                //fragmentManager?.popBackStack()
-                navController.popBackStack()
-                //finish()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
@@ -271,9 +298,9 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                     messageNoMatch,
                     TextToSpeech.QUEUE_FLUSH,
                     null,
-                    "tts3"
+                    "wrongTts"
                 )
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }
     }

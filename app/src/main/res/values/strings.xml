@@ -3,26 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="welcome_message">
-        Selamat Datang di Aplikasi Kesehatan Harian Tunanetra.
-    </string>
-
-    <string name="menu_kembali">
-        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
-    </string>
-
-    <string name="menu_litkes">
-        Katakan 1 untuk Gizi Seimbang, Katakan 2 untuk informasi Covid-19,
-        Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat, Katakan 4 untuk Kontak Person Sahabat Netra,
-        Katakan 0 untuk Keluar.
-    </string>
-
-    <string name="opsi7">
-        katakan 7 untuk opsi selanjutnya
-    </string>
-
-    <string name="notif_error_wa">Anda Tidak Memiliki Aplikasi Whatsapp</string>
-
     <!-- Title Menu -->
     <string name="title_selamat_datang">Selamat\nDatang</string>
     <string name="title_gizi_seimbang">Gizi Seimbang</string>
@@ -40,13 +20,47 @@
     <string name="title_memantau_berat_badan">Memantau Berat Badan</string>
     <string name="title_pemantauan_berat_badan">Pemantauan Berat Badan</string>
 
+    <string name="welcome_message">
+        Selamat Datang di Aplikasi Kesehatan Harian Tunanetra.
+    </string>
 
-    <!-- Menu res -->
-    <string name="menu_giziSeimbang">
-        Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang.
-        Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang,
+    <string name="menu_litkes">
+        Katakan 1 untuk Gizi Seimbang, Katakan 2 untuk informasi Covid-19,
+        Katakan 3 untuk Fasilitas Pelayanan Kesehatan Terdekat, Katakan 4 untuk Kontak Person Sahabat Netra,
+        Katakan 0 untuk Keluar.
+    </string>
+
+    <!-- Custom Options -->
+    <string name="menu_kembali">
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
+    <string name="opsi7">
+        katakan 7 untuk opsi selanjutnya
+    </string>
+
+    <string name="notif_error_wa">Anda Tidak Memiliki Aplikasi Whatsapp</string>
+
+    <!-- 4 Menu res -->
+    <string name="menu_giziSeimbang">
+        Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat gizi dalam jenis dan jumlah yang sesuai dengan kebutuhan tubuh, dengan memperhatikan prinsip 4 pilar gizi seimbang dan 10 pesan gizi seimbang.
+        Katakan 1 untuk 4 Pilar Gizi Seimbang, Katakan 2 untuk 10 Pesan Gizi Seimbang.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_covid19">
+        Katakan 1 untuk Pengertian Covid-19, Katakan 2 untuk Gejala Terkena Virus Covid-19,
+        Katakan 3 untuk Cara Penularan Covid-19, Katakan 4 untuk Cara Mencegah Covid-19,
+        Katakan 5 untuk Penanganan Covid-19, Katakan 6 untuk Sembuh dari Covid-19,
+        Katakan 7 untuk Vaksin Covid-19.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_pelayanan_kesehatan">
+        Katakan 1 untuk Rumah Sakit terdekat, Katakan 2 untuk Puskesmas terdekat,
+        Katakan 3 untuk Apotek terdekat, Katakan 4 untuk Klinik terdekat.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+
+
+    <!-- Sub Menu Gizi Seimbang res -->
     <string name="menu_pilarGiziSeimbang">
         Katakan 1 untuk Mengonsumsi Aneka Ragam Makanan, Katakan 2 untuk Perilaku Hidup Bersih dan Sehat,
         Katakan 3 untuk Aktivitas Fisik, Katakan 4 untuk Memantau Berat Badan,
