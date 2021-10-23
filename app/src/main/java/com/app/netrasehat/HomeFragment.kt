@@ -16,7 +16,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.app.netrasehat.activity.Covid19Activity
 import com.app.netrasehat.databinding.FragmentHomeBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -248,8 +247,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             check2 -> {
                 //textToSpeechEngine?.stop()
                 //stopListening()
-                val covidMenu = Intent(context, Covid19Activity::class.java)
-                startActivity(covidMenu)
                 //finish()
             }
             check3 -> {

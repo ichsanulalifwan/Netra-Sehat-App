@@ -71,6 +71,8 @@ class DetailPhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
             val toolbar = binding.topAppBar
             val navHostFragment = NavHostFragment.findNavController(this)
             NavigationUI.setupWithNavController(toolbar, navHostFragment)
+
+            // Set Navigate to previous page (backstack)
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
             }
@@ -82,7 +84,7 @@ class DetailPhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
             // Get Phbs
             dataPhbs = viewModel.getDetailPhbs(requireActivity())
 
-            // Populate Pesan
+            // Populate phbs
             populateData(dataPhbs)
 
             // Init speechRecognizer

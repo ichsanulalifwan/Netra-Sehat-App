@@ -21,7 +21,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
-import com.app.netrasehat.activity.PhbsActivity
 import com.app.netrasehat.databinding.FragmentPilarGiziSeimbangBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -233,8 +232,6 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 findNavController().navigate(actionToAnekaRagamMakanan)
             }
             check2 -> {
-                val actionToPhbs = Intent(context, PhbsActivity::class.java)
-                startActivity(actionToPhbs)
 //                    val actionToPhbs =
 //                        PilarGiziSeimbangFragmentDirections.actionPilarGiziSeimbangFragmentToPhbsFragment()
 //                    findNavController().navigate(actionToPhbs)
