@@ -86,6 +86,8 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
                     tvMasalahRagamMakanan.visibility = View.GONE
                     detailMasalahRagamMakanan.visibility = View.GONE
                 }
+            } else if (ragamMakananId == 5) {
+                binding.btnJenisJenis.visibility = View.GONE
             }
 
             // Get RagamMakanan
@@ -133,7 +135,7 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
     // Set Button jenis-jenis text and navigation
     private fun setBtnJenisJenis(data: RagamMakanan) {
-        val text = getString(R.string.title_jenis_jenis_makanan) + data.judul
+        val text = getString(R.string.title_jenis_jenis_makanan) + " " + data.judul
         val jenisId = data.id
 
         binding.apply {

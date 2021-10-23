@@ -2,6 +2,7 @@ package com.app.netrasehat.utils
 
 import android.content.Context
 import com.app.netrasehat.R
+import com.app.netrasehat.model.JenisJenisMakanan
 import com.app.netrasehat.model.Pesan
 import com.app.netrasehat.model.Phbs
 import com.app.netrasehat.model.RagamMakanan
@@ -254,6 +255,430 @@ object DataContainer {
                 context.getString(R.string.porsi_ragam_makanan_5),
                 context.getString(R.string.kandungan_ragam_makanan_5),
                 context.getString(R.string.masalah_ragam_makanan_5)
+            )
+        )
+
+        return data
+    }
+
+    fun generateJenisMakananPokok(context: Context): List<JenisJenisMakanan> {
+
+        val data = ArrayList<JenisJenisMakanan>()
+
+        data.add(
+            JenisJenisMakanan(
+                1,
+                context.getString(R.string.title_jenis_makananpokok_1),
+                context.getString(R.string.pengertian_jenis_makananpokok_1),
+                context.getString(R.string.manfaat_jenis_makananpokok_1),
+                context.getString(R.string.jenis_jenis_makananpokok_1),
+                context.getString(R.string.porsi_jenis_makananpokok_1),
+                context.getString(R.string.kandungan_jenis_makananpokok_1),
+                context.getString(R.string.masalah_jenis_makananpokok_1)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                2,
+                context.getString(R.string.title_jenis_makananpokok_2),
+                context.getString(R.string.pengertian_jenis_makananpokok_2),
+                context.getString(R.string.manfaat_jenis_makananpokok_2),
+                context.getString(R.string.jenis_jenis_makananpokok_2),
+                context.getString(R.string.porsi_jenis_makananpokok_2),
+                context.getString(R.string.kandungan_jenis_makananpokok_2),
+                context.getString(R.string.masalah_jenis_makananpokok_2)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                3,
+                context.getString(R.string.title_jenis_makananpokok_3),
+                context.getString(R.string.pengertian_jenis_makananpokok_3),
+                context.getString(R.string.manfaat_jenis_makananpokok_3),
+                context.getString(R.string.jenis_jenis_makananpokok_3),
+                context.getString(R.string.porsi_jenis_makananpokok_3),
+                context.getString(R.string.kandungan_jenis_makananpokok_3),
+                context.getString(R.string.masalah_jenis_makananpokok_3)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                4,
+                context.getString(R.string.title_jenis_makananpokok_4),
+                context.getString(R.string.pengertian_jenis_makananpokok_4),
+                context.getString(R.string.manfaat_jenis_makananpokok_4),
+                context.getString(R.string.jenis_jenis_makananpokok_4),
+                context.getString(R.string.porsi_jenis_makananpokok_4),
+                context.getString(R.string.kandungan_jenis_makananpokok_4),
+                context.getString(R.string.masalah_jenis_makananpokok_4)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                5,
+                context.getString(R.string.title_jenis_makananpokok_5),
+                context.getString(R.string.pengertian_jenis_makananpokok_5),
+                context.getString(R.string.manfaat_jenis_makananpokok_5),
+                context.getString(R.string.jenis_jenis_makananpokok_5),
+                context.getString(R.string.porsi_jenis_makananpokok_5),
+                context.getString(R.string.kandungan_jenis_makananpokok_5),
+                context.getString(R.string.masalah_jenis_makananpokok_5)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                6,
+                context.getString(R.string.title_jenis_makananpokok_6),
+                context.getString(R.string.pengertian_jenis_makananpokok_6),
+                context.getString(R.string.manfaat_jenis_makananpokok_6),
+                context.getString(R.string.jenis_jenis_makananpokok_6),
+                context.getString(R.string.porsi_jenis_makananpokok_6),
+                context.getString(R.string.kandungan_jenis_makananpokok_6),
+                context.getString(R.string.masalah_jenis_makananpokok_6)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                7,
+                context.getString(R.string.title_jenis_makananpokok_7),
+                context.getString(R.string.pengertian_jenis_makananpokok_7),
+                context.getString(R.string.manfaat_jenis_makananpokok_7),
+                context.getString(R.string.jenis_jenis_makananpokok_7),
+                context.getString(R.string.porsi_jenis_makananpokok_7),
+                context.getString(R.string.kandungan_jenis_makananpokok_7),
+                context.getString(R.string.masalah_jenis_makananpokok_7)
+            )
+        )
+
+        return data
+    }
+
+    fun generateJenisLaukPauk(context: Context): List<JenisJenisMakanan> {
+
+        val data = ArrayList<JenisJenisMakanan>()
+
+        data.add(
+            JenisJenisMakanan(
+                1,
+                context.getString(R.string.title_jenis_laukpauk_1),
+                context.getString(R.string.pengertian_jenis_laukpauk_1),
+                context.getString(R.string.manfaat_jenis_laukpauk_1),
+                context.getString(R.string.jenis_jenis_laukpauk_1),
+                context.getString(R.string.porsi_jenis_laukpauk_1),
+                context.getString(R.string.kandungan_jenis_laukpauk_1),
+                context.getString(R.string.masalah_jenis_laukpauk_1)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                2,
+                context.getString(R.string.title_jenis_laukpauk_2),
+                context.getString(R.string.pengertian_jenis_laukpauk_2),
+                context.getString(R.string.manfaat_jenis_laukpauk_2),
+                context.getString(R.string.jenis_jenis_laukpauk_2),
+                context.getString(R.string.porsi_jenis_laukpauk_2),
+                context.getString(R.string.kandungan_jenis_laukpauk_2),
+                context.getString(R.string.masalah_jenis_laukpauk_2)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                3,
+                context.getString(R.string.title_jenis_laukpauk_3),
+                context.getString(R.string.pengertian_jenis_laukpauk_3),
+                context.getString(R.string.manfaat_jenis_laukpauk_3),
+                context.getString(R.string.jenis_jenis_laukpauk_3),
+                context.getString(R.string.porsi_jenis_laukpauk_3),
+                context.getString(R.string.kandungan_jenis_laukpauk_3),
+                context.getString(R.string.masalah_jenis_laukpauk_3)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                4,
+                context.getString(R.string.title_jenis_laukpauk_4),
+                context.getString(R.string.pengertian_jenis_laukpauk_4),
+                context.getString(R.string.manfaat_jenis_laukpauk_4),
+                context.getString(R.string.jenis_jenis_laukpauk_4),
+                context.getString(R.string.porsi_jenis_laukpauk_4),
+                context.getString(R.string.kandungan_jenis_laukpauk_4),
+                context.getString(R.string.masalah_jenis_laukpauk_4)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                5,
+                context.getString(R.string.title_jenis_laukpauk_5),
+                context.getString(R.string.pengertian_jenis_laukpauk_5),
+                context.getString(R.string.manfaat_jenis_laukpauk_5),
+                context.getString(R.string.jenis_jenis_laukpauk_5),
+                context.getString(R.string.porsi_jenis_laukpauk_5),
+                context.getString(R.string.kandungan_jenis_laukpauk_5),
+                context.getString(R.string.masalah_jenis_laukpauk_5)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                6,
+                context.getString(R.string.title_jenis_laukpauk_6),
+                context.getString(R.string.pengertian_jenis_laukpauk_6),
+                context.getString(R.string.manfaat_jenis_laukpauk_6),
+                context.getString(R.string.jenis_jenis_laukpauk_6),
+                context.getString(R.string.porsi_jenis_laukpauk_6),
+                context.getString(R.string.kandungan_jenis_laukpauk_6),
+                context.getString(R.string.masalah_jenis_laukpauk_6)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                7,
+                context.getString(R.string.title_jenis_laukpauk_7),
+                context.getString(R.string.pengertian_jenis_laukpauk_7),
+                context.getString(R.string.manfaat_jenis_laukpauk_7),
+                context.getString(R.string.jenis_jenis_laukpauk_7),
+                context.getString(R.string.porsi_jenis_laukpauk_7),
+                context.getString(R.string.kandungan_jenis_laukpauk_7),
+                context.getString(R.string.masalah_jenis_laukpauk_7)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                8,
+                context.getString(R.string.title_jenis_laukpauk_8),
+                context.getString(R.string.pengertian_jenis_laukpauk_8),
+                context.getString(R.string.manfaat_jenis_laukpauk_8),
+                context.getString(R.string.jenis_jenis_laukpauk_8),
+                context.getString(R.string.porsi_jenis_laukpauk_8),
+                context.getString(R.string.kandungan_jenis_laukpauk_8),
+                context.getString(R.string.masalah_jenis_laukpauk_8)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                9,
+                context.getString(R.string.title_jenis_laukpauk_9),
+                context.getString(R.string.pengertian_jenis_laukpauk_9),
+                context.getString(R.string.manfaat_jenis_laukpauk_9),
+                context.getString(R.string.jenis_jenis_laukpauk_9),
+                context.getString(R.string.porsi_jenis_laukpauk_9),
+                context.getString(R.string.kandungan_jenis_laukpauk_9),
+                context.getString(R.string.masalah_jenis_laukpauk_9)
+            )
+        )
+
+        return data
+    }
+
+    fun generateJenisSayuran(context: Context): List<JenisJenisMakanan> {
+
+        val data = ArrayList<JenisJenisMakanan>()
+
+        data.add(
+            JenisJenisMakanan(
+                1,
+                context.getString(R.string.title_jenis_sayuran_1),
+                context.getString(R.string.pengertian_jenis_sayuran_1),
+                context.getString(R.string.manfaat_jenis_sayuran_1),
+                context.getString(R.string.jenis_jenis_sayuran_1),
+                context.getString(R.string.porsi_jenis_sayuran_1),
+                context.getString(R.string.kandungan_jenis_sayuran_1),
+                context.getString(R.string.masalah_jenis_sayuran_1)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                2,
+                context.getString(R.string.title_jenis_sayuran_2),
+                context.getString(R.string.pengertian_jenis_sayuran_2),
+                context.getString(R.string.manfaat_jenis_sayuran_2),
+                context.getString(R.string.jenis_jenis_sayuran_2),
+                context.getString(R.string.porsi_jenis_sayuran_2),
+                context.getString(R.string.kandungan_jenis_sayuran_2),
+                context.getString(R.string.masalah_jenis_sayuran_2)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                3,
+                context.getString(R.string.title_jenis_sayuran_3),
+                context.getString(R.string.pengertian_jenis_sayuran_3),
+                context.getString(R.string.manfaat_jenis_sayuran_3),
+                context.getString(R.string.jenis_jenis_sayuran_3),
+                context.getString(R.string.porsi_jenis_sayuran_3),
+                context.getString(R.string.kandungan_jenis_sayuran_3),
+                context.getString(R.string.masalah_jenis_sayuran_3)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                4,
+                context.getString(R.string.title_jenis_sayuran_4),
+                context.getString(R.string.pengertian_jenis_sayuran_4),
+                context.getString(R.string.manfaat_jenis_sayuran_4),
+                context.getString(R.string.jenis_jenis_sayuran_4),
+                context.getString(R.string.porsi_jenis_sayuran_4),
+                context.getString(R.string.kandungan_jenis_sayuran_4),
+                context.getString(R.string.masalah_jenis_sayuran_4)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                5,
+                context.getString(R.string.title_jenis_sayuran_5),
+                context.getString(R.string.pengertian_jenis_sayuran_5),
+                context.getString(R.string.manfaat_jenis_sayuran_5),
+                context.getString(R.string.jenis_jenis_sayuran_5),
+                context.getString(R.string.porsi_jenis_sayuran_5),
+                context.getString(R.string.kandungan_jenis_sayuran_5),
+                context.getString(R.string.masalah_jenis_sayuran_5)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                6,
+                context.getString(R.string.title_jenis_sayuran_6),
+                context.getString(R.string.pengertian_jenis_sayuran_6),
+                context.getString(R.string.manfaat_jenis_sayuran_6),
+                context.getString(R.string.jenis_jenis_sayuran_6),
+                context.getString(R.string.porsi_jenis_sayuran_6),
+                context.getString(R.string.kandungan_jenis_sayuran_6),
+                context.getString(R.string.masalah_jenis_sayuran_6)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                7,
+                context.getString(R.string.title_jenis_sayuran_7),
+                context.getString(R.string.pengertian_jenis_sayuran_7),
+                context.getString(R.string.manfaat_jenis_sayuran_7),
+                context.getString(R.string.jenis_jenis_sayuran_7),
+                context.getString(R.string.porsi_jenis_sayuran_7),
+                context.getString(R.string.kandungan_jenis_sayuran_7),
+                context.getString(R.string.masalah_jenis_sayuran_7)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                8,
+                context.getString(R.string.title_jenis_sayuran_8),
+                context.getString(R.string.pengertian_jenis_sayuran_8),
+                context.getString(R.string.manfaat_jenis_sayuran_8),
+                context.getString(R.string.jenis_jenis_sayuran_8),
+                context.getString(R.string.porsi_jenis_sayuran_8),
+                context.getString(R.string.kandungan_jenis_sayuran_8),
+                context.getString(R.string.masalah_jenis_sayuran_8)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                9,
+                context.getString(R.string.title_jenis_sayuran_9),
+                context.getString(R.string.pengertian_jenis_sayuran_9),
+                context.getString(R.string.manfaat_jenis_sayuran_9),
+                context.getString(R.string.jenis_jenis_sayuran_9),
+                context.getString(R.string.porsi_jenis_sayuran_9),
+                context.getString(R.string.kandungan_jenis_sayuran_9),
+                context.getString(R.string.masalah_jenis_sayuran_9)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                10,
+                context.getString(R.string.title_jenis_sayuran_10),
+                context.getString(R.string.pengertian_jenis_sayuran_10),
+                context.getString(R.string.manfaat_jenis_sayuran_10),
+                context.getString(R.string.jenis_jenis_sayuran_10),
+                context.getString(R.string.porsi_jenis_sayuran_10),
+                context.getString(R.string.kandungan_jenis_sayuran_10),
+                context.getString(R.string.masalah_jenis_sayuran_10)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                11,
+                context.getString(R.string.title_jenis_sayuran_11),
+                context.getString(R.string.pengertian_jenis_sayuran_11),
+                context.getString(R.string.manfaat_jenis_sayuran_11),
+                context.getString(R.string.jenis_jenis_sayuran_11),
+                context.getString(R.string.porsi_jenis_sayuran_11),
+                context.getString(R.string.kandungan_jenis_sayuran_11),
+                context.getString(R.string.masalah_jenis_sayuran_11)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                12,
+                context.getString(R.string.title_jenis_sayuran_12),
+                context.getString(R.string.pengertian_jenis_sayuran_12),
+                context.getString(R.string.manfaat_jenis_sayuran_12),
+                context.getString(R.string.jenis_jenis_sayuran_12),
+                context.getString(R.string.porsi_jenis_sayuran_12),
+                context.getString(R.string.kandungan_jenis_sayuran_12),
+                context.getString(R.string.masalah_jenis_sayuran_12)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                13,
+                context.getString(R.string.title_jenis_sayuran_13),
+                context.getString(R.string.pengertian_jenis_sayuran_13),
+                context.getString(R.string.manfaat_jenis_sayuran_13),
+                context.getString(R.string.jenis_jenis_sayuran_13),
+                context.getString(R.string.porsi_jenis_sayuran_13),
+                context.getString(R.string.kandungan_jenis_sayuran_13),
+                context.getString(R.string.masalah_jenis_sayuran_13)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                14,
+                context.getString(R.string.title_jenis_sayuran_14),
+                context.getString(R.string.pengertian_jenis_sayuran_14),
+                context.getString(R.string.manfaat_jenis_sayuran_14),
+                context.getString(R.string.jenis_jenis_sayuran_14),
+                context.getString(R.string.porsi_jenis_sayuran_14),
+                context.getString(R.string.kandungan_jenis_sayuran_14),
+                context.getString(R.string.masalah_jenis_sayuran_14)
+            )
+        )
+
+        data.add(
+            JenisJenisMakanan(
+                15,
+                context.getString(R.string.title_jenis_sayuran_15),
+                context.getString(R.string.pengertian_jenis_sayuran_15),
+                context.getString(R.string.manfaat_jenis_sayuran_15),
+                context.getString(R.string.jenis_jenis_sayuran_15),
+                context.getString(R.string.porsi_jenis_sayuran_15),
+                context.getString(R.string.kandungan_jenis_sayuran_15),
+                context.getString(R.string.masalah_jenis_sayuran_15)
             )
         )
 

@@ -101,7 +101,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_pengertian_ragam_makanan"
                 tools:targetApi="o"
-                tools:text="@string/pengertian_makananPokok" />
+                tools:text="@string/pengertian_jenis_buah_9" />
 
             <TextView
                 android:id="@+id/tv_manfaat_ragam_makanan"
@@ -129,7 +129,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_manfaat_ragam_makanan"
                 tools:targetApi="o"
-                tools:text="@string/manfaat_makanan_pokok" />
+                tools:text="@string/manfaat_jenis_buah_9" />
 
             <TextView
                 android:id="@+id/tv_jenis_ragam_makanan"
@@ -155,7 +155,7 @@
                 app:layout_constraintLeft_toLeftOf="@id/tv_jenis_ragam_makanan"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_jenis_ragam_makanan"
-                tools:text="@string/detail_jenis_makanan_pokok" />
+                tools:text="@string/jenis_jenis_buah_9" />
 
             <TextView
                 android:id="@+id/tv_porsi_ragam_makanan"
@@ -183,7 +183,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_porsi_ragam_makanan"
                 tools:targetApi="o"
-                tools:text="@string/porsi_makanan_pokok" />
+                tools:text="@string/porsi_jenis_buah_9" />
 
             <TextView
                 android:id="@+id/tv_kandungan_ragam_makanan"
@@ -211,7 +211,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_kandungan_ragam_makanan"
                 tools:targetApi="o"
-                tools:text="@string/kandungan_laukpauk" />
+                tools:text="@string/kandungan_jenis_buah_9" />
 
             <TextView
                 android:id="@+id/tv_masalah_ragam_makanan"
@@ -239,7 +239,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_masalah_ragam_makanan"
                 tools:targetApi="o"
-                tools:text="@string/masalah_laukpauk" />
+                tools:text="@string/masalah_jenis_buah_9" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/btn_jenis_jenis"

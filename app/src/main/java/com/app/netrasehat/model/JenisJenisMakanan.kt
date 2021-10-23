@@ -1,6 +1,6 @@
 package com.app.netrasehat.model
 
-class RagamMakanan(
+class JenisJenisMakanan(
     val id: Int,
     val judul: String,
     val pengertian: String,

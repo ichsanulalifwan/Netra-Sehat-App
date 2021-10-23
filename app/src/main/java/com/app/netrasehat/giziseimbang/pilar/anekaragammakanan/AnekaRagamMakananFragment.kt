@@ -75,14 +75,14 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
                 it.findNavController().navigateUp()
             }
 
-            // getListPesan
+            // get List AnekaRagamMakanan
             val dataRagamMakanan = viewModel.getData(requireActivity())
 
             // Init Adapter and rv
             adapterRagamMakanan = RagamMakananAdapter()
             adapterRagamMakanan.setData(dataRagamMakanan)
             setupRecyclerView()
-            // Navigate to detail pesan
+            // Navigate to detail AnekaRagamMakanan
             onItemSelected()
 
             // Init speechRecognizer
