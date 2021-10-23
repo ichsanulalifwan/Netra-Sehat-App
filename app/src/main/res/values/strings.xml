@@ -37,11 +37,7 @@
     <string name="title_aktivitas_fisik">Aktivitas Fisik</string>
     <string name="title_memantau_berat_badan">Memantau Berat Badan</string>
     <string name="title_pemantauan_berat_badan">Pemantauan Berat Badan</string>
-    <string name="title_makanan_pokok">Makanan Pokok</string>
-    <string name="title_lauk_pauk">Lauk Pauk</string>
-    <string name="title_sayuran">Sayuran</string>
-    <string name="title_buah_buahan">Buah-buahan</string>
-    <string name="title_air_putih">Air Putih</string>
+
 
     <!-- Menu res -->
     <string name="menu_giziSeimbang">
@@ -1433,13 +1429,57 @@
     <string name="kandungan_"></string>
     <string name="masalah_"></string>
 
+
+    <!-- Aneka Ragam Makanan res-->
+    <string name="title_ragam_makanan_1">Makanan Pokok</string>
+    <string name="pengertian_ragam_makanan_1">Makanan pokok adalah makanan paling utama yang harus dimakan oleh manusia setiap hari.</string>
+    <string name="manfaat_ragam_makanan_1">Manfaat makanan pokok adalah sebagai sumber energi, dan merupakan penghasil karbohidrat yang dibutuhkan oleh tubuh. Selain itu, karbohidrat dapat bermanfaat untuk meningkatkan metabolisme tubuh, menyeimbangkan asam basa dalam tubuh, pembentuk sel, jaringan serta organ, memperlancar pencernaan dan penyerapan kalsium serta membantu membentuk protein dan lemak.</string>
+    <string name="porsi_ragam_makanan_1">Kebutuhan energi orang dewasa di Indonesia, yakni 2.000 kalori untuk wanita dan 2.300 kalori untuk pria.</string>
+
+    <!-- Lauk Pauk res-->
+    <string name="title_ragam_makanan_2">Lauk Pauk</string>
+    <string name="pengertian_ragam_makanan_2">Lauk pauk adalah makanan pendamping makanan pokok umumnya banyak mengandung protein.</string>
+    <string name="manfaat_ragam_makanan_2">Manfaat lauk-pauk yaitu mengandung zat protein yang berguna sebagai zat pembangun pada tubuh. Protein dapat mengganti sel-sel tubuh yang rusak dengan sel-sel baru (memperbaharui sel). Protein yang kita konsumsi dapat menetralkan racun yang ada pada tubuh, membantu pelaksanaan metabolisme tubuh serta ia dapat memelihara cairan dalam rongga tubuh.</string>
+    <string name="porsi_ragam_makanan_2">Lauk pauk yang berasal dari hewan seperti daging dan telur dapat dikonsumsi maksimal 160 gram saja perharinya. Hal ini setara dengan 2 atau 3 potong daging, untuk protein nabati bisa memakannya hingga 400 gram setiap harinya.</string>
+    <string name="kandungan_ragam_makanan_2">Kandungan zat gizi satu (1) porsi Tempe sebanyak 2 potong sedang atau 50 gram adalah 80 Kalori, 6 gram Protein, 3 gram lemak dan 8 gram karbohidrat.</string>
+    <string name="masalah_ragam_makanan_2">Kelebihan asupan protein akan disimpan sebagai lemak di dalam tubuh. Konsumsi protein yang kurang pada balita dapat menyebabkan kondisi Kurang Energi Protein.</string>
+
+    <!-- Sayuran res-->
+    <string name="title_ragam_makanan_3">Sayuran</string>
+    <string name="pengertian_ragam_makanan_3">Sayuran merupakan bahan pangan asal tumbuhan yang mengandung serat tinggi yang dikonsumsi dalam keadaan segar dan diolah jadi makanan.</string>
+    <string name="manfaat_ragam_makanan_3">Manfaat sayur secara garis besar yaitu berkhasiat untuk meningkatkan kesehatan dan metabolisme tubuh yaitu melancarkan buang air besar, mencegah kanker, meningkatkan sistem imun, meningkatkan kesehatan syaraf dan mata.</string>
+    <string name="porsi_ragam_makanan_3">Konsumsi sayuran yang dianjurkan oleh WHO perhari, yaitu 250 gram sayur (setara dengan 2 ½ porsi atau 2 ½ gelas sayur setelah dimasak dan ditiriskan).</string>
+    <string name="kandungan_ragam_makanan_3">Pada umumnya sayur-sayuran lebih banyak mengandung zat tepung, karbohidrat, terutama sayuran yang berasal dari akar. Sayuran yang berwarna hijau kandungan gulanya lebih sedikit daripada sayuran yang berbentuk buah, dan sayuran yang berupa daun lebih banyak mengandung vitamin dan mineral.</string>
+    <string name="masalah_ragam_makanan_3">Tidak makan sayur dapat mengakibatkan sulit buang air besar, kegemukan, tekanan darah tidak terkontrol, kadar glukosa darah tidak terkontrol, pembuluh darah menyempit, dan mudah terkena penyakit menular. Konsumsi sayur yang kurang dapat menyebabkan kanker gastrointestinal, penyakit jantung iskemik, stroke, dan sebagai faktor risiko kematian.</string>
+
+    <!-- Buah-buahan res-->
+    <string name="title_ragam_makanan_4">Buah-buahan</string>
+    <string name="pengertian_ragam_makanan_4">Secara umum pengertian buah-buahan adalah salah satu bagian dari tanaman atau pohon yang berdaging dan dapat dimakan sebagai makanan yang bisa memberikan efek mengenyangkan, menyehatkan dan menyenangkan (sebagai camilan). Sebagai makanan alami, buah-buahan memiliki kandungan vitamin, gizi, dan mineral.</string>
+    <string name="manfaat_ragam_makanan_4">Manfaat buah untuk kesehatan tubuh yaitu mengoptimalkan kesehatan dalam jangka panjang, menjaga dan meningkatkan energi, kesehatan organ, melindungi tubuh dari penyakit dan membantu proses penyembuhan penyakit.</string>
+    <string name="porsi_ragam_makanan_4">Dianjurkan untuk mengkonsumsi buah–buahan 300–400 gram per orang per hari dan bagi remaja dan orang dewasa sebanyak 400–600 gram per orang per hari.</string>
+    <string name="kandungan_ragam_makanan_4">Berikut ini adalah beberapa kandungan nutrisi yang umum terdapat dalam buah-buahan:
+        \n• Serat, yang beperan penting dalam menjaga fungsi saluran pencernaan
+        \n• Vitamin C, yang penting untuk menjaga jaringan tubuh dari kerusakan akibat radikal bebas
+        \n• Vitamin A, yang penting untuk kesehatan mata, kulit dan sistem kekebalan tubuh
+        \n• Folat, yang berperan penting dalam pembentukan darah dan materi genetik
+        \n• Kalium, yang dapat membantu menjaga tekanan darah dan fungsi sistem saraf
+    </string>
+    <string name="masalah_ragam_makanan_4">1. Gangguan pencernaan
+        \nMakan buah secara berlebihan justru bisa menyebabkan gangguan pencernaan. Anda bisa saja mengalami kembung, begah, kram perut, hingga diare.
+        \n\n2. Peningkatan gula darah pada penderita diabetes
+        \nTerlalu banyak mengonsumsi gula dapat meningkatnya kadar gula darah. Hal ini ternyata juga dapat terjadi bila Anda kebanyakan makan buah.
+        \n\n3. Kekurangan zat gizi
+        \nKebanyakan makan buah memang tidak secara langsung membuat kekurangan zat gizi. Namun, jika menganggap buah sebagai superfood dan mengonsumsinya tanpa dibarengi makanan yang beragam, justru berisiko kekurangan zat gizi lain.
+    </string>
+
     <!-- Air Putih res-->
-    <string name="pengertian_airputih">Air putih adalah air yang melalui proses pengolaha, filtrasi sehingga tampak jernih. Tanpa proses pengolahan yang melalu syarat dan air tidak dapat langsung diminum.</string>
-    <string name="manfaat_airputih">Manfaat air putih untuk kesehatan sangat banyak, air putih dapat digunakan untuk mengobati berbagai penyakit berbahaya atau mencegah terjadinya penyakit yang tidak diinginkan. Air putih merupakan minuman yang paling sehat dan tidak berbahaya karena dibutuhkan setiap hari oleh tubuh kita untuk menjaga kesehatan.</string>
+    <string name="title_ragam_makanan_5">Air Putih</string>
+    <string name="pengertian_ragam_makanan_5">Air putih adalah air yang melalui proses pengolaha, filtrasi sehingga tampak jernih. Tanpa proses pengolahan yang melalu syarat dan air tidak dapat langsung diminum.</string>
+    <string name="manfaat_ragam_makanan_5">Manfaat air putih untuk kesehatan sangat banyak, air putih dapat digunakan untuk mengobati berbagai penyakit berbahaya atau mencegah terjadinya penyakit yang tidak diinginkan. Air putih merupakan minuman yang paling sehat dan tidak berbahaya karena dibutuhkan setiap hari oleh tubuh kita untuk menjaga kesehatan.</string>
     <string name="jenis_airputih">Jenis air putih yaitu air mineral, air demineral, air beroksigen, dan air dengan pH tinggi.</string>
-    <string name="porsi_airputih">Minum minimal 2 liter atau kurang lebih 8 gelas air per hari jika tidak minum 50 persen dari kebutuhan air.</string>
-    <string name="kandungan_airputih">Kandungan dalam air minum adalah Kalsium, Natrium, Selenium, Kalium, Silika dan Zink.</string>
-    <string name="masalah_airputih">Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat.</string>
+    <string name="porsi_ragam_makanan_5">Minum minimal 2 liter atau kurang lebih 8 gelas air per hari jika tidak minum 50 persen dari kebutuhan air.</string>
+    <string name="kandungan_ragam_makanan_5">Kandungan dalam air minum adalah Kalsium, Natrium, Selenium, Kalium, Silika dan Zink.</string>
+    <string name="masalah_ragam_makanan_5">Masalah yang terjadi jika kurang minum air putih yaitu, tekanan darah menurun, mual dan muntah, kram otot, sembelit, penyakit batu ginjal, kurang bertenaga, susah berpikir, sakit kepala, stroke, makan berlebihan, kulit kering, dan merabolisme tubuh lebih lambat.</string>
 
     <!-- Perilaku Hidup Bersih dan Sehat (PHBS) res-->
     <string name="title_phbs_1">Perawatan Diri Pada Kulit</string>

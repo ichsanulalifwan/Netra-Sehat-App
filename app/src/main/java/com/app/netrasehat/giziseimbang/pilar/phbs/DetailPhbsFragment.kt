@@ -285,6 +285,6 @@ class DetailPhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     }
 
     companion object {
-        private const val TAG = "DetailPesanGizi"
+        private const val TAG = "DetailPhbsFragment"
     }
 }

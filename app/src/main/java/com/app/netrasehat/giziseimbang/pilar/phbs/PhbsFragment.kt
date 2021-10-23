@@ -300,6 +300,6 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     }
 
     companion object {
-        private const val TAG = "PesanGiziSeimbang"
+        private const val TAG = "PhbsFragment"
     }
 }

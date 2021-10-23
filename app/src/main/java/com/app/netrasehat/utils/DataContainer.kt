@@ -4,6 +4,7 @@ import android.content.Context
 import com.app.netrasehat.R
 import com.app.netrasehat.model.Pesan
 import com.app.netrasehat.model.Phbs
+import com.app.netrasehat.model.RagamMakanan
 
 object DataContainer {
 
@@ -187,5 +188,70 @@ object DataContainer {
         )
 
         return phbs
+    }
+
+    fun generateRagamMakanan(context: Context): List<RagamMakanan> {
+
+        val data = ArrayList<RagamMakanan>()
+
+        data.add(
+            RagamMakanan(
+                1,
+                context.getString(R.string.title_ragam_makanan_1),
+                context.getString(R.string.pengertian_ragam_makanan_1),
+                context.getString(R.string.manfaat_ragam_makanan_1),
+                context.getString(R.string.porsi_ragam_makanan_1)
+            )
+        )
+
+        data.add(
+            RagamMakanan(
+                2,
+                context.getString(R.string.title_ragam_makanan_2),
+                context.getString(R.string.pengertian_ragam_makanan_2),
+                context.getString(R.string.manfaat_ragam_makanan_2),
+                context.getString(R.string.porsi_ragam_makanan_2),
+                context.getString(R.string.kandungan_ragam_makanan_2),
+                context.getString(R.string.masalah_ragam_makanan_2)
+            )
+        )
+
+        data.add(
+            RagamMakanan(
+                3,
+                context.getString(R.string.title_ragam_makanan_3),
+                context.getString(R.string.pengertian_ragam_makanan_3),
+                context.getString(R.string.manfaat_ragam_makanan_3),
+                context.getString(R.string.porsi_ragam_makanan_3),
+                context.getString(R.string.kandungan_ragam_makanan_3),
+                context.getString(R.string.masalah_ragam_makanan_3)
+            )
+        )
+
+        data.add(
+            RagamMakanan(
+                4,
+                context.getString(R.string.title_ragam_makanan_4),
+                context.getString(R.string.pengertian_ragam_makanan_4),
+                context.getString(R.string.manfaat_ragam_makanan_4),
+                context.getString(R.string.porsi_ragam_makanan_4),
+                context.getString(R.string.kandungan_ragam_makanan_4),
+                context.getString(R.string.masalah_ragam_makanan_4)
+            )
+        )
+
+        data.add(
+            RagamMakanan(
+                5,
+                context.getString(R.string.title_ragam_makanan_5),
+                context.getString(R.string.pengertian_ragam_makanan_5),
+                context.getString(R.string.manfaat_ragam_makanan_5),
+                context.getString(R.string.porsi_ragam_makanan_5),
+                context.getString(R.string.kandungan_ragam_makanan_5),
+                context.getString(R.string.masalah_ragam_makanan_5)
+            )
+        )
+
+        return data
     }
 }

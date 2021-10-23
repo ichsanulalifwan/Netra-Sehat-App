@@ -47,7 +47,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/img_cover_makanan"
             app:layout_constraintTop_toTopOf="@id/img_cover_makanan"
-            tools:text="@string/title_makanan_pokok" />
+            tools:text="@string/title_ragam_makanan_1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

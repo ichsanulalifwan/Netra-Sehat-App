@@ -83,7 +83,11 @@
         android:id="@+id/detailRagamMakananFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.DetailRagamMakananFragment"
         android:label=""
-        tools:layout="@layout/fragment_detail_ragam_makanan" />
+        tools:layout="@layout/fragment_detail_ragam_makanan" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/aktivitasFisikFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.aktivitasfisik.AktivitasFisikFragment"

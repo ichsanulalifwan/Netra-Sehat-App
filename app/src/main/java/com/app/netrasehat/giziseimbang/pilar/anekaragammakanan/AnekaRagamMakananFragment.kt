@@ -8,23 +8,23 @@ import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import androidx.navigation.NavController
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentAnekaRagamMakananBinding
-import com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.airputih.AirPutihActivity
-import com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.laukpauk.LaukPaukActivity
-import com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.makananpokok.MakananPokokActivity
+import com.app.netrasehat.model.RagamMakanan
+import com.app.netrasehat.ui.RagamMakananAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -37,10 +37,11 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
+    private lateinit var adapterRagamMakanan: RagamMakananAdapter
+    private lateinit var viewModel: AnekaRagamMakananViewModel
+    private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentAnekaRagamMakananBinding? = null
     private val binding get() = _binding!!
-    private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -51,6 +52,13 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentAnekaRagamMakananBinding.inflate(inflater, container, false)
+
+        // Init viewModel
+        viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        )[AnekaRagamMakananViewModel::class.java]
+
         return binding.root
     }
 
@@ -59,49 +67,27 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 
         if (activity != null) {
 
-            // Init speechRecognizer
-            setSpeech()
-
             // Init Toolbar
             val toolbar = binding.topAppBar
             val navHostFragment = NavHostFragment.findNavController(this)
             NavigationUI.setupWithNavController(toolbar, navHostFragment)
-
-            // Set Navigate to previous page (backstack)
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
             }
 
-            with(binding) {
-                cvMakanan.setOnClickListener {
-                    val actionToMakananPokok = Intent(context, MakananPokokActivity::class.java)
-                    startActivity(actionToMakananPokok)
-                    //actionToDetail()
-                }
-                cvLauk.setOnClickListener {
-                    val actionToLauk = Intent(context, LaukPaukActivity::class.java)
-                    startActivity(actionToLauk)
-                    //actionToDetail()
-                }
-                cvSayuran.setOnClickListener {
-                    actionToDetail()
-                }
-                cvBuah.setOnClickListener {
-                    actionToDetail()
-                }
-                cvAirPutih.setOnClickListener {
-                    val actionToAirPutih = Intent(context, AirPutihActivity::class.java)
-                    startActivity(actionToAirPutih)
-                    //actionToDetail()
-                }
-            }
-        }
-    }
+            // getListPesan
+            val dataRagamMakanan = viewModel.getData(requireActivity())
 
-    fun actionToDetail() {
-        val actionToDetail =
-            AnekaRagamMakananFragmentDirections.actionAnekaRagamMakananFragmentToDetailRagamMakananFragment()
-        findNavController().navigate(actionToDetail)
+            // Init Adapter and rv
+            adapterRagamMakanan = RagamMakananAdapter()
+            adapterRagamMakanan.setData(dataRagamMakanan)
+            setupRecyclerView()
+            // Navigate to detail pesan
+            onItemSelected()
+
+            // Init speechRecognizer
+            setSpeech()
+        }
     }
 
     override fun onStart() {
@@ -114,18 +100,38 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                textToSpeech()
+                //textToSpeech()
             }
         }
     }
 
+    private fun setupRecyclerView() {
+        with(binding.rvRagamMakanan) {
+            layoutManager = LinearLayoutManager(context)
+            setHasFixedSize(true)
+            adapter = adapterRagamMakanan
+        }
+    }
+
+    private fun onItemSelected() {
+        adapterRagamMakanan.setOnItemClickListener(object : RagamMakananAdapter.OnItemClickListener {
+            override fun onItemClicked(data: RagamMakanan) {
+                val actionToDetail =
+                    AnekaRagamMakananFragmentDirections.actionAnekaRagamMakananFragmentToDetailRagamMakananFragment(
+                        data.id
+                    )
+                findNavController().navigate(actionToDetail)
+            }
+        })
+    }
+
     private fun textToSpeech() {
         // Get the text from local string resource
-        val anekaRagamMakanan = getString(R.string.menu_anekaRagamMakanan)
+        val giziSeimbang = getString(R.string.menu_pesanGiziSeimbang)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(anekaRagamMakanan, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(giziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -157,7 +163,6 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -196,8 +201,6 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -215,7 +218,6 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -224,7 +226,6 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
@@ -243,7 +244,7 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
 //                findNavController().navigate(actionToPesanGizi)
             }
             check8 -> {
-                navController.popBackStack()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
