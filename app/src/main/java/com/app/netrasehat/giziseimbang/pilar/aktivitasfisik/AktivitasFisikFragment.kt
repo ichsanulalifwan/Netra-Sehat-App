@@ -72,17 +72,17 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
             with(binding) {
                 btnAfRingan.setOnClickListener {
                     val actionToJenis =
-                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment()
+                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment(1)
                     findNavController().navigate(actionToJenis)
                 }
                 btnAfSedang.setOnClickListener {
                     val actionToJenis =
-                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment()
+                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment(2)
                     findNavController().navigate(actionToJenis)
                 }
                 btnAfBerat.setOnClickListener {
                     val actionToJenis =
-                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment()
+                        AktivitasFisikFragmentDirections.actionAktivitasFisikFragmentToJenisAktivitasFisikFragment(3)
                     findNavController().navigate(actionToJenis)
                 }
             }

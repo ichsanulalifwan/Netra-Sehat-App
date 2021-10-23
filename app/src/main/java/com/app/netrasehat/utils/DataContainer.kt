@@ -2,10 +2,7 @@ package com.app.netrasehat.utils
 
 import android.content.Context
 import com.app.netrasehat.R
-import com.app.netrasehat.model.JenisJenisMakanan
-import com.app.netrasehat.model.Pesan
-import com.app.netrasehat.model.Phbs
-import com.app.netrasehat.model.RagamMakanan
+import com.app.netrasehat.model.*
 
 object DataContainer {
 
@@ -989,5 +986,42 @@ object DataContainer {
         )
 
         return data
+    }
+
+    fun generateJenisAktivitasFisik(context: Context): List<AktivitasFisik> {
+
+        val jenisAktivitasFisik = ArrayList<AktivitasFisik>()
+
+        jenisAktivitasFisik.add(
+            AktivitasFisik(
+                1,
+                context.getString(R.string.title_af_ringan),
+                context.getString(R.string.pengertian_af_ringan),
+                context.getString(R.string.manfaat_af_ringan),
+                context.getString(R.string.contoh_af_ringan)
+            )
+        )
+
+        jenisAktivitasFisik.add(
+            AktivitasFisik(
+                2,
+                context.getString(R.string.title_af_sedang),
+                context.getString(R.string.pengertian_af_sedang),
+                context.getString(R.string.manfaat_af_sedang),
+                context.getString(R.string.contoh_af_sedang)
+            )
+        )
+
+        jenisAktivitasFisik.add(
+            AktivitasFisik(
+                3,
+                context.getString(R.string.title_af_berat),
+                context.getString(R.string.pengertian_af_berat),
+                context.getString(R.string.manfaat_af_berat),
+                context.getString(R.string.contoh_af_berat)
+            )
+        )
+
+        return jenisAktivitasFisik
     }
 }

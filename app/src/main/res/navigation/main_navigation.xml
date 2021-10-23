@@ -122,7 +122,10 @@
         android:id="@+id/jenisAktivitasFisikFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment"
         android:label=""
-        tools:layout="@layout/fragment_jenis_aktivitas_fisik" />
+        tools:layout="@layout/fragment_jenis_aktivitas_fisik" >
+        <argument android:name="type_aktivitas"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/menghitungBbFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.beratbadan.MenghitungBbFragment"

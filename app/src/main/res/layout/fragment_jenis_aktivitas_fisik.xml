@@ -44,12 +44,12 @@
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="24dp"
                 android:fontFamily="@font/raleway_extrabold"
-                android:text="@string/title_af_ringan"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/title_af_ringan" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_container"
@@ -103,13 +103,13 @@
                                 android:layout_marginTop="4dp"
                                 android:fontFamily="@font/raleway"
                                 android:justificationMode="inter_word"
-                                android:text="@string/pengertian_af_ringan"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="@id/tv_pengertian_af"
                                 app:layout_constraintStart_toStartOf="@id/tv_pengertian_af"
                                 app:layout_constraintTop_toBottomOf="@+id/tv_pengertian_af"
-                                tools:targetApi="o" />
+                                tools:targetApi="o"
+                                tools:text="@string/pengertian_af_ringan" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -153,13 +153,13 @@
                                 android:layout_marginTop="4dp"
                                 android:fontFamily="@font/raleway"
                                 android:justificationMode="inter_word"
-                                android:text="@string/manfaat_af_ringan"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="@id/tv_manfaat_af"
                                 app:layout_constraintStart_toStartOf="@id/tv_manfaat_af"
                                 app:layout_constraintTop_toBottomOf="@+id/tv_manfaat_af"
-                                tools:targetApi="o" />
+                                tools:targetApi="o"
+                                tools:text="@string/manfaat_af_ringan" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -203,13 +203,13 @@
                                 android:layout_marginTop="4dp"
                                 android:fontFamily="@font/raleway"
                                 android:justificationMode="inter_word"
-                                android:text="@string/contoh_af_ringan"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="@id/tv_contoh_af"
                                 app:layout_constraintStart_toStartOf="@id/tv_contoh_af"
                                 app:layout_constraintTop_toBottomOf="@+id/tv_contoh_af"
-                                tools:targetApi="o" />
+                                tools:targetApi="o"
+                                tools:text="@string/contoh_af_ringan" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -219,6 +219,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

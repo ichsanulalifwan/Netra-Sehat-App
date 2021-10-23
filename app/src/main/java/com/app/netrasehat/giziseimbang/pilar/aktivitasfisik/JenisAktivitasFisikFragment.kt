@@ -14,13 +14,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentJenisAktivitasFisikBinding
+import com.app.netrasehat.model.AktivitasFisik
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -33,10 +36,11 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
+    private lateinit var viewModel: JenisAktivitasFisikViewModel
     private var _binding: FragmentJenisAktivitasFisikBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
+    private val args by navArgs<JenisAktivitasFisikFragmentArgs>()
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -47,6 +51,13 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentJenisAktivitasFisikBinding.inflate(inflater, container, false)
+
+        // Init viewModel
+        viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        )[JenisAktivitasFisikViewModel::class.java]
+
         return binding.root
     }
 
@@ -67,6 +78,16 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
             toolbar.setNavigationOnClickListener {
                 it.findNavController().navigateUp()
             }
+
+            // Set Detail Aktivitas Fisik
+            val typeAktivitas = args.typeAktivitas
+            viewModel.setJenisAktivitas(typeAktivitas)
+
+            // Get Aktivitas Fisik
+            val dataAktivitas = viewModel.getDetailAktivitas(requireActivity())
+
+            // Populate Aktivitas Fisik
+            populateData(dataAktivitas)
         }
     }
 
@@ -82,6 +103,15 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
                 // start speech
                 //textToSpeech()
             }
+        }
+    }
+
+    private fun populateData(jenisAktivitas: AktivitasFisik) {
+        binding.apply {
+            txtJenisName.text = jenisAktivitas.title
+            txtPengertianAf.text = jenisAktivitas.pengertian
+            txtManfaatAf.text = jenisAktivitas.manfaat
+            txtContohAf.text = jenisAktivitas.contoh
         }
     }
 
@@ -209,7 +239,7 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
 //                findNavController().navigate(actionToPesanGizi)
             }
             check8 -> {
-                navController.popBackStack()
+                findNavController().navigateUp()
             }
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
