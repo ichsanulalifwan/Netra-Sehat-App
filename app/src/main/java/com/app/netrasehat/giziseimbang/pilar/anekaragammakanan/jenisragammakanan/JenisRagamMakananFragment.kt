@@ -79,9 +79,10 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
             }
 
             // get type Jenis Ragam Makanan
+            val typeMakanan = args.typeMakanan
             // check JenisRagamMakanan and get List JenisRagamMakanan and set title page
             binding.apply {
-                when (args.typeMakanan) {
+                when (typeMakanan) {
                     1 -> {
                         dataJenisMakanan = viewModel.getJenisMakananPokok(requireActivity())
                         toolbarTitle.text = "Jenis-Jenis Makanan Pokok"
@@ -107,7 +108,7 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
             setupRecyclerView()
 
             // Navigate to detail JenisRagamMakanan
-            onItemSelected()
+            onItemSelected(typeMakanan)
 
             // Init speechRecognizer
             setSpeech()
@@ -137,13 +138,13 @@ class JenisRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
         }
     }
 
-    private fun onItemSelected() {
+    private fun onItemSelected(typeMakanan: Int) {
         adapterJenisMakanan.setOnItemClickListener(object :
             JenisMakananAdapter.OnItemClickListener {
             override fun onItemClicked(data: JenisJenisMakanan) {
                 val actionToDetail =
                     JenisRagamMakananFragmentDirections.actionJenisRagamMakananFragmentToDetailJenisMakananFragment(
-                        data.id
+                        data.id, typeMakanan
                     )
                 findNavController().navigate(actionToDetail)
             }

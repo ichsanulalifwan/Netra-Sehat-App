@@ -1,14 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".giziseimbang.pilar.anekaragammakanan.jenisragammakanan.DetailJenisMakananFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collaps_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleGravity="start"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginBottom="28dp"
+            app:expandedTitleMarginStart="16sp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:statusBarScrim="?attr/colorPrimaryVariant">
+
+            <ImageView
+                android:id="@+id/img_header_jenis_makanan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_welcome"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+                app:navigationIconTint="@color/white">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_title_ragam_makanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/purple_1"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Makanan Pokok" />
+
+            <TextView
+                android:id="@+id/tv_pengertian_ragam_makanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/text_pengertian"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_ragam_makanan" />
+
+            <TextView
+                android:id="@+id/detail_pengertian_ragam_makanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_pengertian_ragam_makanan"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_pengertian_ragam_makanan"
+                tools:targetApi="o"
+                tools:text="@string/pengertian_jenis_buah_9" />
+
+            <TextView
+                android:id="@+id/tv_manfaat_ragam_makanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/text_manfaat"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
+                app:layout_constraintTop_toBottomOf="@id/detail_pengertian_ragam_makanan" />
+
+            <TextView
+                android:id="@+id/detail_manfaat_ragam_makanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_manfaat_ragam_makanan"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_manfaat_ragam_makanan"
+                tools:targetApi="o"
+                tools:text="@string/manfaat_jenis_buah_9" />
+
+            <TextView
+                android:id="@+id/tv_jenis_ragam_makanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/text_jenis"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
+                app:layout_constraintTop_toBottomOf="@id/detail_manfaat_ragam_makanan" />
+
+            <TextView
+                android:id="@+id/detail_jenis_ragam_makanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_jenis_ragam_makanan"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jenis_ragam_makanan"
+                tools:targetApi="o"
+                tools:text="@string/jenis_jenis_buah_9" />
+
+            <TextView
+                android:id="@+id/tv_porsi_ragam_makanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/text_porsi"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
+                app:layout_constraintTop_toBottomOf="@id/detail_jenis_ragam_makanan" />
+
+            <TextView
+                android:id="@+id/detail_porsi_ragam_makanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_porsi_ragam_makanan"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_porsi_ragam_makanan"
+                tools:targetApi="o"
+                tools:text="@string/porsi_jenis_buah_9" />
+
+            <TextView
+                android:id="@+id/tv_kandungan_ragam_makanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/text_kandungan"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
+                app:layout_constraintTop_toBottomOf="@id/detail_porsi_ragam_makanan" />
+
+            <TextView
+                android:id="@+id/detail_kandungan_ragam_makanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_kandungan_ragam_makanan"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_kandungan_ragam_makanan"
+                tools:targetApi="o"
+                tools:text="@string/kandungan_jenis_buah_9" />
+
+            <TextView
+                android:id="@+id/tv_masalah_ragam_makanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="@string/text_masalah"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title_ragam_makanan"
+                app:layout_constraintTop_toBottomOf="@id/detail_kandungan_ragam_makanan" />
+
+            <TextView
+                android:id="@+id/detail_masalah_ragam_makanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway"
+                android:justificationMode="inter_word"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_masalah_ragam_makanan"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_masalah_ragam_makanan"
+                tools:targetApi="o"
+                tools:text="@string/masalah_jenis_buah_9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

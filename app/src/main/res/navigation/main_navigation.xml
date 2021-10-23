@@ -225,10 +225,13 @@
     <fragment
         android:id="@+id/detailJenisMakananFragment"
         android:name="com.app.netrasehat.giziseimbang.pilar.anekaragammakanan.jenisragammakanan.DetailJenisMakananFragment"
-        android:label="fragment_detail_jenis_makanan"
+        android:label=""
         tools:layout="@layout/fragment_detail_jenis_makanan" >
         <argument
             android:name="jenisMakananId"
+            app:argType="integer" />
+        <argument
+            android:name="typeMakanan"
             app:argType="integer" />
     </fragment>
 

@@ -27,6 +27,7 @@
             app:statusBarScrim="?attr/colorPrimaryVariant">
 
             <ImageView
+                android:id="@+id/img_header_pesan_gizi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
