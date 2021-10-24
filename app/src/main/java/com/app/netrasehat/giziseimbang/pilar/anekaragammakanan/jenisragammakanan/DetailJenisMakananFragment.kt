@@ -78,11 +78,10 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
             // Set Detail RagamMakanan
             val ragamMakananId = args.jenisMakananId
-            val typeMakanan = args.typeMakanan
             viewModel.setJenisMakanan(ragamMakananId)
 
             // Get RagamMakanan by typeMakanan
-            when (typeMakanan) {
+            when (args.typeMakanan) {
                 1 -> dataJenisMakanan = viewModel.getDetailJenisMakananPokok(requireActivity())
 
                 2 -> dataJenisMakanan = viewModel.getDetailJenisLaukPauk(requireActivity())
@@ -334,9 +333,7 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
                     "menu"
                 )
             }
-            check8 -> {
-                findNavController().navigateUp()
-            }
+            check8 -> findNavController().navigateUp()
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
@@ -398,6 +395,6 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
     }
 
     companion object {
-        private const val TAG = "DetailRagamMakanan"
+        private const val TAG = "DetailJenisMakanan"
     }
 }

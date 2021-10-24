@@ -281,6 +281,12 @@ class PesanGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 check2 -> {
                     navigateToDetail(8)
                 }
+                check3 -> {
+                    navigateToDetail(9)
+                }
+                check4 -> {
+                    navigateToDetail(10)
+                }
                 check8 -> {
                     findNavController().navigateUp()
                 }

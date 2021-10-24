@@ -121,7 +121,12 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val textParam = utteranceId.equals("menu")
+                        || utteranceId.equals("wrongTts")
+                        || utteranceId.equals("jenis")
+                if (textParam) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -242,9 +247,18 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
             }
         } else if (loopCode == 1) {
             when {
-                check1 -> navigateToDetail(1)
-                check2 -> navigateToDetail(2)
-                check3 -> navigateToDetail(3)
+                check1 -> {
+                    navigateToDetail(1)
+                    loopCode = 0
+                }
+                check2 -> {
+                    navigateToDetail(2)
+                    loopCode = 0
+                }
+                check3 -> {
+                    navigateToDetail(3)
+                    loopCode = 0
+                }
                 check8 -> findNavController().navigateUp()
                 check9 -> backToMainMenu()
                 check0 -> exitApp()

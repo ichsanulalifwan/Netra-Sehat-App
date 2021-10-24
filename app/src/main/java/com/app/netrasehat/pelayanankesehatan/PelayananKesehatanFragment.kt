@@ -87,7 +87,7 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
     }
 
     private fun openGoogleMaps(location: String) {
-        val gmmIntentUri = Uri.parse("geo:0,0?q=$location")
+        val gmmIntentUri = Uri.parse("geo:0,0?z=10&q=$location")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         startActivity(mapIntent)

@@ -82,6 +82,7 @@ class AnekaRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListene
             adapterRagamMakanan = RagamMakananAdapter()
             adapterRagamMakanan.setData(dataRagamMakanan)
             setupRecyclerView()
+
             // Navigate to detail AnekaRagamMakanan
             onItemSelected()
 

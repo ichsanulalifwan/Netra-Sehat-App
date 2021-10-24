@@ -96,6 +96,7 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
             // Populate RagamMakanan
             populateData(dataRagamMakanan)
+
             // Set button behavior
             setBtnJenisJenis(dataRagamMakanan)
 
