@@ -3,8 +3,10 @@ package com.app.netrasehat.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.app.netrasehat.R
 import com.app.netrasehat.databinding.ItemRagamMakananBinding
 import com.app.netrasehat.model.RagamMakanan
+import com.bumptech.glide.Glide
 
 class RagamMakananAdapter : RecyclerView.Adapter<RagamMakananAdapter.RagamMakananViewHolder>() {
 
@@ -45,6 +47,13 @@ class RagamMakananAdapter : RecyclerView.Adapter<RagamMakananAdapter.RagamMakana
         fun bind(data: RagamMakanan) {
             binding.apply {
                 tvTitleMakanan.text = data.judul
+
+                Glide.with(itemView.context)
+                    .load(data.img)
+                    .centerCrop()
+                    .placeholder(R.color.purple_1)
+                    .into(imgMakanan)
+
                 itemView.setOnClickListener {
                     onItemClickListener.onItemClicked(data)
                 }

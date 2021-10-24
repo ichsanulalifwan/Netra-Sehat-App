@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.app.netrasehat.databinding.FragmentHomeBinding
+import com.bumptech.glide.Glide
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -54,6 +55,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             // Init speechRecognizer
             setSpeech()
 
+            setImage()
+
             with(binding) {
                 cvGiziSeimbang.setOnClickListener {
                     val actionToGiziSeumbang =
@@ -79,6 +82,32 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 //                        HomeFragmentDirections.actionNavigationHomeToContactSahabatNetraFragment()
 //                    findNavController().navigate(actionToContact)
                 }
+            }
+        }
+    }
+
+    private fun setImage() {
+        binding.apply {
+            context?.let {
+                Glide.with(it)
+                    .load(R.drawable.img_gizi_seimbang)
+                    .centerCrop()
+                    .into(imgGiziSeimbang)
+
+                Glide.with(it)
+                    .load(R.drawable.img_covid19)
+                    .centerCrop()
+                    .into(imgCovid19)
+
+                Glide.with(it)
+                    .load(R.drawable.img_healthcare)
+                    .centerCrop()
+                    .into(imgPelayananKesehatan)
+
+                Glide.with(it)
+                    .load(R.drawable.img_sahabat_netra)
+                    .centerCrop()
+                    .into(imgContactPerson)
             }
         }
     }
@@ -194,8 +223,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        val text = "Mendengarkan . . ."
-        binding.tvSpeak.text = text
+//        val text = "Mendengarkan . . ."
+//        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -213,7 +242,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        binding.tvSpeak.text = errorMessage
+//        binding.tvSpeak.text = errorMessage
         // val messageNoMatch = "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
 //        textToSpeechEngine?.speak(errorMessage, TextToSpeech.QUEUE_FLUSH, null, "tts0")
         startOver()
@@ -224,7 +253,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        binding.tvSpeak.text = recognizedText
+//        binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"

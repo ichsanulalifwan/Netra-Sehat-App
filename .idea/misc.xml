@@ -44,11 +44,11 @@
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_jenis_makanan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_pesan_gizi.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_phbs.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_ragam_makanan.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_ragam_makanan.xml" value="0.1" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_detail_ragam_makananragment.xml" value="0.23645833333333333" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_gejala_covid19.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_gizi_seimbang.xml" value="0.264" />
-        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_jenis_aktivitas_fisik.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_jenis_ragam_makanan.xml" value="0.264" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/fragment_literasi_kesehatan.xml" value="0.264" />
@@ -66,6 +66,8 @@
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_phbs.xml" value="0.4" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_pilargizi.xml" value="0.4" />
         <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/layout/item_ragam_makanan.xml" value="0.264" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11145833333333334" />
+        <entry key="..\:/Android/_Project/TunanetraDaily/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2526041666666667" />
       </map>
     </option>
   </component>

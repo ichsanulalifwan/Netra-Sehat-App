@@ -24,6 +24,7 @@ import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentDetailJenisMakananBinding
 import com.app.netrasehat.model.JenisJenisMakanan
+import com.bumptech.glide.Glide
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -124,6 +125,10 @@ class DetailJenisMakananFragment : Fragment(), CoroutineScope, RecognitionListen
             detailPorsiRagamMakanan.text = data.porsi
             detailKandunganRagamMakanan.text = data.kandungan
             detailMasalahRagamMakanan.text = data.masalah
+            Glide.with(requireActivity())
+                .load(data.img)
+                .centerCrop()
+                .into(imgHeaderJenisMakanan)
         }
     }
 

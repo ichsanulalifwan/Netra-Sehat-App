@@ -21,6 +21,7 @@ import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentPilarGiziSeimbangBinding
+import com.bumptech.glide.Glide
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -70,6 +71,8 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                 it.findNavController().navigateUp()
             }
 
+            setImage()
+
             with(binding) {
                 cvAnekaRagam.setOnClickListener {
                     val actionToAnekaRagamMakanan =
@@ -92,6 +95,27 @@ class PilarGiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListene
                     findNavController().navigate(actionToBeratBadan)
                 }
             }
+        }
+    }
+
+    private fun setImage() {
+        binding.apply {
+            Glide.with(requireActivity())
+                .load(R.drawable.img_anekaragam_makanan)
+                .centerCrop()
+                .into(imgAnekaRagam)
+            Glide.with(requireActivity())
+                .load(R.drawable.img_phbs)
+                .centerCrop()
+                .into(imgPhbs)
+            Glide.with(requireActivity())
+                .load(R.drawable.img_aktivitasfisik)
+                .centerCrop()
+                .into(imgAktivitasFisik)
+            Glide.with(requireActivity())
+                .load(R.drawable.img_beratbadan)
+                .centerCrop()
+                .into(imgPantauBb)
         }
     }
 

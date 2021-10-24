@@ -199,7 +199,10 @@ object DataContainer {
                 context.getString(R.string.pengertian_ragam_makanan_1),
                 context.getString(R.string.manfaat_ragam_makanan_1),
                 context.getString(R.string.jenis_ragam_makanan_1),
-                context.getString(R.string.porsi_ragam_makanan_1)
+                context.getString(R.string.porsi_ragam_makanan_1),
+                "",
+                "",
+                R.drawable.img_makananpokok
             )
         )
 
@@ -212,7 +215,8 @@ object DataContainer {
                 context.getString(R.string.jenis_ragam_makanan_2),
                 context.getString(R.string.porsi_ragam_makanan_2),
                 context.getString(R.string.kandungan_ragam_makanan_2),
-                context.getString(R.string.masalah_ragam_makanan_2)
+                context.getString(R.string.masalah_ragam_makanan_2),
+                R.drawable.img_laukpauk
             )
         )
 
@@ -225,7 +229,8 @@ object DataContainer {
                 context.getString(R.string.jenis_ragam_makanan_3),
                 context.getString(R.string.porsi_ragam_makanan_3),
                 context.getString(R.string.kandungan_ragam_makanan_3),
-                context.getString(R.string.masalah_ragam_makanan_3)
+                context.getString(R.string.masalah_ragam_makanan_3),
+                R.drawable.img_sayuran
             )
         )
 
@@ -238,7 +243,8 @@ object DataContainer {
                 context.getString(R.string.jenis_ragam_makanan_4),
                 context.getString(R.string.porsi_ragam_makanan_4),
                 context.getString(R.string.kandungan_ragam_makanan_4),
-                context.getString(R.string.masalah_ragam_makanan_4)
+                context.getString(R.string.masalah_ragam_makanan_4),
+                R.drawable.img_fruits
             )
         )
 
@@ -251,7 +257,8 @@ object DataContainer {
                 context.getString(R.string.jenis_ragam_makanan_5),
                 context.getString(R.string.porsi_ragam_makanan_5),
                 context.getString(R.string.kandungan_ragam_makanan_5),
-                context.getString(R.string.masalah_ragam_makanan_5)
+                context.getString(R.string.masalah_ragam_makanan_5),
+                R.drawable.img_airputih
             )
         )
 
@@ -271,7 +278,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_makananpokok_1),
                 context.getString(R.string.porsi_jenis_makananpokok_1),
                 context.getString(R.string.kandungan_jenis_makananpokok_1),
-                context.getString(R.string.masalah_jenis_makananpokok_1)
+                context.getString(R.string.masalah_jenis_makananpokok_1),
+                R.drawable.nasi
             )
         )
 
@@ -284,7 +292,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_makananpokok_2),
                 context.getString(R.string.porsi_jenis_makananpokok_2),
                 context.getString(R.string.kandungan_jenis_makananpokok_2),
-                context.getString(R.string.masalah_jenis_makananpokok_2)
+                context.getString(R.string.masalah_jenis_makananpokok_2),
+                R.drawable.jagung
             )
         )
 
@@ -297,7 +306,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_makananpokok_3),
                 context.getString(R.string.porsi_jenis_makananpokok_3),
                 context.getString(R.string.kandungan_jenis_makananpokok_3),
-                context.getString(R.string.masalah_jenis_makananpokok_3)
+                context.getString(R.string.masalah_jenis_makananpokok_3),
+                R.drawable.sagu
             )
         )
 
@@ -310,7 +320,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_makananpokok_4),
                 context.getString(R.string.porsi_jenis_makananpokok_4),
                 context.getString(R.string.kandungan_jenis_makananpokok_4),
-                context.getString(R.string.masalah_jenis_makananpokok_4)
+                context.getString(R.string.masalah_jenis_makananpokok_4),
+                R.drawable.ubijalar
             )
         )
 
@@ -323,7 +334,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_makananpokok_5),
                 context.getString(R.string.porsi_jenis_makananpokok_5),
                 context.getString(R.string.kandungan_jenis_makananpokok_5),
-                context.getString(R.string.masalah_jenis_makananpokok_5)
+                context.getString(R.string.masalah_jenis_makananpokok_5),
+                R.drawable.singkong
             )
         )
 
@@ -336,7 +348,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_makananpokok_6),
                 context.getString(R.string.porsi_jenis_makananpokok_6),
                 context.getString(R.string.kandungan_jenis_makananpokok_6),
-                context.getString(R.string.masalah_jenis_makananpokok_6)
+                context.getString(R.string.masalah_jenis_makananpokok_6),
+                R.drawable.mie
             )
         )
 
@@ -349,7 +362,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_makananpokok_7),
                 context.getString(R.string.porsi_jenis_makananpokok_7),
                 context.getString(R.string.kandungan_jenis_makananpokok_7),
-                context.getString(R.string.masalah_jenis_makananpokok_7)
+                context.getString(R.string.masalah_jenis_makananpokok_7),
+                R.drawable.roti
             )
         )
 
@@ -369,7 +383,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_1),
                 context.getString(R.string.porsi_jenis_laukpauk_1),
                 context.getString(R.string.kandungan_jenis_laukpauk_1),
-                context.getString(R.string.masalah_jenis_laukpauk_1)
+                context.getString(R.string.masalah_jenis_laukpauk_1),
+                R.drawable.ayam
             )
         )
 
@@ -382,7 +397,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_2),
                 context.getString(R.string.porsi_jenis_laukpauk_2),
                 context.getString(R.string.kandungan_jenis_laukpauk_2),
-                context.getString(R.string.masalah_jenis_laukpauk_2)
+                context.getString(R.string.masalah_jenis_laukpauk_2),
+                R.drawable.daging
             )
         )
 
@@ -395,7 +411,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_3),
                 context.getString(R.string.porsi_jenis_laukpauk_3),
                 context.getString(R.string.kandungan_jenis_laukpauk_3),
-                context.getString(R.string.masalah_jenis_laukpauk_3)
+                context.getString(R.string.masalah_jenis_laukpauk_3),
+                R.drawable.ikan
             )
         )
 
@@ -408,7 +425,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_4),
                 context.getString(R.string.porsi_jenis_laukpauk_4),
                 context.getString(R.string.kandungan_jenis_laukpauk_4),
-                context.getString(R.string.masalah_jenis_laukpauk_4)
+                context.getString(R.string.masalah_jenis_laukpauk_4),
+                R.drawable.telur
             )
         )
 
@@ -421,7 +439,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_5),
                 context.getString(R.string.porsi_jenis_laukpauk_5),
                 context.getString(R.string.kandungan_jenis_laukpauk_5),
-                context.getString(R.string.masalah_jenis_laukpauk_5)
+                context.getString(R.string.masalah_jenis_laukpauk_5),
+                R.drawable.kepiting
             )
         )
 
@@ -434,7 +453,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_6),
                 context.getString(R.string.porsi_jenis_laukpauk_6),
                 context.getString(R.string.kandungan_jenis_laukpauk_6),
-                context.getString(R.string.masalah_jenis_laukpauk_6)
+                context.getString(R.string.masalah_jenis_laukpauk_6),
+                R.drawable.udang
             )
         )
 
@@ -447,7 +467,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_7),
                 context.getString(R.string.porsi_jenis_laukpauk_7),
                 context.getString(R.string.kandungan_jenis_laukpauk_7),
-                context.getString(R.string.masalah_jenis_laukpauk_7)
+                context.getString(R.string.masalah_jenis_laukpauk_7),
+                R.drawable.cumi_cumi
             )
         )
 
@@ -460,7 +481,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_8),
                 context.getString(R.string.porsi_jenis_laukpauk_8),
                 context.getString(R.string.kandungan_jenis_laukpauk_8),
-                context.getString(R.string.masalah_jenis_laukpauk_8)
+                context.getString(R.string.masalah_jenis_laukpauk_8),
+                R.drawable.tempe
             )
         )
 
@@ -473,7 +495,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_laukpauk_9),
                 context.getString(R.string.porsi_jenis_laukpauk_9),
                 context.getString(R.string.kandungan_jenis_laukpauk_9),
-                context.getString(R.string.masalah_jenis_laukpauk_9)
+                context.getString(R.string.masalah_jenis_laukpauk_9),
+                R.drawable.tahu
             )
         )
 
@@ -493,7 +516,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_1),
                 context.getString(R.string.porsi_jenis_sayuran_1),
                 context.getString(R.string.kandungan_jenis_sayuran_1),
-                context.getString(R.string.masalah_jenis_sayuran_1)
+                context.getString(R.string.masalah_jenis_sayuran_1),
+                R.drawable.kelor
             )
         )
 
@@ -506,7 +530,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_2),
                 context.getString(R.string.porsi_jenis_sayuran_2),
                 context.getString(R.string.kandungan_jenis_sayuran_2),
-                context.getString(R.string.masalah_jenis_sayuran_2)
+                context.getString(R.string.masalah_jenis_sayuran_2),
+                R.drawable.asem
             )
         )
 
@@ -519,7 +544,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_3),
                 context.getString(R.string.porsi_jenis_sayuran_3),
                 context.getString(R.string.kandungan_jenis_sayuran_3),
-                context.getString(R.string.masalah_jenis_sayuran_3)
+                context.getString(R.string.masalah_jenis_sayuran_3),
+                R.drawable.sop
             )
         )
 
@@ -532,7 +558,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_4),
                 context.getString(R.string.porsi_jenis_sayuran_4),
                 context.getString(R.string.kandungan_jenis_sayuran_4),
-                context.getString(R.string.masalah_jenis_sayuran_4)
+                context.getString(R.string.masalah_jenis_sayuran_4),
+                R.drawable.bayam_bening
             )
         )
 
@@ -545,7 +572,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_5),
                 context.getString(R.string.porsi_jenis_sayuran_5),
                 context.getString(R.string.kandungan_jenis_sayuran_5),
-                context.getString(R.string.masalah_jenis_sayuran_5)
+                context.getString(R.string.masalah_jenis_sayuran_5),
+                R.drawable.lodeh
             )
         )
 
@@ -558,7 +586,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_6),
                 context.getString(R.string.porsi_jenis_sayuran_6),
                 context.getString(R.string.kandungan_jenis_sayuran_6),
-                context.getString(R.string.masalah_jenis_sayuran_6)
+                context.getString(R.string.masalah_jenis_sayuran_6),
+                R.drawable.tumis_sawi
             )
         )
 
@@ -571,7 +600,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_7),
                 context.getString(R.string.porsi_jenis_sayuran_7),
                 context.getString(R.string.kandungan_jenis_sayuran_7),
-                context.getString(R.string.masalah_jenis_sayuran_7)
+                context.getString(R.string.masalah_jenis_sayuran_7),
+                R.drawable.tumis_kacangpanjang
             )
         )
 
@@ -584,7 +614,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_8),
                 context.getString(R.string.porsi_jenis_sayuran_8),
                 context.getString(R.string.kandungan_jenis_sayuran_8),
-                context.getString(R.string.masalah_jenis_sayuran_8)
+                context.getString(R.string.masalah_jenis_sayuran_8),
+                R.drawable.kangkung
             )
         )
 
@@ -597,7 +628,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_9),
                 context.getString(R.string.porsi_jenis_sayuran_9),
                 context.getString(R.string.kandungan_jenis_sayuran_9),
-                context.getString(R.string.masalah_jenis_sayuran_9)
+                context.getString(R.string.masalah_jenis_sayuran_9),
+                R.drawable.tauge
             )
         )
 
@@ -610,7 +642,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_10),
                 context.getString(R.string.porsi_jenis_sayuran_10),
                 context.getString(R.string.kandungan_jenis_sayuran_10),
-                context.getString(R.string.masalah_jenis_sayuran_10)
+                context.getString(R.string.masalah_jenis_sayuran_10),
+                R.drawable.wortel
             )
         )
 
@@ -623,7 +656,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_11),
                 context.getString(R.string.porsi_jenis_sayuran_11),
                 context.getString(R.string.kandungan_jenis_sayuran_11),
-                context.getString(R.string.masalah_jenis_sayuran_11)
+                context.getString(R.string.masalah_jenis_sayuran_11),
+                R.drawable.buncis
             )
         )
 
@@ -636,7 +670,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_12),
                 context.getString(R.string.porsi_jenis_sayuran_12),
                 context.getString(R.string.kandungan_jenis_sayuran_12),
-                context.getString(R.string.masalah_jenis_sayuran_12)
+                context.getString(R.string.masalah_jenis_sayuran_12),
+                R.drawable.labu_siam
             )
         )
 
@@ -649,7 +684,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_13),
                 context.getString(R.string.porsi_jenis_sayuran_13),
                 context.getString(R.string.kandungan_jenis_sayuran_13),
-                context.getString(R.string.masalah_jenis_sayuran_13)
+                context.getString(R.string.masalah_jenis_sayuran_13),
+                R.drawable.balado_terong
             )
         )
 
@@ -662,7 +698,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_14),
                 context.getString(R.string.porsi_jenis_sayuran_14),
                 context.getString(R.string.kandungan_jenis_sayuran_14),
-                context.getString(R.string.masalah_jenis_sayuran_14)
+                context.getString(R.string.masalah_jenis_sayuran_14),
+                R.drawable.terong_bulat_hijau
             )
         )
 
@@ -675,7 +712,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_sayuran_15),
                 context.getString(R.string.porsi_jenis_sayuran_15),
                 context.getString(R.string.kandungan_jenis_sayuran_15),
-                context.getString(R.string.masalah_jenis_sayuran_15)
+                context.getString(R.string.masalah_jenis_sayuran_15),
+                R.drawable.terong_bulat_ungu
             )
         )
 
@@ -695,7 +733,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_1),
                 context.getString(R.string.porsi_jenis_buah_1),
                 context.getString(R.string.kandungan_jenis_buah_1),
-                context.getString(R.string.masalah_jenis_buah_1)
+                context.getString(R.string.masalah_jenis_buah_1),
+                R.drawable.apel
             )
         )
 
@@ -708,7 +747,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_2),
                 context.getString(R.string.porsi_jenis_buah_2),
                 context.getString(R.string.kandungan_jenis_buah_2),
-                context.getString(R.string.masalah_jenis_buah_2)
+                context.getString(R.string.masalah_jenis_buah_2),
+                R.drawable.pepaya
             )
         )
 
@@ -721,7 +761,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_3),
                 context.getString(R.string.porsi_jenis_buah_3),
                 context.getString(R.string.kandungan_jenis_buah_3),
-                context.getString(R.string.masalah_jenis_buah_3)
+                context.getString(R.string.masalah_jenis_buah_3),
+                R.drawable.pisang
             )
         )
 
@@ -734,7 +775,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_4),
                 context.getString(R.string.porsi_jenis_buah_4),
                 context.getString(R.string.kandungan_jenis_buah_4),
-                context.getString(R.string.masalah_jenis_buah_4)
+                context.getString(R.string.masalah_jenis_buah_4),
+                R.drawable.sirsak
             )
         )
 
@@ -747,7 +789,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_5),
                 context.getString(R.string.porsi_jenis_buah_5),
                 context.getString(R.string.kandungan_jenis_buah_5),
-                context.getString(R.string.masalah_jenis_buah_5)
+                context.getString(R.string.masalah_jenis_buah_5),
+                R.drawable.alpukat
             )
         )
 
@@ -760,7 +803,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_6),
                 context.getString(R.string.porsi_jenis_buah_6),
                 context.getString(R.string.kandungan_jenis_buah_6),
-                context.getString(R.string.masalah_jenis_buah_6)
+                context.getString(R.string.masalah_jenis_buah_6),
+                R.drawable.anggur
             )
         )
 
@@ -773,7 +817,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_7),
                 context.getString(R.string.porsi_jenis_buah_7),
                 context.getString(R.string.kandungan_jenis_buah_7),
-                context.getString(R.string.masalah_jenis_buah_7)
+                context.getString(R.string.masalah_jenis_buah_7),
+                R.drawable.belimbing
             )
         )
 
@@ -786,7 +831,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_8),
                 context.getString(R.string.porsi_jenis_buah_8),
                 context.getString(R.string.kandungan_jenis_buah_8),
-                context.getString(R.string.masalah_jenis_buah_8)
+                context.getString(R.string.masalah_jenis_buah_8),
+                R.drawable.durian
             )
         )
 
@@ -799,7 +845,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_9),
                 context.getString(R.string.porsi_jenis_buah_9),
                 context.getString(R.string.kandungan_jenis_buah_9),
-                context.getString(R.string.masalah_jenis_buah_9)
+                context.getString(R.string.masalah_jenis_buah_9),
+                R.drawable.jambu_air
             )
         )
 
@@ -812,7 +859,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_10),
                 context.getString(R.string.porsi_jenis_buah_10),
                 context.getString(R.string.kandungan_jenis_buah_10),
-                context.getString(R.string.masalah_jenis_buah_10)
+                context.getString(R.string.masalah_jenis_buah_10),
+                R.drawable.jambu_biji
             )
         )
 
@@ -825,7 +873,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_11),
                 context.getString(R.string.porsi_jenis_buah_11),
                 context.getString(R.string.kandungan_jenis_buah_11),
-                context.getString(R.string.masalah_jenis_buah_11)
+                context.getString(R.string.masalah_jenis_buah_11),
+                R.drawable.jeruk_bali
             )
         )
 
@@ -838,7 +887,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_12),
                 context.getString(R.string.porsi_jenis_buah_12),
                 context.getString(R.string.kandungan_jenis_buah_12),
-                context.getString(R.string.masalah_jenis_buah_12)
+                context.getString(R.string.masalah_jenis_buah_12),
+                R.drawable.jeruk_mandarin
             )
         )
 
@@ -851,7 +901,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_13),
                 context.getString(R.string.porsi_jenis_buah_13),
                 context.getString(R.string.kandungan_jenis_buah_13),
-                context.getString(R.string.masalah_jenis_buah_13)
+                context.getString(R.string.masalah_jenis_buah_13),
+                R.drawable.kedondong
             )
         )
 
@@ -864,7 +915,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_14),
                 context.getString(R.string.porsi_jenis_buah_14),
                 context.getString(R.string.kandungan_jenis_buah_14),
-                context.getString(R.string.masalah_jenis_buah_14)
+                context.getString(R.string.masalah_jenis_buah_14),
+                R.drawable.mangga
             )
         )
 
@@ -877,7 +929,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_15),
                 context.getString(R.string.porsi_jenis_buah_15),
                 context.getString(R.string.kandungan_jenis_buah_15),
-                context.getString(R.string.masalah_jenis_buah_15)
+                context.getString(R.string.masalah_jenis_buah_15),
+                R.drawable.buah_naga
             )
         )
 
@@ -890,7 +943,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_16),
                 context.getString(R.string.porsi_jenis_buah_16),
                 context.getString(R.string.kandungan_jenis_buah_16),
-                context.getString(R.string.masalah_jenis_buah_16)
+                context.getString(R.string.masalah_jenis_buah_16),
+                R.drawable.nenas
             )
         )
 
@@ -903,7 +957,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_17),
                 context.getString(R.string.porsi_jenis_buah_17),
                 context.getString(R.string.kandungan_jenis_buah_17),
-                context.getString(R.string.masalah_jenis_buah_17)
+                context.getString(R.string.masalah_jenis_buah_17),
+                R.drawable.nangka
             )
         )
 
@@ -916,7 +971,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_18),
                 context.getString(R.string.porsi_jenis_buah_18),
                 context.getString(R.string.kandungan_jenis_buah_18),
-                context.getString(R.string.masalah_jenis_buah_18)
+                context.getString(R.string.masalah_jenis_buah_18),
+                R.drawable.pear
             )
         )
 
@@ -929,7 +985,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_19),
                 context.getString(R.string.porsi_jenis_buah_19),
                 context.getString(R.string.kandungan_jenis_buah_19),
-                context.getString(R.string.masalah_jenis_buah_19)
+                context.getString(R.string.masalah_jenis_buah_19),
+                R.drawable.rambutan
             )
         )
 
@@ -942,7 +999,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_20),
                 context.getString(R.string.porsi_jenis_buah_20),
                 context.getString(R.string.kandungan_jenis_buah_20),
-                context.getString(R.string.masalah_jenis_buah_20)
+                context.getString(R.string.masalah_jenis_buah_20),
+                R.drawable.salak
             )
         )
 
@@ -955,7 +1013,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_21),
                 context.getString(R.string.porsi_jenis_buah_21),
                 context.getString(R.string.kandungan_jenis_buah_21),
-                context.getString(R.string.masalah_jenis_buah_21)
+                context.getString(R.string.masalah_jenis_buah_21),
+                R.drawable.sawo
             )
         )
 
@@ -968,7 +1027,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_22),
                 context.getString(R.string.porsi_jenis_buah_22),
                 context.getString(R.string.kandungan_jenis_buah_22),
-                context.getString(R.string.masalah_jenis_buah_22)
+                context.getString(R.string.masalah_jenis_buah_22),
+                R.drawable.semangka
             )
         )
 
@@ -981,7 +1041,8 @@ object DataContainer {
                 context.getString(R.string.jenis_jenis_buah_23),
                 context.getString(R.string.porsi_jenis_buah_23),
                 context.getString(R.string.kandungan_jenis_buah_23),
-                context.getString(R.string.masalah_jenis_buah_23)
+                context.getString(R.string.masalah_jenis_buah_23),
+                R.drawable.stroberi
             )
         )
 

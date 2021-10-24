@@ -3,8 +3,10 @@ package com.app.netrasehat.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.app.netrasehat.R
 import com.app.netrasehat.databinding.ItemJenisRagamMakananBinding
 import com.app.netrasehat.model.JenisJenisMakanan
+import com.bumptech.glide.Glide
 
 class JenisMakananAdapter : RecyclerView.Adapter<JenisMakananAdapter.JenisMakananViewHolder>() {
 
@@ -48,6 +50,12 @@ class JenisMakananAdapter : RecyclerView.Adapter<JenisMakananAdapter.JenisMakana
                 itemView.setOnClickListener {
                     onItemClickListener.onItemClicked(data)
                 }
+
+                Glide.with(itemView.context)
+                    .load(data.img)
+                    .centerCrop()
+                    .placeholder(R.color.purple_1)
+                    .into(imgItemJenis)
             }
         }
     }

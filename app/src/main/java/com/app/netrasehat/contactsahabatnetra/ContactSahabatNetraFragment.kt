@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.app.netrasehat.databinding.FragmentContactSahabatNetraBinding
-import com.app.netrasehat.databinding.FragmentCovid19Binding
 
 class ContactSahabatNetraFragment : Fragment() {
 

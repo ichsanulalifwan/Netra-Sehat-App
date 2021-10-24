@@ -8,17 +8,6 @@
     android:paddingBottom="56dp"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:id="@+id/tv_speak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/speech_belum_mulai"
-        android:textSize="14sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_welcome"/>
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_welcome"
         android:layout_width="match_parent"
