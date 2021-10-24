@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -37,7 +36,7 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentBeratBadanBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
+    private var loopCode: Int? = 0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -87,18 +86,18 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
         }
     }
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val pilarGiziSeimbang = getString(R.string.menu_pilarGiziSeimbang)
+        val menu = getString(R.string.menu_pantauBeratBadan)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(pilarGiziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_FLUSH, null, "menu")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -108,7 +107,12 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val textParam = utteranceId.equals("menu")
+                        || utteranceId.equals("wrongTts")
+                        || utteranceId.equals("penentuanImt")
+                if (textParam) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -130,7 +134,7 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
         )
         // Adding an extra language, you can use any language from the Locale class.
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
-
+        // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
     }
 
@@ -169,8 +173,6 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -188,7 +190,6 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
@@ -200,40 +201,105 @@ class BeratBadanFragment : Fragment(), CoroutineScope, RecognitionListener {
         //binding.tvSpeak.text = recognizedText
         val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
         val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
+        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
+        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
-        when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
+        if (loopCode == 0) {
+            when {
+                check1 -> {
+                    val pengertian = getString(R.string.pengertian_berat_badan)
+                    val menu = getString(R.string.menu_pantauBeratBadan)
+                    textToSpeechEngine?.speak(
+                        pengertian,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "pengertian"
+                    )
+                    // back to previous menu
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                }
+                check2 -> {
+                    val manfaat = getString(R.string.manfaat_berat_badan)
+                    val menu = getString(R.string.menu_pantauBeratBadan)
+                    textToSpeechEngine?.speak(manfaat, TextToSpeech.QUEUE_FLUSH, null, "manfaat")
+                    // back to previous menu
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                }
+                check3 -> {
+                    val penentuanImt = getString(R.string.menu_penentuanIMT)
+                    textToSpeechEngine?.speak(
+                        penentuanImt,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "penentuanImt"
+                    )
+                    loopCode = 1
+                }
+                check4 -> {
+                    val masalah = getString(R.string.masalah_berat_badan)
+                    val menu = getString(R.string.menu_pantauBeratBadan)
+                    textToSpeechEngine?.speak(masalah, TextToSpeech.QUEUE_FLUSH, null, "masalah")
+                    // back to previous menu
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                }
+                check8 -> findNavController().navigateUp()
+                check9 -> backToMainMenu()
+                check0 -> exitApp()
+                else -> wrongOption()
             }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
-            }
-            check8 -> {
-                navController.popBackStack()
-            }
-            check9 -> {
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
-            }
-            check0 -> {
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-            else -> {
-                val messageNoMatch =
-                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+        } else if (loopCode == 1) {
+            when {
+                check1 -> {
+                    val menentukanImt = getString(R.string.menentukan_berat_badan)
+                    val menu = getString(R.string.menu_pantauBeratBadan)
+                    textToSpeechEngine?.speak(
+                        menentukanImt,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "menentukanImt"
+                    )
+                    // back to previous menu
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                }
+                check2 -> {
+                    val actionToMenghitungBb =
+                        BeratBadanFragmentDirections.actionBeratBadanFragmentToMenghitungBbFragment()
+                    findNavController().navigate(actionToMenghitungBb)
+                }
+                check8 -> findNavController().navigateUp()
+                check9 -> backToMainMenu()
+                check0 -> exitApp()
+                else -> wrongOption()
             }
         }
+    }
+
+    private fun backToMainMenu() {
+        val backMainMenu = Intent(context, MainActivity::class.java)
+        startActivity(backMainMenu)
+        activity?.let {
+            ActivityCompat.finishAffinity(it)
+        }
+    }
+
+    private fun exitApp() {
+        activity?.finishAffinity()
+        exitProcess(0)
+    }
+
+    private fun wrongOption() {
+        val messageNoMatch =
+            "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
+        textToSpeechEngine?.speak(
+            messageNoMatch,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "wrongTts"
+        )
+        Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {

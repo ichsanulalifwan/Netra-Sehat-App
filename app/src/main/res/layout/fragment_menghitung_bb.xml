@@ -96,7 +96,7 @@
                         android:layout_marginEnd="32dp"
                         android:fontFamily="@font/raleway_bold"
                         android:text="@string/title_satuan_kg"
-                        android:textColor="@color/black"
+                        android:textColor="@color/dark_blue"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="@id/input_layout_bb"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -128,12 +128,12 @@
 
                     <TextView
                         android:id="@+id/title_satuan_m"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/raleway_bold"
                         android:text="@string/title_satuan_meter"
-                        android:textColor="@color/black"
+                        android:textColor="@color/dark_blue"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="@id/input_layout_tb"
                         app:layout_constraintEnd_toEndOf="@id/title_satuan_kg"
@@ -183,7 +183,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway_semibold"
-                                android:text="Hasil"
+                                android:text="@string/title_hasil"
                                 android:textColor="@color/purple_0"
                                 android:textSize="16sp"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -196,7 +196,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:fontFamily="@font/raleway"
-                                android:text="Indeks Massa Tubuh anda"
+                                android:text="@string/indeks_massa_tubuh_anda"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toStartOf="@id/result_imt"
@@ -210,13 +210,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
                                 android:fontFamily="@font/raleway"
-                                android:text="22.0"
                                 android:textColor="@color/purple_700"
                                 android:textSize="12sp"
                                 app:layout_constraintBottom_toBottomOf="@id/txt_result_imt"
                                 app:layout_constraintEnd_toEndOf="@id/tv_result_imt"
                                 app:layout_constraintStart_toEndOf="@id/txt_result_imt"
-                                app:layout_constraintTop_toTopOf="@id/txt_result_imt" />
+                                app:layout_constraintTop_toTopOf="@id/txt_result_imt"
+                                tools:text="22.0" />
 
                             <TextView
                                 android:id="@+id/txt_summary_imt"
@@ -224,12 +224,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:fontFamily="@font/raleway"
-                                android:text="@string/result_imt_2"
                                 android:textColor="@color/green_summary"
                                 android:textSize="14sp"
                                 app:layout_constraintEnd_toEndOf="@id/tv_result_imt"
                                 app:layout_constraintStart_toStartOf="@id/tv_result_imt"
-                                app:layout_constraintTop_toBottomOf="@+id/txt_result_imt" />
+                                app:layout_constraintTop_toBottomOf="@+id/txt_result_imt"
+                                tools:text="@string/result_imt_2" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </com.google.android.material.card.MaterialCardView>

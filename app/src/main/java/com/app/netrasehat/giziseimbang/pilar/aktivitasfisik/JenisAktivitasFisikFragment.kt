@@ -137,7 +137,7 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("noMatch")
+                val textParam = utteranceId.equals("menuPilihan") || utteranceId.equals("wrongTts")
                 if (textParam) {
                     startListening()
                 }
@@ -231,9 +231,7 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check8 -> {
-                findNavController().navigateUp()
-            }
+            check8 -> findNavController().navigateUp()
             check9 -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
@@ -246,7 +244,12 @@ class JenisAktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListe
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "noMatch")
+                textToSpeechEngine?.speak(
+                    messageNoMatch,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "wrongTts"
+                )
                 Toast.makeText(context, "Pilihan tidak ada", Toast.LENGTH_SHORT).show()
             }
         }

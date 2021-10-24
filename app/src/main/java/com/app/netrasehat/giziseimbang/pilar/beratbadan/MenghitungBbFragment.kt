@@ -14,9 +14,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
@@ -36,7 +36,7 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
     private var _binding: FragmentMenghitungBbBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
-    private lateinit var navController: NavController
+    private var loopCode: Int? = 0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -70,7 +70,7 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             with(binding) {
                 btnHitung.setOnClickListener {
-                    cvResultImt.visibility = View.VISIBLE
+                    countImt()
                 }
             }
         }
@@ -86,18 +86,51 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
                 textToSpeechEngine?.language = Locale("id", "ID")
 
                 // start speech
-                //textToSpeech()
+                textToSpeech()
             }
+        }
+    }
+
+    private fun countImt() {
+        binding.apply {
+            val beratBadan = addBb.text.toString().toInt()
+            val tinggiBadan = addTb.text.toString().toInt()
+            // Coount Imt
+            val convertTb = tinggiBadan * 0.01
+            val result = beratBadan / (convertTb * convertTb)
+
+            // binding result
+            resultImt.text = String.format("%.1f", result)
+
+            when {
+                result < 18.5 -> {
+                    txtSummaryImt.text = getString(R.string.result_imt_1)
+                    txtSummaryImt.setTextColor(resources.getColor(R.color.red_summary))
+                }
+                result in 18.5..22.9 -> {
+                    txtSummaryImt.text = getString(R.string.result_imt_2)
+                    txtSummaryImt.setTextColor(resources.getColor(R.color.green_summary))
+                }
+                result in 23.0..24.9 -> {
+                    txtSummaryImt.text = getString(R.string.result_imt_3)
+                    txtSummaryImt.setTextColor(resources.getColor(R.color.red_summary))
+                }
+                result >= 25 -> {
+                    txtSummaryImt.text = getString(R.string.result_imt_4)
+                    txtSummaryImt.setTextColor(resources.getColor(R.color.red_summary))
+                }
+            }
+            cvResultImt.visibility = View.VISIBLE
         }
     }
 
     private fun textToSpeech() {
         // Get the text from local string resource
-        val pilarGiziSeimbang = getString(R.string.menu_pilarGiziSeimbang)
+        val inputBb = getString(R.string.menu_inputBbImt)
 
         // Lollipop and above requires an additional ID to be passed.
         // Call Lollipop+ function
-        textToSpeechEngine?.speak(pilarGiziSeimbang, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+        textToSpeechEngine?.speak(inputBb, TextToSpeech.QUEUE_FLUSH, null, "inputBb")
 
         textToSpeechEngine?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
@@ -107,7 +140,13 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
 
             override fun onDone(utteranceId: String?) {
                 Log.i(TAG, "TTS On Done")
-                startListening()
+                val textParam = utteranceId.equals("inputBb")
+                        || utteranceId.equals("wrongInput")
+                        || utteranceId.equals("menu")
+                        || utteranceId.equals("inputTb")
+                if (textParam) {
+                    startListening()
+                }
             }
 
             override fun onError(utteranceId: String?) {
@@ -168,8 +207,6 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-        //val text = "Mendengarkan . . ."
-        //binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -187,52 +224,90 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
     override fun onError(errorCode: Int) {
         val errorMessage: String = getErrorText(errorCode)
         Log.d(TAG, "FAILED $errorMessage")
-        //binding.tvSpeak.text = errorMessage
         startOver()
     }
 
     override fun onResults(results: Bundle?) {
         Log.i(TAG, "onResults")
-
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        //binding.tvSpeak.text = recognizedText
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
         val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
         val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
         val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
+        if (loopCode == 0) {
+            if (recognizedText != null) {
+                if (recognizedText.matches("-?\\d+(\\.\\d+)?".toRegex())) {
+                    binding.addBb.setText(recognizedText)
+                    val mendapatkanBb =
+                        "Berat badan yang anda masukkan ialah $recognizedText kilogram, selanjutnya silahkan masukkan tinggi badan anda dalam satuan sentimeter."
+                    textToSpeechEngine?.speak(
+                        mendapatkanBb,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "inputTb"
+                    )
+                    loopCode = 1
+                } else wrongInput()
+            }
+            when {
+                check8 -> findNavController().navigateUp()
+                check9 -> {
+                    val backMainMenu = Intent(context, MainActivity::class.java)
+                    startActivity(backMainMenu)
+                    activity?.let { ActivityCompat.finishAffinity(it) }
+                }
+                check0 -> {
+                    activity?.finishAffinity()
+                    exitProcess(0)
+                }
+            }
+        } else if (loopCode == 1) {
+            if (recognizedText != null) {
+                if (recognizedText.matches("-?\\d+(\\.\\d+)?".toRegex())) {
+                    binding.addTb.setText(recognizedText)
+                    countImt()
+                    val resultImt = binding.resultImt.text.toString()
+                    val summary = binding.txtSummaryImt.text.toString()
 
-        when {
-            check1 -> {
-//                val actionToPilarGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
-//                findNavController().navigate(actionToPilarGizi)
+                    val mendapatkanTb =
+                        "Tinggi badan yang anda masukkan ialah $recognizedText sentimeter. Hasil Indeks Massa Tubuh Anda ialah $resultImt. $summary"
+                    textToSpeechEngine?.speak(
+                        mendapatkanTb,
+                        TextToSpeech.QUEUE_FLUSH,
+                        null,
+                        "result"
+                    )
+                    // back to previous menu
+                    val menu = getString(R.string.menu_kembali)
+                    textToSpeechEngine?.speak(menu, TextToSpeech.QUEUE_ADD, null, "menu")
+                } else wrongInput()
             }
-            check2 -> {
-//                val actionToPesanGizi =
-//                    GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
-//                findNavController().navigate(actionToPesanGizi)
-            }
-            check8 -> {
-                navController.popBackStack()
-            }
-            check9 -> {
-                val backMainMenu = Intent(context, MainActivity::class.java)
-                startActivity(backMainMenu)
-                activity?.let { ActivityCompat.finishAffinity(it) }
-            }
-            check0 -> {
-                activity?.finishAffinity()
-                exitProcess(0)
-            }
-            else -> {
-                val messageNoMatch =
-                    "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
-                textToSpeechEngine?.speak(messageNoMatch, TextToSpeech.QUEUE_FLUSH, null, "tts3")
-                Toast.makeText(context, "Pilihan Salah", Toast.LENGTH_SHORT).show()
+            when {
+                check8 -> findNavController().navigateUp()
+                check9 -> {
+                    val backMainMenu = Intent(context, MainActivity::class.java)
+                    startActivity(backMainMenu)
+                    activity?.let { ActivityCompat.finishAffinity(it) }
+                }
+                check0 -> {
+                    activity?.finishAffinity()
+                    exitProcess(0)
+                }
             }
         }
+    }
+
+    private fun wrongInput() {
+        val messageWrongInput =
+            "Anda Salah Memasukkan Angka, silahkan coba lagi"
+        textToSpeechEngine?.speak(
+            messageWrongInput,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            "wrongInput"
+        )
+        Toast.makeText(context, "Harap Memasukkan Angka Yang Benar", Toast.LENGTH_SHORT)
+            .show()
     }
 
     override fun onPartialResults(parsialResult: Bundle?) {

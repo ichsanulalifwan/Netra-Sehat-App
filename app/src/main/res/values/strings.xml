@@ -242,11 +242,16 @@
     </string>
 
     <string name="menu_pantauBeratBadan">
-        Katakan 1 untuk Pengertian, Katakan 2 untuk Manfaat, Katakan 3 untuk penentuan Indeks massa tubuh, Katakan 4 untuk Masalah Berat Badan tidak ideal.
+        Katakan 1 untuk Pengertian, Katakan 2 untuk Manfaat, Katakan 3 untuk penentuan IMT, Katakan 4 untuk Masalah Berat Badan tidak ideal.
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
     <string name="menu_penentuanIMT">
-        Katakan 1 untuk Penjelasan Indeks massa tubuh, Katakan 2 untuk menghitung Indeks massa tubuh.
+        Katakan 1 untuk Penjelasan IMT, Katakan 2 untuk menghitung IMT tubuh.
+        Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
+    </string>
+    <string name="menu_inputBbImt">
+        Perhitungan Indeks massa tubuh, harap ucapkan berat badan dan tinggi badan anda dengan baik.
+        Pertama silahkan katakan berat badan anda dalam satuan kilogram.  atau
         Katakan 8 untuk kembali, Katakan 9 untuk ke menu utama, Katakan 0 untuk Keluar.
     </string>
 
@@ -2189,13 +2194,14 @@
     <string name="title_berat_badan">Berat Badan</string>
     <string name="title_satuan_kg">Kg</string>
     <string name="title_tinggi_badan">Tinggi Badan</string>
-    <string name="title_satuan_meter">m</string>
+    <string name="title_satuan_meter">cm</string>
     <string name="title_hitung_imt">Hitung Indeks Massa Tubuh</string>
 
     <!--Hasil Indeks Massa Tubuh-->
-    <string name="result_imt_1">Anda Kekurangan Berat Badan</string>
-    <string name="result_imt_2">Berat Badan Anda Ideal</string>
-    <string name="result_imt_3">Anda Kelebihan Berat Badan</string>
+    <string name="result_imt_1">Anda termasuk Berat badan di bawah normal</string>
+    <string name="result_imt_2">Anda termasuk Berat badan normal</string>
+    <string name="result_imt_3">Anda termasuk Berat badan berlebih</string>
+    <string name="result_imt_4">Anda termasuk Obesitas</string>
 
     <!--Pelayanan Kesehatan Terdekat Res-->
     <string name="title_rumah_sakit">Rumah Sakit</string>
@@ -2218,5 +2224,7 @@
     <string name="toolbar_title2">Jenis-Jenis Lauk Pauk</string>
     <string name="toolbar_title3">Jenis-Jenis Sayuran</string>
     <string name="toolbar_title4">Jenis-Jenis Buah</string>
+    <string name="title_hasil">Hasil</string>
+    <string name="indeks_massa_tubuh_anda">Indeks Massa Tubuh anda</string>
 
 </resources>
