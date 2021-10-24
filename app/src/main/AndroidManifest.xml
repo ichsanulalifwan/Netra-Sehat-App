@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TunanetraDaily">
         <activity
-            android:name="com.app.netrasehat.MainActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,16 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-<!--                <service-->
-<!--                    android:name="MyNavigationService"-->
-<!--                    android:foregroundServiceType="location">-->
-<!--                    &lt;!&ndash; Any inner elements would go here. &ndash;&gt;-->
-<!--                </service>-->
     </application>
 
 </manifest>
