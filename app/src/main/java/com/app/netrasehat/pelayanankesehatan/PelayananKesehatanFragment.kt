@@ -1,8 +1,11 @@
 package com.app.netrasehat.pelayanankesehatan
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.Looper
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
@@ -14,6 +17,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -22,6 +26,7 @@ import androidx.navigation.ui.NavigationUI
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentPelayananKesehatanBinding
+import com.google.android.gms.location.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -37,10 +42,39 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
     private var _binding: FragmentPelayananKesehatanBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
+    private var lat: Double? = 0.0
+    private var long: Double? = 0.0
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Default
+
+    private var fusedLocationProvider: FusedLocationProviderClient? = null
+    private val locationRequest: LocationRequest = LocationRequest.create().apply {
+        interval = 30
+        fastestInterval = 10
+        priority = LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY
+        maxWaitTime = 60
+    }
+
+    private var locationCallback: LocationCallback = object : LocationCallback() {
+        override fun onLocationResult(locationResult: LocationResult) {
+            val locationList = locationResult.locations
+            if (locationList.isNotEmpty()) {
+                //The last location in the list is the newest
+                val location = locationList.last()
+                lat = location.latitude
+                long = location.longitude
+//                Toast.makeText(
+//                    context,
+//                    "Got Location: $location",
+//
+//                    Toast.LENGTH_LONG
+//                )
+//                    .show()
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +88,8 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            fusedLocationProvider = LocationServices.getFusedLocationProviderClient(requireActivity())
 
             // Init speechRecognizer
             setSpeech()
@@ -72,22 +108,40 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
             with(binding) {
                 btnRumahsakit.setOnClickListener {
                     openGoogleMaps("Rumah Sakit")
+                    stopService()
+                    speechRecognizer.destroy()
                 }
                 btnPuskesmas.setOnClickListener {
                     openGoogleMaps("Puskesmas")
+                    stopService()
+                    speechRecognizer.destroy()
                 }
                 btnApotek.setOnClickListener {
                     openGoogleMaps("Apotek")
+                    stopService()
+                    speechRecognizer.destroy()
                 }
                 btnKlinik.setOnClickListener {
                     openGoogleMaps("Klinik")
+                    stopService()
+                    speechRecognizer.destroy()
                 }
+            }
+
+            if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED
+            ) {
+                fusedLocationProvider?.requestLocationUpdates(
+                    locationRequest,
+                    locationCallback,
+                    Looper.getMainLooper()
+                )
             }
         }
     }
 
     private fun openGoogleMaps(location: String) {
-        val gmmIntentUri = Uri.parse("geo:0,0?z=10&q=$location")
+        val gmmIntentUri = Uri.parse("geo:$lat,$long?z=15&q=$location")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         startActivity(mapIntent)
@@ -221,15 +275,23 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
         when {
             check1 -> {
                 openGoogleMaps("Rumah Sakit")
+                stopService()
+                speechRecognizer.destroy()
             }
             check2 -> {
                 openGoogleMaps("Puskesmas")
+                stopService()
+                speechRecognizer.destroy()
             }
             check3 -> {
                 openGoogleMaps("Apotek")
+                stopService()
+                speechRecognizer.destroy()
             }
             check4 -> {
                 openGoogleMaps("Klinik")
+                stopService()
+                speechRecognizer.destroy()
             }
             check8 -> {
                 findNavController().navigateUp()
@@ -281,10 +343,33 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
         return message
     }
 
-    override fun onPause() {
-        super.onPause()
+    override fun onResume() {
+        super.onResume()
+        if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            fusedLocationProvider?.requestLocationUpdates(
+                locationRequest,
+                locationCallback,
+                Looper.getMainLooper()
+            )
+        }
+    }
+
+    private fun stopService() {
         textToSpeechEngine?.stop()
         stopListening()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        stopService()
+
+        if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            fusedLocationProvider?.removeLocationUpdates(locationCallback)
+        }
     }
 
     override fun onDestroyView() {
