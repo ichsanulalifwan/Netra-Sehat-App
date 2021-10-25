@@ -71,12 +71,15 @@ class AktivitasFisikFragment : Fragment(), CoroutineScope, RecognitionListener {
             with(binding) {
                 btnAfRingan.setOnClickListener {
                     navigateToDetail(1)
+                    loopCode = 0
                 }
                 btnAfSedang.setOnClickListener {
                     navigateToDetail(2)
+                    loopCode = 0
                 }
                 btnAfBerat.setOnClickListener {
                     navigateToDetail(3)
+                    loopCode = 0
                 }
             }
         }
