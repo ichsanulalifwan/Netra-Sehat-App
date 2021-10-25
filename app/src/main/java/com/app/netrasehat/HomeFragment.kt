@@ -26,6 +26,7 @@ import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
+
 class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     private lateinit var speechRecognizer: SpeechRecognizer
@@ -78,6 +79,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
                 cvContactPerson.setOnClickListener {
                     openWhatsApp()
+                    textToSpeechEngine?.shutdown()
+                    speechRecognizer.destroy()
 //                    val actionToContact =
 //                        HomeFragmentDirections.actionNavigationHomeToContactSahabatNetraFragment()
 //                    findNavController().navigate(actionToContact)
@@ -146,16 +149,44 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         super.onStart()
 
         // Init TTS
-        textToSpeechEngine = TextToSpeech(context) { arg0 ->
-            if (arg0 == TextToSpeech.SUCCESS) {
+        textToSpeechEngine = TextToSpeech(context
+        ) { status ->
+            if (status == TextToSpeech.SUCCESS) {
                 // Set language
                 textToSpeechEngine?.language = Locale("id", "ID")
 
-                // start speech welcome message
-                textToSpeech()
+
+
+                val result: Int? = textToSpeechEngine?.setLanguage(Locale("id", "ID"))
+                if (result == TextToSpeech.LANG_MISSING_DATA ||
+                    result == TextToSpeech.LANG_NOT_SUPPORTED
+                ) {
+                    val changeEngine = Intent()
+                    changeEngine.action = "com.android.settings.TTS_SETTINGS"
+                    changeEngine.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(changeEngine)
+                    Log.e("error", "This Language is not supported")
+                } else {
+                    // start speech
+                    textToSpeech()
+                }
+
+//                if (!context?.let { isPackageInstalled(it.packageManager, googleTtsPackage) }!!) {
+//                    val installVoice = Intent(ACTION_INSTALL_TTS_DATA)
+//                    startActivity(installVoice)
+//                } else textToSpeechEngine?.setEngineByPackageName(googleTtsPackage)
             }
         }
     }
+
+//    private fun isPackageInstalled(pm: PackageManager, packageName: String?): Boolean {
+//        try {
+//            pm.getPackageInfo(packageName!!, 0)
+//        } catch (e: PackageManager.NameNotFoundException) {
+//            return false
+//        }
+//        return true
+//    }
 
     private fun textToSpeech() {
         // Get the text from local string resource
@@ -278,6 +309,8 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
             }
             check4 -> {
                 openWhatsApp()
+                textToSpeechEngine?.shutdown()
+                speechRecognizer.destroy()
             }
             check0 -> {
                 //textToSpeechEngine?.stop()
