@@ -12,18 +12,28 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.floatPreferencesKey
+import androidx.lifecycle.lifecycleScope
 import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.ActivitySettingVoiceBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import java.util.*
+import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
+@AndroidEntryPoint
 class SettingVoiceActivity : AppCompatActivity(), CoroutineScope, RecognitionListener {
 
+    @Inject
+    lateinit var prefs: DataStore<Preferences>
     private lateinit var binding: ActivitySettingVoiceBinding
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
@@ -56,6 +66,9 @@ class SettingVoiceActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
 
             btnNext.setOnClickListener {
                 startActivity()
+                lifecycleScope.launch {
+                    saveSpeechRateValue()
+                }
             }
         }
 
@@ -190,7 +203,12 @@ class SettingVoiceActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
         when {
             check1 -> increaseSpeech()
             check2 -> decreaseSpeech()
-            check3 -> startActivity()
+            check3 -> {
+                lifecycleScope.launch {
+                    saveSpeechRateValue()
+                }
+                startActivity()
+            }
             else -> {
                 val messageNoMatch =
                     "Pilihan yang anda katakan tidak ada, silahkan katakan sekali lagi"
@@ -287,6 +305,12 @@ class SettingVoiceActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
             else -> "Tidak dapat dipahami, silakan coba lagi."
         }
         return message
+    }
+
+    private suspend fun saveSpeechRateValue() {
+        prefs.edit {
+            it[floatPreferencesKey("speechRate")] = speedRate
+        }
     }
 
     override fun onPause() {

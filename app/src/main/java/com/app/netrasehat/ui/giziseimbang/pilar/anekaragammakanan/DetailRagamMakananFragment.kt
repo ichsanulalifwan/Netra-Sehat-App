@@ -13,8 +13,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -25,16 +29,23 @@ import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentDetailRagamMakananBinding
 import com.app.netrasehat.model.RagamMakanan
 import com.bumptech.glide.Glide
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.util.*
+import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
+@AndroidEntryPoint
 class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListener {
 
+    @Inject
+    lateinit var prefs: DataStore<Preferences>
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
     private lateinit var viewModel: DetailRagamMakananViewModel
@@ -43,6 +54,7 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
     private var _binding: FragmentDetailRagamMakananBinding? = null
     private val binding get() = _binding!!
     private val args by navArgs<DetailRagamMakananFragmentArgs>()
+    private var speechRate: Float? = 1.0f
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -67,6 +79,9 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            // get Text to Speech speed rate
+            getSpeechRate()
 
             // Init Toolbar
             val toolbar = binding.topAppBar
@@ -105,6 +120,16 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         }
     }
 
+    private fun getSpeechRate() {
+        lifecycleScope.launch {
+            prefs.data.catch { e ->
+                e.printStackTrace()
+            }.collectLatest {
+                speechRate = it[floatPreferencesKey("speechRate")]
+            }
+        }
+    }
+
 
     override fun onStart() {
         super.onStart()
@@ -114,6 +139,8 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
             if (arg0 == TextToSpeech.SUCCESS) {
                 // Set language
                 textToSpeechEngine?.language = Locale("id", "ID")
+
+                speechRate?.let { textToSpeechEngine?.setSpeechRate(it) }
 
                 // start speech
                 textToSpeech()

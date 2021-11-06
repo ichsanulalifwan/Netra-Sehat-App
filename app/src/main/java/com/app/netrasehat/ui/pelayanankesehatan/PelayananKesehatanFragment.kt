@@ -18,7 +18,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -27,16 +31,23 @@ import com.app.netrasehat.MainActivity
 import com.app.netrasehat.R
 import com.app.netrasehat.databinding.FragmentPelayananKesehatanBinding
 import com.google.android.gms.location.*
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.util.*
+import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
+@AndroidEntryPoint
 class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListener {
 
+    @Inject
+    lateinit var prefs: DataStore<Preferences>
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
     private var _binding: FragmentPelayananKesehatanBinding? = null
@@ -44,6 +55,7 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
     private var textToSpeechEngine: TextToSpeech? = null
     private var lat: Double? = 0.0
     private var long: Double? = 0.0
+    private var speechRate: Float? = 1.0f
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -88,6 +100,9 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            // get Text to Speech speed rate
+            getSpeechRate()
 
             fusedLocationProvider = LocationServices.getFusedLocationProviderClient(requireActivity())
 
@@ -140,6 +155,16 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
         }
     }
 
+    private fun getSpeechRate() {
+        lifecycleScope.launch {
+            prefs.data.catch { e ->
+                e.printStackTrace()
+            }.collectLatest {
+                speechRate = it[floatPreferencesKey("speechRate")]
+            }
+        }
+    }
+
     private fun openGoogleMaps(location: String) {
         val gmmIntentUri = Uri.parse("geo:$lat,$long?z=15&q=$location")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
@@ -155,6 +180,8 @@ class PelayananKesehatanFragment : Fragment(), CoroutineScope, RecognitionListen
             if (arg0 == TextToSpeech.SUCCESS) {
                 // Set language
                 textToSpeechEngine?.language = Locale("id", "ID")
+
+                speechRate?.let { textToSpeechEngine?.setSpeechRate(it) }
 
                 // start speech
                 textToSpeech()
