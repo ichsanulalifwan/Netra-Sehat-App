@@ -6,7 +6,13 @@ buildscript {
         constraintlayout_version = '2.1.1'
         core_version = '1.6.0'
         circleimageview_version = '3.1.0'
+        datastore_version = '1.0.0'
         glide_version = '4.12.0'
+        gmaps_version = '18.0.0'
+        hilt_version = '2.38.1'
+        hilt_compiler = '1.0.0'
+        hilt_lifecycle = '1.0.0-alpha03'
+        legacy_version = '1.0.0'
         material_version = '1.5.0-alpha02'
         navigation_version = '2.3.5'
         recyclerview_version = '1.2.1'
@@ -27,6 +33,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:7.0.3'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
