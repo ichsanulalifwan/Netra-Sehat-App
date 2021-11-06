@@ -2226,5 +2226,10 @@
     <string name="toolbar_title4">Jenis-Jenis Buah</string>
     <string name="title_hasil">Hasil</string>
     <string name="indeks_massa_tubuh_anda">Indeks Massa Tubuh anda</string>
+    <string name="tombol_tambah_kecepatan_suara">Tombol tambah kecepatan suara</string>
+
+    <string name="speech_speed_message">Sebelum memulai, silahkan atur kecepatan bicara sesuai dengan keinginan anda</string>
+
+    <string name="opsi_speed">Katakan 1 untuk menambah laju suara, katakan 2 untuk mengurangi laju suara, katakan 3 untuk selanjutnya</string>
 
 </resources>
