@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_abu_gradient"
     android:paddingBottom="56dp"
-    tools:context=".HomeFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_welcome"

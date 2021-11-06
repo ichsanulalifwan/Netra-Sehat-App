@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment">
+    tools:context=".ui.giziseimbang.pilar.aktivitasfisik.JenisAktivitasFisikFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"

@@ -2,6 +2,7 @@ package com.app.netrasehat
 
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController

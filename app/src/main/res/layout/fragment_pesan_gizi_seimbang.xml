@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".giziseimbang.pesan.PesanGiziSeimbangFragment">
+    tools:context=".ui.giziseimbang.pesan.PesanGiziSeimbangFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"

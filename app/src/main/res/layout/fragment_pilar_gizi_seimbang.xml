@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".giziseimbang.pilar.PilarGiziSeimbangFragment">
+    tools:context=".ui.giziseimbang.pilar.PilarGiziSeimbangFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -43,7 +43,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".giziseimbang.pilar.">
+            tools:context=".ui.giziseimbang.pilar.">
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_anekaRagam"
