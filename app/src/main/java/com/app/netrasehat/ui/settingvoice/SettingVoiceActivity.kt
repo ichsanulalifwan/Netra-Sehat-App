@@ -1,6 +1,8 @@
 package com.app.netrasehat.ui.settingvoice
 
+import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -36,6 +38,7 @@ class SettingVoiceActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
     lateinit var prefs: DataStore<Preferences>
     private lateinit var binding: ActivitySettingVoiceBinding
     private lateinit var speechRecognizer: SpeechRecognizer
+    private lateinit var audioManager: AudioManager
     private lateinit var sttIntent: Intent
     private var textToSpeechEngine: TextToSpeech? = null
     private var speedRate = 1.0f
@@ -53,6 +56,9 @@ class SettingVoiceActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
 
         binding = ActivitySettingVoiceBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        audioManager.setParameters("noise_suppression=on")
 
         with(binding) {
 
@@ -196,14 +202,20 @@ class SettingVoiceActivity : AppCompatActivity(), CoroutineScope, RecognitionLis
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
-        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
 
         when {
-            check1 -> increaseSpeech()
-            check2 -> decreaseSpeech()
-            check3 -> {
+            recognizedText?.contains(
+                "satu",
+                true
+            ) == true || recognizedText?.contains("1") == true -> increaseSpeech()
+            recognizedText?.contains(
+                "dua",
+                true
+            ) == true || recognizedText?.contains("2") == true -> decreaseSpeech()
+            recognizedText?.contains(
+                "tiga",
+                true
+            ) == true || recognizedText?.contains("3") == true -> {
                 lifecycleScope.launch {
                     saveSpeechRateValue()
                 }
