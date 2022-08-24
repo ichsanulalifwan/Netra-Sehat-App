@@ -265,18 +265,9 @@ class MenghitungBbFragment : Fragment(), CoroutineScope, RecognitionListener {
         Log.i(TAG, "onResults")
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        val check8 = recognizedText?.contains(
-            "delapan",
-            true
-        ) == true || recognizedText?.contains("8") == true
-        val check9 = recognizedText?.contains(
-            "sembilan",
-            true
-        ) == true || recognizedText?.contains("9") == true
-        val check0 = recognizedText?.contains(
-            "nol",
-            true
-        ) == true || recognizedText?.contains("0") == true
+        val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
+        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
+        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
         if (loopCode == 0) {
             if (recognizedText != null) {
                 if (recognizedText.matches("-?\\d+(\\.\\d+)?".toRegex())) {
