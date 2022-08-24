@@ -1,6 +1,8 @@
 package com.app.netrasehat.ui.giziseimbang.pilar.phbs
 
+import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -49,6 +51,7 @@ class DetailPhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     private lateinit var sttIntent: Intent
     private lateinit var viewModel: DetailPhbsViewModel
     private lateinit var dataPhbs: Phbs
+    private lateinit var audioManager: AudioManager
     private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentDetailPhbsBinding? = null
     private val binding get() = _binding!!
@@ -78,6 +81,10 @@ class DetailPhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            // enhanced audio input
+            audioManager = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            audioManager.setParameters("noise_suppression=on")
 
             // get Text to Speech speed rate
             getSpeechRate()
@@ -251,20 +258,26 @@ class DetailPhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
-        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
-        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check8 -> {
+            recognizedText?.contains(
+                "delapan",
+                true
+            ) == true || recognizedText?.contains("8") == true -> {
                 findNavController().navigateUp()
             }
-            check9 -> {
+            recognizedText?.contains(
+                "sembilan",
+                true
+            ) == true || recognizedText?.contains("9") == true -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
                 activity?.let { ActivityCompat.finishAffinity(it) }
             }
-            check0 -> {
+            recognizedText?.contains(
+                "nol",
+                true
+            ) == true || recognizedText?.contains("0") == true -> {
                 activity?.finishAffinity()
                 exitProcess(0)
             }

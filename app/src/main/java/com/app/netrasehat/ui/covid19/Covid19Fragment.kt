@@ -1,6 +1,8 @@
 package com.app.netrasehat.ui.covid19
 
+import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -44,6 +46,7 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
     lateinit var prefs: DataStore<Preferences>
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
+    private lateinit var audioManager: AudioManager
     private var _binding: FragmentCovid19Binding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
@@ -65,6 +68,10 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            // enhanced audio input
+            audioManager = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            audioManager.setParameters("noise_suppression=on")
 
             // get Text to Speech speed rate
             getSpeechRate()
@@ -252,19 +259,12 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
-        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
-        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
-        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
-        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
-        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
-        val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
-        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
-        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check1 -> {
+            recognizedText?.contains(
+                "satu",
+                true
+            ) == true || recognizedText?.contains("1") == true -> {
                 val pengertianCovid = getString(R.string.pengertian_covid19)
                 val covid19 = getString(R.string.menu_covid19)
                 textToSpeechEngine?.speak(
@@ -276,44 +276,71 @@ class Covid19Fragment : Fragment(), CoroutineScope, RecognitionListener {
                 // back to previous menu
                 textToSpeechEngine?.speak(covid19, TextToSpeech.QUEUE_ADD, null, "covidloop")
             }
-            check2 -> {
+            recognizedText?.contains(
+                "dua",
+                true
+            ) == true || recognizedText?.contains("2") == true -> {
                 val action =
                     Covid19FragmentDirections.actionCovid19FragmentToGejalaCovid19Fragment()
                 findNavController().navigate(action)
             }
-            check3 -> {
+            recognizedText?.contains(
+                "tiga",
+                true
+            ) == true || recognizedText?.contains("3") == true -> {
                 val action =
                     Covid19FragmentDirections.actionCovid19FragmentToCaraPenularanFragment()
                 findNavController().navigate(action)
             }
-            check4 -> {
+            recognizedText?.contains(
+                "empat",
+                true
+            ) == true || recognizedText?.contains("4") == true -> {
                 val action =
                     Covid19FragmentDirections.actionCovid19FragmentToCaraMencegahCovid19Fragment()
                 findNavController().navigate(action)
             }
-            check5 -> {
+            recognizedText?.contains(
+                "lima",
+                true
+            ) == true || recognizedText?.contains("5") == true -> {
                 val action =
                     Covid19FragmentDirections.actionCovid19FragmentToPenangananCovid19Fragment()
                 findNavController().navigate(action)
             }
-            check6 -> {
+            recognizedText?.contains(
+                "enam",
+                true
+            ) == true || recognizedText?.contains("6") == true -> {
                 val action =
                     Covid19FragmentDirections.actionCovid19FragmentToSembuhCovid19Fragment()
                 findNavController().navigate(action)
             }
-            check7 -> {
+            recognizedText?.contains(
+                "tujuh",
+                true
+            ) == true || recognizedText?.contains("7") == true -> {
                 val action =
                     Covid19FragmentDirections.actionCovid19FragmentToVaksinCovid19Fragment()
                 findNavController().navigate(action)
             }
-            check8 -> findNavController().navigateUp()
+            recognizedText?.contains(
+                "delapan",
+                true
+            ) == true || recognizedText?.contains("8") == true -> findNavController().navigateUp()
 
-            check9 -> {
+            recognizedText?.contains(
+                "sembilan",
+                true
+            ) == true || recognizedText?.contains("9") == true -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
                 activity?.let { ActivityCompat.finishAffinity(it) }
             }
-            check0 -> {
+            recognizedText?.contains(
+                "nol",
+                true
+            ) == true || recognizedText?.contains("0") == true -> {
                 activity?.finishAffinity()
                 exitProcess(0)
             }

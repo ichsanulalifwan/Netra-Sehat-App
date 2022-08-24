@@ -1,6 +1,8 @@
 package com.app.netrasehat.ui.giziseimbang.pilar.anekaragammakanan
 
+import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -50,6 +52,7 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
     private lateinit var sttIntent: Intent
     private lateinit var viewModel: DetailRagamMakananViewModel
     private lateinit var dataRagamMakanan: RagamMakanan
+    private lateinit var audioManager: AudioManager
     private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentDetailRagamMakananBinding? = null
     private val binding get() = _binding!!
@@ -79,6 +82,10 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            // enhanced audio input
+            audioManager = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            audioManager.setParameters("noise_suppression=on")
 
             // get Text to Speech speed rate
             getSpeechRate()
@@ -299,15 +306,15 @@ class DetailRagamMakananFragment : Fragment(), CoroutineScope, RecognitionListen
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
-        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
-        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
-        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
-        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
-        val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
-        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
-        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
+        val check1 = recognizedText?.contains("satu", true) == true || recognizedText?.contains("1") == true
+        val check2 = recognizedText?.contains("dua", true) == true || recognizedText?.contains("2") == true
+        val check3 = recognizedText?.contains("tiga", true) == true || recognizedText?.contains("3") == true
+        val check4 = recognizedText?.contains("empat", true) == true || recognizedText?.contains("4") == true
+        val check5 = recognizedText?.contains("lima", true) == true || recognizedText?.contains("5") == true
+        val check6 = recognizedText?.contains("enam", true) == true || recognizedText?.contains("6") == true
+        val check8 = recognizedText?.contains("delapan", true) == true || recognizedText?.contains("8") == true
+        val check9 = recognizedText?.contains("sembilan", true) == true || recognizedText?.contains("9") == true
+        val check0 = recognizedText?.contains("nol", true) == true || recognizedText?.contains("0") == true
         val ragamMakananId = args.id
         val menuDetailRagamMakanan = getString(R.string.menu_detail_anekaRagamMakanan)
         val menuDetailRagamMakana2 = getString(R.string.menu_detail_anekaRagamMakanan2)
