@@ -1,6 +1,8 @@
 package com.app.netrasehat.ui.giziseimbang
 
+import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -44,6 +46,7 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
     lateinit var prefs: DataStore<Preferences>
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
+    private lateinit var audioManager: AudioManager
     private var _binding: FragmentGiziSeimbangBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
@@ -66,6 +69,9 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            audioManager = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            audioManager.setParameters("noise_suppression=on")
 
             // get Text to Speech speed rate
             getSpeechRate()
@@ -212,8 +218,6 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
     override fun onBeginningOfSpeech() {
         Log.i(TAG, "onBeginningOfSpeech")
-//        val text = "Mendengarkan . . ."
-//        binding.tvSpeak.text = text
     }
 
     override fun onRmsChanged(rmsdB: Float) {
@@ -240,33 +244,42 @@ class GiziSeimbangFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-//        binding.tvSpeak.text = recognizedText
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
-        val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
-        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
-        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check1 -> {
+            recognizedText?.contains(
+                "satu",
+                true
+            ) == true || recognizedText?.contains("1") == true -> {
                 val actionToPilarGizi =
                     GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPilarGiziSeimbangFragment()
                 findNavController().navigate(actionToPilarGizi)
             }
-            check2 -> {
+            recognizedText?.contains(
+                "dua",
+                true
+            ) == true || recognizedText?.contains("2") == true -> {
                 val actionToPesanGizi =
                     GiziSeimbangFragmentDirections.actionNavigationGiziSeimbangToPesanGiziSeimbangFragment()
                 findNavController().navigate(actionToPesanGizi)
             }
-            check8 -> {
+            recognizedText?.contains(
+                "delapan",
+                true
+            ) == true || recognizedText?.contains("8") == true -> {
                 findNavController().navigateUp()
             }
-            check9 -> {
+            recognizedText?.contains(
+                "sembilan",
+                true
+            ) == true || recognizedText?.contains("9") == true -> {
                 val backMainMenu = Intent(context, MainActivity::class.java)
                 startActivity(backMainMenu)
                 activity?.let { finishAffinity(it) }
             }
-            check0 -> {
+            recognizedText?.contains(
+                "nol",
+                true
+            ) == true || recognizedText?.contains("0") == true -> {
                 activity?.finishAffinity()
                 exitProcess(0)
             }

@@ -1,7 +1,9 @@
 package com.app.netrasehat.ui.home
 
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.AudioManager
 import android.net.Uri
 import android.os.Bundle
 import android.speech.RecognitionListener
@@ -14,6 +16,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.floatPreferencesKey
@@ -42,6 +45,7 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
     lateinit var prefs: DataStore<Preferences>
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var sttIntent: Intent
+    private lateinit var audioManager: AudioManager
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private var textToSpeechEngine: TextToSpeech? = null
@@ -64,6 +68,10 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            // enhanced audio input
+            audioManager = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            audioManager.setParameters("noise_suppression=on")
 
             // get Text to Speech speed rate
             getSpeechRate()
@@ -260,8 +268,6 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
         sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale("id", "ID"))
         // Adding an extra package for fix bug in different phone and API level
         sttIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context?.packageName)
-        //sttIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
-        //sttIntent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1)
     }
 
     private fun startListening() {
@@ -310,35 +316,44 @@ class HomeFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-//        binding.tvSpeak.text = recognizedText
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
-        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
-        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
-        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         when {
-            check1 -> {
+            recognizedText?.contains(
+                "satu",
+                true
+            ) == true || recognizedText?.contains("1") == true -> {
                 val actionToGiziSeumbang =
                     HomeFragmentDirections.actionHomeFragmentToNavigationGiziSeimbang()
                 findNavController().navigate(actionToGiziSeumbang)
             }
-            check2 -> {
+            recognizedText?.contains(
+                "dua",
+                true
+            ) == true || recognizedText?.contains("2") == true -> {
                 val actionToCovid19 =
                     HomeFragmentDirections.actionNavigationHomeToCovid19Fragment()
                 findNavController().navigate(actionToCovid19)
             }
-            check3 -> {
+            recognizedText?.contains(
+                "tiga",
+                true
+            ) == true || recognizedText?.contains("3") == true -> {
                 val actionToPelayanan =
                     HomeFragmentDirections.actionNavigationHomeToPelayananKesehatanFragment()
                 findNavController().navigate(actionToPelayanan)
             }
-            check4 -> {
+            recognizedText?.contains(
+                "empat",
+                true
+            ) == true || recognizedText?.contains("4") == true -> {
                 openWhatsApp()
                 textToSpeechEngine?.shutdown()
                 speechRecognizer.destroy()
             }
-            check0 -> {
+            recognizedText?.contains(
+                "nol",
+                true
+            ) == true || recognizedText?.contains("0") == true -> {
                 //textToSpeechEngine?.stop()
                 //stopListening()
                 activity?.finishAffinity()
