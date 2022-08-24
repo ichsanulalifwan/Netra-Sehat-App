@@ -1,6 +1,8 @@
 package com.app.netrasehat.ui.giziseimbang.pilar.phbs
 
+import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
@@ -50,6 +52,7 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
     private lateinit var sttIntent: Intent
     private lateinit var phbsAdapter: PhbsAdapter
     private lateinit var viewModel: PhbsViewModel
+    private lateinit var audioManager: AudioManager
     private var textToSpeechEngine: TextToSpeech? = null
     private var _binding: FragmentPhbsBinding? = null
     private val binding get() = _binding!!
@@ -79,6 +82,10 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
+
+            // enhanced audio input
+            audioManager = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            audioManager.setParameters("noise_suppression=on")
 
             // get Text to Speech speed rate
             getSpeechRate()
@@ -251,49 +258,69 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
 
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         val recognizedText = matches?.get(0)
-        val check1 = recognizedText.equals("satu", true) || recognizedText == "1"
-        val check2 = recognizedText.equals("dua", true) || recognizedText == "2"
-        val check3 = recognizedText.equals("tiga", true) || recognizedText == "3"
-        val check4 = recognizedText.equals("empat", true) || recognizedText == "4"
-        val check5 = recognizedText.equals("lima", true) || recognizedText == "5"
-        val check6 = recognizedText.equals("enam", true) || recognizedText == "6"
-        val check7 = recognizedText.equals("tujuh", true) || recognizedText == "7"
-        val check8 = recognizedText.equals("delapan", true) || recognizedText == "8"
-        val check9 = recognizedText.equals("sembilan", true) || recognizedText == "9"
-        val check0 = recognizedText.equals("nol", true) || recognizedText == "0"
 
         if (loopCode == 0) {
             when {
-                check1 -> {
+                recognizedText?.contains(
+                    "satu",
+                    true
+                ) == true || recognizedText?.contains("1") == true -> {
                     navigateToDetail(1)
                 }
-                check2 -> {
+                recognizedText?.contains(
+                    "dua",
+                    true
+                ) == true || recognizedText?.contains("2") == true -> {
                     navigateToDetail(2)
                 }
-                check3 -> {
+                recognizedText?.contains(
+                    "tiga",
+                    true
+                ) == true || recognizedText?.contains("3") == true -> {
                     navigateToDetail(3)
                 }
-                check4 -> {
+                recognizedText?.contains(
+                    "empat",
+                    true
+                ) == true || recognizedText?.contains("4") == true -> {
                     navigateToDetail(4)
                 }
-                check5 -> {
+                recognizedText?.contains(
+                    "lima",
+                    true
+                ) == true || recognizedText?.contains("5") == true -> {
                     navigateToDetail(5)
                 }
-                check6 -> {
+                recognizedText?.contains(
+                    "enam",
+                    true
+                ) == true || recognizedText?.contains("6") == true -> {
                     navigateToDetail(6)
                 }
-                check7 -> {
+                recognizedText?.contains(
+                    "tujuh",
+                    true
+                ) == true || recognizedText?.contains("7") == true -> {
                     val phbs2 = getString(R.string.menu_phbs2)
                     textToSpeechEngine?.speak(phbs2, TextToSpeech.QUEUE_FLUSH, null, "phbs2")
                     loopCode = 1
                 }
-                check8 -> {
+                recognizedText?.contains(
+                    "delapan",
+                    true
+                ) == true || recognizedText?.contains("8") == true -> {
                     findNavController().navigateUp()
                 }
-                check9 -> {
+                recognizedText?.contains(
+                    "sembilan",
+                    true
+                ) == true || recognizedText?.contains("9") == true -> {
                     backToMainMenu()
                 }
-                check0 -> {
+                recognizedText?.contains(
+                    "nol",
+                    true
+                ) == true || recognizedText?.contains("0") == true -> {
                     exitApp()
                 }
                 else -> {
@@ -302,11 +329,26 @@ class PhbsFragment : Fragment(), CoroutineScope, RecognitionListener {
             }
         } else if (loopCode == 1) {
             when {
-                check1 -> navigateToDetail(7)
-                check2 -> navigateToDetail(8)
-                check8 -> findNavController().navigateUp()
-                check9 -> backToMainMenu()
-                check0 -> exitApp()
+                recognizedText?.contains(
+                    "satu",
+                    true
+                ) == true || recognizedText?.contains("1") == true -> navigateToDetail(7)
+                recognizedText?.contains(
+                    "dua",
+                    true
+                ) == true || recognizedText?.contains("2") == true -> navigateToDetail(8)
+                recognizedText?.contains(
+                    "delapan",
+                    true
+                ) == true || recognizedText?.contains("8") == true -> findNavController().navigateUp()
+                recognizedText?.contains(
+                    "sembilan",
+                    true
+                ) == true || recognizedText?.contains("9") == true -> backToMainMenu()
+                recognizedText?.contains(
+                    "nol",
+                    true
+                ) == true || recognizedText?.contains("0") == true -> exitApp()
                 else -> wrongOption()
             }
         }
